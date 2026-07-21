@@ -199,7 +199,7 @@ class _FallbackArt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(gradient: AppColors.brandGradient),
+      decoration: const BoxDecoration(color: AppColors.accent),
       child: const Icon(Icons.radio, color: Colors.white, size: 56),
     );
   }

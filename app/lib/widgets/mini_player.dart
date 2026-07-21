@@ -120,7 +120,7 @@ class _FallbackDisc extends StatelessWidget {
     return Container(
       width: 44,
       height: 44,
-      decoration: const BoxDecoration(gradient: AppColors.brandGradient),
+      decoration: const BoxDecoration(color: AppColors.accent),
       child: const Icon(Icons.radio, color: Colors.white, size: 20),
     );
   }

@@ -424,7 +424,7 @@ class _FallbackArt extends StatelessWidget {
     return Container(
       width: 52,
       height: 52,
-      decoration: const BoxDecoration(gradient: AppColors.brandGradient),
+      decoration: const BoxDecoration(color: AppColors.accent),
       alignment: Alignment.center,
       child: Text(
         name.isNotEmpty ? name[0].toUpperCase() : '?',
