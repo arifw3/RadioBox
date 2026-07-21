@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'screens/drive_mode_screen.dart';
 import 'screens/home_screen.dart';
+import 'state/alarm_providers.dart';
 import 'state/drive_mode_providers.dart';
 import 'state/palette_providers.dart';
 
@@ -34,6 +35,10 @@ class _RootScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // Side-effect only: starts alarm playback if this launch came from
+    // tapping the alarm notification. Result is intentionally unused.
+    ref.watch(alarmAutoplayProvider);
+
     final driveMode = ref.watch(driveModeProvider);
     return driveMode ? const DriveModeScreen() : const HomeScreen();
   }

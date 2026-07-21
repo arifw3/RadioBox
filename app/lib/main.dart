@@ -4,13 +4,19 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import 'app.dart';
+import 'services/alarm_service.dart';
 import 'services/dialwave_audio_handler.dart';
+import 'state/alarm_providers.dart';
 import 'state/player_providers.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await MobileAds.instance.initialize();
+
+  final alarmService = AlarmService();
+  await alarmService.init();
+  await alarmService.requestPermissions();
 
   final audioHandler = await AudioService.init(
     builder: DialWaveAudioHandler.new,
@@ -27,7 +33,10 @@ Future<void> main() async {
 
   runApp(
     ProviderScope(
-      overrides: [audioHandlerProvider.overrideWithValue(audioHandler)],
+      overrides: [
+        audioHandlerProvider.overrideWithValue(audioHandler),
+        alarmServiceProvider.overrideWithValue(alarmService),
+      ],
       child: const DialWaveApp(),
     ),
   );

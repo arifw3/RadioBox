@@ -11,6 +11,14 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
+    <!-- Radio wake-up alarm (Section 7, CLAUDE.md): exact-time full-screen
+         notification, the same mechanism the system Clock app uses. -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
     <!-- Most Icecast/Shoutcast radio streams are plain http://, and the
          station list changes nightly, so a fixed domain-config allowlist
          isn't workable — allow cleartext app-wide instead. -->

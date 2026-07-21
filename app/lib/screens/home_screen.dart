@@ -7,6 +7,7 @@ import '../state/drive_mode_providers.dart';
 import '../state/favorites_providers.dart';
 import '../state/player_providers.dart';
 import '../utils/time_of_day_suggestion.dart';
+import '../widgets/alarm_button.dart';
 import '../widgets/banner_ad_widget.dart';
 import '../widgets/country_picker_button.dart';
 import '../widgets/mini_player.dart';
@@ -33,6 +34,7 @@ class HomeScreen extends ConsumerWidget {
                   .state = true,
             ),
             const CountryPickerButton(),
+            const AlarmButton(),
             const SleepTimerButton(),
           ],
           bottom: const TabBar(
