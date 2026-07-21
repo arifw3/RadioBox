@@ -42,6 +42,12 @@
             android:name="flutterEmbedding"
             android:value="2" />
 
+        <!-- Google's public test App ID (Section 9, CLAUDE.md: banner-only
+             ads). TODO: swap for the real AdMob App ID before release. -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
+
         <service android:name="com.ryanheise.audioservice.AudioService"
             android:foregroundServiceType="mediaPlayback"
             android:exported="true" tools:ignore="Instantiatable">

@@ -44,9 +44,17 @@ dependencies:
   # controls (Section 4 of CLAUDE.md).
   audio_service: ^0.18.15
   just_audio: ^0.9.42
+  # Audio focus: ducking for navigation prompts, pause/resume around phone
+  # calls (Section 4 of CLAUDE.md).
+  audio_session: ^0.1.21
 
   flutter_riverpod: ^2.6.1
   http: ^1.2.0
+  shared_preferences: ^2.3.0
+
+  # Sole revenue source: one thin bottom banner, never interstitial/audio
+  # ads (Section 9 of CLAUDE.md).
+  google_mobile_ads: ^5.2.0
 
 dev_dependencies:
   flutter_test:

@@ -50,5 +50,9 @@
 	<array>
 		<string>audio</string>
 	</array>
+	<!-- Google's public test App ID (Section 9, CLAUDE.md: banner-only ads).
+	     TODO: swap for the real AdMob App ID before release. -->
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-3940256099942544~1458002511</string>
 </dict>
 </plist>

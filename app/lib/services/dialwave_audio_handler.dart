@@ -1,26 +1,22 @@
+import 'dart:async';
+
 import 'package:audio_service/audio_service.dart';
+import 'package:audio_session/audio_session.dart';
 import 'package:dialwave_core/dialwave_core.dart';
 import 'package:just_audio/just_audio.dart';
 
 /// Wraps [AudioPlayer] behind audio_service's [BaseAudioHandler] so
 /// playback survives the app going to background and keeps working with
-/// the lock screen / MediaSession (Section 4, CLAUDE.md).
+/// the lock screen / MediaSession (Section 4, CLAUDE.md). Also owns audio
+/// focus (ducking, phone-call pause/resume) and reconnects automatically
+/// when a live stream drops.
 class DialWaveAudioHandler extends BaseAudioHandler with SeekHandler {
   DialWaveAudioHandler() {
     _player.playbackEventStream.listen(
       _broadcastState,
-      onError: (Object error, StackTrace stackTrace) {
-        // A dead stream shouldn't crash the handler — surface it as an
-        // error state so the UI can offer retry/next-station instead of
-        // hanging on a stale "loading" spinner forever.
-        playbackState.add(
-          playbackState.value.copyWith(
-            processingState: AudioProcessingState.error,
-            playing: false,
-          ),
-        );
-      },
+      onError: (Object error, StackTrace stackTrace) => _scheduleReconnect(),
     );
+    unawaited(_initAudioSession());
   }
 
   final AudioPlayer _player = AudioPlayer();
@@ -28,7 +24,52 @@ class DialWaveAudioHandler extends BaseAudioHandler with SeekHandler {
   RadioStation? _currentStation;
   RadioStation? get currentStation => _currentStation;
 
+  /// True if a phone call (or similar) paused us — vs. the user pausing
+  /// manually — so we know whether to auto-resume when it ends.
+  bool _pausedByInterruption = false;
+
+  int _reconnectAttempts = 0;
+  static const _maxReconnectAttempts = 5;
+  Timer? _reconnectTimer;
+
+  Future<void> _initAudioSession() async {
+    final session = await AudioSession.instance;
+    await session.configure(const AudioSessionConfiguration.music());
+
+    session.interruptionEventStream.listen((event) {
+      if (event.begin) {
+        switch (event.type) {
+          case AudioInterruptionType.duck:
+            // Navigation prompts etc. — lower volume instead of stopping.
+            _player.setVolume(0.3);
+          case AudioInterruptionType.pause:
+          case AudioInterruptionType.unknown:
+            // A phone call — stop outright and remember to resume after.
+            _pausedByInterruption = _player.playing;
+            _player.pause();
+        }
+      } else {
+        switch (event.type) {
+          case AudioInterruptionType.duck:
+            _player.setVolume(1.0);
+          case AudioInterruptionType.pause:
+          case AudioInterruptionType.unknown:
+            if (_pausedByInterruption) {
+              _pausedByInterruption = false;
+              _player.play();
+            }
+        }
+      }
+    });
+
+    // Headphones/Bluetooth disconnected — don't blast through the
+    // speaker unexpectedly.
+    session.becomingNoisyEventStream.listen((_) => _player.pause());
+  }
+
   Future<void> playStation(RadioStation station) async {
+    _reconnectTimer?.cancel();
+    _reconnectAttempts = 0;
     _currentStation = station;
     mediaItem.add(_toMediaItem(station));
     playbackState.add(
@@ -41,12 +82,7 @@ class DialWaveAudioHandler extends BaseAudioHandler with SeekHandler {
       await _player.setUrl(station.streamUrl);
       await _player.play();
     } catch (_) {
-      playbackState.add(
-        playbackState.value.copyWith(
-          processingState: AudioProcessingState.error,
-          playing: false,
-        ),
-      );
+      _scheduleReconnect();
     }
   }
 
@@ -68,6 +104,7 @@ class DialWaveAudioHandler extends BaseAudioHandler with SeekHandler {
 
   @override
   Future<void> stop() async {
+    _reconnectTimer?.cancel();
     await _player.stop();
     await super.stop();
   }
@@ -79,6 +116,50 @@ class DialWaveAudioHandler extends BaseAudioHandler with SeekHandler {
   Future<void> onTaskRemoved() async {
     // A real radio doesn't stop just because the user swiped the app
     // away — only an explicit stop() should tear the session down.
+  }
+
+  /// Weak/dropped connections don't just stall a live stream, they kill
+  /// it outright — ExoPlayer surfaces that as a playback error rather
+  /// than transparent buffering. Retry with backoff instead of leaving
+  /// the user stuck on a dead stream.
+  void _scheduleReconnect() {
+    final station = _currentStation;
+    if (station == null) return;
+
+    if (_reconnectAttempts >= _maxReconnectAttempts) {
+      playbackState.add(
+        playbackState.value.copyWith(
+          processingState: AudioProcessingState.error,
+          playing: false,
+        ),
+      );
+      return;
+    }
+
+    _reconnectAttempts++;
+    playbackState.add(
+      playbackState.value.copyWith(
+        processingState: AudioProcessingState.buffering,
+        playing: false,
+      ),
+    );
+
+    _reconnectTimer?.cancel();
+    _reconnectTimer = Timer(
+      Duration(seconds: _reconnectAttempts * 2),
+      () => _attemptReconnect(station),
+    );
+  }
+
+  Future<void> _attemptReconnect(RadioStation station) async {
+    if (_currentStation?.id != station.id) return; // user switched away
+    try {
+      await _player.setUrl(station.streamUrl);
+      await _player.play();
+      _reconnectAttempts = 0;
+    } catch (_) {
+      _scheduleReconnect();
+    }
   }
 
   void _broadcastState(PlaybackEvent event) {
