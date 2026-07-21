@@ -112,6 +112,9 @@ class DialWaveAudioHandler extends BaseAudioHandler with SeekHandler {
   @override
   Future<void> seek(Duration position) => _player.seek(position);
 
+  /// Drive Mode's vertical-swipe volume gesture (Section 6, CLAUDE.md).
+  Future<void> setVolume(double volume) => _player.setVolume(volume.clamp(0.0, 1.0));
+
   @override
   Future<void> onTaskRemoved() async {
     // A real radio doesn't stop just because the user swiped the app

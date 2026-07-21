@@ -56,6 +56,9 @@ dependencies:
   # ads (Section 9 of CLAUDE.md).
   google_mobile_ads: ^5.2.0
 
+  # Drive Mode auto-trigger via GPS speed (Section 6 of CLAUDE.md).
+  geolocator: ^13.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

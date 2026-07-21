@@ -54,5 +54,8 @@
 	     TODO: swap for the real AdMob App ID before release. -->
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-3940256099942544~1458002511</string>
+	<!-- Drive Mode auto-trigger via GPS speed (Section 6, CLAUDE.md). -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>DialWave, araç hızını algılayıp Sürüş Modu'na otomatik geçmek için konumunu kullanır.</string>
 </dict>
 </plist>

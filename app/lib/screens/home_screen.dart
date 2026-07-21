@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../state/country_providers.dart';
+import '../state/drive_mode_providers.dart';
 import '../state/favorites_providers.dart';
 import '../state/player_providers.dart';
 import '../utils/time_of_day_suggestion.dart';
@@ -23,7 +24,17 @@ class HomeScreen extends ConsumerWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('DialWave'),
-          actions: const [CountryPickerButton(), SleepTimerButton()],
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.directions_car_filled_outlined),
+              tooltip: 'Sürüş Modu',
+              onPressed: () => ref
+                  .read(driveModeManualOverrideProvider.notifier)
+                  .state = true,
+            ),
+            const CountryPickerButton(),
+            const SleepTimerButton(),
+          ],
           bottom: const TabBar(
             tabs: [
               Tab(text: 'Tümü'),
