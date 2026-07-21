@@ -1,0 +1,20 @@
+name: radio_sync
+description: >
+  Nightly job — pulls stations from radio-browser.info, verifies each stream
+  actually responds, and writes the survivors to radios.json at the repo
+  root. Runs for free on GitHub Actions; no server involved.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.10.0
+
+dependencies:
+  crypto: ^3.0.0
+  dialwave_core:
+    path: ../../packages/dialwave_core
+  http: ^1.2.0
+  pool: ^1.5.0
+
+dev_dependencies:
+  lints: ^5.0.0

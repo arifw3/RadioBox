@@ -1,0 +1,42 @@
+name: Update radios.json
+
+on:
+  schedule:
+    # 00:00 UTC == 03:00 Europe/Istanbul.
+    - cron: "0 0 * * *"
+  workflow_dispatch: {}
+
+# Only what the commit-back step needs — least privilege for the default
+# GITHUB_TOKEN.
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+
+      - name: Install radio_sync dependencies
+        run: dart pub get
+        working-directory: tool/radio_sync
+
+      - name: Run nightly sync
+        run: dart run bin/radio_sync.dart
+        working-directory: tool/radio_sync
+
+      - name: Commit radios.json if it changed
+        run: |
+          if git diff --quiet -- radios.json; then
+            echo "No station changes — nothing to commit."
+            exit 0
+          fi
+          git config user.name "dialwave-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add radios.json
+          git commit -m "chore: nightly radios.json sync"
+          git push

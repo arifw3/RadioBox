@@ -1,0 +1,31 @@
+import 'package:audio_service/audio_service.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'app.dart';
+import 'services/dialwave_audio_handler.dart';
+import 'state/player_providers.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final audioHandler = await AudioService.init(
+    builder: DialWaveAudioHandler.new,
+    config: const AudioServiceConfig(
+      androidNotificationChannelId: 'com.dialwave.audio',
+      androidNotificationChannelName: 'DialWave Playback',
+      // Keep the foreground service (and stream) alive on pause — a real
+      // radio doesn't stop just because the user swiped the app away.
+      // (Must stay false: audio_service asserts androidNotificationOngoing
+      // can't be true when this is false.)
+      androidStopForegroundOnPause: false,
+    ),
+  );
+
+  runApp(
+    ProviderScope(
+      overrides: [audioHandlerProvider.overrideWithValue(audioHandler)],
+      child: const DialWaveApp(),
+    ),
+  );
+}

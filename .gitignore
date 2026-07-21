@@ -1,0 +1,18 @@
+# Dart tooling — packages/ and tool/ don't have their own .gitignore, so
+# these live at the root. app/ ships its own (flutter create-generated)
+# .gitignore for Android/iOS build artifacts, which git applies on top of
+# this one.
+.dart_tool/
+.packages
+build/
+
+# Library lockfiles aren't meaningful to pin — only the app and the
+# radio_sync script (both "applications") commit theirs.
+packages/*/pubspec.lock
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
