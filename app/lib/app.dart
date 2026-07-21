@@ -4,17 +4,23 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'screens/drive_mode_screen.dart';
 import 'screens/home_screen.dart';
 import 'state/drive_mode_providers.dart';
+import 'state/palette_providers.dart';
 
-class DialWaveApp extends StatelessWidget {
+class DialWaveApp extends ConsumerWidget {
   const DialWaveApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    // App-wide dynamic color palette (Section 7, CLAUDE.md) — tinted by
+    // whatever station is currently playing.
+    final seedColor =
+        ref.watch(dynamicSeedColorProvider).valueOrNull ?? kDefaultSeedColor;
+
     return MaterialApp(
       title: 'DialWave',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorSchemeSeed: const Color(0xFF6C5CE7),
+        colorSchemeSeed: seedColor,
         brightness: Brightness.dark,
         useMaterial3: true,
       ),

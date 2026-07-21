@@ -2,6 +2,7 @@ import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../screens/now_playing_screen.dart';
 import '../state/player_providers.dart';
 
 /// Bottom now-playing bar — sits above where the ad banner will go
@@ -26,6 +27,9 @@ class MiniPlayer extends ConsumerWidget {
       child: SafeArea(
         top: false,
         child: ListTile(
+          onTap: () => Navigator.of(context).push(
+            MaterialPageRoute<void>(builder: (_) => const NowPlayingScreen()),
+          ),
           leading: mediaItem.artUri != null
               ? CircleAvatar(
                   backgroundImage: NetworkImage(mediaItem.artUri.toString()),

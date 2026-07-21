@@ -59,6 +59,10 @@ dependencies:
   # Drive Mode auto-trigger via GPS speed (Section 6 of CLAUDE.md).
   geolocator: ^13.0.1
 
+  # Dynamic color palette from the playing station's logo (Section 7 of
+  # CLAUDE.md).
+  palette_generator: ^0.3.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
