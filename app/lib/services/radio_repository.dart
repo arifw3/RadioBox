@@ -6,9 +6,8 @@ import 'package:http/http.dart' as http;
 
 /// Points at the nightly-generated radios.json, served through jsDelivr's
 /// free GitHub CDN mirror — no GitHub Pages, no server, no bandwidth caps.
-/// TODO: swap the `github-user` placeholder once the repo has a permanent home.
 const kRadiosJsonUrl =
-    'https://cdn.jsdelivr.net/gh/github-user/dialwave@main/radios.json';
+    'https://cdn.jsdelivr.net/gh/arifw3/dialwave@main/radios.json';
 
 class RadioRepository {
   RadioRepository(this._client);
