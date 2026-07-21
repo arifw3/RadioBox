@@ -15,8 +15,9 @@ import 'package:http/http.dart' as http;
 import 'package:pool/pool.dart';
 
 /// Countries whose stations we sync. Extend freely for "Dünya Turu" — no
-/// other code changes needed.
-const _countryCodes = ['TR'];
+/// other code changes needed (RadioStation already carries countryCode,
+/// and the app filters/groups by it).
+const _countryCodes = ['TR', 'US', 'GB', 'DE', 'FR'];
 
 /// radio-browser.info asks integrations to identify themselves with a
 /// descriptive User-Agent; generic ones get rate-limited or blocked.
