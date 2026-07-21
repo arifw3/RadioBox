@@ -13,6 +13,7 @@ packages/*/pubspec.lock
 # IDE / OS
 .idea/
 .vscode/
+.claude/
 *.iml
 .DS_Store
 Thumbs.db
