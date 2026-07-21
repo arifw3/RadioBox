@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../state/palette_providers.dart';
 import '../state/player_providers.dart';
 import '../widgets/circular_visualizer.dart';
+import '../widgets/social_sync_panel.dart';
 
 final _visualizerStyleProvider = StateProvider<int>((ref) => 0);
 
@@ -85,6 +86,8 @@ class NowPlayingScreen extends ConsumerWidget {
                 'Görselleştiriciye dokun: dalga formunu değiştir',
                 style: TextStyle(color: Colors.white54),
               ),
+              const SizedBox(height: 24),
+              const SocialSyncPanel(),
             ],
           ),
         ),

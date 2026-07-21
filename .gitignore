@@ -17,3 +17,9 @@ packages/*/pubspec.lock
 *.iml
 .DS_Store
 Thumbs.db
+
+# Raw scraped source for the one-off custom-station import
+# (tool/radio_sync/bin/import_custom_stations.dart) — already folded into
+# radios.json + images/, no need to commit the unfiltered originals.
+tum_radyolar.json
+images_raw_source/

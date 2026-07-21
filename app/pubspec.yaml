@@ -68,6 +68,12 @@ dependencies:
   timezone: ^0.9.4
   flutter_timezone: ^3.0.1
 
+  # Social Sync: shared listening rooms + live listener count (Section 8
+  # of CLAUDE.md). Firebase Realtime Database on the free Spark plan.
+  firebase_core: ^3.8.0
+  firebase_database: ^11.1.6
+  share_plus: ^10.1.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
