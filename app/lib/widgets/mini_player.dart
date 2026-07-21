@@ -4,9 +4,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../screens/now_playing_screen.dart';
 import '../state/player_providers.dart';
+import '../theme/app_theme.dart';
 
-/// Bottom now-playing bar — sits above where the ad banner will go
-/// (Section 9, CLAUDE.md).
+/// Floating now-playing pill — sits just above the ad banner (Section 9,
+/// CLAUDE.md), styled to match the rounded "premium dark UI kit" look
+/// instead of a flat, edge-to-edge Material bar.
 class MiniPlayer extends ConsumerWidget {
   const MiniPlayer({super.key});
 
@@ -22,45 +24,104 @@ class MiniPlayer extends ConsumerWidget {
             AudioProcessingState.loading ||
         playbackState?.processingState == AudioProcessingState.buffering;
 
-    return Material(
-      elevation: 8,
-      child: SafeArea(
-        top: false,
-        child: ListTile(
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(12, 0, 12, 8),
+      child: Material(
+        color: AppColors.surfaceRaised,
+        borderRadius: BorderRadius.circular(AppRadii.pill),
+        clipBehavior: Clip.antiAlias,
+        elevation: 6,
+        child: InkWell(
           onTap: () => Navigator.of(context).push(
             MaterialPageRoute<void>(builder: (_) => const NowPlayingScreen()),
           ),
-          leading: mediaItem.artUri != null
-              ? CircleAvatar(
-                  backgroundImage: NetworkImage(mediaItem.artUri.toString()),
-                )
-              : const CircleAvatar(child: Icon(Icons.radio)),
-          title: Text(
-            mediaItem.title,
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-          ),
-          subtitle: Text(mediaItem.artist ?? ''),
-          trailing: isBusy
-              ? const SizedBox(
-                  width: 24,
-                  height: 24,
-                  child: CircularProgressIndicator(strokeWidth: 2),
-                )
-              : IconButton(
-                  icon: Icon(
-                    playing
-                        ? Icons.pause_circle_filled
-                        : Icons.play_circle_filled,
-                  ),
-                  iconSize: 36,
-                  onPressed: () {
-                    final handler = ref.read(audioHandlerProvider);
-                    playing ? handler.pause() : handler.play();
-                  },
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+            child: Row(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(AppRadii.pill),
+                  child: mediaItem.artUri != null
+                      ? Image.network(
+                          mediaItem.artUri.toString(),
+                          width: 44,
+                          height: 44,
+                          fit: BoxFit.cover,
+                          errorBuilder: (_, _, _) => const _FallbackDisc(),
+                        )
+                      : const _FallbackDisc(),
                 ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        mediaItem.title,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                      if ((mediaItem.artist ?? '').isNotEmpty)
+                        Text(
+                          mediaItem.artist!,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: Theme.of(context).textTheme.bodySmall,
+                        ),
+                    ],
+                  ),
+                ),
+                if (isBusy)
+                  const Padding(
+                    padding: EdgeInsets.all(10),
+                    child: SizedBox(
+                      width: 24,
+                      height: 24,
+                      child: CircularProgressIndicator(strokeWidth: 2),
+                    ),
+                  )
+                else
+                  Container(
+                    width: 44,
+                    height: 44,
+                    decoration: const BoxDecoration(
+                      color: AppColors.accent,
+                      shape: BoxShape.circle,
+                    ),
+                    child: IconButton(
+                      icon: Icon(
+                        playing
+                            ? Icons.pause_rounded
+                            : Icons.play_arrow_rounded,
+                        color: Colors.white,
+                      ),
+                      onPressed: () {
+                        final handler = ref.read(audioHandlerProvider);
+                        playing ? handler.pause() : handler.play();
+                      },
+                    ),
+                  ),
+              ],
+            ),
+          ),
         ),
       ),
+    );
+  }
+}
+
+class _FallbackDisc extends StatelessWidget {
+  const _FallbackDisc();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 44,
+      height: 44,
+      decoration: const BoxDecoration(gradient: AppColors.brandGradient),
+      child: const Icon(Icons.radio, color: Colors.white, size: 20),
     );
   }
 }

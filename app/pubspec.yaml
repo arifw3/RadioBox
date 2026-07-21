@@ -74,6 +74,9 @@ dependencies:
   firebase_database: ^11.1.6
   share_plus: ^10.1.2
 
+  # Brand typeface for the redesigned UI.
+  google_fonts: ^6.2.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -84,6 +87,9 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
+
+  # Generates real Android/iOS launcher icons from assets/branding/icon.png.
+  flutter_launcher_icons: ^0.14.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -96,10 +102,8 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/branding/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -126,3 +130,13 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/branding/icon.png"
+  # The mark has transparent corners around a circular badge — Android
+  # adaptive icons need an opaque background or launchers render it on
+  # whatever wallpaper is behind it.
+  adaptive_icon_background: "#0D0D12"
+  adaptive_icon_foreground: "assets/branding/icon.png"

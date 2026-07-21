@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:palette_generator/palette_generator.dart';
 
+import '../theme/app_theme.dart';
 import 'player_providers.dart';
 
-const kDefaultSeedColor = Color(0xFF6C5CE7);
+/// Brand pink from the DialWave mark — the app's identity before any
+/// station-specific tint kicks in.
+const kDefaultSeedColor = AppColors.pink;
 
 /// Dominant color of the current station's logo (Section 7, CLAUDE.md) —
 /// falls back to the app's default seed if there's no art or extraction

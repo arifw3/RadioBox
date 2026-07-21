@@ -23,7 +23,7 @@
          station list changes nightly, so a fixed domain-config allowlist
          isn't workable — allow cleartext app-wide instead. -->
     <application
-        android:label="dialwave"
+        android:label="Dial Wave"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="true">

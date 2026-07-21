@@ -6,6 +6,7 @@ import 'screens/home_screen.dart';
 import 'state/alarm_providers.dart';
 import 'state/drive_mode_providers.dart';
 import 'state/palette_providers.dart';
+import 'theme/app_theme.dart';
 
 class DialWaveApp extends ConsumerWidget {
   const DialWaveApp({super.key});
@@ -13,18 +14,15 @@ class DialWaveApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // App-wide dynamic color palette (Section 7, CLAUDE.md) — tinted by
-    // whatever station is currently playing.
+    // whatever station is currently playing; falls back to the brand mark's
+    // own gradient color when nothing's playing yet.
     final seedColor =
         ref.watch(dynamicSeedColorProvider).valueOrNull ?? kDefaultSeedColor;
 
     return MaterialApp(
       title: 'DialWave',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorSchemeSeed: seedColor,
-        brightness: Brightness.dark,
-        useMaterial3: true,
-      ),
+      theme: buildAppTheme(seedColor),
       home: const _RootScreen(),
     );
   }

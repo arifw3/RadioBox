@@ -6,6 +6,7 @@ import '../state/country_providers.dart';
 import '../state/drive_mode_providers.dart';
 import '../state/favorites_providers.dart';
 import '../state/player_providers.dart';
+import '../theme/app_theme.dart';
 import '../utils/time_of_day_suggestion.dart';
 import '../widgets/alarm_button.dart';
 import '../widgets/banner_ad_widget.dart';
@@ -13,67 +14,168 @@ import '../widgets/country_picker_button.dart';
 import '../widgets/mini_player.dart';
 import '../widgets/sleep_timer_button.dart';
 
+final _selectedTabProvider = StateProvider<int>((ref) => 0);
+
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final catalog = ref.watch(radioCatalogProvider);
+    final selectedTab = ref.watch(_selectedTabProvider);
 
-    return DefaultTabController(
-      length: 2,
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('DialWave'),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.directions_car_filled_outlined),
-              tooltip: 'Sürüş Modu',
-              onPressed: () => ref
-                  .read(driveModeManualOverrideProvider.notifier)
-                  .state = true,
-            ),
-            const CountryPickerButton(),
-            const AlarmButton(),
-            const SleepTimerButton(),
-          ],
-          bottom: const TabBar(
-            tabs: [
-              Tab(text: 'Tümü'),
-              Tab(text: 'Favoriler'),
-            ],
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Image.asset(
+          'assets/branding/logo_horizontal.png',
+          height: 32,
+          fit: BoxFit.contain,
+          alignment: Alignment.centerLeft,
         ),
-        body: catalog.when(
-          data: (data) => TabBarView(
-            children: [
-              _AllStationsTab(allStations: data.stations),
-              _FavoritesTab(allStations: data.stations),
-            ],
+        actions: [
+          _AppBarIconButton(
+            icon: Icons.directions_car_filled_outlined,
+            tooltip: 'Sürüş Modu',
+            onPressed: () => ref
+                .read(driveModeManualOverrideProvider.notifier)
+                .state = true,
           ),
-          loading: () => const Center(child: CircularProgressIndicator()),
-          error: (error, _) => Center(
-            child: Padding(
-              padding: const EdgeInsets.all(24),
-              child: Text(
-                'Radyo listesi yüklenemedi.\n$error',
-                textAlign: TextAlign.center,
+          const _AppBarIconWrapper(child: CountryPickerButton()),
+          const _AppBarIconWrapper(child: AlarmButton()),
+          const _AppBarIconWrapper(child: SleepTimerButton()),
+          const SizedBox(width: 8),
+        ],
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 4, 16, 12),
+            child: _SegmentedTabs(
+              labels: const ['Tümü', 'Favoriler'],
+              selectedIndex: selectedTab,
+              onChanged: (i) => ref.read(_selectedTabProvider.notifier).state = i,
+            ),
+          ),
+          Expanded(
+            child: catalog.when(
+              data: (data) => selectedTab == 0
+                  ? _AllStationsTab(allStations: data.stations)
+                  : _FavoritesTab(allStations: data.stations),
+              loading: () => const Center(child: CircularProgressIndicator()),
+              error: (error, _) => Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(24),
+                  child: Text(
+                    'Radyo listesi yüklenemedi.\n$error',
+                    textAlign: TextAlign.center,
+                  ),
+                ),
               ),
             ),
           ),
+        ],
+      ),
+      bottomNavigationBar: const Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [MiniPlayer(), BannerAdWidget()],
+      ),
+    );
+  }
+}
+
+class _AppBarIconWrapper extends StatelessWidget {
+  const _AppBarIconWrapper({required this.child});
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 2),
+      child: Container(
+        decoration: const BoxDecoration(
+          color: AppColors.surfaceRaised,
+          shape: BoxShape.circle,
         ),
-        bottomNavigationBar: const Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [MiniPlayer(), BannerAdWidget()],
-        ),
+        child: child,
+      ),
+    );
+  }
+}
+
+class _AppBarIconButton extends StatelessWidget {
+  const _AppBarIconButton({
+    required this.icon,
+    required this.tooltip,
+    required this.onPressed,
+  });
+
+  final IconData icon;
+  final String tooltip;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return _AppBarIconWrapper(
+      child: IconButton(icon: Icon(icon), tooltip: tooltip, onPressed: onPressed),
+    );
+  }
+}
+
+/// A rounded pill segmented control — replaces the flat Material TabBar to
+/// match the "premium dark UI kit" look (rounded filter chips everywhere).
+class _SegmentedTabs extends StatelessWidget {
+  const _SegmentedTabs({
+    required this.labels,
+    required this.selectedIndex,
+    required this.onChanged,
+  });
+
+  final List<String> labels;
+  final int selectedIndex;
+  final ValueChanged<int> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(4),
+      decoration: BoxDecoration(
+        color: AppColors.surface,
+        borderRadius: BorderRadius.circular(AppRadii.pill),
+      ),
+      child: Row(
+        children: [
+          for (var i = 0; i < labels.length; i++)
+            Expanded(
+              child: GestureDetector(
+                onTap: () => onChanged(i),
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 200),
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  decoration: BoxDecoration(
+                    color: i == selectedIndex ? AppColors.accent : null,
+                    borderRadius: BorderRadius.circular(AppRadii.pill),
+                  ),
+                  alignment: Alignment.center,
+                  child: Text(
+                    labels[i],
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: i == selectedIndex ? Colors.white : AppColors.textMuted,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+        ],
       ),
     );
   }
 }
 
 /// The onboarding-detected (or manually picked) country's station list,
-/// with an optional time-of-day suggestion strip on top (Section 5 & 7,
-/// CLAUDE.md) — all computed on-device, no cloud calls.
+/// topped with a hero card (Section 5 & 7, CLAUDE.md) — all computed
+/// on-device, no cloud calls.
 class _AllStationsTab extends ConsumerWidget {
   const _AllStationsTab({required this.allStations});
 
@@ -86,6 +188,10 @@ class _AllStationsTab extends ConsumerWidget {
         ? allStations
         : allStations.where((s) => s.countryCode == selectedCountry).toList();
 
+    if (stations.isEmpty) {
+      return const Center(child: Text('Şu an listelenecek radyo yok.'));
+    }
+
     final suggestion = suggestionForHour(DateTime.now().hour);
     final suggested = suggestion == null
         ? const <RadioStation>[]
@@ -96,82 +202,122 @@ class _AllStationsTab extends ConsumerWidget {
                     .any((keyword) => tag.toLowerCase().contains(keyword)),
               ),
             )
-            .take(6)
             .toList();
 
-    return Column(
+    final sortedByPopularity = [...stations]
+      ..sort((a, b) => b.clickCount.compareTo(a.clickCount));
+    final hero = (suggested.isNotEmpty ? suggested : sortedByPopularity).first;
+    final heroLabel = suggested.isNotEmpty ? suggestion!.label : 'Öne Çıkan';
+
+    final rest = stations.where((s) => s.id != hero.id).toList();
+
+    return ListView(
+      padding: const EdgeInsets.only(bottom: 8),
       children: [
-        if (suggested.isNotEmpty)
-          _SuggestionStrip(label: suggestion!.label, stations: suggested),
-        Expanded(child: _StationList(stations: stations)),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: _HeroCard(label: heroLabel, station: hero),
+        ),
+        const SizedBox(height: 20),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Text('Tüm İstasyonlar', style: Theme.of(context).textTheme.titleMedium),
+        ),
+        const SizedBox(height: 4),
+        _StationList(stations: rest),
       ],
     );
   }
 }
 
-class _SuggestionStrip extends ConsumerWidget {
-  const _SuggestionStrip({required this.label, required this.stations});
+class _HeroCard extends ConsumerWidget {
+  const _HeroCard({required this.label, required this.station});
 
   final String label;
-  final List<RadioStation> stations;
+  final RadioStation station;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
-          child: Text(
-            'Şimdi: $label',
-            style: Theme.of(context).textTheme.titleSmall,
-          ),
-        ),
-        SizedBox(
-          height: 88,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.symmetric(horizontal: 12),
-            itemCount: stations.length,
-            itemBuilder: (context, index) {
-              final station = stations[index];
-              return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 4),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    InkWell(
-                      borderRadius: BorderRadius.circular(28),
-                      onTap: () =>
-                          ref.read(audioHandlerProvider).playStation(station),
-                      child: station.favicon.isNotEmpty
-                          ? CircleAvatar(
-                              radius: 28,
-                              backgroundImage: NetworkImage(station.favicon),
-                            )
-                          : const CircleAvatar(
-                              radius: 28,
-                              child: Icon(Icons.radio),
-                            ),
+    return GestureDetector(
+      onTap: () => ref.read(audioHandlerProvider).playStation(station),
+      child: AspectRatio(
+        aspectRatio: 16 / 9,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(AppRadii.card),
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              Container(color: AppColors.surfaceRaised),
+              // Most station logos are small square favicons — stretching
+              // one across a 16:9 hero with BoxFit.cover looks blurry and
+              // distorted, so show it at its natural aspect ratio instead.
+              // (Tried a blurred-backdrop-plus-sharp-logo layout first, but
+              // fetching the same favicon twice concurrently made some
+              // CDNs — e.g. kanal7.com — fail to decode it at all.)
+              if (station.favicon.isNotEmpty)
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(36),
+                    child: Image.network(
+                      station.favicon,
+                      fit: BoxFit.contain,
+                      errorBuilder: (_, _, _) => const SizedBox.shrink(),
                     ),
-                    SizedBox(
-                      width: 64,
-                      child: Text(
-                        station.name,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.labelSmall,
-                      ),
+                  ),
+                ),
+              DecoratedBox(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Colors.black.withValues(alpha: 0.15),
+                      Colors.black.withValues(alpha: 0.85),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 20,
+                right: 20,
+                bottom: 18,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Şimdi: $label',
+                      style: Theme.of(context)
+                          .textTheme
+                          .labelSmall
+                          ?.copyWith(color: Colors.white70),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      station.name,
+                      style: Theme.of(context).textTheme.headlineSmall,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),
-              );
-            },
+              ),
+              Positioned(
+                right: 16,
+                bottom: 16,
+                child: Container(
+                  width: 52,
+                  height: 52,
+                  decoration: const BoxDecoration(
+                    color: AppColors.accent,
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(Icons.play_arrow_rounded, color: Colors.white, size: 30),
+                ),
+              ),
+            ],
           ),
         ),
-        const Divider(height: 1),
-      ],
+      ),
     );
   }
 }
@@ -219,29 +365,75 @@ class _StationList extends ConsumerWidget {
     final favoriteIds = ref.watch(favoritesProvider).valueOrNull ?? const {};
 
     return ListView.builder(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       itemCount: stations.length,
       itemBuilder: (context, index) {
         final station = stations[index];
         final isFavorite = favoriteIds.contains(station.id);
         return ListTile(
-          leading: station.favicon.isNotEmpty
-              ? CircleAvatar(backgroundImage: NetworkImage(station.favicon))
-              : const CircleAvatar(child: Icon(Icons.radio)),
-          title: Text(station.name),
+          contentPadding: const EdgeInsets.symmetric(horizontal: 8),
+          leading: ClipRRect(
+            borderRadius: BorderRadius.circular(14),
+            child: station.favicon.isNotEmpty
+                ? Image.network(
+                    station.favicon,
+                    width: 52,
+                    height: 52,
+                    fit: BoxFit.cover,
+                    errorBuilder: (_, _, _) => _FallbackArt(name: station.name),
+                  )
+                : _FallbackArt(name: station.name),
+          ),
+          title: Text(
+            station.name,
+            style: Theme.of(context).textTheme.titleMedium,
+          ),
           subtitle: Text(
             station.tags.isNotEmpty
                 ? station.tags.join(', ')
                 : station.countryCode,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: Theme.of(context).textTheme.bodySmall,
           ),
           trailing: IconButton(
-            icon: Icon(isFavorite ? Icons.favorite : Icons.favorite_border),
-            color: isFavorite ? Colors.redAccent : null,
+            icon: Icon(
+              isFavorite ? Icons.favorite : Icons.favorite_border,
+              size: 22,
+            ),
+            color: isFavorite ? AppColors.pink : AppColors.textMuted,
             onPressed: () =>
                 ref.read(favoritesProvider.notifier).toggle(station.id),
           ),
           onTap: () => ref.read(audioHandlerProvider).playStation(station),
         );
       },
+    );
+  }
+}
+
+class _FallbackArt extends StatelessWidget {
+  const _FallbackArt({required this.name});
+
+  final String name;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 52,
+      height: 52,
+      decoration: const BoxDecoration(gradient: AppColors.brandGradient),
+      alignment: Alignment.center,
+      child: Text(
+        name.isNotEmpty ? name[0].toUpperCase() : '?',
+        style: const TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.w700,
+          fontSize: 18,
+        ),
+      ),
     );
   }
 }
