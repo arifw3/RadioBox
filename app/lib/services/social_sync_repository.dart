@@ -1,14 +1,26 @@
 import 'dart:async';
 import 'dart:math';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
+
+/// The Realtime Database instance lives in europe-west1, created after
+/// firebase_options.dart was generated, so FirebaseDatabase.instance (which
+/// assumes the legacy us-central1 default URL) would point at the wrong
+/// place. Pinning the URL explicitly avoids that mismatch.
+const _databaseUrl =
+    'https://dialwave-radio-2026-default-rtdb.europe-west1.firebasedatabase.app';
 
 /// "Birlikte Dinle" (Section 8, CLAUDE.md) — a "room" is just a shared
 /// pointer to a station ID plus a set of present listener IDs. Radio is
 /// already a live broadcast, so listening to the same station *is* the
 /// sync; there's no per-listener playback position to reconcile.
 class SocialSyncRepository {
-  SocialSyncRepository() : _db = FirebaseDatabase.instance;
+  SocialSyncRepository()
+      : _db = FirebaseDatabase.instanceFor(
+          app: Firebase.app(),
+          databaseURL: _databaseUrl,
+        );
 
   final FirebaseDatabase _db;
 
