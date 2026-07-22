@@ -23,3 +23,17 @@ Thumbs.db
 # radios.json + images/, no need to commit the unfiltered originals.
 tum_radyolar.json
 images_raw_source/
+
+# Source files for branding assets (already copied into
+# app/assets/branding/, app/android/.../mipmap-*, app/ios/.../AppIcon.appiconset)
+# and one-off UI mockup references — not part of the app or the CDN
+# station-image mirror.
+/icon.png
+/logo.png
+/logo2.png
+images/icons/
+images/*.webp
+
+# Local test artifacts from device runs.
+run_debug*.log
+screenshot*.png

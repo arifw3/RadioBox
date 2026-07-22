@@ -93,7 +93,7 @@ Future<void> main(List<String> args) async {
       final destFile = File('$outputImagesDir/$imageFileName');
       await sourceImageFile.copy(destFile.path);
       favicon =
-          'https://cdn.jsdelivr.net/gh/arifw3/dialwave@main/images/$imageFileName';
+          'https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/$imageFileName';
     } else {
       skippedMissingImage++;
     }

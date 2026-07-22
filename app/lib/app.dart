@@ -12,8 +12,8 @@ import 'state/play_history_providers.dart';
 import 'state/player_providers.dart';
 import 'theme/app_theme.dart';
 
-class DialWaveApp extends ConsumerWidget {
-  const DialWaveApp({super.key});
+class RadioBoxApp extends ConsumerWidget {
+  const RadioBoxApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -24,7 +24,7 @@ class DialWaveApp extends ConsumerWidget {
         ref.watch(dynamicSeedColorProvider).valueOrNull ?? kDefaultSeedColor;
 
     return MaterialApp(
-      title: 'DialWave',
+      title: 'RadioBox',
       debugShowCheckedModeBanner: false,
       theme: buildAppTheme(seedColor),
       locale: ref.watch(localeProvider),

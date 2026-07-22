@@ -292,20 +292,30 @@ class _AllStationsTab extends ConsumerWidget {
             : b.clickCount.compareTo(a.clickCount);
       });
 
-    return ListView(
-      padding: const EdgeInsets.only(bottom: 8),
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: _HeroCard(label: heroLabel, station: hero),
+    // A plain ListView with a nested shrinkWrap ListView.builder inside it
+    // (the previous layout) defeats lazy loading entirely: shrinkWrap
+    // forces every single item — all ~2000 stations, each with its own
+    // Image.network — to build up front instead of only the ones on
+    // screen. A single CustomScrollView with real slivers keeps the hero
+    // card as one item and the station rows properly virtualized.
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: _HeroCard(label: heroLabel, station: hero),
+          ),
         ),
-        const SizedBox(height: 20),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Text(l10n.allStationsHeading, style: Theme.of(context).textTheme.titleMedium),
+        const SliverToBoxAdapter(child: SizedBox(height: 20)),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Text(l10n.allStationsHeading, style: Theme.of(context).textTheme.titleMedium),
+          ),
         ),
-        const SizedBox(height: 4),
-        _StationList(stations: rest),
+        const SliverToBoxAdapter(child: SizedBox(height: 4)),
+        _StationSliverList(stations: rest),
+        const SliverToBoxAdapter(child: SizedBox(height: 8)),
       ],
     );
   }
@@ -430,68 +440,73 @@ class _FavoritesTab extends ConsumerWidget {
         ),
       );
     }
-    return _StationList(stations: favorites);
+    return CustomScrollView(
+      slivers: [_StationSliverList(stations: favorites)],
+    );
   }
 }
 
-class _StationList extends ConsumerWidget {
-  const _StationList({required this.stations});
+/// Real virtualization (Section: on-device performance) — a bare
+/// SliverList.builder, always used inside a CustomScrollView. Never wrap
+/// this in shrinkWrap: true; that forces every row (and its
+/// Image.network) to build immediately instead of only the visible ones,
+/// which is what made the station list slow to open and slow to react to
+/// taps on a ~2000-station catalog.
+class _StationSliverList extends ConsumerWidget {
+  const _StationSliverList({required this.stations});
 
   final List<RadioStation> stations;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    if (stations.isEmpty) {
-      return Center(child: Text(AppLocalizations.of(context)!.noStationsToList));
-    }
     final favoriteIds = ref.watch(favoritesProvider).valueOrNull ?? const {};
 
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
+    return SliverPadding(
       padding: const EdgeInsets.symmetric(horizontal: 8),
-      itemCount: stations.length,
-      itemBuilder: (context, index) {
-        final station = stations[index];
-        final isFavorite = favoriteIds.contains(station.id);
-        return ListTile(
-          contentPadding: const EdgeInsets.symmetric(horizontal: 8),
-          leading: ClipRRect(
-            borderRadius: BorderRadius.circular(14),
-            child: station.favicon.isNotEmpty
-                ? Image.network(
-                    station.favicon,
-                    width: 52,
-                    height: 52,
-                    fit: BoxFit.cover,
-                    errorBuilder: (_, _, _) => _FallbackArt(name: station.name),
-                  )
-                : _FallbackArt(name: station.name),
-          ),
-          title: Text(
-            station.name,
-            style: Theme.of(context).textTheme.titleMedium,
-          ),
-          subtitle: Text(
-            station.tags.isNotEmpty
-                ? station.tags.join(', ')
-                : station.countryCode,
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.bodySmall,
-          ),
-          trailing: IconButton(
-            icon: Icon(
-              isFavorite ? Icons.favorite : Icons.favorite_border,
-              size: 22,
+      sliver: SliverList.builder(
+        itemCount: stations.length,
+        itemBuilder: (context, index) {
+          final station = stations[index];
+          final isFavorite = favoriteIds.contains(station.id);
+          return ListTile(
+            contentPadding: const EdgeInsets.symmetric(horizontal: 8),
+            leading: ClipRRect(
+              borderRadius: BorderRadius.circular(14),
+              child: station.favicon.isNotEmpty
+                  ? Image.network(
+                      station.favicon,
+                      width: 52,
+                      height: 52,
+                      fit: BoxFit.cover,
+                      errorBuilder: (_, _, _) => _FallbackArt(name: station.name),
+                    )
+                  : _FallbackArt(name: station.name),
             ),
-            color: isFavorite ? AppColors.pink : AppColors.textMuted,
-            onPressed: () =>
-                ref.read(favoritesProvider.notifier).toggle(station.id),
-          ),
-          onTap: () => ref.read(audioHandlerProvider).playStation(station),
-        );
-      },
+            title: Text(
+              station.name,
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
+            subtitle: Text(
+              station.tags.isNotEmpty
+                  ? station.tags.join(', ')
+                  : station.countryCode,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
+            trailing: IconButton(
+              icon: Icon(
+                isFavorite ? Icons.favorite : Icons.favorite_border,
+                size: 22,
+              ),
+              color: isFavorite ? AppColors.pink : AppColors.textMuted,
+              onPressed: () =>
+                  ref.read(favoritesProvider.notifier).toggle(station.id),
+            ),
+            onTap: () => ref.read(audioHandlerProvider).playStation(station),
+          );
+        },
+      ),
     );
   }
 }

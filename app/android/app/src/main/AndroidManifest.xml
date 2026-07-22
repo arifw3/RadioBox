@@ -27,7 +27,7 @@
          station list changes nightly, so a fixed domain-config allowlist
          isn't workable — allow cleartext app-wide instead. -->
     <application
-        android:label="Dial Wave"
+        android:label="Radio Box"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
