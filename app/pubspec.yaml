@@ -79,6 +79,9 @@ dependencies:
   firebase_database: ^11.1.6
   share_plus: ^10.1.2
 
+  # Crash/error reporting — free on the Spark plan, no server to run.
+  firebase_crashlytics: ^4.1.5
+
   # Brand typeface for the redesigned UI.
   google_fonts: ^6.2.1
 
@@ -86,6 +89,17 @@ dependencies:
   # is impractical, so search leads with on-device speech recognition and
   # falls back to a keyboard.
   speech_to_text: ^7.0.0
+
+  # Disk-persistent image cache — station logos shouldn't re-download on
+  # every cold start.
+  cached_network_image: ^3.4.1
+
+  # Local persistence: cache-first catalog load, Wi-Fi-only setting,
+  # in-app review triggers.
+  path_provider: ^2.1.5
+  connectivity_plus: ^6.1.0
+  in_app_review: ^2.0.10
+  url_launcher: ^6.3.1
 
 dev_dependencies:
   flutter_test:

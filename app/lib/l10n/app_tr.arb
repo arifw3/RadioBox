@@ -34,5 +34,10 @@
   "languageLabel": "Dil",
 
   "stationNotSelected": "İstasyon seçilmedi",
-  "visualizerHint": "Görselleştiriciye dokun: dalga formunu değiştir"
+  "visualizerHint": "Görselleştiriciye dokun: dalga formunu değiştir",
+
+  "wifiOnlyLabel": "Sadece Wi-Fi'de çal",
+  "wifiOnlyBlocked": "Sadece Wi-Fi modu açık ve şu an Wi-Fi'ye bağlı değilsin.",
+  "dataUsageSwitchWarning": "Mobil veriye geçildi — yayın mobil veri planını kullanmaya devam ediyor.",
+  "contactLabel": "İçerik bildir / İletişim"
 }

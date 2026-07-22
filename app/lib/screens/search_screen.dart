@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dialwave_core/dialwave_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -6,8 +7,8 @@ import 'package:speech_to_text/speech_to_text.dart' as stt;
 import '../l10n/app_localizations.dart';
 import '../state/player_providers.dart';
 import '../theme/app_theme.dart';
+import '../utils/playback_navigation.dart';
 import '../widgets/banner_ad_widget.dart';
-import 'now_playing_screen.dart';
 
 enum _SearchMode { voice, keyboard }
 
@@ -215,29 +216,24 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                           leading: ClipRRect(
                             borderRadius: BorderRadius.circular(12),
                             child: station.favicon.isNotEmpty
-                                ? Image.network(
-                                    station.favicon,
+                                ? CachedNetworkImage(
+                                    imageUrl: station.favicon,
                                     width: 48,
                                     height: 48,
                                     fit: BoxFit.cover,
-                                    errorBuilder: (_, _, _) =>
+                                    errorWidget: (_, _, _) =>
                                         _ResultFallback(name: station.name),
                                   )
                                 : _ResultFallback(name: station.name),
                           ),
                           title: Text(station.name),
                           subtitle: Text(station.countryCode),
-                          onTap: () {
-                            ref.read(audioHandlerProvider).playStation(station);
-                            // Replace Search with Now Playing rather than
-                            // pop-then-push: back from the player should
-                            // return to Home, not flash Search again.
-                            Navigator.of(context).pushReplacement(
-                              MaterialPageRoute<void>(
-                                builder: (_) => const NowPlayingScreen(),
-                              ),
-                            );
-                          },
+                          onTap: () => playStationAndShowNowPlaying(
+                            context,
+                            ref,
+                            station,
+                            replace: true,
+                          ),
                         );
                       },
                     ),

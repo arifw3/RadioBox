@@ -1,9 +1,15 @@
 import 'dart:async';
+import 'dart:convert';
+import 'dart:ui' as ui;
 
 import 'package:audio_service/audio_service.dart';
 import 'package:audio_session/audio_session.dart';
 import 'package:dialwave_core/dialwave_core.dart';
+import 'package:http/http.dart' as http;
 import 'package:just_audio/just_audio.dart';
+
+import 'favorites_repository.dart';
+import 'radio_repository.dart';
 
 /// Wraps [AudioPlayer] behind audio_service's [BaseAudioHandler] so
 /// playback survives the app going to background and keeps working with
@@ -16,10 +22,31 @@ class DialWaveAudioHandler extends BaseAudioHandler with SeekHandler {
       _broadcastState,
       onError: (Object error, StackTrace stackTrace) => _scheduleReconnect(),
     );
+    _player.icyMetadataStream.listen(_onIcyMetadata);
     unawaited(_initAudioSession());
   }
 
   final AudioPlayer _player = AudioPlayer();
+  final RadioRepository _radioRepository = RadioRepository(http.Client());
+  final FavoritesRepository _favoritesRepository = FavoritesRepository();
+  RadioCatalog? _browsingCatalogCache;
+
+  static const _favoritesFolderId = 'favorites';
+  static const _allStationsFolderId = 'all_stations';
+  static const _folderTitlesByLanguage = {
+    _favoritesFolderId: {
+      'tr': 'Favoriler',
+      'en': 'Favorites',
+      'es': 'Favoritas',
+      'de': 'Favoriten',
+    },
+    _allStationsFolderId: {
+      'tr': 'Tüm İstasyonlar',
+      'en': 'All Stations',
+      'es': 'Todas las emisoras',
+      'de': 'Alle Sender',
+    },
+  };
 
   RadioStation? _currentStation;
   RadioStation? get currentStation => _currentStation;
@@ -95,6 +122,100 @@ class DialWaveAudioHandler extends BaseAudioHandler with SeekHandler {
         // Live streams have no known duration or seek range.
         duration: null,
       );
+
+  /// Android Auto/Automotive binds to this service independently of the
+  /// Flutter UI, so browsing needs its own catalog source rather than
+  /// reading a Riverpod provider — reuses the same cache-first repository
+  /// the app itself warms on cold start.
+  Future<RadioCatalog> _catalogForBrowsing() async {
+    final cached = _browsingCatalogCache;
+    if (cached != null) return cached;
+    final fromDisk = await _radioRepository.loadCached();
+    if (fromDisk != null) {
+      _browsingCatalogCache = fromDisk;
+      return fromDisk;
+    }
+    final fresh = await _radioRepository.fetchAndCache();
+    _browsingCatalogCache = fresh;
+    return fresh;
+  }
+
+  MediaItem _folderItem(String id) {
+    final lang = ui.PlatformDispatcher.instance.locale.languageCode;
+    final titles = _folderTitlesByLanguage[id]!;
+    return MediaItem(id: id, title: titles[lang] ?? titles['en']!, playable: false);
+  }
+
+  /// Android Auto's browse tree: two folders mirroring the app's own
+  /// Home tabs (Favorites, All Stations) rather than a single flat list
+  /// of ~2000 stations.
+  @override
+  Future<List<MediaItem>> getChildren(
+    String parentMediaId, [
+    Map<String, dynamic>? options,
+  ]) async {
+    switch (parentMediaId) {
+      case AudioService.browsableRootId:
+        return [
+          _folderItem(_favoritesFolderId),
+          _folderItem(_allStationsFolderId),
+        ];
+      case _favoritesFolderId:
+        final catalog = await _catalogForBrowsing();
+        final favoriteIds = await _favoritesRepository.load();
+        return catalog.stations
+            .where((s) => favoriteIds.contains(s.id))
+            .map(_toMediaItem)
+            .toList();
+      case _allStationsFolderId:
+        final catalog = await _catalogForBrowsing();
+        return catalog.stations.map(_toMediaItem).toList();
+      default:
+        return [];
+    }
+  }
+
+  @override
+  Future<void> playFromMediaId(
+    String mediaId, [
+    Map<String, dynamic>? extras,
+  ]) async {
+    final catalog = await _catalogForBrowsing();
+    for (final station in catalog.stations) {
+      if (station.id == mediaId) {
+        await playStation(station);
+        return;
+      }
+    }
+  }
+
+  /// Most stations without ICY metadata never fire this at all — the
+  /// artist field just keeps showing the country code fallback set in
+  /// [_toMediaItem]. When a stream does send a "StreamTitle" (usually
+  /// "Artist - Song"), swap it in as the artist line so it survives on
+  /// the lock screen and Now Playing without needing a dedicated field.
+  void _onIcyMetadata(IcyMetadata? icyMetadata) {
+    final rawTitle = icyMetadata?.info?.title?.trim();
+    if (rawTitle == null || rawTitle.isEmpty) return;
+    final current = mediaItem.value;
+    if (current == null) return;
+    mediaItem.add(current.copyWith(artist: _fixIcyEncoding(rawTitle)));
+  }
+
+  /// ExoPlayer/AVPlayer decode ICY "StreamTitle" metadata as ISO-8859-1
+  /// per the (informal) ICY spec, which mangles non-ASCII characters
+  /// (Turkish, Spanish, German diacritics etc.) whenever the station's
+  /// source encoder actually sent UTF-8. Re-encoding the mangled string
+  /// back to bytes as Latin-1 and decoding those bytes as UTF-8 recovers
+  /// the original text when that's what happened; falls back to the raw
+  /// string untouched otherwise (e.g. it really was ASCII/Latin-1).
+  String _fixIcyEncoding(String raw) {
+    try {
+      return utf8.decode(latin1.encode(raw));
+    } catch (_) {
+      return raw;
+    }
+  }
 
   @override
   Future<void> play() => _player.play();

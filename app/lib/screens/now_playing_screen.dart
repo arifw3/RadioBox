@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -65,10 +66,10 @@ class NowPlayingScreen extends ConsumerWidget {
                         ),
                         child: ClipOval(
                           child: mediaItem?.artUri != null
-                              ? Image.network(
-                                  mediaItem!.artUri.toString(),
+                              ? CachedNetworkImage(
+                                  imageUrl: mediaItem!.artUri.toString(),
                                   fit: BoxFit.cover,
-                                  errorBuilder: (_, _, _) =>
+                                  errorWidget: (_, _, _) =>
                                       const _FallbackArt(),
                                 )
                               : const _FallbackArt(),

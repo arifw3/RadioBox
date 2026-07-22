@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dialwave_core/dialwave_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -6,9 +7,11 @@ import '../l10n/app_localizations.dart';
 import '../state/country_providers.dart';
 import '../state/drive_mode_providers.dart';
 import '../state/favorites_providers.dart';
+import '../state/network_providers.dart';
 import '../state/play_history_providers.dart';
 import '../state/player_providers.dart';
 import '../theme/app_theme.dart';
+import '../utils/contact.dart';
 import '../utils/playback_navigation.dart';
 import '../utils/time_of_day_suggestion.dart';
 import '../widgets/alarm_button.dart';
@@ -135,16 +138,18 @@ class _AppBarIconButton extends StatelessWidget {
   }
 }
 
-enum _OverflowAction { alarm, sleepTimer, language }
+enum _OverflowAction { alarm, sleepTimer, language, wifiOnly, contact }
 
-/// Alarm + Sleep Timer + Language share one overflow menu — five-plus
-/// separate circular AppBar icons left no room for the logo to breathe.
+/// Alarm + Sleep Timer + Language + Wi-Fi Only + Contact share one overflow
+/// menu — five-plus separate circular AppBar icons left no room for the
+/// logo to breathe.
 class _OverflowMenuButton extends ConsumerWidget {
   const _OverflowMenuButton();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
+    final wifiOnly = ref.watch(wifiOnlyProvider);
     return _AppBarIconWrapper(
       child: PopupMenuButton<_OverflowAction>(
         icon: const Icon(Icons.more_vert),
@@ -157,6 +162,10 @@ class _OverflowMenuButton extends ConsumerWidget {
               openSleepTimerSheet(context, ref);
             case _OverflowAction.language:
               openLanguageSheet(context, ref);
+            case _OverflowAction.wifiOnly:
+              ref.read(wifiOnlyProvider.notifier).toggle();
+            case _OverflowAction.contact:
+              openContactEmail();
           }
         },
         itemBuilder: (context) => [
@@ -181,6 +190,20 @@ class _OverflowMenuButton extends ConsumerWidget {
             child: ListTile(
               leading: const Icon(Icons.language),
               title: Text(l10n.languageLabel),
+              contentPadding: EdgeInsets.zero,
+            ),
+          ),
+          const PopupMenuDivider(),
+          CheckedPopupMenuItem(
+            value: _OverflowAction.wifiOnly,
+            checked: wifiOnly,
+            child: Text(l10n.wifiOnlyLabel),
+          ),
+          PopupMenuItem(
+            value: _OverflowAction.contact,
+            child: ListTile(
+              leading: const Icon(Icons.mail_outline),
+              title: Text(l10n.contactLabel),
               contentPadding: EdgeInsets.zero,
             ),
           ),
@@ -365,10 +388,10 @@ class _HeroCard extends ConsumerWidget {
                 Center(
                   child: Padding(
                     padding: const EdgeInsets.all(36),
-                    child: Image.network(
-                      station.favicon,
+                    child: CachedNetworkImage(
+                      imageUrl: station.favicon,
                       fit: BoxFit.contain,
-                      errorBuilder: (_, _, _) => const SizedBox.shrink(),
+                      errorWidget: (_, _, _) => const SizedBox.shrink(),
                     ),
                   ),
                 ),
@@ -488,12 +511,12 @@ class _StationSliverList extends ConsumerWidget {
             leading: ClipRRect(
               borderRadius: BorderRadius.circular(14),
               child: station.favicon.isNotEmpty
-                  ? Image.network(
-                      station.favicon,
+                  ? CachedNetworkImage(
+                      imageUrl: station.favicon,
                       width: 52,
                       height: 52,
                       fit: BoxFit.cover,
-                      errorBuilder: (_, _, _) => _FallbackArt(name: station.name),
+                      errorWidget: (_, _, _) => _FallbackArt(name: station.name),
                     )
                   : _FallbackArt(name: station.name),
             ),

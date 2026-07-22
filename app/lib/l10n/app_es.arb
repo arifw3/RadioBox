@@ -1,0 +1,43 @@
+{
+  "@@locale": "es",
+
+  "tabAll": "Todas",
+  "tabFavorites": "Favoritas",
+  "allStationsHeading": "Todas las emisoras",
+  "featuredLabel": "Destacada",
+  "nowLabel": "Ahora: {label}",
+  "@nowLabel": {
+    "placeholders": { "label": { "type": "String" } }
+  },
+  "noStationsToList": "No hay emisoras para mostrar ahora.",
+  "catalogLoadError": "No se pudo cargar la lista de emisoras.\n{error}",
+  "@catalogLoadError": {
+    "placeholders": { "error": { "type": "String" } }
+  },
+  "emptyFavorites": "Aún no tienes favoritas.\nToca el corazón de una emisora.",
+
+  "searchTitle": "Buscar radio",
+  "searchKeyboardToggle": "Teclado",
+  "searchVoiceToggle": "Voz",
+  "searchHintTyping": "Escribe el nombre de una emisora...",
+  "searchListening": "Escuchando...",
+  "searchTapMic": "Toca el micrófono para buscar",
+  "searchUnavailable": "Búsqueda por voz no disponible",
+  "searchPromptEmpty": "Di o escribe el nombre de una emisora",
+  "searchNoResults": "No se encontraron resultados",
+
+  "driveModeTooltip": "Modo Conducción",
+  "searchTooltip": "Buscar radio",
+  "moreTooltip": "Más",
+  "alarmLabel": "Alarma",
+  "sleepTimerLabel": "Temporizador de apagado",
+  "languageLabel": "Idioma",
+
+  "stationNotSelected": "Ninguna emisora seleccionada",
+  "visualizerHint": "Toca el visualizador para cambiar la onda",
+
+  "wifiOnlyLabel": "Solo con Wi-Fi",
+  "wifiOnlyBlocked": "El modo solo Wi-Fi está activado y no estás conectado a Wi-Fi.",
+  "dataUsageSwitchWarning": "Se cambió a datos móviles: la reproducción sigue usando tu plan de datos.",
+  "contactLabel": "Reportar contenido / Contacto"
+}

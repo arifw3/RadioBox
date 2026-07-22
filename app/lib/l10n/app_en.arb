@@ -34,5 +34,10 @@
   "languageLabel": "Language",
 
   "stationNotSelected": "No station selected",
-  "visualizerHint": "Tap the visualizer to change the waveform"
+  "visualizerHint": "Tap the visualizer to change the waveform",
+
+  "wifiOnlyLabel": "Wi-Fi only",
+  "wifiOnlyBlocked": "Wi-Fi only is on and you're not connected to Wi-Fi.",
+  "dataUsageSwitchWarning": "Switched to mobile data — playback keeps using your data plan.",
+  "contactLabel": "Report content / Contact"
 }

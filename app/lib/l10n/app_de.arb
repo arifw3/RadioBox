@@ -1,0 +1,43 @@
+{
+  "@@locale": "de",
+
+  "tabAll": "Alle",
+  "tabFavorites": "Favoriten",
+  "allStationsHeading": "Alle Sender",
+  "featuredLabel": "Empfohlen",
+  "nowLabel": "Jetzt: {label}",
+  "@nowLabel": {
+    "placeholders": { "label": { "type": "String" } }
+  },
+  "noStationsToList": "Momentan keine Sender verfügbar.",
+  "catalogLoadError": "Senderliste konnte nicht geladen werden.\n{error}",
+  "@catalogLoadError": {
+    "placeholders": { "error": { "type": "String" } }
+  },
+  "emptyFavorites": "Noch keine Favoriten.\nTippe auf das Herz-Symbol eines Senders.",
+
+  "searchTitle": "Radio suchen",
+  "searchKeyboardToggle": "Tastatur",
+  "searchVoiceToggle": "Sprache",
+  "searchHintTyping": "Sendername eingeben...",
+  "searchListening": "Höre zu...",
+  "searchTapMic": "Zum Suchen aufs Mikrofon tippen",
+  "searchUnavailable": "Sprachsuche nicht verfügbar",
+  "searchPromptEmpty": "Sendername sagen oder eingeben",
+  "searchNoResults": "Keine Ergebnisse gefunden",
+
+  "driveModeTooltip": "Fahrmodus",
+  "searchTooltip": "Radio suchen",
+  "moreTooltip": "Mehr",
+  "alarmLabel": "Wecker",
+  "sleepTimerLabel": "Einschlaftimer",
+  "languageLabel": "Sprache",
+
+  "stationNotSelected": "Kein Sender ausgewählt",
+  "visualizerHint": "Tippe auf den Visualizer, um die Wellenform zu ändern",
+
+  "wifiOnlyLabel": "Nur mit WLAN",
+  "wifiOnlyBlocked": "Nur-WLAN-Modus ist aktiv und du bist gerade nicht mit WLAN verbunden.",
+  "dataUsageSwitchWarning": "Zu mobilen Daten gewechselt — die Wiedergabe nutzt weiterhin dein Datenvolumen.",
+  "contactLabel": "Inhalt melden / Kontakt"
+}

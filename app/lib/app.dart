@@ -7,9 +7,11 @@ import 'screens/home_screen.dart';
 import 'state/alarm_providers.dart';
 import 'state/drive_mode_providers.dart';
 import 'state/locale_providers.dart';
+import 'state/network_providers.dart';
 import 'state/palette_providers.dart';
 import 'state/play_history_providers.dart';
 import 'state/player_providers.dart';
+import 'state/review_providers.dart';
 import 'theme/app_theme.dart';
 
 class RadioBoxApp extends ConsumerWidget {
@@ -52,6 +54,33 @@ class _RootScreen extends ConsumerWidget {
       final id = next.valueOrNull?.id;
       if (id != null && id != previous?.valueOrNull?.id) {
         ref.read(playHistoryProvider.notifier).recordPlay(id);
+        ref
+            .read(reviewPromptServiceProvider)
+            .maybePromptAfterPlay(ref.read(playHistoryProvider));
+      }
+    });
+
+    // Data-saving notice (Section 8, CLAUDE.md): only worth a warning if
+    // a stream is actively playing across the handoff — a silent app
+    // sitting in the background switching networks isn't burning data.
+    ref.listen(connectivityProvider, (previous, next) {
+      final before = previous?.valueOrNull;
+      final after = next.valueOrNull;
+      if (before == null || after == null) return;
+      final isPlaying = ref.read(playbackStateProvider).valueOrNull?.playing ?? false;
+      if (!isPlaying || !isOnWifi(before) || isOnWifi(after)) return;
+
+      if (ref.read(wifiOnlyProvider)) {
+        // "Wi-Fi only" means the stream shouldn't silently keep burning
+        // mobile data just because it already started on Wi-Fi.
+        ref.read(audioHandlerProvider).pause();
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(AppLocalizations.of(context)!.wifiOnlyBlocked)),
+        );
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(AppLocalizations.of(context)!.dataUsageSwitchWarning)),
+        );
       }
     });
 

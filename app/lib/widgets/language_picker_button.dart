@@ -7,6 +7,8 @@ import '../state/locale_providers.dart';
 const _supported = [
   (code: 'tr', label: 'Türkçe'),
   (code: 'en', label: 'English'),
+  (code: 'es', label: 'Español'),
+  (code: 'de', label: 'Deutsch'),
 ];
 
 /// Opens the language picker sheet — called from the AppBar overflow menu.

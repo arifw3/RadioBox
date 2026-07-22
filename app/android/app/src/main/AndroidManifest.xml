@@ -65,6 +65,13 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3851784424831046~4283229049"/>
 
+        <!-- Android Auto (Section 6, CLAUDE.md) — declares this a "media"
+             app so Android Auto lists it and binds to the MediaBrowserService
+             below instead of requiring a full driver-distraction-safe UI. -->
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc"/>
+
         <service android:name="com.ryanheise.audioservice.AudioService"
             android:foregroundServiceType="mediaPlayback"
             android:exported="true" tools:ignore="Instantiatable">

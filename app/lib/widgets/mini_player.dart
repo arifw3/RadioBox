@@ -1,4 +1,5 @@
 import 'package:audio_service/audio_service.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -42,12 +43,12 @@ class MiniPlayer extends ConsumerWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(AppRadii.pill),
                   child: mediaItem.artUri != null
-                      ? Image.network(
-                          mediaItem.artUri.toString(),
+                      ? CachedNetworkImage(
+                          imageUrl: mediaItem.artUri.toString(),
                           width: 44,
                           height: 44,
                           fit: BoxFit.cover,
-                          errorBuilder: (_, _, _) => const _FallbackDisc(),
+                          errorWidget: (_, _, _) => const _FallbackDisc(),
                         )
                       : const _FallbackDisc(),
                 ),
