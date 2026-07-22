@@ -6,6 +6,23 @@ import '../services/alarm_repository.dart';
 import '../state/alarm_providers.dart';
 import '../state/player_providers.dart';
 
+/// Opens the alarm setup sheet — also called directly from the AppBar
+/// overflow menu, not just [AlarmButton].
+Future<void> openAlarmSheet(BuildContext context, WidgetRef ref) async {
+  final catalog = ref.read(radioCatalogProvider).valueOrNull;
+  final existing = await ref.read(alarmRepositoryProvider).load();
+
+  if (!context.mounted) return;
+  await showModalBottomSheet<void>(
+    context: context,
+    isScrollControlled: true,
+    builder: (context) => _AlarmSheet(
+      stations: catalog?.stations ?? const [],
+      existing: existing,
+    ),
+  );
+}
+
 /// AppBar action for the radio wake-up alarm (Section 7, CLAUDE.md).
 class AlarmButton extends ConsumerWidget {
   const AlarmButton({super.key});
@@ -15,22 +32,7 @@ class AlarmButton extends ConsumerWidget {
     return IconButton(
       icon: const Icon(Icons.alarm),
       tooltip: 'Alarm',
-      onPressed: () => _openSheet(context, ref),
-    );
-  }
-
-  Future<void> _openSheet(BuildContext context, WidgetRef ref) async {
-    final catalog = ref.read(radioCatalogProvider).valueOrNull;
-    final existing = await ref.read(alarmRepositoryProvider).load();
-
-    if (!context.mounted) return;
-    await showModalBottomSheet<void>(
-      context: context,
-      isScrollControlled: true,
-      builder: (context) => _AlarmSheet(
-        stations: catalog?.stations ?? const [],
-        existing: existing,
-      ),
+      onPressed: () => openAlarmSheet(context, ref),
     );
   }
 }

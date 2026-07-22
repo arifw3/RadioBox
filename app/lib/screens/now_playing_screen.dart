@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../l10n/app_localizations.dart';
 import '../state/country_providers.dart';
 import '../state/palette_providers.dart';
 import '../state/player_providers.dart';
@@ -17,6 +18,7 @@ class NowPlayingScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final mediaItem = ref.watch(currentMediaItemProvider).valueOrNull;
     final playbackState = ref.watch(playbackStateProvider).valueOrNull;
     final playing = playbackState?.playing ?? false;
@@ -77,7 +79,7 @@ class NowPlayingScreen extends ConsumerWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Text(
-                    mediaItem?.title ?? 'İstasyon seçilmedi',
+                    mediaItem?.title ?? l10n.stationNotSelected,
                     style: Theme.of(context).textTheme.headlineSmall,
                     textAlign: TextAlign.center,
                   ),
@@ -125,9 +127,9 @@ class NowPlayingScreen extends ConsumerWidget {
                   ],
                 ),
                 const SizedBox(height: 12),
-                const Text(
-                  'Görselleştiriciye dokun: dalga formunu değiştir',
-                  style: TextStyle(color: Colors.white54),
+                Text(
+                  l10n.visualizerHint,
+                  style: const TextStyle(color: Colors.white54),
                 ),
                 const SizedBox(height: 28),
                 const SocialSyncPanel(),

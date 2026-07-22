@@ -3,11 +3,12 @@ import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-/// Google's public test ad unit IDs — swap for real AdMob unit IDs before
-/// release, alongside the matching test App IDs in AndroidManifest.xml /
-/// Info.plist.
+/// Real AdMob banner unit on Android (see AndroidManifest.xml for the
+/// matching real App ID). No iOS AdMob app has been created yet, so iOS
+/// stays on Google's public test unit — TODO: swap once one exists,
+/// alongside the test App ID still in Info.plist.
 String get _bannerAdUnitId {
-  if (Platform.isAndroid) return 'ca-app-pub-3940256099942544/6300978111';
+  if (Platform.isAndroid) return 'ca-app-pub-3851784424831046/2371381571';
   if (Platform.isIOS) return 'ca-app-pub-3940256099942544/2934735716';
   throw UnsupportedError('Ads are only wired up for Android/iOS');
 }

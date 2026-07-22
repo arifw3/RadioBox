@@ -57,5 +57,11 @@
 	<!-- Drive Mode auto-trigger via GPS speed (Section 6, CLAUDE.md). -->
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>DialWave, araç hızını algılayıp Sürüş Modu'na otomatik geçmek için konumunu kullanır.</string>
+	<!-- Voice-first full-screen search — typing station names while
+	     driving is impractical. -->
+	<key>NSMicrophoneUsageDescription</key>
+	<string>DialWave, sesli radyo aramasını kullanabilmek için mikrofonuna ihtiyaç duyar.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>DialWave, söylediğin radyo adını yazıya çevirip aramak için konuşma tanımayı kullanır.</string>
 </dict>
 </plist>

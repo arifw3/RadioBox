@@ -1,0 +1,38 @@
+{
+  "@@locale": "tr",
+
+  "tabAll": "Tümü",
+  "tabFavorites": "Favoriler",
+  "allStationsHeading": "Tüm İstasyonlar",
+  "featuredLabel": "Öne Çıkan",
+  "nowLabel": "Şimdi: {label}",
+  "@nowLabel": {
+    "placeholders": { "label": { "type": "String" } }
+  },
+  "noStationsToList": "Şu an listelenecek radyo yok.",
+  "catalogLoadError": "Radyo listesi yüklenemedi.\n{error}",
+  "@catalogLoadError": {
+    "placeholders": { "error": { "type": "String" } }
+  },
+  "emptyFavorites": "Henüz favori eklemedin.\nBir istasyonun kalp ikonuna dokun.",
+
+  "searchTitle": "Radyo Ara",
+  "searchKeyboardToggle": "Klavye",
+  "searchVoiceToggle": "Sesli",
+  "searchHintTyping": "İstasyon adı yaz...",
+  "searchListening": "Dinliyorum...",
+  "searchTapMic": "Aramak için mikrofona dokun",
+  "searchUnavailable": "Sesli arama kullanılamıyor",
+  "searchPromptEmpty": "İstasyon adını söyle ya da yaz",
+  "searchNoResults": "Sonuç bulunamadı",
+
+  "driveModeTooltip": "Sürüş Modu",
+  "searchTooltip": "Radyo Ara",
+  "moreTooltip": "Daha fazla",
+  "alarmLabel": "Alarm",
+  "sleepTimerLabel": "Uyku Zamanlayıcısı",
+  "languageLabel": "Dil",
+
+  "stationNotSelected": "İstasyon seçilmedi",
+  "visualizerHint": "Görselleştiriciye dokun: dalga formunu değiştir"
+}

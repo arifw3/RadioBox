@@ -1,0 +1,38 @@
+{
+  "@@locale": "en",
+
+  "tabAll": "All",
+  "tabFavorites": "Favorites",
+  "allStationsHeading": "All Stations",
+  "featuredLabel": "Featured",
+  "nowLabel": "Now: {label}",
+  "@nowLabel": {
+    "placeholders": { "label": { "type": "String" } }
+  },
+  "noStationsToList": "No stations to show right now.",
+  "catalogLoadError": "Couldn't load the station list.\n{error}",
+  "@catalogLoadError": {
+    "placeholders": { "error": { "type": "String" } }
+  },
+  "emptyFavorites": "No favorites yet.\nTap a station's heart icon.",
+
+  "searchTitle": "Search Radio",
+  "searchKeyboardToggle": "Keyboard",
+  "searchVoiceToggle": "Voice",
+  "searchHintTyping": "Type a station name...",
+  "searchListening": "Listening...",
+  "searchTapMic": "Tap the mic to search",
+  "searchUnavailable": "Voice search unavailable",
+  "searchPromptEmpty": "Say or type a station name",
+  "searchNoResults": "No results found",
+
+  "driveModeTooltip": "Drive Mode",
+  "searchTooltip": "Search Radio",
+  "moreTooltip": "More",
+  "alarmLabel": "Alarm",
+  "sleepTimerLabel": "Sleep Timer",
+  "languageLabel": "Language",
+
+  "stationNotSelected": "No station selected",
+  "visualizerHint": "Tap the visualizer to change the waveform"
+}

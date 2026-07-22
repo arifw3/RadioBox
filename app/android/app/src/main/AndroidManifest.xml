@@ -19,6 +19,10 @@
     <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
+    <!-- Voice-first full-screen search — typing station names while
+         driving is impractical. -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
     <!-- Most Icecast/Shoutcast radio streams are plain http://, and the
          station list changes nightly, so a fixed domain-config allowlist
          isn't workable — allow cleartext app-wide instead. -->
@@ -26,6 +30,7 @@
         android:label="Dial Wave"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
@@ -55,11 +60,10 @@
             android:name="flutterEmbedding"
             android:value="2" />
 
-        <!-- Google's public test App ID (Section 9, CLAUDE.md: banner-only
-             ads). TODO: swap for the real AdMob App ID before release. -->
+        <!-- Real AdMob App ID (Section 9, CLAUDE.md: banner-only ads). -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-3851784424831046~4283229049"/>
 
         <service android:name="com.ryanheise.audioservice.AudioService"
             android:foregroundServiceType="mediaPlayback"
@@ -85,6 +89,10 @@
         <intent>
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>
+        </intent>
+        <!-- speech_to_text package visibility requirement on Android 11+. -->
+        <intent>
+            <action android:name="android.speech.RecognitionService"/>
         </intent>
     </queries>
 </manifest>
