@@ -101,6 +101,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                 children: [
                   IconButton(
                     icon: const Icon(Icons.arrow_back, size: 26),
+                    tooltip: MaterialLocalizations.of(context).backButtonTooltip,
                     onPressed: () => Navigator.of(context).pop(),
                   ),
                   Expanded(
@@ -153,21 +154,25 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 child: Column(
                   children: [
-                    GestureDetector(
-                      onTap: _speechAvailable ? _toggleListening : null,
-                      child: Container(
-                        width: 108,
-                        height: 108,
-                        decoration: BoxDecoration(
-                          color: _isListening
-                              ? AppColors.accent
-                              : AppColors.surfaceRaised,
-                          shape: BoxShape.circle,
-                        ),
-                        child: Icon(
-                          _isListening ? Icons.mic_rounded : Icons.mic_none_rounded,
-                          size: 52,
-                          color: Colors.white,
+                    Semantics(
+                      button: true,
+                      label: _isListening ? l10n.micStop : l10n.micStart,
+                      child: GestureDetector(
+                        onTap: _speechAvailable ? _toggleListening : null,
+                        child: Container(
+                          width: 108,
+                          height: 108,
+                          decoration: BoxDecoration(
+                            color: _isListening
+                                ? AppColors.accent
+                                : AppColors.surfaceRaised,
+                            shape: BoxShape.circle,
+                          ),
+                          child: Icon(
+                            _isListening ? Icons.mic_rounded : Icons.mic_none_rounded,
+                            size: 52,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),

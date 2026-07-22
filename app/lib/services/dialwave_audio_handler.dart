@@ -5,6 +5,7 @@ import 'dart:ui' as ui;
 import 'package:audio_service/audio_service.dart';
 import 'package:audio_session/audio_session.dart';
 import 'package:dialwave_core/dialwave_core.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:http/http.dart' as http;
 import 'package:just_audio/just_audio.dart';
 
@@ -59,6 +60,11 @@ class DialWaveAudioHandler extends BaseAudioHandler with SeekHandler {
   static const _maxReconnectAttempts = 5;
   Timer? _reconnectTimer;
 
+  /// See the comment in [playStation] — ICY metadata events are ignored
+  /// until this time to avoid a stale event from the previous station's
+  /// connection landing on the new one.
+  DateTime? _ignoreIcyUntil;
+
   Future<void> _initAudioSession() async {
     final session = await AudioSession.instance;
     await session.configure(const AudioSessionConfiguration.music());
@@ -98,6 +104,15 @@ class DialWaveAudioHandler extends BaseAudioHandler with SeekHandler {
     _reconnectTimer?.cancel();
     _reconnectAttempts = 0;
     _currentStation = station;
+    // ExoPlayer's ICY extractor runs on a background thread against the
+    // *old* stream connection while it's being torn down — a metadata
+    // event already in flight when setUrl() below replaces the source can
+    // still land in _onIcyMetadata afterwards, wrongly tagging the new
+    // station with the previous one's leftover "Artist - Song" text. Since
+    // there's no per-event way to tell which stream a callback came from,
+    // ignore ICY updates for a short grace window right after switching —
+    // real stations don't announce that fast anyway.
+    _ignoreIcyUntil = DateTime.now().add(const Duration(seconds: 2));
     mediaItem.add(_toMediaItem(station));
     playbackState.add(
       playbackState.value.copyWith(
@@ -195,6 +210,8 @@ class DialWaveAudioHandler extends BaseAudioHandler with SeekHandler {
   /// "Artist - Song"), swap it in as the artist line so it survives on
   /// the lock screen and Now Playing without needing a dedicated field.
   void _onIcyMetadata(IcyMetadata? icyMetadata) {
+    final ignoreUntil = _ignoreIcyUntil;
+    if (ignoreUntil != null && DateTime.now().isBefore(ignoreUntil)) return;
     final rawTitle = icyMetadata?.info?.title?.trim();
     if (rawTitle == null || rawTitle.isEmpty) return;
     final current = mediaItem.value;
@@ -256,6 +273,22 @@ class DialWaveAudioHandler extends BaseAudioHandler with SeekHandler {
           processingState: AudioProcessingState.error,
           playing: false,
         ),
+      );
+      // Non-fatal — this is a broken/dead stream, not an app crash, but
+      // still worth knowing about: the nightly radio_sync ping only
+      // catches links that are down *at 03:00*, not ones that fail
+      // during actual playback later in the day.
+      FirebaseCrashlytics.instance.recordError(
+        Exception(
+          'Radio stream failed after $_maxReconnectAttempts reconnect attempts',
+        ),
+        StackTrace.current,
+        fatal: false,
+        information: [
+          'stationId: ${station.id}',
+          'stationName: ${station.name}',
+          'streamUrl: ${station.streamUrl}',
+        ],
       );
       return;
     }

@@ -39,5 +39,32 @@
   "wifiOnlyLabel": "Sadece Wi-Fi'de çal",
   "wifiOnlyBlocked": "Sadece Wi-Fi modu açık ve şu an Wi-Fi'ye bağlı değilsin.",
   "dataUsageSwitchWarning": "Mobil veriye geçildi — yayın mobil veri planını kullanmaya devam ediyor.",
-  "contactLabel": "İçerik bildir / İletişim"
+  "contactLabel": "İçerik bildir / İletişim",
+
+  "nowPlayingSong": "Şu an çalıyor: {song}",
+  "@nowPlayingSong": {
+    "placeholders": { "song": { "type": "String" } }
+  },
+  "otherSongsHeading": "Başka şarkılar",
+
+  "songHistoryLabel": "Şarkı Geçmişi",
+  "songHistoryEmpty": "Henüz kaydedilmiş şarkı yok.\nGerçek şarkı bilgisi gönderen bir istasyon dinlediğinde burada listelenir.",
+  "songHistorySearchTooltip": "Bu şarkıyı ara",
+  "searchOnSpotify": "Spotify'da ara",
+  "searchOnYoutube": "YouTube'da ara",
+
+  "transportPrevious": "Önceki istasyon",
+  "transportPlay": "Oynat",
+  "transportPause": "Duraklat",
+  "transportNext": "Sonraki istasyon",
+  "favoriteAdd": "Favorilere ekle",
+  "favoriteRemove": "Favorilerden çıkar",
+  "micStart": "Sesli aramayı başlat",
+  "micStop": "Sesli aramayı durdur",
+  "socialShareLabel": "Oda linkini paylaş",
+  "socialLeaveLabel": "Odadan ayrıl",
+  "playStationLabel": "Çal: {name}",
+  "@playStationLabel": {
+    "placeholders": { "name": { "type": "String" } }
+  }
 }

@@ -39,5 +39,32 @@
   "wifiOnlyLabel": "Solo con Wi-Fi",
   "wifiOnlyBlocked": "El modo solo Wi-Fi está activado y no estás conectado a Wi-Fi.",
   "dataUsageSwitchWarning": "Se cambió a datos móviles: la reproducción sigue usando tu plan de datos.",
-  "contactLabel": "Reportar contenido / Contacto"
+  "contactLabel": "Reportar contenido / Contacto",
+
+  "nowPlayingSong": "Sonando ahora: {song}",
+  "@nowPlayingSong": {
+    "placeholders": { "song": { "type": "String" } }
+  },
+  "otherSongsHeading": "Más canciones",
+
+  "songHistoryLabel": "Historial de canciones",
+  "songHistoryEmpty": "Aún no hay canciones registradas.\nCuando escuches una emisora que envíe información real de la canción, aparecerá aquí.",
+  "songHistorySearchTooltip": "Buscar esta canción",
+  "searchOnSpotify": "Buscar en Spotify",
+  "searchOnYoutube": "Buscar en YouTube",
+
+  "transportPrevious": "Emisora anterior",
+  "transportPlay": "Reproducir",
+  "transportPause": "Pausar",
+  "transportNext": "Siguiente emisora",
+  "favoriteAdd": "Añadir a favoritas",
+  "favoriteRemove": "Quitar de favoritas",
+  "micStart": "Iniciar búsqueda por voz",
+  "micStop": "Detener búsqueda por voz",
+  "socialShareLabel": "Compartir enlace de la sala",
+  "socialLeaveLabel": "Salir de la sala",
+  "playStationLabel": "Reproducir: {name}",
+  "@playStationLabel": {
+    "placeholders": { "name": { "type": "String" } }
+  }
 }

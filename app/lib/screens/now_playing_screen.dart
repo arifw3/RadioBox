@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../l10n/app_localizations.dart';
+import '../services/itunes_search_repository.dart';
+import '../state/artist_spotlight_providers.dart';
 import '../state/country_providers.dart';
 import '../state/palette_providers.dart';
 import '../state/player_providers.dart';
@@ -13,8 +15,9 @@ import '../widgets/social_sync_panel.dart';
 
 final _visualizerStyleProvider = StateProvider<int>((ref) => 0);
 
-/// Full-screen now-playing view — dynamic background tint from the
-/// station's logo, plus the circular visualizer (Section 7, CLAUDE.md).
+/// Now-playing view — full-bleed artist/album art (from ICY metadata +
+/// iTunes Search API) when a match is found, falling back to the
+/// dynamic-tint circular visualizer (Section 7, CLAUDE.md) otherwise.
 class NowPlayingScreen extends ConsumerWidget {
   const NowPlayingScreen({super.key});
 
@@ -27,6 +30,64 @@ class NowPlayingScreen extends ConsumerWidget {
     final seedColor =
         ref.watch(dynamicSeedColorProvider).valueOrNull ?? kDefaultSeedColor;
     final style = ref.watch(_visualizerStyleProvider);
+
+    final spotlightAsync = ref.watch(artistSpotlightProvider);
+    final spotlight = spotlightAsync.valueOrNull;
+    // Riverpod keeps a FutureProvider's *previous* value visible by default
+    // while it's re-fetching after a dependency change (so quick refreshes
+    // don't flash a loading spinner) — here that dependency is the current
+    // song, so without this check a new song's title would briefly pair
+    // with the previous song's cover art until the new iTunes lookup
+    // finishes. Gating on isLoading falls back to the plain visualizer for
+    // that window instead of showing a mismatched image.
+    final spotlightReady =
+        !spotlightAsync.isLoading &&
+        spotlight != null &&
+        (spotlight.imageUrl?.isNotEmpty ?? false);
+
+    final transportRow = Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        _TransportButton(
+          icon: Icons.skip_previous_rounded,
+          size: 56,
+          iconSize: 28,
+          tooltip: l10n.transportPrevious,
+          onPressed: () => _skip(ref, forward: false),
+        ),
+        const SizedBox(width: 20),
+        _TransportButton(
+          icon: playing ? Icons.pause_rounded : Icons.play_arrow_rounded,
+          size: 84,
+          iconSize: 44,
+          filled: true,
+          tooltip: playing ? l10n.transportPause : l10n.transportPlay,
+          onPressed: () {
+            final handler = ref.read(audioHandlerProvider);
+            playing ? handler.pause() : handler.play();
+          },
+        ),
+        const SizedBox(width: 20),
+        _TransportButton(
+          icon: Icons.skip_next_rounded,
+          size: 56,
+          iconSize: 28,
+          tooltip: l10n.transportNext,
+          onPressed: () => _skip(ref, forward: true),
+        ),
+      ],
+    );
+
+    if (spotlightReady) {
+      return _SpotlightScaffold(
+        imageUrl: spotlight.imageUrl!,
+        stationName: mediaItem?.title ?? l10n.stationNotSelected,
+        artistName: spotlight.artistName,
+        songTitle: spotlight.songTitle,
+        otherTracks: spotlight.otherTracks,
+        transportRow: transportRow,
+      );
+    }
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -46,10 +107,15 @@ class NowPlayingScreen extends ConsumerWidget {
             child: Column(
               children: [
                 const SizedBox(height: 24),
-                GestureDetector(
-                  onTap: () => ref.read(_visualizerStyleProvider.notifier).state =
-                      (style + 1) % CircularVisualizer.styleCount,
-                  child: Stack(
+                Semantics(
+                  button: true,
+                  label: l10n.visualizerHint,
+                  child: GestureDetector(
+                    onTap: () => ref
+                            .read(_visualizerStyleProvider.notifier)
+                            .state =
+                        (style + 1) % CircularVisualizer.styleCount,
+                    child: Stack(
                     alignment: Alignment.center,
                     children: [
                       CircularVisualizer(
@@ -75,7 +141,8 @@ class NowPlayingScreen extends ConsumerWidget {
                               : const _FallbackArt(),
                         ),
                       ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(height: 32),
@@ -98,37 +165,7 @@ class NowPlayingScreen extends ConsumerWidget {
                   ),
                 ],
                 const SizedBox(height: 32),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    _TransportButton(
-                      icon: Icons.skip_previous_rounded,
-                      size: 56,
-                      iconSize: 28,
-                      onPressed: () => _skip(ref, forward: false),
-                    ),
-                    const SizedBox(width: 20),
-                    _TransportButton(
-                      icon: playing
-                          ? Icons.pause_rounded
-                          : Icons.play_arrow_rounded,
-                      size: 84,
-                      iconSize: 44,
-                      filled: true,
-                      onPressed: () {
-                        final handler = ref.read(audioHandlerProvider);
-                        playing ? handler.pause() : handler.play();
-                      },
-                    ),
-                    const SizedBox(width: 20),
-                    _TransportButton(
-                      icon: Icons.skip_next_rounded,
-                      size: 56,
-                      iconSize: 28,
-                      onPressed: () => _skip(ref, forward: true),
-                    ),
-                  ],
-                ),
+                transportRow,
                 const SizedBox(height: 12),
                 Text(
                   l10n.visualizerHint,
@@ -166,12 +203,200 @@ class NowPlayingScreen extends ConsumerWidget {
   }
 }
 
+/// Full-screen artist/album-art variant — image fills the entire body,
+/// station/artist/song text and controls sit on top of it in a scrollable
+/// overlay so nothing overflows on shorter screens.
+class _SpotlightScaffold extends StatelessWidget {
+  const _SpotlightScaffold({
+    required this.imageUrl,
+    required this.stationName,
+    required this.artistName,
+    required this.songTitle,
+    required this.otherTracks,
+    required this.transportRow,
+  });
+
+  final String imageUrl;
+  final String stationName;
+  final String artistName;
+  final String songTitle;
+  final List<ItunesTrack> otherTracks;
+  final Widget transportRow;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final screenHeight = MediaQuery.sizeOf(context).height;
+
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Text(
+          stationName,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+          style: Theme.of(
+            context,
+          ).textTheme.titleMedium?.copyWith(color: Colors.white),
+        ),
+        centerTitle: true,
+      ),
+      bottomNavigationBar: const BannerAdWidget(),
+      backgroundColor: AppColors.background,
+      body: Column(
+        children: [
+          // A fixed-height photo block, not a full-bleed backdrop with text
+          // washed over it — the image stays clean and the station/artist/
+          // song text gets its own card below, on the normal background.
+          SizedBox(
+            height: screenHeight * 0.5,
+            width: double.infinity,
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                CachedNetworkImage(imageUrl: imageUrl, fit: BoxFit.cover),
+                // Dark enough at the very top for the back button/title to
+                // stay legible, clear through the middle so the photo
+                // actually shows, then fades to the exact background color
+                // at the bottom so it blends into the content below instead
+                // of cutting off sharply.
+                DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Colors.black45,
+                        Colors.transparent,
+                        Colors.transparent,
+                        AppColors.background,
+                      ],
+                      stops: const [0.0, 0.18, 0.7, 1.0],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  const SizedBox(height: 20),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24),
+                    child: Column(
+                      children: [
+                        Text(
+                          artistName,
+                          style: Theme.of(context).textTheme.headlineSmall,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          l10n.nowPlayingSong(songTitle),
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyMedium
+                              ?.copyWith(color: Colors.white70),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  transportRow,
+                  if (otherTracks.isNotEmpty) ...[
+                    const SizedBox(height: 24),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 24),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            l10n.otherSongsHeading,
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleSmall
+                                ?.copyWith(color: Colors.white70),
+                          ),
+                          const SizedBox(height: 12),
+                          for (final track in otherTracks)
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 10),
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 12,
+                                  vertical: 10,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: AppColors.surfaceRaised,
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      width: 40,
+                                      height: 40,
+                                      decoration: BoxDecoration(
+                                        color: AppColors.surface,
+                                        borderRadius: BorderRadius.circular(
+                                          10,
+                                        ),
+                                      ),
+                                      alignment: Alignment.center,
+                                      child: const Icon(
+                                        Icons.music_note_rounded,
+                                        color: Colors.white70,
+                                        size: 20,
+                                      ),
+                                    ),
+                                    const SizedBox(width: 12),
+                                    Expanded(
+                                      child: Text(
+                                        track.trackName,
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .bodyMedium
+                                            ?.copyWith(color: Colors.white),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                        ],
+                      ),
+                    ),
+                  ],
+                  const SizedBox(height: 24),
+                  const SocialSyncPanel(),
+                  const SizedBox(height: 16),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class _TransportButton extends StatelessWidget {
   const _TransportButton({
     required this.icon,
     required this.size,
     required this.iconSize,
     required this.onPressed,
+    required this.tooltip,
     this.filled = false,
   });
 
@@ -179,6 +404,7 @@ class _TransportButton extends StatelessWidget {
   final double size;
   final double iconSize;
   final VoidCallback onPressed;
+  final String tooltip;
   final bool filled;
 
   @override
@@ -192,6 +418,7 @@ class _TransportButton extends StatelessWidget {
       ),
       child: IconButton(
         icon: Icon(icon, color: Colors.white, size: iconSize),
+        tooltip: tooltip,
         onPressed: onPressed,
       ),
     );

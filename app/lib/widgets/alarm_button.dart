@@ -2,6 +2,7 @@ import 'package:dialwave_core/dialwave_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../l10n/app_localizations.dart';
 import '../services/alarm_repository.dart';
 import '../state/alarm_providers.dart';
 import '../state/player_providers.dart';
@@ -31,7 +32,7 @@ class AlarmButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return IconButton(
       icon: const Icon(Icons.alarm),
-      tooltip: 'Alarm',
+      tooltip: AppLocalizations.of(context)!.alarmLabel,
       onPressed: () => openAlarmSheet(context, ref),
     );
   }

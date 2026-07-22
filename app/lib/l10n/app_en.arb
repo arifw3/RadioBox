@@ -39,5 +39,32 @@
   "wifiOnlyLabel": "Wi-Fi only",
   "wifiOnlyBlocked": "Wi-Fi only is on and you're not connected to Wi-Fi.",
   "dataUsageSwitchWarning": "Switched to mobile data — playback keeps using your data plan.",
-  "contactLabel": "Report content / Contact"
+  "contactLabel": "Report content / Contact",
+
+  "nowPlayingSong": "Now playing: {song}",
+  "@nowPlayingSong": {
+    "placeholders": { "song": { "type": "String" } }
+  },
+  "otherSongsHeading": "More songs",
+
+  "songHistoryLabel": "Song History",
+  "songHistoryEmpty": "No songs logged yet.\nOnce you listen to a station that sends real song info, it'll show up here.",
+  "songHistorySearchTooltip": "Search this song",
+  "searchOnSpotify": "Search on Spotify",
+  "searchOnYoutube": "Search on YouTube",
+
+  "transportPrevious": "Previous station",
+  "transportPlay": "Play",
+  "transportPause": "Pause",
+  "transportNext": "Next station",
+  "favoriteAdd": "Add to favorites",
+  "favoriteRemove": "Remove from favorites",
+  "micStart": "Start voice search",
+  "micStop": "Stop voice search",
+  "socialShareLabel": "Share room link",
+  "socialLeaveLabel": "Leave room",
+  "playStationLabel": "Play: {name}",
+  "@playStationLabel": {
+    "placeholders": { "name": { "type": "String" } }
+  }
 }

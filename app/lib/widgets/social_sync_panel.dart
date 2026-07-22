@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../l10n/app_localizations.dart';
 import '../state/player_providers.dart';
 import '../state/social_sync_providers.dart';
 
@@ -15,6 +16,7 @@ class SocialSyncPanel extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final roomId = ref.watch(currentRoomIdProvider);
     ref.watch(roomStationSyncProvider); // side effect only, value unused
 
@@ -54,12 +56,14 @@ class SocialSyncPanel extends ConsumerWidget {
             ),
             IconButton(
               icon: const Icon(Icons.share),
+              tooltip: l10n.socialShareLabel,
               onPressed: () => Share.share(
                 'RadioBox\'ta benimle dinle! Oda kodu: $roomId',
               ),
             ),
             IconButton(
               icon: const Icon(Icons.exit_to_app),
+              tooltip: l10n.socialLeaveLabel,
               onPressed: () => _leaveRoom(ref, roomId),
             ),
           ],
@@ -73,6 +77,7 @@ class SocialSyncPanel extends ConsumerWidget {
                     .read(socialSyncRepositoryProvider)
                     .sendReaction(roomId, emoji),
                 icon: Text(emoji, style: const TextStyle(fontSize: 24)),
+                tooltip: emoji,
               ),
           ],
         ),

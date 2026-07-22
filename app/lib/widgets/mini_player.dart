@@ -3,6 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../l10n/app_localizations.dart';
 import '../screens/now_playing_screen.dart';
 import '../state/player_providers.dart';
 import '../theme/app_theme.dart';
@@ -15,6 +16,7 @@ class MiniPlayer extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final mediaItem = ref.watch(currentMediaItemProvider).valueOrNull;
     final playbackState = ref.watch(playbackStateProvider).valueOrNull;
 
@@ -98,6 +100,7 @@ class MiniPlayer extends ConsumerWidget {
                             : Icons.play_arrow_rounded,
                         color: Colors.white,
                       ),
+                      tooltip: playing ? l10n.transportPause : l10n.transportPlay,
                       onPressed: () {
                         final handler = ref.read(audioHandlerProvider);
                         playing ? handler.pause() : handler.play();

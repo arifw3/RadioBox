@@ -5,6 +5,7 @@ import 'l10n/app_localizations.dart';
 import 'screens/drive_mode_screen.dart';
 import 'screens/home_screen.dart';
 import 'state/alarm_providers.dart';
+import 'state/artist_spotlight_providers.dart';
 import 'state/drive_mode_providers.dart';
 import 'state/locale_providers.dart';
 import 'state/network_providers.dart';
@@ -12,6 +13,7 @@ import 'state/palette_providers.dart';
 import 'state/play_history_providers.dart';
 import 'state/player_providers.dart';
 import 'state/review_providers.dart';
+import 'state/song_history_providers.dart';
 import 'theme/app_theme.dart';
 
 class RadioBoxApp extends ConsumerWidget {
@@ -57,6 +59,18 @@ class _RootScreen extends ConsumerWidget {
         ref
             .read(reviewPromptServiceProvider)
             .maybePromptAfterPlay(ref.read(playHistoryProvider));
+      }
+    });
+
+    // Logs a timestamped entry every time real ICY "Artist - Song" text
+    // shows up (never the plain country-code fallback — rawNowPlayingTextProvider
+    // already filters that out), independent of whether the iTunes lookup
+    // for the artist spotlight card finds anything.
+    ref.listen(rawNowPlayingTextProvider, (previous, next) {
+      if (next != null && next != previous) {
+        final stationName =
+            ref.read(currentMediaItemProvider).valueOrNull?.title ?? '';
+        ref.read(songHistoryProvider.notifier).record(next, stationName);
       }
     });
 

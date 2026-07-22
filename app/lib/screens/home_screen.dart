@@ -19,6 +19,7 @@ import '../widgets/banner_ad_widget.dart';
 import '../widgets/country_picker_button.dart';
 import '../widgets/language_picker_button.dart';
 import '../widgets/mini_player.dart';
+import 'song_history_screen.dart';
 import '../widgets/sleep_timer_button.dart';
 import 'search_screen.dart';
 
@@ -138,7 +139,14 @@ class _AppBarIconButton extends StatelessWidget {
   }
 }
 
-enum _OverflowAction { alarm, sleepTimer, language, wifiOnly, contact }
+enum _OverflowAction {
+  alarm,
+  sleepTimer,
+  language,
+  songHistory,
+  wifiOnly,
+  contact,
+}
 
 /// Alarm + Sleep Timer + Language + Wi-Fi Only + Contact share one overflow
 /// menu — five-plus separate circular AppBar icons left no room for the
@@ -162,6 +170,12 @@ class _OverflowMenuButton extends ConsumerWidget {
               openSleepTimerSheet(context, ref);
             case _OverflowAction.language:
               openLanguageSheet(context, ref);
+            case _OverflowAction.songHistory:
+              Navigator.of(context).push(
+                MaterialPageRoute<void>(
+                  builder: (_) => const SongHistoryScreen(),
+                ),
+              );
             case _OverflowAction.wifiOnly:
               ref.read(wifiOnlyProvider.notifier).toggle();
             case _OverflowAction.contact:
@@ -190,6 +204,14 @@ class _OverflowMenuButton extends ConsumerWidget {
             child: ListTile(
               leading: const Icon(Icons.language),
               title: Text(l10n.languageLabel),
+              contentPadding: EdgeInsets.zero,
+            ),
+          ),
+          PopupMenuItem(
+            value: _OverflowAction.songHistory,
+            child: ListTile(
+              leading: const Icon(Icons.history),
+              title: Text(l10n.songHistoryLabel),
               contentPadding: EdgeInsets.zero,
             ),
           ),
@@ -368,7 +390,11 @@ class _HeroCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
-    return GestureDetector(
+    return Semantics(
+      button: true,
+      label: l10n.playStationLabel(station.name),
+      excludeSemantics: true,
+      child: GestureDetector(
       onTap: () => playStationAndShowNowPlaying(context, ref, station),
       child: AspectRatio(
         aspectRatio: 16 / 9,
@@ -447,6 +473,7 @@ class _HeroCard extends ConsumerWidget {
             ],
           ),
         ),
+      ),
       ),
     );
   }
@@ -538,6 +565,9 @@ class _StationSliverList extends ConsumerWidget {
                 size: 22,
               ),
               color: isFavorite ? AppColors.pink : AppColors.textMuted,
+              tooltip: isFavorite
+                  ? AppLocalizations.of(context)!.favoriteRemove
+                  : AppLocalizations.of(context)!.favoriteAdd,
               onPressed: () =>
                   ref.read(favoritesProvider.notifier).toggle(station.id),
             ),

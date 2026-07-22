@@ -39,5 +39,32 @@
   "wifiOnlyLabel": "Nur mit WLAN",
   "wifiOnlyBlocked": "Nur-WLAN-Modus ist aktiv und du bist gerade nicht mit WLAN verbunden.",
   "dataUsageSwitchWarning": "Zu mobilen Daten gewechselt — die Wiedergabe nutzt weiterhin dein Datenvolumen.",
-  "contactLabel": "Inhalt melden / Kontakt"
+  "contactLabel": "Inhalt melden / Kontakt",
+
+  "nowPlayingSong": "Läuft gerade: {song}",
+  "@nowPlayingSong": {
+    "placeholders": { "song": { "type": "String" } }
+  },
+  "otherSongsHeading": "Weitere Songs",
+
+  "songHistoryLabel": "Songverlauf",
+  "songHistoryEmpty": "Noch keine Songs protokolliert.\nSobald du einen Sender mit echten Songinfos hörst, erscheint er hier.",
+  "songHistorySearchTooltip": "Diesen Song suchen",
+  "searchOnSpotify": "Bei Spotify suchen",
+  "searchOnYoutube": "Bei YouTube suchen",
+
+  "transportPrevious": "Vorheriger Sender",
+  "transportPlay": "Abspielen",
+  "transportPause": "Pause",
+  "transportNext": "Nächster Sender",
+  "favoriteAdd": "Zu Favoriten hinzufügen",
+  "favoriteRemove": "Aus Favoriten entfernen",
+  "micStart": "Sprachsuche starten",
+  "micStop": "Sprachsuche stoppen",
+  "socialShareLabel": "Raum-Link teilen",
+  "socialLeaveLabel": "Raum verlassen",
+  "playStationLabel": "Abspielen: {name}",
+  "@playStationLabel": {
+    "placeholders": { "name": { "type": "String" } }
+  }
 }
