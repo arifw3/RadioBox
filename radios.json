@@ -1,5 +1,5 @@
 {
-  "version": "89871b66e4233ac5245612f6926cc633fdc3733a8f46adeb1eee6d82138827ce",
+  "version": "93f85e8403ec81722a81fe72cfe9b41d34094ecdfe76607ed1c4b15061c61078",
   "generatedAtUtc": "2026-07-21T17:22:51.700140Z",
   "stations": [
     {
@@ -253,23 +253,6 @@
       "bitrateKbps": 128,
       "votes": 1554,
       "clickCount": 380
-    },
-    {
-      "id": "31074f8a-e6f4-11e9-a96c-52543be04c81",
-      "name": "France Info",
-      "streamUrl": "http://icecast.radiofrance.fr/franceinfo-hifi.aac",
-      "countryCode": "FR",
-      "favicon": "https://www.francetvinfo.fr/assets/common/images/pwa/ios/120-0cfbd6d4.png",
-      "tags": [
-        "aac",
-        "information",
-        "public radio",
-        "radio france"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 192,
-      "votes": 59258,
-      "clickCount": 358
     },
     {
       "id": "ba3ad919-0516-485c-bce6-b27c4492ab14",
@@ -1349,18 +1332,6 @@
       "clickCount": 79
     },
     {
-      "id": "d2bbffaf-5d67-4a65-9772-097d8c0269d3",
-      "name": "France Inter",
-      "streamUrl": "http://direct.franceinter.fr/live/franceinter-hifi.aac",
-      "countryCode": "FR",
-      "favicon": "https://www.franceinter.fr/favicon.ico",
-      "tags": [],
-      "codec": "AAC",
-      "bitrateKbps": 192,
-      "votes": 59509,
-      "clickCount": 79
-    },
-    {
       "id": "226396d3-6335-4d39-89fc-f1564d6f3ad7",
       "name": "NRJ Paris",
       "streamUrl": "https://streaming.nrjaudio.fm/ou5k6tirv93h",
@@ -1774,20 +1745,6 @@
       "clickCount": 60
     },
     {
-      "id": "9fd1acea-3fcb-4e44-914a-116990ba0e96",
-      "name": "181.FM - Old School HipHop/RnB",
-      "streamUrl": "http://listen.181fm.com/181-oldschool_128k.mp3",
-      "countryCode": "US",
-      "favicon": "",
-      "tags": [
-        "old school hip hop"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 1412,
-      "clickCount": 58
-    },
-    {
       "id": "96136071-0601-11e8-ae97-52543be04c81",
       "name": "Jazz Radio Classic Jazz",
       "streamUrl": "http://jazz-wr01.ice.infomaniak.ch/jazz-wr01-128.mp3",
@@ -2129,20 +2086,6 @@
       "codec": "MP3",
       "bitrateKbps": 256,
       "votes": 1758,
-      "clickCount": 54
-    },
-    {
-      "id": "46e52c57-1c94-49fe-8d79-69c2f16372a8",
-      "name": "The Big 80s Station",
-      "streamUrl": "http://158.69.114.190:8065/;",
-      "countryCode": "US",
-      "favicon": "https://static.mytuner.mobi/media/tvos_radios/vl4bvwwwmhej.jpg",
-      "tags": [
-        "80s radio"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 398,
       "clickCount": 54
     },
     {
@@ -2712,20 +2655,6 @@
       "clickCount": 42
     },
     {
-      "id": "51775b57-e11a-40ef-8894-38b07d80bb73",
-      "name": "Europe 1",
-      "streamUrl": "https://europe1.lmn.fm/europe1.mp3",
-      "countryCode": "FR",
-      "favicon": "https://db.radioline.fr/pictures/radio_fa64fea9b6ccd92e058ced3fa41f58f5/logo200.jpg",
-      "tags": [
-        "génaraliste"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 669,
-      "clickCount": 42
-    },
-    {
       "id": "a5314180-7573-4b46-aafc-51ed2d5b9e71",
       "name": "NPR Newscast",
       "streamUrl": "http://pd.npr.org/anon.npr-mp3/npr/news/newscast.mp3",
@@ -2822,25 +2751,6 @@
       "clickCount": 40
     },
     {
-      "id": "797a1245-f5b0-4a8c-a450-2d74c3defa6e",
-      "name": "RADIO NOVA",
-      "streamUrl": "https://novazz.ice.infomaniak.ch/novazz-128.mp3",
-      "countryCode": "FR",
-      "favicon": "https://www.nova.fr/wp-content/uploads/sites/2/2020/10/NOVA_CARD_HD.png?resize=560%2C664&quality=75",
-      "tags": [
-        "electro",
-        "hip hop",
-        "jazz",
-        "new wave",
-        "reggae",
-        "world music"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 902,
-      "clickCount": 40
-    },
-    {
       "id": "a570f67d-3740-4e4a-a4c5-5b99b0d8abed",
       "name": "Alouette",
       "streamUrl": "http://alouette.ice.infomaniak.ch/alouette-high.mp3",
@@ -2903,18 +2813,6 @@
       "clickCount": 40
     },
     {
-      "id": "d9fc29b8-b152-11e8-afe1-52543be04c81",
-      "name": "France Inter",
-      "streamUrl": "http://direct.franceinter.fr/live/franceinter-midfi.mp3",
-      "countryCode": "FR",
-      "favicon": "",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 54399,
-      "clickCount": 39
-    },
-    {
       "id": "3afa9b63-d668-43ea-ac6f-295c341baa29",
       "name": "Urban Radio - Hip Hop / R&B",
       "streamUrl": "http://hydra.cdnstream.com/1536_128",
@@ -2928,27 +2826,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 648,
-      "clickCount": 39
-    },
-    {
-      "id": "14543b1e-44bf-4151-ae89-ec23b6eb711f",
-      "name": "NPR 24 Hour Program Stream",
-      "streamUrl": "http://npr-ice.streamguys1.com/live.aac",
-      "countryCode": "US",
-      "favicon": "https://static-assets.npr.org/static/images/favicon/favicon-96x96.png",
-      "tags": [
-        "news",
-        "news talk",
-        "political",
-        "political talk",
-        "politics",
-        "talk",
-        "talk radio",
-        "world news"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 64,
-      "votes": 1589,
       "clickCount": 39
     },
     {
@@ -3326,22 +3203,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 393,
-      "clickCount": 36
-    },
-    {
-      "id": "a1249d7e-eb60-48bf-ba83-ebf3960b9a90",
-      "name": "Sunshine Live",
-      "streamUrl": "http://sunsl.streamabc.net/sunsl-sslsimulcast-mp3-192-4434053?sABC=6557p1o3%230%236080533n48sp2nrq0o4389q6o67o3qps%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1700250035",
-      "countryCode": "DE",
-      "favicon": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sunshine_live_Logo_2022.svg/640px-Sunshine_live_Logo_2022.svg.png",
-      "tags": [
-        "electronic",
-        "house",
-        "techno"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 0,
-      "votes": 1100,
       "clickCount": 36
     },
     {
@@ -4052,20 +3913,6 @@
       "clickCount": 28
     },
     {
-      "id": "8890f793-36f4-4218-8f53-3d34a75db66a",
-      "name": "Radio Classique",
-      "streamUrl": "https://radioclassique.ice.infomaniak.ch/radioclassique-high.mp3",
-      "countryCode": "FR",
-      "favicon": "",
-      "tags": [
-        "classical"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 10,
-      "clickCount": 28
-    },
-    {
       "id": "9467b580-dd8b-44d6-b99a-6ac688a50786",
       "name": "ISEKOI Radio | Chill Zone",
       "streamUrl": "https://public.isekoi-radio.com/listen/chill/radio.mp3",
@@ -4248,20 +4095,6 @@
       "clickCount": 27
     },
     {
-      "id": "a347209e-6ce6-4c94-81ed-003c1275188f",
-      "name": "BBC World Service",
-      "streamUrl": "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service_east_asia",
-      "countryCode": "GB",
-      "favicon": "https://cdn.vox-cdn.com/thumbor/FOKCcOpam5-0m4VfrxvfzMdDK6I=/10x0:610x400/1400x1400/filters:focal(10x0:610x400):format(jpeg)/cdn.vox-cdn.com/assets/958975/bbc_world_service.jpeg",
-      "tags": [
-        "news"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 56,
-      "votes": 2602,
-      "clickCount": 27
-    },
-    {
       "id": "dfc627d6-5bb2-11ea-be63-52543be04c81",
       "name": "Tropiques FM",
       "streamUrl": "http://listen.radioking.com/radio/8916/stream/19088",
@@ -4299,20 +4132,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 6852,
-      "clickCount": 26
-    },
-    {
-      "id": "003baf55-9ac9-4352-bceb-375ee4203133",
-      "name": "France Info",
-      "streamUrl": "http://icecast.radiofrance.fr/franceinfo-hifi.aac",
-      "countryCode": "FR",
-      "favicon": "https://www.francetvinfo.fr/assets/common/images/pwa/ios/120-5487caf3.png",
-      "tags": [
-        "informations"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 192,
-      "votes": 2330,
       "clickCount": 26
     },
     {
@@ -4600,23 +4419,6 @@
       "clickCount": 25
     },
     {
-      "id": "5e992e1e-e6ef-11e9-a96c-52543be04c81",
-      "name": "France Musique",
-      "streamUrl": "http://icecast.radiofrance.fr/francemusique-hifi.aac",
-      "countryCode": "FR",
-      "favicon": "https://upload.wikimedia.org/wikipedia/fr/thumb/2/22/France_Musique_-_2008.svg/1024px-France_Musique_-_2008.svg.png",
-      "tags": [
-        "aac",
-        "musique",
-        "public radio",
-        "radio france"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 192,
-      "votes": 12641,
-      "clickCount": 25
-    },
-    {
       "id": "900a7450-c2fb-4896-a38f-99a2e6dc0c6e",
       "name": "80s80s Italo Disco",
       "streamUrl": "http://regiocast.streamabc.net/regc-80s80sitalohits4327678-mp3-192-4934150?sABC=654902n3%230%232qqpnss01895rqr0s8oq129o03s183o0%23fgernzf.80f80f.qr&aw_0_1st.playerid=streams.80s80s.de&amsparams=playerid:streams.80s80s.de;skey:1699283619",
@@ -4664,27 +4466,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 8141,
-      "clickCount": 24
-    },
-    {
-      "id": "3d4c97c7-e122-4304-b8c8-52336683bda1",
-      "name": "WDR 5",
-      "streamUrl": "https://wdr-wdr5-live.icecastssl.wdr.de/wdr/wdr5/live/mp3/128/stream.mp3",
-      "countryCode": "DE",
-      "favicon": "https://www1.wdr.de/resources/img/wdr/logo/epgmodule/wdr5_logo_claim.svg",
-      "tags": [
-        "chanson",
-        "culture",
-        "current focal points",
-        "folk",
-        "latin",
-        "science",
-        "sophisticated underground music",
-        "soul"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 417,
       "clickCount": 24
     },
     {
@@ -5316,18 +5097,6 @@
       "clickCount": 21
     },
     {
-      "id": "d45dff01-bb08-4703-992d-a679a0ba0b05",
-      "name": "Antenne Bayern",
-      "streamUrl": "https://stream.antenne.de/antenne/stream/mp3",
-      "countryCode": "DE",
-      "favicon": "https://i.postimg.cc/TYJQSsJx/1000002936.webp",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 47,
-      "clickCount": 21
-    },
-    {
       "id": "0c9ddabb-b41c-11e8-afe1-52543be04c81",
       "name": "90s90s Techno HQ",
       "streamUrl": "http://streams.90s90s.de/techno/mp3-192/radiode/",
@@ -5623,18 +5392,6 @@
       "clickCount": 20
     },
     {
-      "id": "7a18cc3d-0487-4d0c-a032-0320ffc88098",
-      "name": "KontraFunk",
-      "streamUrl": "https://stream.kontrafunk.radio/listen/kontrafunk/radio.mp3",
-      "countryCode": "DE",
-      "favicon": "https://play-lh.googleusercontent.com/R6go7XJTLHpMyaynmAlx8kI9kAj728uqRoywvSatUTdU4RVlZyyOzHcxbEgdLVh7Og=w480-h960",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 192,
-      "votes": 97,
-      "clickCount": 20
-    },
-    {
       "id": "42a73a97-9398-437c-b521-86646a79f82f",
       "name": "deutschlandfunk",
       "streamUrl": "https://st01.sslstream.dlf.de/dlf/01/128/mp3/stream.mp3?aggregator=web",
@@ -5691,21 +5448,6 @@
       "codec": "AAC+",
       "bitrateKbps": 192,
       "votes": 5100,
-      "clickCount": 19
-    },
-    {
-      "id": "e8c4dc8d-2f73-4779-b074-90eefb98b388",
-      "name": "Radio X",
-      "streamUrl": "http://icecast.thisisdax.com/RadioXUKMP3",
-      "countryCode": "GB",
-      "favicon": "https://i.imgur.com/fbhlSLX.jpg",
-      "tags": [
-        "alternative rock",
-        "britpop"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 2029,
       "clickCount": 19
     },
     {
@@ -5968,20 +5710,6 @@
       "clickCount": 18
     },
     {
-      "id": "598c4d0e-6b06-43fb-bff4-717c591213a9",
-      "name": "BBC World Service",
-      "streamUrl": "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service",
-      "countryCode": "GB",
-      "favicon": "https://rmp.files.bbci.co.uk/rmp-shared-assets/1.4.0/img/network-logos/national/bbc_world_service_colour.svg",
-      "tags": [
-        "bbc"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 56,
-      "votes": 16585,
-      "clickCount": 18
-    },
-    {
       "id": "9610c519-0601-11e8-ae97-52543be04c81",
       "name": ".977 Smooth Jazz",
       "streamUrl": "http://14543.live.streamtheworld.com/977_SMOOJAZZ_SC",
@@ -6092,18 +5820,6 @@
       "codec": "MP3",
       "bitrateKbps": 192,
       "votes": 713,
-      "clickCount": 18
-    },
-    {
-      "id": "62ee0f9a-5ad0-42cd-9c37-d16de34043ea",
-      "name": "Radio Bollerwagen",
-      "streamUrl": "https://stream.ffn.de/radiobollerwagen/mp3-192/stream.mp3",
-      "countryCode": "DE",
-      "favicon": "https://radiobollerwagen.de/typo3conf/ext/ffn_radiosender_site/Resources/Public/Icons/Favicons/RadioBollerwagen/cropped-radio-bollerwagen-favicon-180x180.png",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 192,
-      "votes": 83,
       "clickCount": 18
     },
     {
@@ -6623,20 +6339,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 4342,
-      "clickCount": 16
-    },
-    {
-      "id": "792ca70c-3444-4d95-bcf7-3f179fc119be",
-      "name": "Absolut Relax",
-      "streamUrl": "https://absolut-relax.live-sm.absolutradio.de/absolut-relax/stream/mp3",
-      "countryCode": "DE",
-      "favicon": "",
-      "tags": [
-        "relax"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 84,
       "clickCount": 16
     },
     {
@@ -7426,20 +7128,6 @@
       "clickCount": 15
     },
     {
-      "id": "eb8148fe-9402-4c69-8bc6-1f07157106eb",
-      "name": "Antenne Bayern - Oldies but Goldies",
-      "streamUrl": "https://stream.oldie-antenne.de/oldie-antenne/stream/mp3",
-      "countryCode": "DE",
-      "favicon": "https://antenne.de/logos/station-antenne-bayern/apple-touch-icon.png",
-      "tags": [
-        "misc"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 227,
-      "clickCount": 15
-    },
-    {
       "id": "2a372113-4b74-41aa-a1e8-3dcb5d66de61",
       "name": "JOY TÜRK TURKEY",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/JOY_TURK_SC?/",
@@ -7672,20 +7360,6 @@
       "clickCount": 15
     },
     {
-      "id": "9a7f14e6-2826-47e4-8008-d54af25cf0d8",
-      "name": "baba radyo",
-      "streamUrl": "http://officialbabaradyo.radyotvonline.net/babaofficial",
-      "countryCode": "TR",
-      "favicon": "https://www.babaradyo.com/wp-content/uploads/2025/01/cropped-baba-radyo-23-180x180.png",
-      "tags": [
-        "classic hits"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 1193,
-      "clickCount": 15
-    },
-    {
       "id": "ae6c1e45-2ec6-43de-99e3-75fc1e77465d",
       "name": "Rock Antenne Modern Metal",
       "streamUrl": "https://stream.rockantenne.de/modern-metal/stream/mp3",
@@ -7761,20 +7435,6 @@
       "clickCount": 14
     },
     {
-      "id": "962e9a46-0601-11e8-ae97-52543be04c81",
-      "name": "Heart 80s",
-      "streamUrl": "http://media-ice.musicradio.com/Heart80sMP3",
-      "countryCode": "GB",
-      "favicon": "http://heart.co.uk/assets_v4r/heart/img/favicon-196x196.png",
-      "tags": [
-        "80s"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 3162,
-      "clickCount": 14
-    },
-    {
       "id": "31da019f-9f0a-11e9-a787-52543be04c81",
       "name": "ALTIN SARKILAR",
       "streamUrl": "http://37.247.98.8/stream/25/;",
@@ -7787,18 +7447,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 8017,
-      "clickCount": 14
-    },
-    {
-      "id": "e7336c56-10dc-4d43-8244-eee899cda358",
-      "name": "Damar Turk FM",
-      "streamUrl": "https://live.radyositesihazir.com:10997/;",
-      "countryCode": "TR",
-      "favicon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAlkZWbK47GUO6iQFP2yohP0z_5X3WpdjdMQ&amp;s",
-      "tags": [],
-      "codec": "AAC+",
-      "bitrateKbps": 192,
-      "votes": 454,
       "clickCount": 14
     },
     {
@@ -7842,18 +7490,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 6121,
-      "clickCount": 14
-    },
-    {
-      "id": "4c1dceb9-5a74-469e-af10-8f972b620dd6",
-      "name": "Radio Bollerwagen",
-      "streamUrl": "https://ffn-stream19.radiohost.de/radiobollerwagen_mp3-192",
-      "countryCode": "DE",
-      "favicon": "https://radiobollerwagen.de/wp-content/uploads/2021/10/cropped-radio-bollerwagen-logo-e1634208057769-180x180.png",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 192,
-      "votes": 263,
       "clickCount": 14
     },
     {
@@ -8056,20 +7692,6 @@
       "clickCount": 14
     },
     {
-      "id": "4d8e945e-57a9-4c5a-a92e-d43a7c3c58d7",
-      "name": "Kontrafunk",
-      "streamUrl": "http://s5.radio.co/sca4082ebb/listen",
-      "countryCode": "DE",
-      "favicon": "",
-      "tags": [
-        "news"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 1090,
-      "clickCount": 14
-    },
-    {
       "id": "65f5549e-a554-4386-9249-7f9651fd40f6",
       "name": "Schwarzwaldradio",
       "streamUrl": "https://edge80.streamonkey.net/fho-schwarzwaldradiolive/stream/mp3?aggregator=smk-m3u-mp3",
@@ -8182,20 +7804,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 5805,
-      "clickCount": 13
-    },
-    {
-      "id": "77c2c6f8-18ed-493e-99fe-abca5f582a9e",
-      "name": "Sunshine Live",
-      "streamUrl": "http://stream.sunshine-live.de/live/mp3-192",
-      "countryCode": "DE",
-      "favicon": "",
-      "tags": [
-        "electronic"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 0,
-      "votes": 103,
       "clickCount": 13
     },
     {
@@ -8323,18 +7931,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 124,
-      "clickCount": 13
-    },
-    {
-      "id": "1b60b688-13b5-4eeb-8fa4-ce0fb2cf813d",
-      "name": "Rire et Chansons Sketches",
-      "streamUrl": "https://streaming.nrjaudio.fm/ou8oqegk7oiu?aw_0_1st.station=Rire-Chansons-SKETCHES&origine=mytuner",
-      "countryCode": "FR",
-      "favicon": "https://img.nrj.fr/pIABw7XJL-WSr_yM15yCzAxG394=/360x360/smart/https%3A%2F%2Fplayers.nrjaudio.fm%2Flive-metadata%2Fplayer%2Fimg%2Fplayer-files%2Frire%2Flogos%2F640x640%2FRIRE-WR-Sketches.jpg",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 11,
       "clickCount": 13
     },
     {
@@ -9232,34 +8828,6 @@
       "clickCount": 12
     },
     {
-      "id": "5d0149db-4923-4ac6-a45d-459dea9269cb",
-      "name": "Radio Hamburg",
-      "streamUrl": "https://frontend.streamonkey.net/rhh-1036?",
-      "countryCode": "DE",
-      "favicon": "",
-      "tags": [],
-      "codec": "AAC",
-      "bitrateKbps": 0,
-      "votes": 250,
-      "clickCount": 12
-    },
-    {
-      "id": "9610ad64-0601-11e8-ae97-52543be04c81",
-      "name": "Ballermann Radio",
-      "streamUrl": "http://stream.bmr-radio.de/",
-      "countryCode": "DE",
-      "favicon": "http://www.ballermann-radio.de/favicon.ico",
-      "tags": [
-        "party",
-        "pop",
-        "schlager"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 0,
-      "votes": 3115,
-      "clickCount": 12
-    },
-    {
       "id": "9617c02d-0601-11e8-ae97-52543be04c81",
       "name": "Autoroute Info 107.7 Zone Sud",
       "streamUrl": "http://media.autorouteinfo.fr:8000/direct_sud.mp3",
@@ -9417,34 +8985,6 @@
       "clickCount": 12
     },
     {
-      "id": "4b96ce1a-bb77-4bcc-be59-be493608631e",
-      "name": "BFM Radio (128.mp3)",
-      "streamUrl": "https://audio.bfmtv.com/bfmradio_128.mp3",
-      "countryCode": "FR",
-      "favicon": "https://www.bfmtv.com/android-icon-192x192.png",
-      "tags": [
-        "information",
-        "informations",
-        "news"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 256,
-      "votes": 627,
-      "clickCount": 12
-    },
-    {
-      "id": "d19052d9-963d-4559-98d2-ebd8337023cb",
-      "name": "Radio Meuh",
-      "streamUrl": "https://radiomeuh2.ice.infomaniak.ch/radiomeuh2-128.mp3",
-      "countryCode": "FR",
-      "favicon": "https://www.radiomeuh.com/android-icon-192x192.png",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 242,
-      "clickCount": 12
-    },
-    {
       "id": "c257d985-4a5a-4f5d-b861-6a1397d8a9c1",
       "name": "RTL France",
       "streamUrl": "https://icecast.rtl.fr/rtl-1-44-128",
@@ -9514,18 +9054,6 @@
       "codec": "AAC+",
       "bitrateKbps": 320,
       "votes": 132,
-      "clickCount": 12
-    },
-    {
-      "id": "78d27eb0-ad49-4188-be72-38f7137e4164",
-      "name": "Antenne Bayern",
-      "streamUrl": "http://mp3channels.webradio.antenne.de/antenne",
-      "countryCode": "DE",
-      "favicon": "",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 49,
       "clickCount": 12
     },
     {
@@ -10177,37 +9705,6 @@
       "clickCount": 11
     },
     {
-      "id": "e093a1fe-1466-4c11-8cba-12db6de65b74",
-      "name": "Chante France 80's",
-      "streamUrl": "https://chantefrance80s.ice.infomaniak.ch/chantefrance80s-128.mp3",
-      "countryCode": "FR",
-      "favicon": "https://m209.syncusercontent.com/mfs-60:62a5d44bbf259b3cd1bfc46b554dc870=============================/p/Chante_France_80s.PNG?allowdd=0&datakey=IiyCboqbabGVcgKaDzHK02vXW3Wky759JGLowzH0RO5kZXgBRhFkorPIHuNpTR9+35SR35ZpNbQ+kwtHURxsIulDqyud/UkpFEYEPU2UGLy4FjPkgwUl2C1PIScCRX0ZnWXDKcH6sbuJiRtmdarH0A3qt31L+jTBhgOETWvJ8i7zNIOy7FUFOnyiKGULsFiYVZ5Ta4FsdARFqu+JXxkZ1fSE4/W/E4ePYH58jkI7KHopwc5VG2wlbGy2zRmW+xW99ck7BeLtgglYJ1IGwflB1yYRLr3ZhnxqGAgiBRnZVFO6SB/N1HF3DduX2eg8RKl1oBkSoCFgzf3YnS9Tp83S3Q&engine=ln-3.1.38&errurl=hClSQ4MkSQjg1qv64K1t4MZGzA8/95NcIiROqX2SC/ATAZg9EuQgUaHPydUV/+gizUbVpzxtzONz1ZmDAbcLjzb6JI+kLZRjdmKO+ZDa2/ZLq3DGtvsXxJihIBsyGdnVlLT0/Yzm3hfa1ftoaMNbjzV2Jud3IZw5CxZ69QsIutUsC0Gv93kawZLvsFQ2QJFDUjzYHYCZC3Pm0hcy1N6EWSDH2snTlxy8erDa13+FluIyc4h6GS9V3Di2XS28g2K8BVRaqHzzhtwNnc7H2Q6s7L5YkN8KgPyq/PWt74IrfkeUXBUd4IHpqOhoz2kKVbnynrMRu+T2mg02oep3HFcT1g==&header1=Q29udGVudC1UeXBlOiBpbWFnZS9wbmc&header2=Q29udGVudC1EaXNwb3NpdGlvbjogaW5saW5lOyBmaWxlbmFtZT0iQ2hhbnRlX0ZyYW5jZV84MHMuUE5HIjtmaWxlbmFtZSo9VVRGLTgnJ0NoYW50ZV9GcmFuY2VfODBzLlBORzs&ipaddress=1414030563&linkcachekey=d0286fb30&linkoid=1991610004&mode=101&sharelink_id=17962735040004&timestamp=1708276131659&uagent=3b50c75381f12107280e9099b5b7674cf455a2e5&signature=05c24b5e57cc52ad8f43654652244e0a257732ff&cachekey=60:62a5d44bbf259b3cd1bfc46b554dc870=============================",
-      "tags": [
-        "chansons françaises",
-        "french chansons"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 102,
-      "clickCount": 11
-    },
-    {
-      "id": "71ab8906-a508-4f98-a498-8840b41b79d5",
-      "name": "France Inter",
-      "streamUrl": "http://direct.franceinter.fr/live/franceinter-midfi.mp3",
-      "countryCode": "FR",
-      "favicon": "https://www.radiofrance.fr/dist/favicons/logo-120.png",
-      "tags": [
-        "debate",
-        "music",
-        "news"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 772,
-      "clickCount": 11
-    },
-    {
       "id": "960bf247-0601-11e8-ae97-52543be04c81",
       "name": "Radio Espérance Grégorien",
       "streamUrl": "https://esperance.streamakaci.com/gregorien.mp3",
@@ -10245,18 +9742,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 2925,
-      "clickCount": 11
-    },
-    {
-      "id": "168088af-f8f0-42e1-b787-30e1f2fb34db",
-      "name": "MOUV'",
-      "streamUrl": "http://icecast.radiofrance.fr/mouv-hifi.aac",
-      "countryCode": "FR",
-      "favicon": "https://charte.radiofrance.fr/images/mouv/mouv-avatar.png",
-      "tags": [],
-      "codec": "AAC",
-      "bitrateKbps": 192,
-      "votes": 19,
       "clickCount": 11
     },
     {
@@ -11299,20 +10784,6 @@
       "clickCount": 10
     },
     {
-      "id": "f760fce4-6d26-4203-9eb6-cf25e8799716",
-      "name": "France Inter",
-      "streamUrl": "https://icecast.radiofrance.fr/franceinter-hifi.aac",
-      "countryCode": "FR",
-      "favicon": "https://upload.wikimedia.org/wikipedia/commons/a/a0/France_Inter_logo_2021.svg",
-      "tags": [
-        "news talk"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 192,
-      "votes": 278,
-      "clickCount": 10
-    },
-    {
       "id": "96135f9c-0601-11e8-ae97-52543be04c81",
       "name": "Jazz Radio Black Music",
       "streamUrl": "http://jazzblackmusic.ice.infomaniak.ch/jazzblackmusic-high.mp3",
@@ -11517,18 +10988,6 @@
       "clickCount": 10
     },
     {
-      "id": "09a6d94f-6687-499f-903d-f2e949bd65f3",
-      "name": "Radio Courtoisie",
-      "streamUrl": "http://ice.creacast.com/radio-courtoisie",
-      "countryCode": "FR",
-      "favicon": "",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 7,
-      "clickCount": 10
-    },
-    {
       "id": "2e53ff8e-1d21-4e04-b0e9-f68257c4e7e9",
       "name": "OnlyHit K-Pop",
       "streamUrl": "https://kpop.onlyhit.us/play",
@@ -11616,35 +11075,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 1708,
-      "clickCount": 9
-    },
-    {
-      "id": "0efe50ba-3b6a-11e9-9b4e-52543be04c81",
-      "name": "France Inter",
-      "streamUrl": "http://direct.franceinter.fr/live/franceinter-lofi.mp3",
-      "countryCode": "FR",
-      "favicon": "https://www.franceinter.fr/favicon.ico",
-      "tags": [
-        "news talk"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 32,
-      "votes": 21256,
-      "clickCount": 9
-    },
-    {
-      "id": "f2c327d2-619d-48cd-a5d3-2fa705625c6a",
-      "name": "France Info",
-      "streamUrl": "http://direct.franceinfo.fr/live/franceinfo-midfi.aac",
-      "countryCode": "FR",
-      "favicon": "https://m209.syncusercontent.com/mfs-60:e7d8bcadd5a2477fc9e51bcf050e882e=============================/p/FranceInfo.png?allowdd=0&datakey=oRfJWLO6jtwpRPP6jNCQN57oNuBOHsNUitHdz3RIW2vZImwxaSD/BMCrflKec/vHo3SxNLXFu1udMP1S8XHjPXw1q5kFoSg7egRcIOebiokWBPOr09HQdsFTOMnhM35aakAPiHis5fRC74CjVIh05epEX3IzZZSWFj/OfZQ7k+3d2U9vkgewVimqIaTJuVNyKAJ0k/5Ki65LjHOfI3kDK891oQKVSExxxD0cZm9SziqD/wNdZflXZZNwvVrl3ef3TfuK9GCprIHLC5Fpt3djEIs/jmoSapjQZl4l5sez++LaVNSaP4OZe+z4YK3Kiuef0mN5THxwh2JS2mpzYRGdoA&engine=ln-3.1.38&errurl=pl576c8tTkE53fesN6K59kLFTlfG9ukXOsWjYDyCBknLOMFJ7nSS6G45+Rqiajr6D+YVYQGYv6bQK/07r1fnLn0H8NQKBKKeYOKnZ2VVU6LxVkuqYFOENdT0QdS0UznLvBKHDQ3ljz4eOKolzdl3d4xl+5Z5sAi1GdSzv27mF7GuqFNtcKnt0q2ZogvLNx/bJSBNbFKwhvpXKr1jbqTVXVW1eRnN0wWW1a30NLuV+woXgYk057D1reVd4fGJcC6Wy0WXWvBfFEreFqNOVyBrxenbprKCzhzVTuSY8z/uj2x6cqFBbpfgTumCneiWx0ApNNPg6DiFxXZ0V8q3RRXG4Q==&header1=Q29udGVudC1UeXBlOiBpbWFnZS9wbmc&header2=Q29udGVudC1EaXNwb3NpdGlvbjogaW5saW5lOyBmaWxlbmFtZT0iRnJhbmNlSW5mby5wbmciO2ZpbGVuYW1lKj1VVEYtOCcnRnJhbmNlSW5mby5wbmc7&ipaddress=1414030563&linkcachekey=748911ee0&linkoid=1991610004&mode=101&sharelink_id=17949036050004&timestamp=1708187509312&uagent=3b50c75381f12107280e9099b5b7674cf455a2e5&signature=00134c6a20bb3132c47960c0e5b08e7df047a4aa&cachekey=60:e7d8bcadd5a2477fc9e51bcf050e882e=============================",
-      "tags": [
-        "information",
-        "news"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 96,
-      "votes": 1348,
       "clickCount": 9
     },
     {
@@ -11783,23 +11213,6 @@
       "clickCount": 9
     },
     {
-      "id": "a5331ae6-1196-46c4-b8d6-6a013018bbfe",
-      "name": "Cinemix",
-      "streamUrl": "https://kathy.torontocast.com:1825/stream",
-      "countryCode": "FR",
-      "favicon": "",
-      "tags": [
-        "film music",
-        "film scores",
-        "instrumental",
-        "soundtrack"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 1048,
-      "clickCount": 9
-    },
-    {
       "id": "12ade23d-8bac-4462-b49c-4d116e0d8c8b",
       "name": "@Magic Radio",
       "streamUrl": "http://mp3.magic-radio.net/320",
@@ -11823,20 +11236,6 @@
       "codec": "MP3",
       "bitrateKbps": 64,
       "votes": 1002,
-      "clickCount": 9
-    },
-    {
-      "id": "9df3c7af-26d1-4100-8bad-9cb2432ecdf4",
-      "name": "France Info",
-      "streamUrl": "http://icecast.radiofrance.fr/franceinfo-hifi.aac",
-      "countryCode": "FR",
-      "favicon": "https://www.francetvinfo.fr/assets/common/images/pwa/ios/120-5487caf3.png",
-      "tags": [
-        "informations"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 192,
-      "votes": 1255,
       "clickCount": 9
     },
     {
@@ -12285,25 +11684,6 @@
       "clickCount": 9
     },
     {
-      "id": "fd13051d-40ec-11e9-aa55-52543be04c81",
-      "name": "- 0 N - Classic Rock on Radio",
-      "streamUrl": "https://0n-classicrock.radionetz.de/0n-classicrock.aac",
-      "countryCode": "DE",
-      "favicon": "https://www.0nradio.com/logos/0n-classic-rock_600x600.jpg",
-      "tags": [
-        "80er",
-        "80s",
-        "90er",
-        "90s",
-        "classic rock",
-        "rock"
-      ],
-      "codec": "AAC+",
-      "bitrateKbps": 64,
-      "votes": 1654,
-      "clickCount": 9
-    },
-    {
       "id": "9612308f-0601-11e8-ae97-52543be04c81",
       "name": "Frisky Deep",
       "streamUrl": "http://deep.friskyradio.com/friskydeep_aachi",
@@ -12480,25 +11860,6 @@
       "clickCount": 9
     },
     {
-      "id": "4b473070-a3c2-41bd-8d98-c2db5f5954bc",
-      "name": "Rock Antenne Heavy Metal",
-      "streamUrl": "https://stream.rockantenne.de/heavy-metal/stream/aacp",
-      "countryCode": "DE",
-      "favicon": "https://www.rockantenne.de/logos/station-rock-antenne/apple-touch-icon.png",
-      "tags": [
-        "black metal",
-        "death metal",
-        "heavy metal",
-        "metal",
-        "symphonic metal",
-        "thrash metal"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 0,
-      "votes": 1748,
-      "clickCount": 9
-    },
-    {
       "id": "64f0a21e-1f0f-4f3b-a903-1d4e872fa094",
       "name": "Best Of Rock.FM Hard Rock",
       "streamUrl": "https://bestofrockfm.stream.vip/hardrock/mp3-256/bestofrock.fm/",
@@ -12546,23 +11907,6 @@
       "codec": "AAC",
       "bitrateKbps": 320,
       "votes": 677,
-      "clickCount": 9
-    },
-    {
-      "id": "a2353b31-3ace-11ea-8dd7-52543be04c81",
-      "name": "Radio Bollerwagen",
-      "streamUrl": "http://player.ffn.de/radiobollerwagen.m3u",
-      "countryCode": "DE",
-      "favicon": "",
-      "tags": [
-        "party",
-        "party hits",
-        "partyhits",
-        "partymusik"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 192,
-      "votes": 557,
       "clickCount": 9
     },
     {
@@ -12942,22 +12286,6 @@
       "clickCount": 9
     },
     {
-      "id": "9844b1b2-7f4e-4c99-95d1-cc7a18a26ba7",
-      "name": "Fun Radio",
-      "streamUrl": "https://icecast.funradio.fr/fun-1-44-128",
-      "countryCode": "FR",
-      "favicon": "",
-      "tags": [
-        "electro",
-        "electronic",
-        "r'n'b"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 218,
-      "clickCount": 9
-    },
-    {
       "id": "77c0b127-4805-4c8c-ac78-859ab4fadf17",
       "name": "Italo Disco USA",
       "streamUrl": "http://broadcast.miami/proxy/italodisco?mp=/stream/;",
@@ -13083,20 +12411,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 852,
-      "clickCount": 8
-    },
-    {
-      "id": "c6c204d3-3ffd-4e85-b0f9-29bf6de7ddf4",
-      "name": "Absolute Radio 80s",
-      "streamUrl": "https://stream-ar.hellorayo.co.uk/absolute80shigh.aac?aw_0_1st.skey=1602676850&direct=true&rp_source=1",
-      "countryCode": "GB",
-      "favicon": "https://media.bauerradio.com/image/upload/c_crop,g_custom/v1717682143/brand_manager/stations/d8fpii0yfv7fimdhxqp1.png",
-      "tags": [
-        "80s"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 128,
-      "votes": 18,
       "clickCount": 8
     },
     {
@@ -13895,20 +13209,6 @@
       "clickCount": 8
     },
     {
-      "id": "621bcc4f-ef14-46c7-b234-70003d436764",
-      "name": "Radio Vinci Autoroutes 107.7 Sud Ouest",
-      "streamUrl": "http://str0.creacast.com/radio_vinci_autoroutes_3",
-      "countryCode": "FR",
-      "favicon": "",
-      "tags": [
-        "news"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 34,
-      "clickCount": 8
-    },
-    {
       "id": "18a12030-0b31-449e-9b0b-493a4c57ada7",
       "name": "RADIO BOB! Livestream",
       "streamUrl": "http://streams.radiobob.de/bob-national/mp3-192/mediaplayer",
@@ -14440,24 +13740,6 @@
       "clickCount": 8
     },
     {
-      "id": "80d74009-e473-4454-9602-139b88485ba5",
-      "name": "Capital FM London",
-      "streamUrl": "https://media-ssl.musicradio.com/CapitalMP3",
-      "countryCode": "GB",
-      "favicon": "https://imgs.capitalfm.com/images/573609?format=png&signature=fxgDCsRPRQMvt-WaQM8YWFAMFa8=",
-      "tags": [
-        "chr",
-        "dance",
-        "hits",
-        "pop",
-        "top 40"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 90,
-      "clickCount": 8
-    },
-    {
       "id": "0edc51ea-fc6b-4ab8-a687-8dde4730007b",
       "name": "Pal station",
       "streamUrl": "http://shoutcast.radyogrup.com:1020/",
@@ -14787,18 +14069,6 @@
       "clickCount": 8
     },
     {
-      "id": "486d5290-cf76-43e1-9cb9-d50f96eea034",
-      "name": "SWR1 BW",
-      "streamUrl": "https://liveradio.swr.de/sw331ch/swr1bw/",
-      "countryCode": "DE",
-      "favicon": "https://api.ardmediathek.de/image-service/images/urn:ard:image:fcd6835b90ee9466?w=512",
-      "tags": [],
-      "codec": "AAC",
-      "bitrateKbps": 128,
-      "votes": 88,
-      "clickCount": 8
-    },
-    {
       "id": "96108f48-0601-11e8-ae97-52543be04c81",
       "name": "Sunshine Live - EDM",
       "streamUrl": "http://stream.sunshine-live.de/edm/mp3-192/stream.sunshine-live.de/",
@@ -14811,18 +14081,6 @@
       "codec": "MP3",
       "bitrateKbps": 0,
       "votes": 3970,
-      "clickCount": 8
-    },
-    {
-      "id": "a1d6b58e-eb8c-4932-a3f8-5da21211dd7d",
-      "name": "TechnoBase.FM",
-      "streamUrl": "https://listen.technobase.fm/tunein-mp3",
-      "countryCode": "DE",
-      "favicon": "https://www.technobase.fm/content/images/site/logo-technobase.fm.png",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 192,
-      "votes": 58,
       "clickCount": 8
     },
     {
@@ -14972,27 +14230,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 421,
-      "clickCount": 7
-    },
-    {
-      "id": "8a18c2ff-bdb9-4bfc-9707-091c12086fea",
-      "name": "Indie X FM",
-      "streamUrl": "https://kathy.torontocast.com:2695/stream",
-      "countryCode": "US",
-      "favicon": "https://img1.wsimg.com/isteam/ip/6b751bf2-5843-4590-8843-d4025327a155/favicon/b60d118d-2ffa-4828-9955-afea07eb614f.png/:/rs=w:180,h:180,m",
-      "tags": [
-        "alternative rock",
-        "alternative wave",
-        "classic alternative",
-        "edm",
-        "indie",
-        "indie pop",
-        "indie rock",
-        "punk"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 320,
-      "votes": 242,
       "clickCount": 7
     },
     {
@@ -15379,20 +14616,6 @@
       "clickCount": 7
     },
     {
-      "id": "717fc5d5-fe02-462c-8d41-64c4c6895d98",
-      "name": "France Info",
-      "streamUrl": "http://icecast.radiofrance.fr/franceinfo-hifi.aac",
-      "countryCode": "FR",
-      "favicon": "",
-      "tags": [
-        "informations"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 192,
-      "votes": 108,
-      "clickCount": 7
-    },
-    {
       "id": "21a282be-44f4-4b8e-aae9-b4c2041af4a5",
       "name": "Radio Paradise World/Etc Mix 320k AAC",
       "streamUrl": "https://stream.radioparadise.com/world-etc-320",
@@ -15456,20 +14679,6 @@
       "clickCount": 7
     },
     {
-      "id": "9d5be614-9fe5-42d9-ad83-f4747f8dd8c7",
-      "name": "Fip",
-      "streamUrl": "http://icecast.radiofrance.fr/fip-hifi.aac",
-      "countryCode": "FR",
-      "favicon": "https://www.radiofrance.fr/dist/favicons/logo-120.png",
-      "tags": [
-        "pop jazz"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 192,
-      "votes": 223,
-      "clickCount": 7
-    },
-    {
       "id": "2992ab47-a3d5-4ab2-9881-bf7657fa1c03",
       "name": "Bloomberg 99.1/105.7 HD2",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/WBBRDCAAC.aac",
@@ -15481,18 +14690,6 @@
       "codec": "AAC+",
       "bitrateKbps": 32,
       "votes": 1902,
-      "clickCount": 7
-    },
-    {
-      "id": "bed0e87f-2d83-41ff-bb9b-0ed0594dc9d7",
-      "name": "La Grosse Radio Reggae",
-      "streamUrl": "https://hd.lagrosseradio.info/lagrosseradio-reggae-192.mp3",
-      "countryCode": "FR",
-      "favicon": "https://www.lagrosseradio.com/wp-content/uploads/2020/11/logo_reggae.png",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 192,
-      "votes": 290,
       "clickCount": 7
     },
     {
@@ -15514,30 +14711,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 7,
-      "clickCount": 7
-    },
-    {
-      "id": "5ad1950b-0938-4b00-9fa1-07d82ab0ae2b",
-      "name": "Hits 1",
-      "streamUrl": "https://hits1-audiomediaradio.radioca.st/hits1",
-      "countryCode": "FR",
-      "favicon": "https://www.hits1radio.com/wp-content/uploads/2019/03/dummy-e1554135926529.jpg",
-      "tags": [
-        "dance",
-        "dj",
-        "dj sets",
-        "djs",
-        "edm",
-        "electronic",
-        "hits",
-        "house",
-        "top 40",
-        "top charts",
-        "top hits"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 256,
-      "votes": 15,
       "clickCount": 7
     },
     {
@@ -15599,20 +14772,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 6281,
-      "clickCount": 7
-    },
-    {
-      "id": "ba19a7c3-9d5a-46cf-89a4-00c27a0cfcab",
-      "name": "France Info",
-      "streamUrl": "http://icecast.radiofrance.fr/franceinfo-hifi.aac",
-      "countryCode": "FR",
-      "favicon": "https://www.francetvinfo.fr/assets/common/images/pwa/ios/120-5487caf3.png",
-      "tags": [
-        "informations"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 192,
-      "votes": 113,
       "clickCount": 7
     },
     {
@@ -15698,20 +14857,6 @@
       "clickCount": 7
     },
     {
-      "id": "c29e0d15-ca39-447a-ae90-cb169712dfba",
-      "name": "Absolut Relax",
-      "streamUrl": "https://edge19.live-sm.absolutradio.de/absolut-relax/stream/aacp",
-      "countryCode": "DE",
-      "favicon": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Logo_Absolut_relax.svg/960px-Logo_Absolut_relax.svg.png",
-      "tags": [
-        "relax"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 0,
-      "votes": 19,
-      "clickCount": 7
-    },
-    {
       "id": "63105f87-5cf8-4652-9263-7ab4dd537a99",
       "name": "Kiss FM Oldschool Hiphop",
       "streamUrl": "http://topradio-de-hz-fal-stream03-cluster01.radiohost.de/kissfm-hiphop_aac-64?",
@@ -15793,39 +14938,6 @@
       "clickCount": 7
     },
     {
-      "id": "811852ec-3a93-11e9-9b4e-52543be04c81",
-      "name": "- 0 N - Country on Radio",
-      "streamUrl": "https://0n-country.radionetz.de/0n-country.aac",
-      "countryCode": "DE",
-      "favicon": "https://www.0nradio.com/logos/0n-country_600x600.jpg",
-      "tags": [
-        "country",
-        "pop",
-        "rock"
-      ],
-      "codec": "AAC+",
-      "bitrateKbps": 64,
-      "votes": 302,
-      "clickCount": 7
-    },
-    {
-      "id": "8b3e9c54-f365-11e8-a471-52543be04c81",
-      "name": "- 0 N - Chillout on Radio",
-      "streamUrl": "https://0n-chillout.radionetz.de/0n-chillout.mp3",
-      "countryCode": "DE",
-      "favicon": "https://www.0nradio.com/logos/0n-chillout_600x600.jpg",
-      "tags": [
-        "ambient",
-        "chillout",
-        "easy listening",
-        "electro"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 2969,
-      "clickCount": 7
-    },
-    {
       "id": "6c243782-c04e-4c99-9d16-7bfdeb85ea85",
       "name": "Tendance Ouest",
       "streamUrl": "http://tendanceouest-calvados.ice.infomaniak.ch/caen.mp3",
@@ -15851,21 +14963,6 @@
       "codec": "MP3",
       "bitrateKbps": 192,
       "votes": 677,
-      "clickCount": 7
-    },
-    {
-      "id": "d599979c-7e17-43e9-a48f-f0fcd651d6a9",
-      "name": "BBC World Service",
-      "streamUrl": "http://stream.live.vc.bbcmedia.co.uk/bbc_world_service",
-      "countryCode": "GB",
-      "favicon": "http://cdn-profiles.tunein.com/s24948/images/logoq.jpg?t=1",
-      "tags": [
-        "news",
-        "talk"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 56,
-      "votes": 10,
       "clickCount": 7
     },
     {
@@ -15977,26 +15074,6 @@
       "clickCount": 7
     },
     {
-      "id": "2e12dea0-9604-409a-ace1-f0281fdf2c60",
-      "name": "Radio Paradise Main Mix (EU) 320k AAC",
-      "streamUrl": "http://stream-uk1.radioparadise.com/aac-320",
-      "countryCode": "US",
-      "favicon": "https://radioparadise.com/apple-touch-icon.png",
-      "tags": [
-        "california",
-        "eclectic",
-        "free",
-        "internet",
-        "non-commercial",
-        "paradise",
-        "radio"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 320,
-      "votes": 7,
-      "clickCount": 7
-    },
-    {
       "id": "b0d6423b-dd92-4267-9b91-f3d291cf8849",
       "name": "BAYRAM FM TURKEY",
       "streamUrl": "https://sslyayin.netyayin.net/3442/stream",
@@ -16056,27 +15133,6 @@
       "clickCount": 7
     },
     {
-      "id": "261bb8f7-70a7-4621-9ff2-fffc327f328a",
-      "name": "Radio Nova France",
-      "streamUrl": "https://novazz.ice.infomaniak.ch/novazz-128.mp3",
-      "countryCode": "FR",
-      "favicon": "https://www.nova.fr/wp-content/thumbnails/uploads/sites/2/2024/08/cropped-favicon-4-t-384x384.png",
-      "tags": [
-        "alternative",
-        "dub",
-        "ecletic",
-        "electro",
-        "folk",
-        "hip-hop",
-        "reggae",
-        "rock"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 1,
-      "clickCount": 7
-    },
-    {
       "id": "83169ce5-c4d5-43a1-b223-07e4b93b4a8d",
       "name": "星岛中文电台粤语广播",
       "streamUrl": "http://nap.casthost.net:8765/;?icy=http",
@@ -16103,20 +15159,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 216,
-      "clickCount": 7
-    },
-    {
-      "id": "3711e557-d001-4f4e-af88-85a11faa9a80",
-      "name": "RTL2",
-      "streamUrl": "http://icecast.rtl2.fr/rtl2-1-44-128?listen=webCwsBCggNCQgLDQUGBAcGBg",
-      "countryCode": "FR",
-      "favicon": "",
-      "tags": [
-        "pop"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 21,
       "clickCount": 7
     },
     {
@@ -16179,25 +15221,6 @@
       "codec": "AAC+",
       "bitrateKbps": 96,
       "votes": 756,
-      "clickCount": 7
-    },
-    {
-      "id": "04407d31-2cc0-11e8-91bf-52543be04c81",
-      "name": "dinamo.fm sleep",
-      "streamUrl": "http://channels.dinamo.fm/sleep-mp3",
-      "countryCode": "TR",
-      "favicon": "https://www.dinamo.fm/favicons/dinamo-sleep-favicon.jpg",
-      "tags": [
-        "ambient",
-        "chillout",
-        "lullaby",
-        "relaxing",
-        "sleep",
-        "zen"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 320,
-      "votes": 6063,
       "clickCount": 7
     },
     {
@@ -16285,18 +15308,6 @@
       "codec": "MP3",
       "bitrateKbps": 192,
       "votes": 81,
-      "clickCount": 7
-    },
-    {
-      "id": "b84a0128-72de-455a-82ca-bbc8d13e4bac",
-      "name": "Radio Courtoisie",
-      "streamUrl": "https://ice.creacast.com/radio-courtoisie",
-      "countryCode": "FR",
-      "favicon": "",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 1188,
       "clickCount": 7
     },
     {
@@ -16531,20 +15542,6 @@
       "clickCount": 7
     },
     {
-      "id": "ae1dc3f1-ac79-4b79-9de6-64dd99a528db",
-      "name": "Dance UK",
-      "streamUrl": "http://51.89.148.171:8022/stream/",
-      "countryCode": "GB",
-      "favicon": "",
-      "tags": [
-        "the best dance music mix"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 50,
-      "clickCount": 7
-    },
-    {
       "id": "21dbb37d-60a6-4ec2-b5c8-28b46fc2bfea",
       "name": "Happy Hardcore",
       "streamUrl": "https://audio-edge-3mayu.fra.h.radiomast.io/73055724-1141-41e2-a69b-24a6ca96c8e7",
@@ -16642,24 +15639,6 @@
       "codec": "MP3",
       "bitrateKbps": 0,
       "votes": 279,
-      "clickCount": 7
-    },
-    {
-      "id": "a4192629-2918-4416-b614-9e4d49a1f9be",
-      "name": "Frisky",
-      "streamUrl": "https://stream.frisky.friskyradio.com/frisky_mp3_high",
-      "countryCode": "US",
-      "favicon": "https://s3.amazonaws.com/media.friskyradio.com/favicon.png",
-      "tags": [
-        "electronic",
-        "house",
-        "progressive",
-        "techno",
-        "trance"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 96,
-      "votes": 1407,
       "clickCount": 7
     },
     {
@@ -17381,18 +16360,6 @@
       "clickCount": 6
     },
     {
-      "id": "4a1bbe28-0675-43bb-98dc-fae037b0b026",
-      "name": "Radio FG 98.2",
-      "streamUrl": "https://stream.rcs.revma.com/wknqhm4yuchvv",
-      "countryCode": "FR",
-      "favicon": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.xYs-7QDFZLe3JLyEmOuMHAHaGb%3Fpid%3DApi&f=1&ipt=a4b9fe03598a6c8d9f40fc0dcc26deccfa541340435253746eb3def913cf03d0&ipo=images",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 0,
-      "votes": 26,
-      "clickCount": 6
-    },
-    {
       "id": "442fad00-5089-4616-a981-5ab4d8ee4539",
       "name": "Folk Music Notebook",
       "streamUrl": "https://s3.radio.co/s0b5d4adb5/listen",
@@ -17619,22 +16586,6 @@
       "clickCount": 6
     },
     {
-      "id": "e7c1fe5e-2ce8-4a85-9263-7da9ab6899a3",
-      "name": "FG Classics",
-      "streamUrl": "https://stream.rcs.revma.com/37n8gxv9n98uv?CAID=202605180046506038991434",
-      "countryCode": "FR",
-      "favicon": "https://www.radiofg.com/favicon.ico",
-      "tags": [
-        "90's",
-        "dance",
-        "house"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 0,
-      "votes": 5,
-      "clickCount": 6
-    },
-    {
       "id": "9d6c1cc0-aa12-4cf5-b400-0d8f77b1f2c1",
       "name": "VorteX | Radio",
       "streamUrl": "https://az11.yesstreaming.net:8530/radio.mp3",
@@ -17682,18 +16633,6 @@
       "clickCount": 6
     },
     {
-      "id": "2470f399-4883-44fb-8eb4-f54a6df61e72",
-      "name": "Fip Electro",
-      "streamUrl": "http://direct.fipradio.fr/live/fipelectro-hifi.aac",
-      "countryCode": "FR",
-      "favicon": "https://cdn-profiles.tunein.com/s293089/images/logod.png?t=636966438620000000",
-      "tags": [],
-      "codec": "AAC",
-      "bitrateKbps": 192,
-      "votes": 297,
-      "clickCount": 6
-    },
-    {
       "id": "6b285ff1-f972-4396-9b95-580eb8f1fd5b",
       "name": "franceinfo aac lofi http",
       "streamUrl": "http://icecast.radiofrance.fr/franceinfo-lofi.aac",
@@ -17719,20 +16658,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 573,
-      "clickCount": 6
-    },
-    {
-      "id": "0b75d36d-decf-4fbb-8ee9-a7324de6b532",
-      "name": "Chante France",
-      "streamUrl": "https://chantefrance.ice.infomaniak.ch/chantefrance-128.mp3",
-      "countryCode": "FR",
-      "favicon": "https://m209.syncusercontent.com/mfs-60:cb6f4bc6ae404acfd00aa8544532d2ee=============================/p/Chante_France.png?allowdd=0&datakey=R5YpRVrhYNeD+1hOJOFXmKaneQKyptagGRsnPqFrMgk09zt/aoimFAWj1E4bzIjOU0g1o5MxlP746mGz5VH3wucpR5G6vC+Me0h0ZeYV7EIbiWelnDRsKOCxz2SmUhhfBttEkOZKO5UkFp/tRjvFV/vr9BzlZwzWen8c4n7G0K1otVJmrwPADQlhBtYAytiT/Jl4ZxmCEtDVv0JTRPofYBE20DvltkTD6lbo4R6kJWG2GsPW0Wy528a/cu0Vbjfu4kw2ondZeMahCBtPufqoymgCOpBIbD4jmaYN2YJqVBzLLbNJFyjkuGHbszVKrIOf4GFEFtc/+5ZwfK9ph5HhGw&engine=ln-3.1.38&errurl=RSx/vozVCnVLZv1bk0MyaWdETxt++NDMXx9XYlrZeFiSATv5OY89vUAfztxyJMSadtZ+3VKLgARqcHmRX/vO1WsIByONH7dqCTePiCMNrEDofZw2E5fG9FLHL0O3MdUBqsE9PQPFyiyLgxh4jt3M8h2/CyQ5k/kAUiil4fRBsSeY0tUY/lr40FfGlLbDdFSo5G7EXEcpUcRSpRiUGOVAqpbWuOlNvypwAPo5Fg6jpoZwyB9o/Oquhovzrne5RL+gKBq3rIzDh8TK+cdBy2lWpH/8SgTv1YcB+qoyjtsQMl8S+PGdKrpU/uvcwFY7fO6exyMiUlhjK3Y6nd+MsyJJDQ==&header1=Q29udGVudC1UeXBlOiBpbWFnZS9wbmc&header2=Q29udGVudC1EaXNwb3NpdGlvbjogaW5saW5lOyBmaWxlbmFtZT0iQ2hhbnRlX0ZyYW5jZS5wbmciO2ZpbGVuYW1lKj1VVEYtOCcnQ2hhbnRlX0ZyYW5jZS5wbmc7&ipaddress=1414030563&linkcachekey=7e09c8630&linkoid=1991610004&mode=101&sharelink_id=17962716890004&timestamp=1708275384958&uagent=3b50c75381f12107280e9099b5b7674cf455a2e5&signature=12c67b7cb607d73d96ee853fdb7988614ac1afcb&cachekey=60:cb6f4bc6ae404acfd00aa8544532d2ee=============================",
-      "tags": [
-        "french chansons"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 70,
       "clickCount": 6
     },
     {
@@ -18012,18 +16937,6 @@
       "clickCount": 6
     },
     {
-      "id": "f4b4718c-aca0-45dd-bdce-b104dbc0b657",
-      "name": "Radyo Ekin",
-      "streamUrl": "https://yayin.turkhosted.com/6006/stream",
-      "countryCode": "TR",
-      "favicon": "https://www.radyoekin.net/favicon.ico",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 182,
-      "clickCount": 6
-    },
-    {
       "id": "c06ef146-a5b0-485f-a6e3-1df09514a5bf",
       "name": "Kurd1",
       "streamUrl": "https://listen.radioking.com/radio/119251/stream/158701",
@@ -18066,18 +16979,6 @@
       "codec": "AAC+",
       "bitrateKbps": 128,
       "votes": 2091,
-      "clickCount": 6
-    },
-    {
-      "id": "10f4ee63-82fa-413f-a862-14556d5f95b8",
-      "name": "ALEM FM",
-      "streamUrl": "https://edge1.radyotvonline.net/shoutcast/play/alemfm",
-      "countryCode": "TR",
-      "favicon": "https://www.alemfm.com/assets/img/alemfm-apple-touch-icon.png",
-      "tags": [],
-      "codec": "AAC",
-      "bitrateKbps": 128,
-      "votes": 147,
       "clickCount": 6
     },
     {
@@ -18255,18 +17156,6 @@
       "clickCount": 6
     },
     {
-      "id": "30153bd1-4c23-4439-a24c-da2820bce863",
-      "name": "Radio Caroline Flashback",
-      "streamUrl": "http://sc2.radiocaroline.net:10558/;stream.mp3",
-      "countryCode": "GB",
-      "favicon": "http://www.carolineflashback.co.uk/images/flashback_logo_mobile.png",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 175,
-      "clickCount": 6
-    },
-    {
       "id": "68f52212-e3b0-479b-9da6-962a6c5e713d",
       "name": "ROKit Radio Science Fiction",
       "streamUrl": "https://streaming05.liveboxstream.uk/proxy/roksta12/stream",
@@ -18396,23 +17285,6 @@
       "codec": "MP3",
       "bitrateKbps": 320,
       "votes": 8,
-      "clickCount": 6
-    },
-    {
-      "id": "dd0e86d3-b9b4-11e9-acb2-52543be04c81",
-      "name": "Heart Dance",
-      "streamUrl": "https://media-ssl.musicradio.com/HeartDance",
-      "countryCode": "GB",
-      "favicon": "",
-      "tags": [
-        "2000s",
-        "90s",
-        "club",
-        "dance"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 48,
-      "votes": 792,
       "clickCount": 6
     },
     {
@@ -18689,20 +17561,6 @@
       "clickCount": 6
     },
     {
-      "id": "add1c37e-717e-4746-8a30-e47f791b1231",
-      "name": "BBC Arabic",
-      "streamUrl": "https://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio",
-      "countryCode": "GB",
-      "favicon": "null",
-      "tags": [
-        "news"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 56,
-      "votes": 219,
-      "clickCount": 6
-    },
-    {
       "id": "2748845d-79fa-414e-a78f-a8fc2093ae20",
       "name": "WTOP 103.5 FM",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/WTOPFM.mp3",
@@ -18819,18 +17677,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 30,
-      "clickCount": 5
-    },
-    {
-      "id": "ac828878-c76a-4bd2-95dc-746e49b93032",
-      "name": "Smooth Radio",
-      "streamUrl": "http://media-the.musicradio.com/SmoothEastMids",
-      "countryCode": "GB",
-      "favicon": "http://assets6.smoothradio.com/2014/09/smooth-logo-square-1394202221-facebook-promo-0.jpg",
-      "tags": [],
-      "codec": "AAC",
-      "bitrateKbps": 48,
-      "votes": 355,
       "clickCount": 5
     },
     {
@@ -19147,32 +17993,6 @@
       "codec": "MP3",
       "bitrateKbps": 320,
       "votes": 435,
-      "clickCount": 5
-    },
-    {
-      "id": "bee4aa5e-e55c-499d-9bbd-75ad1b9c76b9",
-      "name": "Capital Dance",
-      "streamUrl": "https://icecast.thisisdax.com/CapitalDanceMP3",
-      "countryCode": "GB",
-      "favicon": "https://www.capitaldance.com/assets_v4r/capitaldance/img/favicon-196x196.png",
-      "tags": [
-        "dance"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 173,
-      "clickCount": 5
-    },
-    {
-      "id": "fc057e27-07f1-4556-bd31-bceb31d5eabd",
-      "name": "Radio X",
-      "streamUrl": "https://media-ssl.musicradio.com/RadioXLondonMP3",
-      "countryCode": "GB",
-      "favicon": "",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 288,
       "clickCount": 5
     },
     {
@@ -19710,17 +18530,20 @@
       "clickCount": 5
     },
     {
-      "id": "3a6c5454-a001-4800-ae33-813b1227789e",
+      "id": "76b129aa-45cc-46cf-b6b2-1fde08a2c8f9",
       "name": "FIP Pop",
       "streamUrl": "https://icecast.radiofrance.fr/fippop-hifi.aac",
       "countryCode": "FR",
-      "favicon": "https://cdn.radiofrance.fr/s3/cruiser-production/2020/06/14f16d25-960c-4cf4-8e39-682268b1a0c1/200x200_fip-pop_ok.jpg",
+      "favicon": "https://www.fip.fr/dist/favicons/logo-120.png",
       "tags": [
-        "pop"
+        "aac",
+        "pop",
+        "public radio",
+        "radio france"
       ],
       "codec": "AAC",
       "bitrateKbps": 192,
-      "votes": 148,
+      "votes": 1355,
       "clickCount": 5
     },
     {
@@ -19898,23 +18721,6 @@
       "clickCount": 5
     },
     {
-      "id": "76b129aa-45cc-46cf-b6b2-1fde08a2c8f9",
-      "name": "FIP Pop",
-      "streamUrl": "https://icecast.radiofrance.fr/fippop-hifi.aac",
-      "countryCode": "FR",
-      "favicon": "https://www.fip.fr/dist/favicons/logo-120.png",
-      "tags": [
-        "aac",
-        "pop",
-        "public radio",
-        "radio france"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 192,
-      "votes": 1355,
-      "clickCount": 5
-    },
-    {
       "id": "5ea2952c-ac54-4dc5-b19d-cb189b68758b",
       "name": "Radio Fuego",
       "streamUrl": "https://n12a-eu.rcs.revma.com/dapwbz2befcwv",
@@ -20034,18 +18840,6 @@
       "clickCount": 5
     },
     {
-      "id": "0673eb03-ec0d-4a36-9238-202b38c95b49",
-      "name": "Sud Radio",
-      "streamUrl": "https://live.sudradio.fr/sudradio-mp3-128",
-      "countryCode": "FR",
-      "favicon": "https://www.sudradio.fr/wp-content/themes/sud-2023/assets/img/logo-fondblanc-parlons.png",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 38,
-      "clickCount": 5
-    },
-    {
       "id": "9624d0bb-0601-11e8-ae97-52543be04c81",
       "name": "Galaxie New Wave",
       "streamUrl": "https://www.radioking.com/play/galaxienewwave",
@@ -20139,18 +18933,6 @@
       "codec": "MP3",
       "bitrateKbps": 320,
       "votes": 2,
-      "clickCount": 5
-    },
-    {
-      "id": "4f2a06cc-13a1-46e5-baba-ef60f9a650c1",
-      "name": "France Inter",
-      "streamUrl": "http://icecast.radiofrance.fr/franceinter-hifi.aac",
-      "countryCode": "FR",
-      "favicon": "",
-      "tags": [],
-      "codec": "AAC",
-      "bitrateKbps": 192,
-      "votes": 3,
       "clickCount": 5
     },
     {
@@ -20261,18 +19043,6 @@
       "codec": "AAC",
       "bitrateKbps": 128,
       "votes": 1591,
-      "clickCount": 5
-    },
-    {
-      "id": "0af72e12-050b-477e-bec9-ed7b5bcb56c6",
-      "name": "Alouette",
-      "streamUrl": "https://alouette.ice.infomaniak.ch/alouette-high.mp3",
-      "countryCode": "FR",
-      "favicon": "https://bocir-prod-bucket.s3.amazonaws.com/radios/alouette/images/favicon.x-icon",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 294,
       "clickCount": 5
     },
     {
@@ -20400,26 +19170,6 @@
       "clickCount": 5
     },
     {
-      "id": "68c6f990-7d00-4c8f-b2a8-5d396884ad96",
-      "name": "Hits 1",
-      "streamUrl": "https://radio12.pro-fhi.net/live/Hits%201%20radio",
-      "countryCode": "FR",
-      "favicon": "https://www.hits1radio.com/wp-content/uploads/2019/03/cropped-1024-5-180x180.png",
-      "tags": [
-        "contemporary hits",
-        "dance",
-        "electro",
-        "electronic",
-        "hits",
-        "pop",
-        "top40"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 256,
-      "votes": 112,
-      "clickCount": 5
-    },
-    {
       "id": "a25b97e7-9b23-413e-823e-baec874d0bf8",
       "name": "Vintage 80 90",
       "streamUrl": "https://radio8.pro-fhi.net/live/VINTAGE80-90",
@@ -20457,18 +19207,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 1337,
-      "clickCount": 5
-    },
-    {
-      "id": "3a83c34b-ca9d-48c8-916e-9563216ddcdf",
-      "name": "BFM Business",
-      "streamUrl": "https://audio.bfmtv.com/bfmbusiness_128.mp3",
-      "countryCode": "FR",
-      "favicon": "",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 256,
-      "votes": 1587,
       "clickCount": 5
     },
     {
@@ -21095,28 +19833,6 @@
       "clickCount": 4
     },
     {
-      "id": "39e5d255-c3ad-4f81-9957-a1ceb59a3488",
-      "name": "Celtic Music Radio",
-      "streamUrl": "https://uksoutha.streaming.broadcast.radio/celtic",
-      "countryCode": "GB",
-      "favicon": "https://www.celticmusicradio.net/wp-content/uploads/2021/03/cropped-CMR-Logo-New-Ross-New-again-morse-correct.jpg",
-      "tags": [
-        "americana",
-        "celtic",
-        "community",
-        "contemporary folk",
-        "listener supported",
-        "roots",
-        "scottish",
-        "traditional folk",
-        "world"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 0,
-      "votes": 23,
-      "clickCount": 4
-    },
-    {
       "id": "2862466b-e997-4bc1-95d2-2ba51972a8ae",
       "name": "Classic FM Hall of Fame",
       "streamUrl": "https://icecast.thisisdax.com/ClassicFM-M-HOF",
@@ -21140,20 +19856,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 2292,
-      "clickCount": 4
-    },
-    {
-      "id": "a7d816c2-722f-4060-907d-b4c796482d87",
-      "name": "Jazz London radio",
-      "streamUrl": "https://radio.canstream.co.uk:8075/live.aac",
-      "countryCode": "GB",
-      "favicon": "https://www.jazzlondonradio.com/images/favicon.ico",
-      "tags": [
-        "jazz"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 64,
-      "votes": 48,
       "clickCount": 4
     },
     {
@@ -21447,20 +20149,6 @@
       "clickCount": 4
     },
     {
-      "id": "1ee17d63-1702-11e8-ae97-52543be04c81",
-      "name": "Classic FM UK",
-      "streamUrl": "http://media-the.musicradio.com/ClassicFM",
-      "countryCode": "GB",
-      "favicon": "",
-      "tags": [
-        "classical"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 48,
-      "votes": 6457,
-      "clickCount": 4
-    },
-    {
       "id": "3e841d56-72bc-4728-a8df-fa8389f0f974",
       "name": "FunkURadio",
       "streamUrl": "https://furfmcou.radioca.st/stream",
@@ -21643,20 +20331,6 @@
       "clickCount": 4
     },
     {
-      "id": "d3279cf6-5703-4990-a693-eed1b34cc81d",
-      "name": "Super Fm",
-      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/SUPER_FM_SC",
-      "countryCode": "TR",
-      "favicon": "https://superfm.com.tr/favicon.ico",
-      "tags": [
-        "pop"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 64,
-      "votes": 4,
-      "clickCount": 4
-    },
-    {
       "id": "354ffe25-8a45-4534-888b-c900054c1ba7",
       "name": "JOY TÜRK ROCK TURKEY",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/JOYTURK_ROCK_SC?/",
@@ -21725,21 +20399,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 64,
-      "clickCount": 4
-    },
-    {
-      "id": "da5c3f55-c1df-4f49-8727-d59f1787784d",
-      "name": "Arabesk FM",
-      "streamUrl": "http://yayin.arabeskfm.biz:8042/",
-      "countryCode": "TR",
-      "favicon": "",
-      "tags": [
-        "müzik",
-        "türkçe"
-      ],
-      "codec": "AAC+",
-      "bitrateKbps": 64,
-      "votes": 16,
       "clickCount": 4
     },
     {
@@ -21825,18 +20484,6 @@
       "codec": "AAC+",
       "bitrateKbps": 56,
       "votes": 778,
-      "clickCount": 4
-    },
-    {
-      "id": "3fa95d90-9b20-4c4c-91c9-1c556f55a084",
-      "name": "ALEM FM",
-      "streamUrl": "https://edge1.radyotvonline.net/shoutcast/play/alemfm",
-      "countryCode": "TR",
-      "favicon": "https://cdn.alemfm.com/resize/407x430/BroadcasterImages/alemprogramsizbuyuk.png",
-      "tags": [],
-      "codec": "AAC",
-      "bitrateKbps": 128,
-      "votes": 488,
       "clickCount": 4
     },
     {
@@ -22797,21 +21444,6 @@
       "clickCount": 4
     },
     {
-      "id": "10881362-4ee9-4f42-a8b8-542977818b83",
-      "name": "France Culture",
-      "streamUrl": "http://icecast.radiofrance.fr/franceculture-hifi.aac",
-      "countryCode": "FR",
-      "favicon": "https://upload.wikimedia.org/wikipedia/commons/d/d6/France_Culture_logo_2021.svg",
-      "tags": [
-        "culture",
-        "talk"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 192,
-      "votes": 26,
-      "clickCount": 4
-    },
-    {
       "id": "8825f3fd-8023-48b1-b39c-eac504202052",
       "name": "Hotmix Classic Rap",
       "streamUrl": "https://streaming.hotmixradio.com/hotmix-classic-rap-en-mp3?provider=radiobrowser",
@@ -22985,20 +21617,6 @@
       "bitrateKbps": 128,
       "votes": 265,
       "clickCount": 4
-    },
-    {
-      "id": "22a579ef-2346-4185-a8be-3419326d34b2",
-      "name": "Classic FM UK",
-      "streamUrl": "http://ice-the.musicradio.com/ClassicFMMP3",
-      "countryCode": "GB",
-      "favicon": "https://herald.musicradio.com/media/6a3ef437-0652-463d-9e9d-980d453c9168.png",
-      "tags": [
-        "classical"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 39,
-      "clickCount": 3
     },
     {
       "id": "2816ef39-ba7d-42fc-9f81-443c386ac3dc",
@@ -23236,29 +21854,6 @@
       "codec": "MP3",
       "bitrateKbps": 256,
       "votes": 1767,
-      "clickCount": 3
-    },
-    {
-      "id": "9ddf7d9b-0c0b-470e-b3fe-481691046717",
-      "name": "Radio Central 24",
-      "streamUrl": "http://philae.shoutca.st:8459/",
-      "countryCode": "GB",
-      "favicon": "http://radiocentral24.com/assets/images/transparent-121x64.png",
-      "tags": [
-        "bangladeshi",
-        "bhangrah",
-        "bollywood",
-        "desi",
-        "hindi",
-        "indian music",
-        "lollywood",
-        "pakistani",
-        "sufi",
-        "tamil music"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 184,
       "clickCount": 3
     },
     {
@@ -23521,20 +22116,6 @@
       "clickCount": 3
     },
     {
-      "id": "c7b54750-52e4-4602-a556-23a84619420e",
-      "name": "Radyo Seymen",
-      "streamUrl": "https://yayin.radyoseymen.com.tr:1070/stream",
-      "countryCode": "TR",
-      "favicon": "",
-      "tags": [
-        "folk"
-      ],
-      "codec": "AAC+",
-      "bitrateKbps": 128,
-      "votes": 385,
-      "clickCount": 3
-    },
-    {
       "id": "cda70b2c-e8f0-4d05-9b74-dc26b0a187b1",
       "name": "The Tube | NTS",
       "streamUrl": "https://stream-mixtape-geo.ntslive.net/mixtape26",
@@ -23607,32 +22188,6 @@
       "codec": "AAC+",
       "bitrateKbps": 32,
       "votes": 15,
-      "clickCount": 3
-    },
-    {
-      "id": "cc691852-21a7-4f96-bfed-6b208eb73f34",
-      "name": "Virgin Radio Türkiye",
-      "streamUrl": "http://29103.live.streamtheworld.com/VIRGIN_RADIO_SC",
-      "countryCode": "TR",
-      "favicon": "https://i.karnavalcdn.com/media/site_media/icons/android-icon-192x192.png",
-      "tags": [
-        "pop rock"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 64,
-      "votes": 21,
-      "clickCount": 3
-    },
-    {
-      "id": "5e4306b6-eed8-441a-b0fd-7bf61534144b",
-      "name": "TRT Radyo 1",
-      "streamUrl": "https://trt.radyotvonline.net/trt1",
-      "countryCode": "TR",
-      "favicon": "https://static.wikia.nocookie.net/logopedia/images/2/27/TRT_Radyo_1_logo.svg/revision/latest/scale-to-width-down/300?cb=20211026160210",
-      "tags": [],
-      "codec": "AAC+",
-      "bitrateKbps": 129,
-      "votes": 242,
       "clickCount": 3
     },
     {
@@ -23713,23 +22268,6 @@
       "codec": "AAC+",
       "bitrateKbps": 52,
       "votes": 904,
-      "clickCount": 3
-    },
-    {
-      "id": "45bb5fc8-84df-4561-b282-935bb5dd7c86",
-      "name": "dinamo.fm fluent",
-      "streamUrl": "http://channels.dinamo.fm/fluent-mp3",
-      "countryCode": "TR",
-      "favicon": "https://www.dinamo.fm/favicons/dinamo-fluent-favicon.jpg",
-      "tags": [
-        "atmospheric",
-        "d&b",
-        "drum and bass",
-        "liquid"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 320,
-      "votes": 500,
       "clickCount": 3
     },
     {
@@ -23835,18 +22373,6 @@
       "clickCount": 3
     },
     {
-      "id": "a30ab711-5363-4db1-af70-733aee01e2c8",
-      "name": "Damar Turk FM",
-      "streamUrl": "https://live.radyositesihazir.com:10997/;",
-      "countryCode": "TR",
-      "favicon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAlkZWbK47GUO6iQFP2yohP0z_5X3WpdjdMQ&amp;s",
-      "tags": [],
-      "codec": "AAC+",
-      "bitrateKbps": 192,
-      "votes": 7,
-      "clickCount": 3
-    },
-    {
       "id": "d3714737-f527-451f-a93d-a66368e188b0",
       "name": "Erzincan Nostalji Radyo",
       "streamUrl": "https://erzincannostalji.ozelip.com/8238/stream",
@@ -23856,22 +22382,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 35,
-      "clickCount": 3
-    },
-    {
-      "id": "288fe97a-9b9f-4af1-814f-24eed6e264ae",
-      "name": "dinamo.fm deep",
-      "streamUrl": "http://channels.dinamo.fm/deep-mp3",
-      "countryCode": "TR",
-      "favicon": "https://www.dinamo.fm/favicons/dinamo-deep-favicon.jpg",
-      "tags": [
-        "deep house",
-        "house",
-        "nu disco"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 320,
-      "votes": 772,
       "clickCount": 3
     },
     {
@@ -24133,18 +22643,6 @@
       "clickCount": 3
     },
     {
-      "id": "607dfcbd-0c9d-42bf-b715-c182446c0671",
-      "name": "DAMAR TURK FM",
-      "streamUrl": "https://live.radyositesihazir.com:10997/",
-      "countryCode": "TR",
-      "favicon": "https://www.damarturkfm.com/favicon.ico",
-      "tags": [],
-      "codec": "AAC+",
-      "bitrateKbps": 192,
-      "votes": 2,
-      "clickCount": 3
-    },
-    {
       "id": "75f4faad-b3e8-4601-a895-5a5ec8981343",
       "name": "Radyo Zile FM 93.5",
       "streamUrl": "https://radyozile.ozelip.com/8114/stream",
@@ -24245,18 +22743,6 @@
       "clickCount": 2
     },
     {
-      "id": "b5fda548-6745-4c8f-921a-1046aceee560",
-      "name": "HEY RADYO",
-      "streamUrl": "https://usa4.fastcast4u.com/proxy/radyoizmirfm/",
-      "countryCode": "TR",
-      "favicon": "http://www.heyradyo.com/assets/favicon.png",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 0,
-      "clickCount": 2
-    },
-    {
       "id": "5ce39eb0-54da-4b6c-890b-e83c4a0ca228",
       "name": "Arkadas Radyo",
       "streamUrl": "http://yayin2.yayindakiler.com:4134/;stream.nsv",
@@ -24273,7 +22759,7 @@
       "clickCount": 2
     },
     {
-      "id": "5483caa9-b021-4351-94d5-0da5649e3f11",
+      "id": "2adbdfbb-1b24-479d-b956-f175c4bb2590",
       "name": "Yeni Radyo Nostaljinin Sesi",
       "streamUrl": "http://51.255.235.165:26113/stream",
       "countryCode": "TR",
@@ -24281,21 +22767,7 @@
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 64,
-      "votes": 52,
-      "clickCount": 2
-    },
-    {
-      "id": "cc84b14e-6f8d-45a1-b144-d7f25242c9d9",
-      "name": "Radyo Voyage",
-      "streamUrl": "http://voyagewmp.radyotvonline.com/",
-      "countryCode": "TR",
-      "favicon": "",
-      "tags": [
-        "smooth"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 224,
-      "votes": 104,
+      "votes": 98,
       "clickCount": 2
     },
     {
@@ -24379,20 +22851,6 @@
       "clickCount": 2
     },
     {
-      "id": "e6549c43-15bd-4675-bc96-f39723bb6144",
-      "name": "Gundi Fm",
-      "streamUrl": "http://gundifm.ozelip.com:7830/;",
-      "countryCode": "TR",
-      "favicon": "",
-      "tags": [
-        "classical"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 64,
-      "votes": 435,
-      "clickCount": 2
-    },
-    {
       "id": "51d0f041-acdf-44ab-aa2d-a2056aa3c640",
       "name": "Kalbe Dokunan Şarkılar",
       "streamUrl": "https://live.sinirsizhost.com.tr/8058/stream",
@@ -24402,33 +22860,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 0,
-      "clickCount": 2
-    },
-    {
-      "id": "41d9f9ac-ff15-4f08-929c-32f3d9270394",
-      "name": "Apacik Radyo",
-      "streamUrl": "http://stream.34bit.net/ar.aac",
-      "countryCode": "TR",
-      "favicon": "https://apacikradyo.com.tr/logo1024",
-      "tags": [
-        "community radio",
-        "independent radio"
-      ],
-      "codec": "AAC+",
-      "bitrateKbps": 128,
-      "votes": 8,
-      "clickCount": 2
-    },
-    {
-      "id": "2adbdfbb-1b24-479d-b956-f175c4bb2590",
-      "name": "Yeni Radyo Nostaljinin Sesi",
-      "streamUrl": "http://51.255.235.165:26113/stream",
-      "countryCode": "TR",
-      "favicon": "",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 64,
-      "votes": 98,
       "clickCount": 2
     },
     {
@@ -24697,35 +23128,6 @@
       "clickCount": 2
     },
     {
-      "id": "fa9d480d-3db9-49c6-a801-c0f5301b9072",
-      "name": "RADYO VOYAGE",
-      "streamUrl": "http://voyagewmp.radyotvonline.com/;",
-      "countryCode": "TR",
-      "favicon": "",
-      "tags": [
-        "classical"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 224,
-      "votes": 789,
-      "clickCount": 2
-    },
-    {
-      "id": "cc9c0c3a-bcc7-4e54-9456-5cb125cf8f93",
-      "name": "Bayram FM",
-      "streamUrl": "https://sslyayin.netyayin.net/3442/stream/;stream.mp3",
-      "countryCode": "TR",
-      "favicon": "",
-      "tags": [
-        "ilahi",
-        "islam"
-      ],
-      "codec": "AAC+",
-      "bitrateKbps": 96,
-      "votes": 3,
-      "clickCount": 2
-    },
-    {
       "id": "c0f5e413-4c6a-4146-90d9-774ef452ee4b",
       "name": "KIYI Turkce",
       "streamUrl": "https://kiyiturk.radioca.st/stream",
@@ -24735,20 +23137,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 43,
-      "clickCount": 2
-    },
-    {
-      "id": "43419b09-da78-4b2f-816d-3c7e0a60e528",
-      "name": "Türkülerle Türkiye",
-      "streamUrl": "http://37.247.98.8/stream/22/;",
-      "countryCode": "TR",
-      "favicon": "",
-      "tags": [
-        "türkü"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 47,
       "clickCount": 2
     },
     {
@@ -25107,18 +23495,6 @@
       "clickCount": 2
     },
     {
-      "id": "b671cc05-ffac-4f72-b2e3-99d46c4c2781",
-      "name": "SIZIR FM",
-      "streamUrl": "https://stream.radiojar.com/tamm1f7kk48uv",
-      "countryCode": "TR",
-      "favicon": "https://sizirfm.com/assets/favicon.ico",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 0,
-      "votes": 4,
-      "clickCount": 2
-    },
-    {
       "id": "2d368ee6-ed68-4832-8cfc-302d11e1d9d1",
       "name": "DOLU RADYO",
       "streamUrl": "https://sslyayin.radyoyayini.com:7070/",
@@ -25185,18 +23561,6 @@
       "clickCount": 2
     },
     {
-      "id": "3a1acfc6-9002-427f-8532-aa10612cbc87",
-      "name": "Damar Turk FM",
-      "streamUrl": "https://live.radyositesihazir.com:10997/;",
-      "countryCode": "TR",
-      "favicon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAlkZWbK47GUO6iQFP2yohP0z_5X3WpdjdMQ&amp;s",
-      "tags": [],
-      "codec": "AAC+",
-      "bitrateKbps": 192,
-      "votes": 2,
-      "clickCount": 2
-    },
-    {
       "id": "577aa633-ae8e-4452-9eee-7d98d39e721f",
       "name": "DÜNYADAN SESLER",
       "streamUrl": "https://stream.radiojar.com/cg24hdbwa0hvv",
@@ -25224,20 +23588,6 @@
       "clickCount": 2
     },
     {
-      "id": "e8274b3d-4ee9-4cda-8bcb-60ea92e2db37",
-      "name": "Retro Turk",
-      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RETROTURK_SC?/;",
-      "countryCode": "TR",
-      "favicon": "",
-      "tags": [
-        "pop"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 64,
-      "votes": 147,
-      "clickCount": 2
-    },
-    {
       "id": "cd908e32-35c9-4eb3-9754-0331ed0f4d65",
       "name": "LP Roman Fm",
       "streamUrl": "https://stream.zeno.fm/netvowp5t54uv",
@@ -25247,24 +23597,6 @@
       "codec": "MP3",
       "bitrateKbps": 0,
       "votes": 2,
-      "clickCount": 2
-    },
-    {
-      "id": "ae7b21fa-e664-4a31-ab98-1cc8c5b12064",
-      "name": "Radyo 45lik yeni",
-      "streamUrl": "https://stream.radyo45lik.com:4545/",
-      "countryCode": "TR",
-      "favicon": "",
-      "tags": [
-        "70s",
-        "80s",
-        "90s",
-        "nostalgic",
-        "retro"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 128,
-      "votes": 3,
       "clickCount": 2
     },
     {
@@ -25365,20 +23697,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 0,
-      "clickCount": 1
-    },
-    {
-      "id": "ad09398c-3f3d-4311-9344-c76395e46805",
-      "name": "NTV Radyo",
-      "streamUrl": "http://ntvrdwmp.radyotvonline.com/",
-      "countryCode": "TR",
-      "favicon": "",
-      "tags": [
-        "news"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 297,
       "clickCount": 1
     },
     {
@@ -25804,25 +24122,6 @@
       "clickCount": 1
     },
     {
-      "id": "d14b4b92-7c34-49c6-8b65-2da15bc51346",
-      "name": "Apacik Radyo",
-      "streamUrl": "http://stream.34bit.net/ar.aac",
-      "countryCode": "TR",
-      "favicon": "https://apacikradyo.com.tr/logo1024",
-      "tags": [
-        "classical",
-        "ethnic",
-        "jazz",
-        "talk",
-        "turkish music",
-        "world music"
-      ],
-      "codec": "AAC+",
-      "bitrateKbps": 128,
-      "votes": 8,
-      "clickCount": 1
-    },
-    {
       "id": "c745e25e-0af7-431b-a0c2-ee20bd695893",
       "name": "Küpe FM",
       "streamUrl": "https://icecast.netmedya.net/kupefm",
@@ -25914,60 +24213,6 @@
       "clickCount": 1
     },
     {
-      "id": "341e06c4-da16-475d-a013-ba296d52db13",
-      "name": "HEY RADYO",
-      "streamUrl": "https://usa4.fastcast4u.com/proxy/radyoizmirfm/",
-      "countryCode": "TR",
-      "favicon": "http://www.heyradyo.com/assets/favicon.png",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 0,
-      "clickCount": 1
-    },
-    {
-      "id": "eb24e125-daa8-4cc8-a268-e6a36fdff606",
-      "name": "90lar turkey",
-      "streamUrl": "http://37.247.98.8/stream/166/",
-      "countryCode": "TR",
-      "favicon": "",
-      "tags": [],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 17,
-      "clickCount": 1
-    },
-    {
-      "id": "ddded9d3-ae94-4856-b3bc-885995256c88",
-      "name": "Radyo 45lik Canlı Yayın - En İyi Türkçe Nostalji Şarkılar | 70ler 80ler ve 90lar",
-      "streamUrl": "https://stream.radyo45lik.com:4545/",
-      "countryCode": "TR",
-      "favicon": "",
-      "tags": [
-        "70er",
-        "80er",
-        "90er"
-      ],
-      "codec": "AAC+",
-      "bitrateKbps": 128,
-      "votes": 81,
-      "clickCount": 1
-    },
-    {
-      "id": "74accaed-3589-47b5-8190-54d10f9bf5f8",
-      "name": "Apacik Radyo",
-      "streamUrl": "http://stream.34bit.net/ar.mp3",
-      "countryCode": "TR",
-      "favicon": "https://apacikradyo.com.tr/logo1024",
-      "tags": [
-        "jazz"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 42,
-      "clickCount": 1
-    },
-    {
       "id": "e6b49745-baa3-41b5-9c43-9cb8284139dc",
       "name": "TRD 4",
       "streamUrl": "https://stream.zeno.fm/x5n4sfyy9nhvv",
@@ -25994,18 +24239,6 @@
       "clickCount": 1
     },
     {
-      "id": "8729ad8c-9842-4737-a1fb-3823b92c2610",
-      "name": "Apacik Radyo",
-      "streamUrl": "http://stream.34bit.net/ar.aac",
-      "countryCode": "TR",
-      "favicon": "https://apacikradyo.com.tr/logo1024",
-      "tags": [],
-      "codec": "AAC+",
-      "bitrateKbps": 128,
-      "votes": 13,
-      "clickCount": 1
-    },
-    {
       "id": "b1443978-7de0-11e8-b68b-52543be04c81",
       "name": "MaxFM",
       "streamUrl": "http://live.radyotvonline.com:8090/;",
@@ -26015,18 +24248,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 300,
-      "clickCount": 1
-    },
-    {
-      "id": "f035ba3b-6ec5-418a-ba73-9a504ab70c13",
-      "name": "DAMAR TURK FM",
-      "streamUrl": "https://live.radyositesihazir.com:10997/",
-      "countryCode": "TR",
-      "favicon": "https://www.damarturkfm.com/favicon.ico",
-      "tags": [],
-      "codec": "AAC+",
-      "bitrateKbps": 192,
-      "votes": 11,
       "clickCount": 1
     },
     {
@@ -26123,20 +24344,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 0,
-      "clickCount": 1
-    },
-    {
-      "id": "d40a095c-63dd-4c25-ab89-8bc33505786c",
-      "name": "Virgin Radio Türkiye",
-      "streamUrl": "http://29103.live.streamtheworld.com/VIRGIN_RADIO_SC",
-      "countryCode": "TR",
-      "favicon": "https://i.karnavalcdn.com/media/site_media/icons/android-icon-192x192.png",
-      "tags": [
-        "pop rock"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 64,
-      "votes": 39,
       "clickCount": 1
     },
     {
@@ -26249,18 +24456,6 @@
       "codec": "MP3",
       "bitrateKbps": 112,
       "votes": 38,
-      "clickCount": 1
-    },
-    {
-      "id": "434b73f8-2fc5-40e5-af3c-254b6d603d08",
-      "name": "Metro FM",
-      "streamUrl": "http://28503.live.streamtheworld.com:3690/METRO_FMAAC_SC",
-      "countryCode": "TR",
-      "favicon": "https://metrofm.com.tr/favicon.ico",
-      "tags": [],
-      "codec": "AAC+",
-      "bitrateKbps": 64,
-      "votes": 9,
       "clickCount": 1
     },
     {

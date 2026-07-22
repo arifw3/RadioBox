@@ -6,6 +6,7 @@ import '../state/country_providers.dart';
 import '../state/palette_providers.dart';
 import '../state/player_providers.dart';
 import '../theme/app_theme.dart';
+import '../widgets/banner_ad_widget.dart';
 import '../widgets/circular_visualizer.dart';
 import '../widgets/social_sync_panel.dart';
 
@@ -29,6 +30,7 @@ class NowPlayingScreen extends ConsumerWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(backgroundColor: Colors.transparent, elevation: 0),
+      bottomNavigationBar: const BannerAdWidget(),
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(

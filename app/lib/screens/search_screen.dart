@@ -6,6 +6,8 @@ import 'package:speech_to_text/speech_to_text.dart' as stt;
 import '../l10n/app_localizations.dart';
 import '../state/player_providers.dart';
 import '../theme/app_theme.dart';
+import '../widgets/banner_ad_widget.dart';
+import 'now_playing_screen.dart';
 
 enum _SearchMode { voice, keyboard }
 
@@ -88,6 +90,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
 
     return Scaffold(
       backgroundColor: AppColors.background,
+      bottomNavigationBar: const BannerAdWidget(),
       body: SafeArea(
         child: Column(
           children: [
@@ -226,7 +229,14 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                           subtitle: Text(station.countryCode),
                           onTap: () {
                             ref.read(audioHandlerProvider).playStation(station);
-                            Navigator.of(context).pop();
+                            // Replace Search with Now Playing rather than
+                            // pop-then-push: back from the player should
+                            // return to Home, not flash Search again.
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute<void>(
+                                builder: (_) => const NowPlayingScreen(),
+                              ),
+                            );
                           },
                         );
                       },

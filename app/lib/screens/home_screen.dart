@@ -9,6 +9,7 @@ import '../state/favorites_providers.dart';
 import '../state/play_history_providers.dart';
 import '../state/player_providers.dart';
 import '../theme/app_theme.dart';
+import '../utils/playback_navigation.dart';
 import '../utils/time_of_day_suggestion.dart';
 import '../widgets/alarm_button.dart';
 import '../widgets/banner_ad_widget.dart';
@@ -243,18 +244,33 @@ class _SegmentedTabs extends StatelessWidget {
 /// The onboarding-detected (or manually picked) country's station list,
 /// topped with a hero card (Section 5 & 7, CLAUDE.md) — all computed
 /// on-device, no cloud calls.
-class _AllStationsTab extends ConsumerWidget {
+class _AllStationsTab extends ConsumerStatefulWidget {
   const _AllStationsTab({required this.allStations});
 
   final List<RadioStation> allStations;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<_AllStationsTab> createState() => _AllStationsTabState();
+}
+
+class _AllStationsTabState extends ConsumerState<_AllStationsTab> {
+  // A snapshot, not a live watch: re-sorting the list the instant a play
+  // count changes (i.e. right as the user taps something) made stations
+  // jump position while still on screen, which read as a bug ("I tapped
+  // the wrong thing"). Personal-play ordering should only change the
+  // *next* time this tab is entered, not mid-session.
+  late final Map<String, int> _playCountSnapshot =
+      ref.read(playHistoryProvider);
+
+  @override
+  Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final selectedCountry = ref.watch(selectedCountryProvider);
     final stations = selectedCountry == null
-        ? allStations
-        : allStations.where((s) => s.countryCode == selectedCountry).toList();
+        ? widget.allStations
+        : widget.allStations
+            .where((s) => s.countryCode == selectedCountry)
+            .toList();
 
     if (stations.isEmpty) {
       return Center(child: Text(l10n.noStationsToList));
@@ -282,11 +298,10 @@ class _AllStationsTab extends ConsumerWidget {
     // "Sık dinlenen önce": personal play count beats favorite status or
     // radio-browser.info's global click count — a station you actually
     // listen to a lot should float up even if you never hearted it.
-    final playCounts = ref.watch(playHistoryProvider);
     final rest = stations.where((s) => s.id != hero.id).toList()
       ..sort((a, b) {
-        final byPersonalPlays =
-            (playCounts[b.id] ?? 0).compareTo(playCounts[a.id] ?? 0);
+        final byPersonalPlays = (_playCountSnapshot[b.id] ?? 0)
+            .compareTo(_playCountSnapshot[a.id] ?? 0);
         return byPersonalPlays != 0
             ? byPersonalPlays
             : b.clickCount.compareTo(a.clickCount);
@@ -331,7 +346,7 @@ class _HeroCard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
     return GestureDetector(
-      onTap: () => ref.read(audioHandlerProvider).playStation(station),
+      onTap: () => playStationAndShowNowPlaying(context, ref, station),
       child: AspectRatio(
         aspectRatio: 16 / 9,
         child: ClipRRect(
@@ -503,7 +518,7 @@ class _StationSliverList extends ConsumerWidget {
               onPressed: () =>
                   ref.read(favoritesProvider.notifier).toggle(station.id),
             ),
-            onTap: () => ref.read(audioHandlerProvider).playStation(station),
+            onTap: () => playStationAndShowNowPlaying(context, ref, station),
           );
         },
       ),

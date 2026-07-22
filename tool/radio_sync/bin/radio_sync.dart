@@ -55,12 +55,20 @@ Future<void> main(List<String> args) async {
       '${verified.length}/${candidates.length} streams verified reachable',
     );
 
-    verified.sort((a, b) => b.clickCount.compareTo(a.clickCount));
+    // radio-browser.info is crowdsourced — the same station commonly gets
+    // submitted more than once (different UUIDs, mirrored stream URLs).
+    // Keep only the most-clicked entry per (name, country).
+    final deduplicated = _deduplicate(verified);
+    stderr.writeln(
+      '${deduplicated.length}/${verified.length} after merging same-name duplicates',
+    );
+
+    deduplicated.sort((a, b) => b.clickCount.compareTo(a.clickCount));
 
     final catalog = RadioCatalog(
-      version: _hashStations(verified),
+      version: _hashStations(deduplicated),
       generatedAtUtc: DateTime.now().toUtc(),
-      stations: verified,
+      stations: deduplicated,
     );
 
     final outFile = File(_resolveOutputPath(args));
@@ -254,6 +262,28 @@ bool _looksLikeAudio(String contentType) {
     'application/octet-stream',
   ];
   return audioMarkers.any(contentType.contains);
+}
+
+List<RadioStation> _deduplicate(List<RadioStation> stations) {
+  final byKey = <String, RadioStation>{};
+  for (final station in stations) {
+    final key = '${station.name.trim().toLowerCase()}|${station.countryCode}';
+    final current = byKey[key];
+    if (current == null || _isBetterDuplicate(station, current)) {
+      byKey[key] = station;
+    }
+  }
+  return byKey.values.toList();
+}
+
+/// Which of two same-name entries to keep: the more-clicked one is more
+/// likely to be the mirror people actually found and listened to, not a
+/// stale/abandoned duplicate submission.
+bool _isBetterDuplicate(RadioStation candidate, RadioStation current) {
+  if (candidate.clickCount != current.clickCount) {
+    return candidate.clickCount > current.clickCount;
+  }
+  return candidate.votes > current.votes;
 }
 
 String _hashStations(List<RadioStation> stations) {
