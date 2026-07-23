@@ -3,7 +3,13 @@
 // Unlike radio_sync.dart, this does NOT modify radios.json — it's for
 // manual review, so broken entries can be fixed/replaced by hand.
 //
-// Usage: dart run bin/link_report.dart [radios.json path] [report output path]
+// Also flags stations with an entirely empty favicon field — the app
+// falls back to a first-letter avatar (_FallbackArt in home_screen.dart)
+// both when favicon is empty AND when a non-empty favicon URL fails to
+// load, so "shows as a letter" covers both cases and only the URL-broken
+// one was previously being reported.
+//
+// Usage: dart run bin/link_report.dart [radios.json path] [report output path] [country code]
 
 import 'dart:async';
 import 'dart:convert';
@@ -21,22 +27,27 @@ const _requestTimeout = Duration(seconds: 8);
 Future<void> main(List<String> args) async {
   final radiosPath = args.isNotEmpty ? args[0] : '../../../radios.json';
   final reportPath = args.length > 1 ? args[1] : '../../../link_report.txt';
+  final countryFilter = args.length > 2 ? args[2] : null;
 
   final catalog = RadioCatalog.fromJson(
     jsonDecode(await File(radiosPath).readAsString()) as Map<String, dynamic>,
   );
+  final stations = countryFilter == null
+      ? catalog.stations
+      : catalog.stations.where((s) => s.countryCode == countryFilter).toList();
 
-  stderr.writeln('Checking ${catalog.stations.length} stations...');
+  stderr.writeln('Checking ${stations.length} stations...');
 
   final client = http.Client();
   final pool = Pool(_concurrentChecks);
   final brokenStreams = <_Issue>[];
   final brokenFavicons = <_Issue>[];
+  final emptyFavicons = <RadioStation>[];
   var checked = 0;
 
   try {
     await Future.wait(
-      catalog.stations.map((station) {
+      stations.map((station) {
         return pool.withResource(() async {
           final streamIssue = await _checkUrl(
             client,
@@ -46,7 +57,9 @@ Future<void> main(List<String> args) async {
           if (streamIssue != null) {
             brokenStreams.add(_Issue(station: station, reason: streamIssue));
           }
-          if (station.favicon.isNotEmpty) {
+          if (station.favicon.isEmpty) {
+            emptyFavicons.add(station);
+          } else {
             final faviconIssue = await _checkUrl(
               client,
               station.favicon,
@@ -60,7 +73,7 @@ Future<void> main(List<String> args) async {
           }
           checked++;
           if (checked % 100 == 0) {
-            stderr.writeln('  $checked/${catalog.stations.length} checked...');
+            stderr.writeln('  $checked/${stations.length} checked...');
           }
         });
       }),
@@ -72,7 +85,7 @@ Future<void> main(List<String> args) async {
 
   final buffer = StringBuffer()
     ..writeln('# Kırık Link Raporu')
-    ..writeln('Toplam istasyon: ${catalog.stations.length}')
+    ..writeln('Toplam istasyon: ${stations.length}')
     ..writeln('Tarih: ${DateTime.now().toIso8601String()}')
     ..writeln()
     ..writeln('## Kırık yayın linkleri (${brokenStreams.length})');
@@ -84,7 +97,19 @@ Future<void> main(List<String> args) async {
   }
   buffer
     ..writeln()
-    ..writeln('## Kırık görsel (favicon) linkleri (${brokenFavicons.length})');
+    ..writeln(
+      '## Görseli hiç olmayan istasyonlar — uygulamada isim baş harfi görünür (${emptyFavicons.length})',
+    );
+  for (final station in emptyFavicons) {
+    buffer.writeln(
+      '- [${station.id}] ${station.name} (${station.countryCode})',
+    );
+  }
+  buffer
+    ..writeln()
+    ..writeln(
+      '## Kırık görsel (favicon) linkleri — yüklenemediği için baş harfe düşer (${brokenFavicons.length})',
+    );
   for (final issue in brokenFavicons) {
     buffer.writeln(
       '- [${issue.station.id}] ${issue.station.name} '
@@ -95,6 +120,7 @@ Future<void> main(List<String> args) async {
   await File(reportPath).writeAsString(buffer.toString());
   stderr.writeln(
     'Done. ${brokenStreams.length} broken streams, '
+    '${emptyFavicons.length} empty favicons, '
     '${brokenFavicons.length} broken favicons.',
   );
   stderr.writeln('Report: $reportPath');
