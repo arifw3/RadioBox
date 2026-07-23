@@ -1,9 +1,13 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:dialwave_core/dialwave_core.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 
 import '../services/deezer_search_repository.dart';
+import '../services/icy_metadata_probe.dart';
 import '../services/itunes_search_repository.dart';
 import '../services/wikipedia_artist_repository.dart';
+import 'network_providers.dart';
 import 'player_providers.dart';
 
 final itunesSearchRepositoryProvider = Provider<ItunesSearchRepository>(
@@ -16,6 +20,10 @@ final deezerSearchRepositoryProvider = Provider<DeezerSearchRepository>(
 
 final wikipediaArtistRepositoryProvider = Provider<WikipediaArtistRepository>(
   (ref) => WikipediaArtistRepository(http.Client()),
+);
+
+final icyMetadataProbeProvider = Provider<IcyMetadataProbe>(
+  (ref) => IcyMetadataProbe(http.Client()),
 );
 
 /// Common shape both ItunesTrack and DeezerTrack are reduced to once
@@ -62,19 +70,46 @@ final rawNowPlayingTextProvider = Provider<String?>((ref) {
 
 /// Refetches automatically whenever the raw ICY text changes (i.e. a new
 /// song starts).
+final artistSpotlightProvider = FutureProvider<ArtistSpotlightData?>((
+  ref,
+) async {
+  final raw = ref.watch(rawNowPlayingTextProvider);
+  if (raw == null) return null;
+  return resolveSpotlight(ref, raw);
+});
+
+/// Same live/no-song-guessing spotlight chain as [artistSpotlightProvider],
+/// but for a station the user isn't actually playing — reads one ICY
+/// metadata block via a short-lived probe connection (see
+/// icy_metadata_probe.dart) instead of the real playback stream. Used by
+/// the home screen hero so "your most-played station" can show what's
+/// live on it without requiring playback first.
 ///
+/// Respects the existing "Wi-Fi only" setting exactly like starting
+/// playback does (playback_navigation.dart) — this is a real, if small,
+/// network fetch the user didn't explicitly ask for by pressing play.
+final heroSpotlightProvider = FutureProvider.family<ArtistSpotlightData?, RadioStation>(
+  (ref, station) async {
+    if (ref.watch(wifiOnlyProvider)) {
+      final results = await Connectivity().checkConnectivity();
+      if (!isOnWifi(results)) return null;
+    }
+
+    final probe = ref.watch(icyMetadataProbeProvider);
+    final raw = await probe.fetchStreamTitle(station.streamUrl);
+    if (raw == null || raw.isEmpty || raw == station.countryCode) return null;
+
+    return resolveSpotlight(ref, raw);
+  },
+);
+
 /// Three tiers, each stricter than cheap but weaker than confident:
 /// 1. iTunes exact/fuzzy song match (cover art + song title).
 /// 2. Deezer exact/fuzzy song match, same rule, when iTunes has nothing.
 /// 3. Wikipedia artist photo — only reachable when neither source could
 ///    confirm the actual song, so it never claims a song match; it's just
 ///    a real photo of the artist ICY told us is playing.
-final artistSpotlightProvider = FutureProvider<ArtistSpotlightData?>((
-  ref,
-) async {
-  final raw = ref.watch(rawNowPlayingTextProvider);
-  if (raw == null) return null;
-
+Future<ArtistSpotlightData?> resolveSpotlight(Ref ref, String raw) async {
   // ICY "StreamTitle" formatting isn't standardized across stations: most
   // use "Artist - Song", but plenty send "ARTIST SONG" with no separator
   // at all. Try the structured split first, and fall back to a free-text
@@ -151,7 +186,7 @@ final artistSpotlightProvider = FutureProvider<ArtistSpotlightData?>((
     imageUrl: artistPhoto,
     otherTracks: const [],
   );
-});
+}
 
 /// Exact match first; a loose substring match second (catches "(Remastered)"/
 /// "[Live]" suffixes a source appends but ICY metadata usually omits).

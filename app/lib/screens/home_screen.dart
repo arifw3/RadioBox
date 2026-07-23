@@ -595,21 +595,20 @@ class _HeroCard extends ConsumerWidget {
     final l10n = AppLocalizations.of(context)!;
 
     // This hero is "the user's most-played station", which isn't
-    // necessarily what's playing right now — a live artist/song/photo is
-    // only something we actually know when it is. Reuses the exact same
+    // necessarily what's playing right now. When it IS, reuse the exact
     // spotlight chain (iTunes -> Deezer -> Wikipedia) Now Playing already
-    // resolves; nothing new to fetch here.
+    // resolves. When it's not, a short-lived ICY metadata probe (Wi-Fi-
+    // gated the same way starting playback is) reads what's live on it
+    // without requiring the user to press play first — same chain either
+    // way, just a different source for the raw "Artist - Song" text.
     final isCurrentlyPlayingThis =
         ref.watch(currentMediaItemProvider).valueOrNull?.id == station.id;
     final spotlightAsync = isCurrentlyPlayingThis
         ? ref.watch(artistSpotlightProvider)
-        : const AsyncValue<ArtistSpotlightData?>.data(null);
+        : ref.watch(heroSpotlightProvider(station));
     final spotlight = spotlightAsync.valueOrNull;
-    final hasLiveSpotlight =
-        isCurrentlyPlayingThis && (spotlight?.imageUrl?.isNotEmpty ?? false);
-    final isResolvingSpotlight = isCurrentlyPlayingThis &&
-        spotlightAsync.isLoading &&
-        !hasLiveSpotlight;
+    final hasLiveSpotlight = spotlight?.imageUrl?.isNotEmpty ?? false;
+    final isResolvingSpotlight = spotlightAsync.isLoading && !hasLiveSpotlight;
     final playing = isCurrentlyPlayingThis &&
         (ref.watch(playbackStateProvider).valueOrNull?.playing ?? false);
 
