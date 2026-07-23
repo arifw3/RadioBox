@@ -23,6 +23,18 @@
          driving is impractical. -->
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
+    <!-- Android TV boxes have none of these, and Play Store's device
+         catalog silently hides an app from a device unless every
+         permission-implied feature is explicitly marked optional —
+         touchscreen is required by default even though we never declared
+         it ourselves. Nothing here is essential to playing radio: Drive
+         Mode just never auto-triggers without GPS, voice search just isn't
+         offered without a mic. -->
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:name="android.software.leanback" android:required="false"/>
+
     <!-- Most Icecast/Shoutcast radio streams are plain http://, and the
          station list changes nightly, so a fixed domain-config allowlist
          isn't workable — allow cleartext app-wide instead. -->
@@ -31,6 +43,7 @@
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:banner="@drawable/banner"
         android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
@@ -52,6 +65,10 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
+                <!-- Android TV home screen row (Section: Play Store TV
+                     visibility) — same activity, no separate TV UI; the
+                     phone layout is just navigated with a D-pad. -->
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
             </intent-filter>
         </activity>
         <!-- Don't delete the meta-data below.
