@@ -56,14 +56,42 @@ final artistSpotlightProvider = FutureProvider<ArtistSpotlightData?>((
   final tracks = await repo.search(query);
   if (tracks.isEmpty) return null;
 
-  final matched = expectedSong == null
-      ? tracks.first
-      : tracks.firstWhere(
-          (t) => t.trackName.toLowerCase() == expectedSong.toLowerCase(),
-          orElse: () => tracks.first,
-        );
+  ItunesTrack? matched;
+  if (expectedSong == null) {
+    // No dash to split on, so there was never a specific song title to
+    // verify against — the artist-only search result is the best we can
+    // do, low-confidence or not.
+    matched = tracks.first;
+  } else {
+    final normalizedExpected = _normalizeTitle(expectedSong);
+    for (final t in tracks) {
+      if (_normalizeTitle(t.trackName) == normalizedExpected) {
+        matched = t;
+        break;
+      }
+    }
+    // A track like "Tutkunum (Remastered)" won't exact-match ICY's plain
+    // "Tutkunum" — a loose substring match still catches those without
+    // accepting a same-artist-but-different-song false positive.
+    if (matched == null) {
+      for (final t in tracks) {
+        final normalizedTrack = _normalizeTitle(t.trackName);
+        if (normalizedTrack.contains(normalizedExpected) ||
+            normalizedExpected.contains(normalizedTrack)) {
+          matched = t;
+          break;
+        }
+      }
+    }
+  }
+
+  // Showing a confidently wrong song + cover art (a different track by
+  // the same artist) is worse than showing nothing — fall back to the
+  // plain visualizer instead of guessing with tracks.first here.
+  if (matched == null) return null;
+
   final others = tracks
-      .where((t) => t.trackName != matched.trackName)
+      .where((t) => t.trackName != matched!.trackName)
       .take(3)
       .toList();
 
@@ -74,3 +102,13 @@ final artistSpotlightProvider = FutureProvider<ArtistSpotlightData?>((
     otherTracks: others,
   );
 });
+
+/// Case-insensitive, ignores parenthetical/bracketed qualifiers like
+/// "(Remastered)" or "[Live]" that iTunes often appends but ICY metadata
+/// usually omits.
+String _normalizeTitle(String input) {
+  return input
+      .replaceAll(RegExp(r'\(.*?\)|\[.*?\]'), '')
+      .toLowerCase()
+      .trim();
+}
