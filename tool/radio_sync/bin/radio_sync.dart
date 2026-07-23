@@ -50,9 +50,16 @@ Future<void> main(List<String> args) async {
       candidates.addAll(stations);
     }
 
-    final bonus = await _loadBonusCandidates();
+    final bonus = await _loadCandidatesFromFile('bonus_stations.json');
     stderr.writeln('bonus_stations.json: ${bonus.length} extra candidates');
     candidates.addAll(bonus);
+
+    final turkradyodinle =
+        await _loadCandidatesFromFile('turkradyodinle_stations.json');
+    stderr.writeln(
+      'turkradyodinle_stations.json: ${turkradyodinle.length} extra candidates',
+    );
+    candidates.addAll(turkradyodinle);
 
     final verified = await _verifyStreams(client, candidates);
     stderr.writeln(
@@ -207,12 +214,12 @@ Future<List<_Candidate>> _fetchStationsForCountry(
 }
 
 /// Extra seed stations from a static radio-browser.info-shaped export
-/// (bonus_stations.json, sitting next to this script) — same field
-/// mapping as the live API response, just read from a local file instead
-/// of fetched over HTTP. Optional: silently skipped if the file isn't
-/// there.
-Future<List<_Candidate>> _loadBonusCandidates() async {
-  final file = File('bonus_stations.json');
+/// (bonus_stations.json / turkradyodinle_stations.json, sitting next to
+/// this script) — same field mapping as the live API response, just read
+/// from a local file instead of fetched over HTTP. Optional: silently
+/// skipped if the file isn't there.
+Future<List<_Candidate>> _loadCandidatesFromFile(String fileName) async {
+  final file = File(fileName);
   if (!await file.exists()) return const [];
 
   final raw = jsonDecode(await file.readAsString()) as List<dynamic>;
@@ -307,6 +314,8 @@ bool _looksLikeAudio(String contentType) {
     'audio/',
     'application/ogg',
     'application/octet-stream',
+    // HLS playlists (.m3u8) — a growing share of Turkish CDN-hosted streams.
+    'mpegurl',
   ];
   return audioMarkers.any(contentType.contains);
 }
