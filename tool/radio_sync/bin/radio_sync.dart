@@ -50,6 +50,10 @@ Future<void> main(List<String> args) async {
       candidates.addAll(stations);
     }
 
+    final bonus = await _loadBonusCandidates();
+    stderr.writeln('bonus_stations.json: ${bonus.length} extra candidates');
+    candidates.addAll(bonus);
+
     final verified = await _verifyStreams(client, candidates);
     stderr.writeln(
       '${verified.length}/${candidates.length} streams verified reachable',
@@ -76,7 +80,7 @@ Future<void> main(List<String> args) async {
     await outFile.writeAsString(
       const JsonEncoder.withIndent('  ').convert(catalog.toJson()),
     );
-    stderr.writeln('Wrote ${verified.length} stations -> ${outFile.path}');
+    stderr.writeln('Wrote ${deduplicated.length} stations -> ${outFile.path}');
   } finally {
     client.close();
   }
@@ -200,6 +204,49 @@ Future<List<_Candidate>> _fetchStationsForCountry(
   }).where((c) => c.name.isNotEmpty && c.streamUrl.isNotEmpty);
 
   return candidates.toList();
+}
+
+/// Extra seed stations from a static radio-browser.info-shaped export
+/// (bonus_stations.json, sitting next to this script) — same field
+/// mapping as the live API response, just read from a local file instead
+/// of fetched over HTTP. Optional: silently skipped if the file isn't
+/// there.
+Future<List<_Candidate>> _loadBonusCandidates() async {
+  final file = File('bonus_stations.json');
+  if (!await file.exists()) return const [];
+
+  final raw = jsonDecode(await file.readAsString()) as List<dynamic>;
+  return raw
+      .map((entry) {
+        final map = entry as Map<String, dynamic>;
+        final resolvedUrl = (map['url_resolved'] as String?)?.trim() ?? '';
+        final url = (map['url'] as String?)?.trim() ?? '';
+        final countryCode =
+            (map['countrycode'] as String? ?? '').trim().toUpperCase();
+        return _Candidate(
+          id: map['stationuuid'] as String,
+          name: (map['name'] as String? ?? '').trim(),
+          streamUrl: resolvedUrl.isNotEmpty ? resolvedUrl : url,
+          countryCode: countryCode,
+          favicon: (map['favicon'] as String? ?? '').trim(),
+          tags: (map['tags'] as String? ?? '')
+              .split(',')
+              .map((t) => t.trim())
+              .where((t) => t.isNotEmpty)
+              .toList(),
+          codec: (map['codec'] as String? ?? '').trim(),
+          bitrateKbps: (map['bitrate'] as num? ?? 0).toInt(),
+          votes: (map['votes'] as num? ?? 0).toInt(),
+          clickCount: (map['clickcount'] as num? ?? 0).toInt(),
+        );
+      })
+      .where(
+        (c) =>
+            c.name.isNotEmpty &&
+            c.streamUrl.isNotEmpty &&
+            c.countryCode.isNotEmpty,
+      )
+      .toList();
 }
 
 Future<List<RadioStation>> _verifyStreams(

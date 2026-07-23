@@ -73,5 +73,9 @@
   "timeShiftReturnToLive": "Volver a en vivo",
   "shareTooltip": "Compartir esta emisora",
   "sharePreviewTitle": "Compartir",
-  "shareAction": "Compartir"
+  "shareAction": "Compartir",
+
+  "categoryAllLabel": "Todas",
+  "sortPopularLabel": "Popular",
+  "sortAlphabeticalLabel": "A-Z"
 }

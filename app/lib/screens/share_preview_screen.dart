@@ -12,6 +12,7 @@ import '../state/artist_spotlight_providers.dart';
 import '../state/palette_providers.dart';
 import '../state/player_providers.dart';
 import '../theme/app_theme.dart';
+import '../widgets/banner_ad_widget.dart';
 import '../widgets/share_card.dart';
 
 /// Renders the shareable story card, previews it at on-screen size, and
@@ -38,13 +39,17 @@ class _SharePreviewScreenState extends ConsumerState<SharePreviewScreen> {
         ref.watch(dynamicSeedColorProvider).valueOrNull ?? kDefaultSeedColor;
 
     final stationName = mediaItem?.title ?? '';
-    final subtitle = spotlight != null
-        ? '${spotlight.artistName} · ${spotlight.songTitle}'
-        : (mediaItem?.artist ?? '');
+    final artistName = spotlight?.artistName ?? '';
+    final songTitle = spotlight?.songTitle ?? '';
+    // Real artist/album art when the iTunes match resolved one; otherwise
+    // the station's own logo — the card should never show nothing when a
+    // perfectly good station favicon is sitting right there in mediaItem.
+    final imageUrl = spotlight?.imageUrl ?? mediaItem?.artUri?.toString();
 
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(title: Text(l10n.sharePreviewTitle)),
+      bottomNavigationBar: const BannerAdWidget(),
       body: Column(
         children: [
           Expanded(
@@ -55,16 +60,14 @@ class _SharePreviewScreenState extends ConsumerState<SharePreviewScreen> {
                 // outside the RepaintBoundary, so toImage() below still
                 // captures the card at its true 1080x1920 layout size.
                 child: FittedBox(
-                  child: SizedBox(
-                    width: 1080,
-                    height: 1920,
-                    child: RepaintBoundary(
-                      key: _boundaryKey,
-                      child: ShareCard(
-                        stationName: stationName,
-                        subtitle: subtitle,
-                        seedColor: seedColor,
-                      ),
+                  child: RepaintBoundary(
+                    key: _boundaryKey,
+                    child: ShareCard(
+                      stationName: stationName,
+                      artistName: artistName,
+                      songTitle: songTitle,
+                      imageUrl: imageUrl,
+                      seedColor: seedColor,
                     ),
                   ),
                 ),

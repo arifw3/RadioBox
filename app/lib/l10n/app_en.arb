@@ -73,5 +73,9 @@
   "timeShiftReturnToLive": "Back to live",
   "shareTooltip": "Share this station",
   "sharePreviewTitle": "Share",
-  "shareAction": "Share"
+  "shareAction": "Share",
+
+  "categoryAllLabel": "All",
+  "sortPopularLabel": "Popular",
+  "sortAlphabeticalLabel": "A-Z"
 }

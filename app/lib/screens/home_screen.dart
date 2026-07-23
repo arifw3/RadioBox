@@ -309,18 +309,77 @@ class _AllStationsTabState extends ConsumerState<_AllStationsTab> {
   late final Map<String, int> _playCountSnapshot =
       ref.read(playHistoryProvider);
 
+  String? _selectedCategory;
+  bool _alphabetical = false;
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final selectedCountry = ref.watch(selectedCountryProvider);
-    final stations = selectedCountry == null
+    final countryStations = selectedCountry == null
         ? widget.allStations
         : widget.allStations
             .where((s) => s.countryCode == selectedCountry)
             .toList();
 
-    if (stations.isEmpty) {
+    if (countryStations.isEmpty) {
       return Center(child: Text(l10n.noStationsToList));
+    }
+
+    // Categories are derived from whatever tags actually show up in this
+    // country's stations rather than a fixed list — radio-browser.info
+    // tags are free text with no set taxonomy, and a hardcoded Turkish
+    // genre list wouldn't make sense once "Dünya Turu" switches country.
+    final categories = _topCategories(countryStations);
+    final category = _selectedCategory;
+    final stations = category == null
+        ? countryStations
+        : countryStations
+            .where(
+              (s) => s.tags.any((t) => t.toLowerCase() == category),
+            )
+            .toList();
+
+    if (stations.isEmpty) {
+      return Column(
+        children: [
+          _CategorySortBar(
+            categories: categories,
+            selectedCategory: _selectedCategory,
+            alphabetical: _alphabetical,
+            onCategorySelected: (c) => setState(() => _selectedCategory = c),
+            onSortModeChanged: (a) => setState(() => _alphabetical = a),
+          ),
+          Expanded(child: Center(child: Text(l10n.noStationsToList))),
+        ],
+      );
+    }
+
+    // Alphabetical browsing is a systematic scan through everything
+    // matching the filter — the "featured" hero pick and personal-play
+    // ordering below are about surfacing a favorite quickly, which is the
+    // opposite intent, so skip both and just show a flat A-Z list.
+    if (_alphabetical) {
+      final sorted = [...stations]
+        ..sort(
+          (a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()),
+        );
+      return Column(
+        children: [
+          _CategorySortBar(
+            categories: categories,
+            selectedCategory: _selectedCategory,
+            alphabetical: _alphabetical,
+            onCategorySelected: (c) => setState(() => _selectedCategory = c),
+            onSortModeChanged: (a) => setState(() => _alphabetical = a),
+          ),
+          Expanded(
+            child: CustomScrollView(
+              slivers: [_StationSliverList(stations: sorted)],
+            ),
+          ),
+        ],
+      );
     }
 
     final suggestion = suggestionForHour(DateTime.now().hour);
@@ -363,6 +422,15 @@ class _AllStationsTabState extends ConsumerState<_AllStationsTab> {
     return CustomScrollView(
       slivers: [
         SliverToBoxAdapter(
+          child: _CategorySortBar(
+            categories: categories,
+            selectedCategory: _selectedCategory,
+            alphabetical: _alphabetical,
+            onCategorySelected: (c) => setState(() => _selectedCategory = c),
+            onSortModeChanged: (a) => setState(() => _alphabetical = a),
+          ),
+        ),
+        SliverToBoxAdapter(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: _HeroCard(label: heroLabel, station: hero),
@@ -379,6 +447,123 @@ class _AllStationsTabState extends ConsumerState<_AllStationsTab> {
         _StationSliverList(stations: rest),
         const SliverToBoxAdapter(child: SizedBox(height: 8)),
       ],
+    );
+  }
+
+  /// Top N most common tags in this station set, title-cased for display.
+  /// Recomputed from `countryStations` (not the category-filtered list) so
+  /// the chip row itself doesn't shrink away once a category is picked.
+  List<String> _topCategories(List<RadioStation> stations, {int limit = 10}) {
+    final counts = <String, int>{};
+    for (final station in stations) {
+      for (final tag in station.tags) {
+        final normalized = tag.trim().toLowerCase();
+        if (normalized.isEmpty) continue;
+        counts.update(normalized, (n) => n + 1, ifAbsent: () => 1);
+      }
+    }
+    final sorted = counts.keys.toList()
+      ..sort((a, b) => counts[b]!.compareTo(counts[a]!));
+    return sorted.take(limit).toList();
+  }
+}
+
+/// Category filter chips + a Popüler/A-Z sort toggle, sitting above the
+/// station list on the "Tümü" tab.
+class _CategorySortBar extends StatelessWidget {
+  const _CategorySortBar({
+    required this.categories,
+    required this.selectedCategory,
+    required this.alphabetical,
+    required this.onCategorySelected,
+    required this.onSortModeChanged,
+  });
+
+  final List<String> categories;
+  final String? selectedCategory;
+  final bool alphabetical;
+  final ValueChanged<String?> onCategorySelected;
+  final ValueChanged<bool> onSortModeChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8),
+      child: Row(
+        children: [
+          Expanded(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: Row(
+                children: [
+                  _CategoryChip(
+                    label: l10n.categoryAllLabel,
+                    selected: selectedCategory == null,
+                    onTap: () => onCategorySelected(null),
+                  ),
+                  for (final category in categories) ...[
+                    const SizedBox(width: 8),
+                    _CategoryChip(
+                      label: category[0].toUpperCase() + category.substring(1),
+                      selected: selectedCategory == category,
+                      onTap: () => onCategorySelected(category),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 16),
+            child: IconButton(
+              icon: Icon(
+                alphabetical ? Icons.sort_by_alpha : Icons.local_fire_department,
+              ),
+              tooltip: alphabetical
+                  ? l10n.sortAlphabeticalLabel
+                  : l10n.sortPopularLabel,
+              color: AppColors.accent,
+              onPressed: () => onSortModeChanged(!alphabetical),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _CategoryChip extends StatelessWidget {
+  const _CategoryChip({
+    required this.label,
+    required this.selected,
+    required this.onTap,
+  });
+
+  final String label;
+  final bool selected;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 150),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        decoration: BoxDecoration(
+          color: selected ? AppColors.accent : AppColors.surface,
+          borderRadius: BorderRadius.circular(AppRadii.pill),
+        ),
+        child: Text(
+          label,
+          style: TextStyle(
+            color: selected ? Colors.white : AppColors.textMuted,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
     );
   }
 }

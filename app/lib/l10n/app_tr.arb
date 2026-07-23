@@ -73,5 +73,9 @@
   "timeShiftReturnToLive": "Canlıya dön",
   "shareTooltip": "Bu istasyonu paylaş",
   "sharePreviewTitle": "Paylaş",
-  "shareAction": "Paylaş"
+  "shareAction": "Paylaş",
+
+  "categoryAllLabel": "Tümü",
+  "sortPopularLabel": "Popüler",
+  "sortAlphabeticalLabel": "A-Z"
 }

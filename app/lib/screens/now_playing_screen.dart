@@ -243,11 +243,6 @@ class NowPlayingScreen extends ConsumerWidget {
                 const SizedBox(height: 32),
                 transportRow,
                 timeShiftRow,
-                const SizedBox(height: 12),
-                Text(
-                  l10n.visualizerHint,
-                  style: const TextStyle(color: Colors.white54),
-                ),
                 const SizedBox(height: 28),
                 const SocialSyncPanel(),
                 const SizedBox(height: 16),
