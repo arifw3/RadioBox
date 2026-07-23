@@ -168,13 +168,22 @@ Future<Uint8List?> _fetchBytes(http.Client client, String url) async {
   }
 }
 
+/// Hosts we serve station art from ourselves — guessing icon paths on
+/// these origins finds THEIR site-wide branding, not anything related to
+/// the station. Bit us for real: 30 already-correctly-self-hosted TR
+/// favicons under 150px got silently replaced with jsDelivr's own promo
+/// graphic because "origin" of a cdn.jsdelivr.net/gh/... URL is just
+/// cdn.jsdelivr.net, and /apple-touch-icon.png on THAT resolved to a real
+/// (unrelated) image.
+const _selfHostedOrigins = ['https://cdn.jsdelivr.net'];
+
 Future<(String, (int, int))?> _findBetterCandidate(
   http.Client client,
   String faviconUrl,
   (int, int) currentSize,
 ) async {
   final origin = Uri.tryParse(faviconUrl)?.origin;
-  if (origin == null) return null;
+  if (origin == null || _selfHostedOrigins.contains(origin)) return null;
 
   (String, (int, int))? best;
 

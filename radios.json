@@ -9483,7 +9483,7 @@
       "name": "Türkülerle Türkiye",
       "streamUrl": "http://37.247.98.8/stream/22/;",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/360028f5-46ba-11ea-a860-52543be04c81-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-turkulerle-turkiye-dinle.jpg",
       "tags": [
         "türkü"
       ],
@@ -14176,22 +14176,6 @@
       "clickCount": 29
     },
     {
-      "id": "a4a06619-c8fc-43aa-b574-48b350b5e213",
-      "name": "Havin FM",
-      "streamUrl": "http://yayin6.radyohizmeti.com:7050/;stream.mp3",
-      "countryCode": "TR",
-      "favicon": "",
-      "tags": [
-        "folk music",
-        "kurdish folk music",
-        "kurdish songs"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 64,
-      "votes": 931,
-      "clickCount": 29
-    },
-    {
       "id": "308d38c6-e8a4-41e9-8ffe-9be2623826a4",
       "name": "BBC Radio 1Xtra (128k)",
       "streamUrl": "http://as-hls-ww-live.akamaized.net/pool_92079267/live/ww/bbc_1xtra/bbc_1xtra.isml/bbc_1xtra-audio%3d128000.norewind.m3u8",
@@ -16710,7 +16694,7 @@
       "name": "Ankara Havalari",
       "streamUrl": "http://37.247.98.8/stream/30/;",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/8c01f241-6fe8-42b1-afd3-d6abf90ec78e-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-ankara-havalari-dinle.jpg",
       "tags": [
         "folk"
       ],
@@ -17590,7 +17574,7 @@
       "name": "Park Fm",
       "streamUrl": "http://yayin.netradyom.com:8050/PARKFM/",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/2871e14f-254c-4b0a-b506-c59bc6175e43-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/park-fm-dinle.jpg",
       "tags": [
         "folk"
       ],
@@ -23683,7 +23667,7 @@
       "name": "Borusan Klasik",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/BORUSAN_KLASIKAAC_SC",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ccfd28c8-9f0a-11e9-a787-52543be04c81-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/borusan-klasik-dinle.jpg",
       "tags": [
         "classical"
       ],
@@ -27292,7 +27276,7 @@
       "name": "Radyo Viva",
       "streamUrl": "https://moondigitaledge.radyotvonline.net/radyoviva/playlist.m3u8",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/097bda49-2be1-4306-a657-ce5bd922bd40-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-viva-dinle.jpg",
       "tags": [],
       "codec": "UNKNOWN",
       "bitrateKbps": 0,
@@ -27446,7 +27430,7 @@
       "name": "BloombergHTradyo",
       "streamUrl": "https://ciner-live.ercdn.net/bloombergradyo/bloombergradyo_1.m3u8",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/08b82bc9-67a0-49c8-a059-24c3d8948a90-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/bloomberg-ht-radyo-dinle.jpg",
       "tags": [
         "news"
       ],
@@ -27460,7 +27444,7 @@
       "name": "ALTIN SARKILAR",
       "streamUrl": "http://37.247.98.8/stream/25/;",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/31da019f-9f0a-11e9-a787-52543be04c81-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-altin-sarkilar-dinle.jpg",
       "tags": [
         "golden oldies",
         "retro"
@@ -27874,7 +27858,7 @@
       "name": "JoyTürk Akustik",
       "streamUrl": "http://playerservices.streamtheworld.com/api/livestream-redirect/JOYTURK_AKUSTIK128AAC.aac",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/a7dc38d4-920a-4de2-8fac-5106abccf69e-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/joy-turk-akustik-dinle.jpg",
       "tags": [
         "acustic",
         "pop"
@@ -27969,7 +27953,7 @@
       "name": "Pal Doğa",
       "streamUrl": "http://shoutcast.radyogrup.com:1040/;*.mp3",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0da692ab-2ee2-45e6-8303-26ff30949f91-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/pal-doga-dinle.jpg",
       "tags": [
         "classical"
       ],
@@ -31324,20 +31308,6 @@
       "clickCount": 5
     },
     {
-      "id": "c06ef146-a5b0-485f-a6e3-1df09514a5bf",
-      "name": "Kurd1",
-      "streamUrl": "https://listen.radioking.com/radio/119251/stream/158701",
-      "countryCode": "TR",
-      "favicon": "https://turkradyodinle.com/stations/logos/kurd1.png",
-      "tags": [
-        "classical"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
-      "votes": 1311,
-      "clickCount": 5
-    },
-    {
       "id": "a404045e-bd13-4e15-a591-6c81b846b1b8",
       "name": "Med Radyo",
       "streamUrl": "http://medradyo.kesintisizyayin.com:8062/stream",
@@ -31382,7 +31352,7 @@
       "name": "Radyo 45'lik",
       "streamUrl": "http://stream.radyo45lik.com:4545/",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1a43c888-149f-4d58-ba45-1168efdcddde-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-45lik-dinle.jpg",
       "tags": [
         "pop",
         "retro music"
@@ -31460,7 +31430,7 @@
       "name": "ALTIN ŞARKILAR",
       "streamUrl": "https://moondigitalmaster.radyotvonline.net/altinsarkilar/playlist.m3u8",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/dcdcc68c-5116-48f3-a70b-7c923233d27c-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-altin-sarkilar-dinle.jpg",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 128,
@@ -31472,7 +31442,7 @@
       "name": "Radyo Gol",
       "streamUrl": "https://edge1.radyotvonline.net/shoutcast/play/radyogol",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/87c44288-3030-4e9f-b5af-62fc254fa3f9-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-gol-dinle.jpg",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 128,
@@ -31537,20 +31507,6 @@
       "codec": "AAC",
       "bitrateKbps": 140,
       "votes": 33,
-      "clickCount": 5
-    },
-    {
-      "id": "dd462b37-5792-402b-a1a2-4dd70c3971ee",
-      "name": "TRT Radyo Kurdî",
-      "streamUrl": "https://radio-trtradyo6.medya.trt.com.tr/master.m3u8",
-      "countryCode": "TR",
-      "favicon": "https://turkradyodinle.com/stations/logos/trt-radyo-kurdi.png",
-      "tags": [
-        "kurdish songs"
-      ],
-      "codec": "AAC",
-      "bitrateKbps": 140,
-      "votes": 978,
       "clickCount": 5
     },
     {
@@ -32128,7 +32084,7 @@
       "name": "ROMANTİK TÜRK",
       "streamUrl": "https://radyo.yayin.com.tr:6042/",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/f39f52d9-2c9f-4f31-8f46-68ade8bdc2e6-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-romantik-turk-dinle.jpg",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 64,
@@ -32530,22 +32486,6 @@
       "codec": "AAC",
       "bitrateKbps": 128,
       "votes": 62,
-      "clickCount": 4
-    },
-    {
-      "id": "e07ce960-0fca-49c5-9f9f-4aa24feb77a8",
-      "name": "Gundi FM",
-      "streamUrl": "http://gundifm.ozelip.com:7830/;",
-      "countryCode": "TR",
-      "favicon": "https://yt3.ggpht.com/ytc/AKedOLSnbp3j7UCOUCra41mcQXEaeuobWPad1G7bwOsZDw=s900-c-k-c0x00ffffff-no-rj",
-      "tags": [
-        "folk music",
-        "kurdish folk music",
-        "kurdish songs"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 64,
-      "votes": 610,
       "clickCount": 4
     },
     {
@@ -33511,7 +33451,7 @@
       "name": "Tezene",
       "streamUrl": "http://37.247.98.8/stream/22/.mp3?%26token=Bsx3vK2u28-xMp98IZDV2Q%26expires=1618686860%27%20type=%27audio/mp3%27&rd2=%27https://radyo.vip/stream",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/86f7abc5-a65e-43ac-817f-e3b87f734fa1-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-tezene-dinle.jpg",
       "tags": [
         "classical"
       ],
@@ -33637,7 +33577,7 @@
       "name": "Radyo Fıtrat",
       "streamUrl": "http://radyofitrat.radyotvonline.net/",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/7ea58b1d-e502-4e03-abb1-65b2408bab2d-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-fitrat-dinle.jpg",
       "tags": [
         "islamic",
         "quran",
@@ -33695,7 +33635,7 @@
       "name": "Batı Radyo",
       "streamUrl": "https://sslyayin.netyayin.net:10902/",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/c7ef0cc3-2ce1-4c4d-9506-ff1ca8d27197-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/bati-radyo-dinle.jpg",
       "tags": [
         "classical"
       ],
@@ -34057,7 +33997,7 @@
       "name": "POP 90",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/POP90128AAC.aac",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/75c5ca67-d613-4a9f-8bcf-eb69473153f9-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-pop-90-dinle.jpg",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 128,
@@ -34203,7 +34143,7 @@
       "name": "RADYO LOJİK",
       "streamUrl": "https://ip20.ozelip.com:9710/",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/817c8b2d-df4b-4191-93cc-be9c9d87da1a-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-lojik-afyon-dinle.jpg",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 128,
@@ -34227,7 +34167,7 @@
       "name": "RADYOTÜRK",
       "streamUrl": "https://radyo.yayindakiler.com:4028/",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/84e38e40-cd43-459e-9562-0c9685e94c34-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-turk-dinle.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -34313,7 +34253,7 @@
       "name": "Bizim Radyo",
       "streamUrl": "https://ip132.ozelip.com:7017/",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1d1fd095-2d1b-43f4-be0e-de834631ec30-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/bizim-radyo-dinle.jpg",
       "tags": [
         "talk & speech"
       ],
@@ -34500,7 +34440,7 @@
       "name": "Radyo ODTU",
       "streamUrl": "http://stream.radyoodtu.com.tr/;",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/7ccb7f82-7dd6-11e8-b68b-52543be04c81-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-odtu-dinle.jpg",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 48,
@@ -35018,7 +34958,7 @@
       "name": "HABER TÜRK RADYO",
       "streamUrl": "https://haberturkradyo.radyotvonline.net/haberturkradyo",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0c61b20d-bfaa-4647-aa9b-3308087d5a4d-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/haberturk-radyo-dinle.jpg",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 128,
@@ -35137,7 +35077,7 @@
       "name": "Emek radyo",
       "streamUrl": "http://yayin1.radyohizmeti.com:8585/;",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/7f4814fc-09f6-4be0-ab7d-6b9320ff3538-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/emek-radyo-dinle.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -35251,7 +35191,7 @@
       "name": "Radyo A (Radyo Anadolu Üniversitesi)",
       "streamUrl": "http://canli.radyoa.anadolu.edu.tr:44445/Radyo_A_MP3",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/961f44d7-0601-11e8-ae97-52543be04c81-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-a-anadolu-universitesi-dinle.jpg",
       "tags": [
         "blues",
         "folk",
@@ -35282,7 +35222,7 @@
       "name": "meteorolojinin sesi",
       "streamUrl": "http://radyomgm.canliyayinda.com/;stream.mp3",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/3acd808a-e801-43bb-bdb3-16a8f4761f0d-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/meteorolojinin-sesi-dinle.jpg",
       "tags": [
         "news"
       ],
@@ -35358,7 +35298,7 @@
       "name": "Ribat FM",
       "streamUrl": "http://yayin1.canliyayin.org:7010/;*.mp3",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/43b61654-8c90-11e9-ad01-52543be04c81-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/konya-ribat-fm-dinle.jpg",
       "tags": [
         "islamic"
       ],
@@ -35505,7 +35445,7 @@
       "name": "BOĞAZ FM",
       "streamUrl": "https://radyo.yayin.com.tr:5938/",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/205d99bd-4e97-4373-a0d8-2658c0e75afe-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/bogaz-fm-dinle.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -35529,7 +35469,7 @@
       "name": "Dost FM",
       "streamUrl": "http://yayin.dostfm.com:8920/;.mp3?no_dl",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/87f52657-066b-4ffe-b8c5-4cc1f9476b7e-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/dost-fm-dinle.jpg",
       "tags": [
         "talk & speech"
       ],
@@ -35559,7 +35499,7 @@
       "name": "Magic FM",
       "streamUrl": "http://yayin1.yayindakiler.com:3032/",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/960e1f3e-0601-11e8-ae97-52543be04c81-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/magic-fm-92-karabuk-dinle.jpg",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 32,
@@ -35609,7 +35549,7 @@
       "name": "POWER EARTH",
       "streamUrl": "http://listen.powerapp.com.tr/powerearth/abr/playlist.m3u8",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/2a2cb6a8-a0a3-49d9-81e2-987b7edc83a7-favicon-upgrade.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/power-earth-dinle.jpg",
       "tags": [
         "pop"
       ],
@@ -36474,24 +36414,6 @@
       ],
       "codec": "MP3",
       "bitrateKbps": 64,
-      "votes": 0,
-      "clickCount": 0
-    },
-    {
-      "id": "trd-kurd1-fm",
-      "name": "Kurd1 FM",
-      "streamUrl": "https://listen.radioking.com/radio/119251/stream/158701",
-      "countryCode": "TR",
-      "favicon": "https://turkradyodinle.com/stations/logos/kurd1-fm.png",
-      "tags": [
-        "folk music",
-        "kurdish folk music",
-        "kurdish songs",
-        "turk-halk-muzigi",
-        "kurtce-bolgesel"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 128,
       "votes": 0,
       "clickCount": 0
     },
