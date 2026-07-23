@@ -1024,7 +1024,7 @@
       "name": "metro fm south Africa",
       "streamUrl": "https://25283.live.streamtheworld.com/METROFMAAC.aac?dist=triton-widget&tdsdk=js-2.9&swm=false&pname=tdwidgets&pversion=2.9&banners=none&burst-time=15&sbmid=541b37d8-153e-41d8-85b9-35e10d314d8c",
       "countryCode": "ZA",
-      "favicon": "null",
+      "favicon": "",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 48,
@@ -3516,7 +3516,7 @@
       "name": "Радио дача",
       "streamUrl": "http://listen13.vdfm.ru:8000/dacha",
       "countryCode": "RU",
-      "favicon": "null",
+      "favicon": "",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -4476,7 +4476,7 @@
       "name": "bollywood 90s radio",
       "streamUrl": "https://stream-157.zeno.fm/rm4i9pdex3cuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJybTRpOXBkZXgzY3V2IiwiaG9zdCI6InN0cmVhbS0xNTcuemVuby5mbSIsInRtIjpmYWxzZSwicnR0bCI6NSwianRpIjoiYWtXZGJKVzdRbzZBX3RuVTE0MHh2QSIsImlhdCI6MTc1OTA0ODY2MywiZXhwIjoxNzU5MDQ4NzIzfQ.0Or2yFxKCLWplJWbk0YjbVse8dZYouLJd9CB80yib1k",
       "countryCode": "IN",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "music"
       ],
@@ -7288,7 +7288,7 @@
       "name": "Bollywood 2000's",
       "streamUrl": "https://2.mystreaming.net/uber/bollywood2000s/icecast.audio",
       "countryCode": "IN",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "bollywood"
       ],
@@ -8928,7 +8928,7 @@
       "name": "বাংলাদেশ বেতার ঢাকা ক",
       "streamUrl": "http://as1.digitalsynapsebd.com:8582/;",
       "countryCode": "BD",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "bangla music",
         "bangla natok",
@@ -10283,7 +10283,7 @@
       "name": "Mohammed Rafi",
       "streamUrl": "https://stream-159.zeno.fm/6yqvumgfxtzuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI2eXF2dW1nZnh0enV2IiwiaG9zdCI6InN0cmVhbS0xNTkuemVuby5mbSIsInRtIjpmYWxzZSwicnR0bCI6NSwianRpIjoiNGxLMGxDSE1TRU8yLUJUYnEyT0stQSIsImlhdCI6MTc1ODk5NjgzNywiZXhwIjoxNzU4OTk2ODk3fQ.U3Lx-pZE7klBJoO3t0D_gleBIl7vTp567-mIVrjZUTQ",
       "countryCode": "IN",
-      "favicon": "null",
+      "favicon": "",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 0,
@@ -10776,7 +10776,7 @@
       "name": "Bollywood classic songs",
       "streamUrl": "https://stream-169.zeno.fm/60ef4p33vxquv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI2MGVmNHAzM3Z4cXV2IiwiaG9zdCI6InN0cmVhbS0xNjkuemVuby5mbSIsInRtIjpmYWxzZSwicnR0bCI6NSwianRpIjoieS1oSkVCczBUYW1QdEJOZENrbnlIdyIsImlhdCI6MTc1ODk3ODAwNSwiZXhwIjoxNzU4OTc4MDY1fQ.VmR6h_oSZ83rRJfxbF0EvJTv5fJpSCFEMGQTLTQ5nlo&rj-ttl=5&rj-tok=AAABc-OCFngAs_AvDsY_StEpMg",
       "countryCode": "IN",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "music"
       ],
@@ -11051,7 +11051,7 @@
       "name": "বাংলাদেশ বেতার বানিজ্যিক কার্যক্রম",
       "streamUrl": "http://as1.digitalsynapsebd.com:8741/;",
       "countryCode": "BD",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "bengali music",
         "music"
@@ -14605,7 +14605,7 @@
       "name": "美国之音",
       "streamUrl": "https://voa-ingest.akamaized.net/hls/live/2035206/151_124L/playlist.m3u8",
       "countryCode": "US",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "新闻"
       ],
@@ -15513,7 +15513,7 @@
       "name": "Halk Tv",
       "streamUrl": "https://halktv.daioncdn.net/halktv/halktv_1080p.m3u8?sid=6vahxsup0jxl&app=c86957d3-74a7-44da-9ad2-dc358c769609&ce=3",
       "countryCode": "TR",
-      "favicon": "null",
+      "favicon": "",
       "tags": [],
       "codec": "UNKNOWN",
       "bitrateKbps": 0,
@@ -17775,7 +17775,7 @@
       "name": "BBC Arabic",
       "streamUrl": "https://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio",
       "countryCode": "GB",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "news"
       ],
@@ -18245,7 +18245,7 @@
       "name": "Pink Floyd",
       "streamUrl": "https://stream.pcradio.ru/Pink_Floyd-hi",
       "countryCode": "GB",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "discography"
       ],
@@ -23290,7 +23290,7 @@
       "name": "Magic 80s Florida (128 kbit/s)",
       "streamUrl": "https://streaming.live365.com/a79417",
       "countryCode": "US",
-      "favicon": "null",
+      "favicon": "",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -25039,7 +25039,7 @@
       "name": "bbc 2",
       "streamUrl": "http://as-hls-ww-live.akamaized.net/pool_74208725/live/ww/bbc_radio_two/bbc_radio_two.isml/bbc_radio_two-audio%3d320000.norewind.m3u8",
       "countryCode": "GB",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "music"
       ],
@@ -25177,7 +25177,7 @@
       "name": "Dire Straits",
       "streamUrl": "https://stream.pcradio.ru/dire_straits-hi",
       "countryCode": "GB",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "discography"
       ],
@@ -25234,7 +25234,7 @@
       "name": "Def Leppard",
       "streamUrl": "https://stream.pcradio.ru/def_leppard-hi",
       "countryCode": "GB",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "discography"
       ],
@@ -25434,7 +25434,7 @@
       "name": "The Beatles",
       "streamUrl": "https://stream.pcradio.ru/The_Beatles-hi",
       "countryCode": "GB",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "discography"
       ],
@@ -27445,7 +27445,7 @@
       "name": "Radyo Alevi Canlar",
       "streamUrl": "https://alevifm.80.yayin.com.tr/",
       "countryCode": "TR",
-      "favicon": "null",
+      "favicon": "",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 128,
@@ -27793,7 +27793,7 @@
       "name": "Radiohead",
       "streamUrl": "https://stream.pcradio.ru/radiohead-hi",
       "countryCode": "GB",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "discography"
       ],
@@ -27807,7 +27807,7 @@
       "name": "Radio XL 1296",
       "streamUrl": "https://xlradio.co.uk:8000/",
       "countryCode": "GB",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "music"
       ],
@@ -30376,7 +30376,7 @@
       "name": "Queen",
       "streamUrl": "https://stream.pcradio.ru/Queen-hi",
       "countryCode": "GB",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "discography"
       ],
@@ -30587,7 +30587,7 @@
       "name": "Dandelion Radio",
       "streamUrl": "http://stream.dandelionradio.com:9414/;",
       "countryCode": "GB",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "alternative",
         "eclectic",
@@ -30743,7 +30743,7 @@
       "name": "Deep Purple",
       "streamUrl": "https://stream.pcradio.ru/Deep_purple-hi",
       "countryCode": "GB",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "discography"
       ],
@@ -32311,7 +32311,7 @@
       "name": "Radyo Banko Fm",
       "streamUrl": "http://yayin.netradyom.com:8050/RADYOBANKO",
       "countryCode": "TR",
-      "favicon": "null",
+      "favicon": "",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 32,
@@ -33187,7 +33187,7 @@
       "name": "Boom",
       "streamUrl": "http://edge-audio-03-gos2.sharp-stream.com/65_boom_radio_live_320",
       "countryCode": "GB",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "oldies"
       ],
@@ -33337,7 +33337,7 @@
       "name": "Bradford Asian Radio",
       "streamUrl": "https://cast1.asurahosting.com/proxy/bradford/stream",
       "countryCode": "GB",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "music"
       ],
@@ -34761,7 +34761,7 @@
       "name": "Tarkan",
       "streamUrl": "https://stream.pcradio.ru/tarkan-hi",
       "countryCode": "TR",
-      "favicon": "null",
+      "favicon": "",
       "tags": [
         "discography"
       ],

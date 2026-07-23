@@ -123,6 +123,14 @@ Future<String> _pickApiMirror(http.Client client) async {
   }
 }
 
+/// radio-browser.info sometimes sends the literal string "null" instead of
+/// an empty/absent field for stations with no favicon — treat that the
+/// same as genuinely empty, or the app tries to load "null" as a URL.
+String _cleanFavicon(String? raw) {
+  final trimmed = (raw ?? '').trim();
+  return trimmed.toLowerCase() == 'null' ? '' : trimmed;
+}
+
 class _Candidate {
   _Candidate({
     required this.id,
@@ -197,7 +205,7 @@ Future<List<_Candidate>> _fetchStationsForCountry(
       name: (map['name'] as String? ?? '').trim(),
       streamUrl: resolvedUrl.isNotEmpty ? resolvedUrl : url,
       countryCode: countryCode,
-      favicon: (map['favicon'] as String? ?? '').trim(),
+      favicon: _cleanFavicon(map['favicon'] as String?),
       tags: (map['tags'] as String? ?? '')
           .split(',')
           .map((t) => t.trim())
@@ -235,7 +243,7 @@ Future<List<_Candidate>> _loadCandidatesFromFile(String fileName) async {
           name: (map['name'] as String? ?? '').trim(),
           streamUrl: resolvedUrl.isNotEmpty ? resolvedUrl : url,
           countryCode: countryCode,
-          favicon: (map['favicon'] as String? ?? '').trim(),
+          favicon: _cleanFavicon(map['favicon'] as String?),
           tags: (map['tags'] as String? ?? '')
               .split(',')
               .map((t) => t.trim())
