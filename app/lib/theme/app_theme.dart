@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-/// Colors sampled straight from the RadioBox mark (assets/branding/icon.png):
+/// Colors sampled straight from the Radio Box mark (assets/branding/icon.png):
 /// an orange-to-pink gradient microphone with a deep-purple soundwave.
 class AppColors {
   const AppColors._();

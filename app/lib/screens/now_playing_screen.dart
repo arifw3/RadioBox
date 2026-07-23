@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../l10n/app_localizations.dart';
 import '../state/artist_spotlight_providers.dart';
 import '../state/country_providers.dart';
+import '../state/favorites_providers.dart';
 import '../state/palette_providers.dart';
 import '../state/player_providers.dart';
 import '../theme/app_theme.dart';
@@ -143,6 +144,7 @@ class NowPlayingScreen extends ConsumerWidget {
     if (spotlightReady) {
       return _SpotlightScaffold(
         imageUrl: spotlight.imageUrl!,
+        stationId: mediaItem?.id,
         stationName: mediaItem?.title ?? l10n.stationNotSelected,
         artistName: spotlight.artistName,
         songTitle: spotlight.songTitle,
@@ -158,6 +160,7 @@ class NowPlayingScreen extends ConsumerWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
+          _FavoriteButton(stationId: mediaItem?.id),
           IconButton(
             icon: const Icon(Icons.ios_share),
             tooltip: l10n.shareTooltip,
@@ -280,6 +283,7 @@ class NowPlayingScreen extends ConsumerWidget {
 class _SpotlightScaffold extends StatelessWidget {
   const _SpotlightScaffold({
     required this.imageUrl,
+    required this.stationId,
     required this.stationName,
     required this.artistName,
     required this.songTitle,
@@ -289,6 +293,7 @@ class _SpotlightScaffold extends StatelessWidget {
   });
 
   final String imageUrl;
+  final String? stationId;
   final String stationName;
   final String artistName;
   final String songTitle;
@@ -316,6 +321,7 @@ class _SpotlightScaffold extends StatelessWidget {
         ),
         centerTitle: true,
         actions: [
+          _FavoriteButton(stationId: stationId),
           IconButton(
             icon: const Icon(Icons.ios_share),
             tooltip: l10n.shareTooltip,
@@ -504,6 +510,32 @@ class _TransportButton extends StatelessWidget {
         tooltip: tooltip,
         onPressed: onPressed,
       ),
+    );
+  }
+}
+
+/// Heart toggle for the currently playing station — same icon/color/
+/// tooltip convention as the favorites list in home_screen.dart, just
+/// reachable from the player instead of only the station list.
+class _FavoriteButton extends ConsumerWidget {
+  const _FavoriteButton({required this.stationId});
+
+  final String? stationId;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
+    final favoriteIds =
+        ref.watch(favoritesProvider).valueOrNull ?? const <String>{};
+    final isFavorite = stationId != null && favoriteIds.contains(stationId);
+
+    return IconButton(
+      icon: Icon(isFavorite ? Icons.favorite : Icons.favorite_border),
+      color: isFavorite ? AppColors.pink : Colors.white,
+      tooltip: isFavorite ? l10n.favoriteRemove : l10n.favoriteAdd,
+      onPressed: stationId == null
+          ? null
+          : () => ref.read(favoritesProvider.notifier).toggle(stationId!),
     );
   }
 }

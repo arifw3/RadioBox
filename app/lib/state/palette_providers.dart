@@ -5,7 +5,7 @@ import 'package:palette_generator/palette_generator.dart';
 import '../theme/app_theme.dart';
 import 'player_providers.dart';
 
-/// Brand pink from the RadioBox mark — the app's identity before any
+/// Brand pink from the Radio Box mark — the app's identity before any
 /// station-specific tint kicks in.
 const kDefaultSeedColor = AppColors.pink;
 

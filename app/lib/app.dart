@@ -28,7 +28,7 @@ class RadioBoxApp extends ConsumerWidget {
         ref.watch(dynamicSeedColorProvider).valueOrNull ?? kDefaultSeedColor;
 
     return MaterialApp(
-      title: 'RadioBox',
+      title: 'Radio Box',
       debugShowCheckedModeBanner: false,
       theme: buildAppTheme(seedColor),
       locale: ref.watch(localeProvider),

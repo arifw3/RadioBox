@@ -58,7 +58,7 @@ class SocialSyncPanel extends ConsumerWidget {
               icon: const Icon(Icons.share),
               tooltip: l10n.socialShareLabel,
               onPressed: () => Share.share(
-                'RadioBox\'ta benimle dinle! Oda kodu: $roomId',
+                'Radio Box\'ta benimle dinle! Oda kodu: $roomId',
               ),
             ),
             IconButton(

@@ -55,7 +55,7 @@ class AlarmService {
 
     await _plugin.zonedSchedule(
       _notificationId,
-      'RadioBox Alarmı',
+      'Radio Box Alarmı',
       '$stationName çalıyor olacak',
       scheduled,
       const NotificationDetails(

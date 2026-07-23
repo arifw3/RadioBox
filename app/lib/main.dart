@@ -33,7 +33,7 @@ Future<void> main() async {
       builder: DialWaveAudioHandler.new,
       config: const AudioServiceConfig(
         androidNotificationChannelId: 'com.dialwave.audio',
-        androidNotificationChannelName: 'RadioBox Playback',
+        androidNotificationChannelName: 'Radio Box Playback',
         // Keep the foreground service (and stream) alive on pause — a real
         // radio doesn't stop just because the user swiped the app away.
         // (Must stay false: audio_service asserts androidNotificationOngoing
