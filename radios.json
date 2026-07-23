@@ -98,7 +98,7 @@
       "name": "The Rock - NZ's #1 rock radio station",
       "streamUrl": "https://mediaworks.streamguys1.com/rock_net_icy",
       "countryCode": "NZ",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/bc9ac88d-9af6-4564-9cb4-57edf4d36865.jpg",
       "tags": [
         "alternative rock",
         "classic rock",
@@ -320,7 +320,7 @@
       "name": "BBC Radio 4 (128k)",
       "streamUrl": "http://as-hls-ww-live.akamaized.net/pool_55057080/live/ww/bbc_radio_fourfm/bbc_radio_fourfm.isml/bbc_radio_fourfm-audio%3d128000.norewind.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/98137c2d-ce68-4e33-8cb7-ddf3692ecc9d.png",
       "tags": [
         "comedy",
         "drama",
@@ -337,7 +337,7 @@
       "name": "CCTV-13新闻伴音",
       "streamUrl": "https://piccpndali.v.myalicdn.com/audio/cctv13_2.m3u8",
       "countryCode": "CN",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/2bf82625-6e78-445d-afff-e51e53c369a9.jpg",
       "tags": [
         "tv"
       ],
@@ -351,7 +351,7 @@
       "name": "France Culture",
       "streamUrl": "http://icecast.radiofrance.fr/franceculture-hifi.aac",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/6a1440b2-e6f0-11e9-a96c-52543be04c81.webp",
       "tags": [
         "aac",
         "culture",
@@ -368,7 +368,7 @@
       "name": "FIP",
       "streamUrl": "http://icecast.radiofrance.fr/fip-hifi.aac",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/932eb148-e6f6-11e9-a96c-52543be04c81.webp",
       "tags": [
         "aac",
         "music",
@@ -385,7 +385,7 @@
       "name": "France Inter",
       "streamUrl": "https://stream.radiofrance.fr/franceinter/franceinter_hifi.m3u8?id=radiofrance",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/33960c43-0464-44b4-abfa-73591ebf647f.webp",
       "tags": [],
       "codec": "UNKNOWN",
       "bitrateKbps": 0,
@@ -427,7 +427,7 @@
       "name": "Ретро FM",
       "streamUrl": "http://retroserver.streamr.ru:8043/retro256.mp3",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/964fade0-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "classic hits",
         "moscow",
@@ -476,7 +476,7 @@
       "name": "LBC UK",
       "streamUrl": "http://media-ice.musicradio.com/LBCUK",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/6efe216d-bf7e-11e9-8502-52543be04c81.svg",
       "tags": [
         "news talk",
         "talk"
@@ -589,7 +589,7 @@
       "name": "РАДИО ВАНЯ",
       "streamUrl": "https://icecast-radiovanya.cdnvideo.ru/radiovanya",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/63688c44-e90b-11e8-a471-52543be04c81.webp",
       "tags": [
         "pop"
       ],
@@ -740,7 +740,7 @@
       "name": "NPO Radio 2",
       "streamUrl": "http://icecast.omroep.nl/radio2-bb-mp3",
       "countryCode": "NL",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96126e82-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "evergreens",
         "talk"
@@ -841,7 +841,7 @@
       "name": "NPO Radio 1",
       "streamUrl": "http://icecast.omroep.nl/radio1-bb-mp3",
       "countryCode": "NL",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96126f56-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "news"
       ],
@@ -901,7 +901,7 @@
       "name": "Ambient Sleeping Pill",
       "streamUrl": "http://radio.stereoscenic.com/asp-h",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/961fa288-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "ambient",
         "meditation",
@@ -987,7 +987,7 @@
       "name": "CLASSIC HITS RADIO 70 80 DiscoFunk ModernSoul Boogie",
       "streamUrl": "https://radiopanther.radiolebowski.com/play",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/c93f9c76-2ad4-464d-bff4-7f46e95f2601.png",
       "tags": [
         "1970s",
         "1980s",
@@ -1118,7 +1118,7 @@
       "name": "80s80s",
       "streamUrl": "http://regiocast.streamabc.net/regc-80s80smweb2517500-mp3-192-1672667?sABC=68q87pnp%230%23q7s809s74070n543n7p5213q6qr39235%23fgernzf.80f80f.qr&aw_0_1st.playerid=streams.80s80s.de&amsparams=playerid:streams.80s80s.de;skey:1759018156",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/962dc110-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "80s"
       ],
@@ -1198,7 +1198,7 @@
       "name": "Дискотека СССР",
       "streamUrl": "http://pub0302.101.ru:8000/stream/pro/aac/64/144?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpcCI6IjUuMTguMjQ4Ljk4IiwidXNlcmFnZW50IjoiTW96aWxsYVwvNS4wIChYMTE7IExpbnV4IHg4Nl82NDsgcnY6ODIuMCkgR2Vja29cLzIwMTAwMTAxIEZpcmVmb3hcLzgyLjAiLCJ1aWRfY2hhbm5lbCI6IjE0NCIsInR5cGVfY2hhbm5lbCI6ImNoYW5uZWwiLCJleHAiOjE2MDU5NjQ1MTZ9.Ln1wEJ8cHHzK_Ea6Zr8J8acdny0R9ShZ_KUKVf6TmQA",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/f796d445-4314-4eb6-a09d-bcac5d474661.png",
       "tags": [
         "80s",
         "90s",
@@ -1321,7 +1321,7 @@
       "name": "Радио «Комсомольская Правда» | КП Россия",
       "streamUrl": "http://kpradio.hostingradio.ru:8000/russia.radiokp128.mp3",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/962a1abd-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "moscow",
         "music",
@@ -1368,7 +1368,7 @@
       "name": "BBC Radio 1",
       "streamUrl": "http://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/pc_hd_abr_v2/ak/bbc_radio_one.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/fdbdc2b0-c184-437b-8643-9a5bfa45c253.png",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 101,
@@ -1441,7 +1441,7 @@
       "name": "KAYA FM 95.9",
       "streamUrl": "http://edge.iono.fm/xhls/82_high.m3u8",
       "countryCode": "ZA",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/119f07c3-81f0-4309-91e8-f46525f0d35d.jpg",
       "tags": [
         "african",
         "alternative",
@@ -1517,7 +1517,7 @@
       "name": "DFM Дискач 90-х",
       "streamUrl": "https://dfm-disc90.hostingradio.ru/disc9096.aacp",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/165eab56-4a14-11e9-a4d7-52543be04c81.png",
       "tags": [
         "90-е",
         "eurodance",
@@ -1557,7 +1557,7 @@
       "name": "BBC Radio 2 (128k)",
       "streamUrl": "http://as-hls-ww-live.akamaized.net/pool_74208725/live/ww/bbc_radio_two/bbc_radio_two.isml/bbc_radio_two-audio%3d128000.norewind.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/3606ef8c-cd58-4440-8c47-dbf1e0cacdac.png",
       "tags": [
         "adult contemporary"
       ],
@@ -1583,7 +1583,7 @@
       "name": "Rai Radio 1",
       "streamUrl": "http://icecdn-19d24861e90342cc8decb03c24c8a419.msvdn.net/icecastRelay/S16355530/Q4zh3NTu28Rx/icecast",
       "countryCode": "IT",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96185693-0601-11e8-ae97-52543be04c81.jpg",
       "tags": [
         "news",
         "public radio",
@@ -1947,7 +1947,7 @@
       "name": "Rai Radio 3",
       "streamUrl": "http://icecdn-19d24861e90342cc8decb03c24c8a419.msvdn.net/icecastRelay/S56630579/yEbkcBtIoSwd/icecast",
       "countryCode": "IT",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9608eb3e-0601-11e8-ae97-52543be04c81.jpg",
       "tags": [
         "classical",
         "culture",
@@ -2021,7 +2021,7 @@
       "name": "Sunshine Live",
       "streamUrl": "http://sunsl.streamabc.net/sunsl-sslsimulcast-mp3-192-4434053?sABC=68q88142%230%234313or3p195706q13n90589o7061s597%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1759019330",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/960d063e-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "dance",
         "trance"
@@ -2142,7 +2142,7 @@
       "name": "BBC Radio 6 Music",
       "streamUrl": "http://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d320000.norewind.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1c6dcd6f-88c6-4fd4-8191-078435168e85.png",
       "tags": [
         "alternative",
         "blues",
@@ -2194,7 +2194,7 @@
       "name": "The Big 80s Station",
       "streamUrl": "http://158.69.114.190:8065/;",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/f4bfa5d0-a403-11e8-abb8-52543be04c81.jpg",
       "tags": [
         "80s"
       ],
@@ -2345,7 +2345,7 @@
       "name": "1.FM - Chillout Lounge Radio",
       "streamUrl": "http://strm112.1.fm/chilloutlounge_mobile_mp3",
       "countryCode": "CH",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/961fb4b2-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "chillout",
         "lounge"
@@ -2394,7 +2394,7 @@
       "name": "Alpha FM 101.7 MHz (São Paulo - SP)",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_ALPHAFM_ADP.aac",
       "countryCode": "BR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/447a1a5f-aee6-4b21-b85f-10ceb1896ad3.png",
       "tags": [
         "light",
         "misc",
@@ -2453,7 +2453,7 @@
       "name": "Akaboozi FM 87.9",
       "streamUrl": "http://162.244.80.52:8732/stream.mp3",
       "countryCode": "UG",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9a8f7fb5-3159-11ea-afca-52543be04c81.png",
       "tags": [
         "news",
         "talk"
@@ -2468,7 +2468,7 @@
       "name": "Radio Nowy Świat",
       "streamUrl": "https://go-audio.toya.net.pl/63214",
       "countryCode": "PL",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/d81fd5d3-4c24-4768-88b3-57954e77c0e7.png",
       "tags": [
         "soft adult contemporary"
       ],
@@ -2508,7 +2508,7 @@
       "name": "Спутник",
       "streamUrl": "https://icecast-rian.cdnvideo.ru/voicerus",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/2678a502-9a27-4774-a549-e00091878051.png",
       "tags": [
         "news",
         "talk"
@@ -2550,7 +2550,7 @@
       "name": "德云社相声合集",
       "streamUrl": "https://stream-174.zeno.fm/yqawwmweq8mtv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ5cWF3d213ZXE4bXR2IiwiaG9zdCI6InN0cmVhbS0xNzQuemVuby5mbSIsInRtIjpmYWxzZSwicnR0bCI6NSwianRpIjoiN0pobVNQZ25SSUcxMnhUendiM0otZyIsImlhdCI6MTc1OTAyODI5NCwiZXhwIjoxNzU5MDI4MzU0fQ.degzTkGPGBOFUnnzlRmICS-boLTftVvOEqwcySRI2qc",
       "countryCode": "CN",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0ab8efd5-9110-4fc0-a961-f397d00ea93f.png",
       "tags": [
         "crosstalk",
         "entertainment"
@@ -2565,7 +2565,7 @@
       "name": "1.FM - Deep House Radio",
       "streamUrl": "http://strm112.1.fm/deephouse_mobile_mp3",
       "countryCode": "CH",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/962a748b-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "deep house",
         "techno"
@@ -2677,7 +2677,7 @@
       "name": "Radio Record - Russian Mix",
       "streamUrl": "https://radiorecord.hostingradio.ru/rus96.aacp",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/b3c3ac25-ea2c-4865-8444-7ba9a71960f8.png",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 0,
@@ -2689,7 +2689,7 @@
       "name": "CAPITAL - The UK's No.1 Hit Music Station",
       "streamUrl": "https://media-ssl.musicradio.com/CapitalUK",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/4ad5bdc7-01e5-47c9-a1f9-751671b4707e.png",
       "tags": [
         "capital",
         "capital fm",
@@ -2884,7 +2884,7 @@
       "name": "SRF 3",
       "streamUrl": "http://livestreaming-node-2.srg-ssr.ch/srgssr/srf3/mp3/128",
       "countryCode": "CH",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/961f1da4-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "pop",
         "public radio",
@@ -2900,7 +2900,7 @@
       "name": "Radio Swiss Jazz",
       "streamUrl": "http://livestreaming-node-3.srg-ssr.ch/srgssr/rsj/mp3/128",
       "countryCode": "CH",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/961ac56b-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "jazz",
         "public radio",
@@ -2964,7 +2964,7 @@
       "name": "Fun Radio",
       "streamUrl": "http://stream.funradio.sk:8000/fun128.mp3",
       "countryCode": "SK",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9d69cc77-b698-40c0-8036-17cd1f09ca44.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -2976,7 +2976,7 @@
       "name": "Heart London 106.2 [MP3]",
       "streamUrl": "http://ice-sov.musicradio.com/HeartLondonMP3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9608ade8-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "commercial",
         "hot adult contemporary",
@@ -3024,7 +3024,7 @@
       "name": "Comedy Radio new link",
       "streamUrl": "http://ic6.101.ru:8000/stream/air/aac/64/202",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1fbda80a-41a7-11ea-a95e-52543be04c81.png",
       "tags": [
         "comedy",
         "humor",
@@ -3287,7 +3287,7 @@
       "name": "BBC Radio 5 Live (128k)",
       "streamUrl": "http://as-hls-ww-live.akamaized.net/pool_89021708/live/ww/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d128000.norewind.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/cae35448-1285-4f12-b3e0-2f4fdde00002.png",
       "tags": [
         "news",
         "sports",
@@ -3333,7 +3333,7 @@
       "name": "ONDA CERO (España)",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/OCAAC",
       "countryCode": "ES",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/b8601593-152a-429d-9cb2-5065cf7c0185.png",
       "tags": [
         "noticias y música"
       ],
@@ -3391,7 +3391,7 @@
       "name": "90s90s Hits",
       "streamUrl": "http://regiocast.streamabc.net/regc-90s90spop4760822-mp3-192-9403761?sABC=68q8o9o6%230%234313or3p195706q13n90589o7061s597%23fgernzf.90f90f.qr&aw_0_1st.playerid=streams.90s90s.de&amsparams=playerid:streams.90s90s.de;skey:1759033782",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9637a1b2-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "90s",
         "hits",
@@ -3422,7 +3422,7 @@
       "name": "RAC1",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RAC_1.mp3",
       "countryCode": "ES",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/38a33fc0-be05-4c98-8c6a-ba3869575bc1.png",
       "tags": [
         "culture",
         "humour",
@@ -3530,7 +3530,7 @@
       "name": "Радио Маяк (Radio Mayak)",
       "streamUrl": "http://icecast.vgtrk.cdnvideo.ru/mayakfm_mp3_192kbps",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9614aa8d-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "music",
         "news",
@@ -3546,7 +3546,7 @@
       "name": "Rai Radio 2",
       "streamUrl": "http://icecdn-19d24861e90342cc8decb03c24c8a419.msvdn.net/icecastRelay/S35942484/yp5F67151K92/icecast",
       "countryCode": "IT",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96181819-0601-11e8-ae97-52543be04c81.jpg",
       "tags": [
         "public radio",
         "rai"
@@ -3644,7 +3644,7 @@
       "name": "Radio 105 Network",
       "streamUrl": "http://icecast.unitedradio.it/Radio105.mp3",
       "countryCode": "IT",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9619ea14-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "hits",
         "mediaset",
@@ -3676,7 +3676,7 @@
       "name": "esRadio",
       "streamUrl": "http://livestreaming.esradio.fm/stream64.mp3",
       "countryCode": "ES",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9611ecb1-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "news",
         "talk"
@@ -4007,7 +4007,7 @@
       "name": "France Musique",
       "streamUrl": "http://icecast.radiofrance.fr/francemusique-hifi.aac",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/5e992e1e-e6ef-11e9-a96c-52543be04c81.webp",
       "tags": [
         "aac",
         "musique",
@@ -4069,7 +4069,7 @@
       "name": "BBC News HD (720P)",
       "streamUrl": "https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ea391ded-00f0-47e0-841c-d92663e11854.png",
       "tags": [
         "england",
         "english",
@@ -4129,7 +4129,7 @@
       "name": "3FM",
       "streamUrl": "http://icecast.omroep.nl/3fm-bb-mp3",
       "countryCode": "NL",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/81a4bb94-f26a-497c-ae03-771e97773686.png",
       "tags": [
         "pop"
       ],
@@ -4281,7 +4281,7 @@
       "name": "Hard Rock Heaven",
       "streamUrl": "http://hydra.cdnstream.com/1521_128",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96336b01-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "80s",
         "glam metal",
@@ -4406,7 +4406,7 @@
       "name": "Radio Swiss Pop",
       "streamUrl": "http://livestreaming-node-1.srg-ssr.ch/srgssr/rsp/aac/96",
       "countryCode": "CH",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/cf430e7d-6fce-4931-8a53-5115acde3eb5.png",
       "tags": [
         "aac+",
         "pop",
@@ -4438,7 +4438,7 @@
       "name": "1.FM - Amsterdam Trance Radio",
       "streamUrl": "http://strm112.1.fm/atr_mobile_mp3",
       "countryCode": "CH",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/962a61bf-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "trance"
       ],
@@ -4452,7 +4452,7 @@
       "name": "hamsafar",
       "streamUrl": "http://n0f.radiojar.com/pyea7q9h5ehvv?rj-ttl=5&rj-tok=AAABmY23_n0AMIc5PqOEZqqfDw",
       "countryCode": "IR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/a9e20c5b-0758-46e6-8f70-fa2ab481b72d.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 0,
@@ -4635,7 +4635,7 @@
       "name": "go",
       "streamUrl": "https://stream-163.zeno.fm/v5kxmagseg0uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ2NWt4bWFnc2VnMHV2IiwiaG9zdCI6InN0cmVhbS0xNjMuemVuby5mbSIsInRtIjpmYWxzZSwicnR0bCI6NSwianRpIjoiNHpEUDM4aTZRTkdYenMtN0tCWXByUSIsImlhdCI6MTc1ODk5ODAyOSwiZXhwIjoxNzU4OTk4MDg5fQ.FabxDLQ97OLs_LULTM9NbwDKBDgUcECQLQUJblmftyQ",
       "countryCode": "IR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/a23469c1-a0f4-42f7-80d3-ca69f6ddaa01.png",
       "tags": [
         "donya"
       ],
@@ -4741,7 +4741,7 @@
       "name": "Radio Disney 94.3 - Buenos Aires, Argentina",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_ARG_BA_ADP.aac",
       "countryCode": "AR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9257ed3b-c422-43cf-a8dd-8165861b3187.png",
       "tags": [
         "94.3 fm",
         "américa",
@@ -4831,7 +4831,7 @@
       "name": "BBC Radio 3 (128k)",
       "streamUrl": "http://as-hls-ww-live.akamaized.net/pool_23461179/live/ww/bbc_radio_three/bbc_radio_three.isml/bbc_radio_three-audio%3d128000.norewind.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/03e68f6d-1ca3-459f-891a-c55d84711646.png",
       "tags": [
         "classical"
       ],
@@ -4845,7 +4845,7 @@
       "name": "Radio Swiss Classic German",
       "streamUrl": "http://livestreaming-node-3.srg-ssr.ch/srgssr/rsc_de/mp3/128",
       "countryCode": "CH",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96077079-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "classical",
         "public radio",
@@ -4949,7 +4949,7 @@
       "name": "Ретро FM 70e",
       "streamUrl": "http://retro70.hostingradio.ru:8025/retro70-128.mp3",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/960faade-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "70s"
       ],
@@ -5051,7 +5051,7 @@
       "name": "FUNKY RADIO - Only Funk Music (60's 70's)",
       "streamUrl": "https://funkyradio.streamingmedia.it/play.mp3",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/c77c45c4-cf37-414c-ae34-868f7d9cd944.png",
       "tags": [
         "60s",
         "70s",
@@ -5248,7 +5248,7 @@
       "name": "Sunshine Live - Techno",
       "streamUrl": "http://sunsl.streamabc.net/sunsl-techno-mp3-192-4912904?sABC=68q851n4%230%23q7s809s74070n543n7p5213q6qr39235%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1759007140",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9627c2e6-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "dance",
         "electronic",
@@ -5316,7 +5316,7 @@
       "name": "Radio Romania Actualități",
       "streamUrl": "http://89.238.227.6:8006/;",
       "countryCode": "RO",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/960e71a1-0601-11e8-ae97-52543be04c81.svg",
       "tags": [
         "folk",
         "news",
@@ -5503,7 +5503,7 @@
       "name": "Virgin Radio Türkiye",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/VIRGIN_RADIO_SC",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/960969eb-0601-11e8-ae97-52543be04c81.jpg",
       "tags": [
         "pop rock"
       ],
@@ -5576,7 +5576,7 @@
       "name": "101,ru Russian Dance",
       "streamUrl": "https://pub0302.101.ru:8443/stream/trust/mp3/128/17?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpcCI6IjQ5LjM3LjE1MS42IiwidXNlcmFnZW50IjoiTW96aWxsYVwvNS4wIChYMTE7IExpbnV4IHg4Nl82NDsgcnY6ODguMCkgR2Vja29cLzIwMTAwMTAxIEZpcmVmb3hcLzg4LjAiLCJ1aWRfY2hhbm5lbCI6IjE3IiwidHlwZV9jaGFubmVsIjoiY2hhbm5lbCIsImV4cCI6MTYxODUwMTYyM30.vsWQ1s12RL1P3yuD4Eb6E2Og6YaLbXceO-cfhhhwl5s",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/7f3e194e-9ff6-4530-8b71-216b892aad39.png",
       "tags": [
         "#101",
         "#music",
@@ -5649,7 +5649,7 @@
       "name": "BOX : Japan City Pop - 日本のシティポップ",
       "streamUrl": "https://boxradio-edge-00.streamafrica.net/jpopchill",
       "countryCode": "JP",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/30b09043-9b67-43d7-b9c6-b4401e5cb636.jpg",
       "tags": [
         "city pop",
         "japanese"
@@ -5664,7 +5664,7 @@
       "name": "Kiss FM 106.5",
       "streamUrl": "http://online.kissfm.ua/KissFM",
       "countryCode": "UA",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/bd9c1301-562d-451f-94bf-6a76e3bb898e.png",
       "tags": [
         "music"
       ],
@@ -5690,7 +5690,7 @@
       "name": "Fnf.Fm Hindi",
       "streamUrl": "http://192.99.8.192:5032/;stream",
       "countryCode": "IN",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/273c4a22-5a4a-11e8-b0ce-52543be04c81.png",
       "tags": [
         "bollywood"
       ],
@@ -5704,7 +5704,7 @@
       "name": "CCTV-4中文国际伴音",
       "streamUrl": "https://piccpndali.v.myalicdn.com/audio/cctv4_2.m3u8",
       "countryCode": "CN",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/7478cbd8-9217-4e39-8da7-a0d4385685ce.jpg",
       "tags": [
         "news"
       ],
@@ -5718,7 +5718,7 @@
       "name": "Jazz 24",
       "streamUrl": "https://knkx-live-a.edge.audiocdn.com/6285_256k",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/29f12cf8-fddc-481e-b7f2-d849e041daf7.png",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 256,
@@ -5745,7 +5745,7 @@
       "name": "BBC Radio 4 Extra (128k)",
       "streamUrl": "http://as-hls-ww-live.akamaized.net/pool_26173715/live/ww/bbc_radio_four_extra/bbc_radio_four_extra.isml/bbc_radio_four_extra-audio%3d128000.norewind.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ccd9d009-b369-4451-9ebb-a2138bed734f.png",
       "tags": [
         "comedy",
         "drama",
@@ -5761,7 +5761,7 @@
       "name": "راديو الناس",
       "streamUrl": "https://cdna.streamgates.net/RadioNas/Live-Audio/icecast.audio",
       "countryCode": "PS",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/bcfe2aae-33fa-494a-a571-c3bbc8715c7d.png",
       "tags": [
         "culture",
         "music",
@@ -5844,7 +5844,7 @@
       "name": "90s90s Techno HQ",
       "streamUrl": "http://regiocast.streamabc.net/regc-90s90stechno2195701-mp3-192-2408420?sABC=68q8r321%230%23q7s809s74070n543n7p5213q6qr39235%23enqvbqr&aw_0_1st.playerid=radiode&amsparams=playerid:radiode;skey:1759044385",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0c9ddabb-b41c-11e8-afe1-52543be04c81.png",
       "tags": [
         "90s",
         "techno"
@@ -5933,7 +5933,7 @@
       "name": "Antena 1 São Paulo, SP (ZYD823 94,7 MHz FM) [aac]",
       "streamUrl": "http://antena1.newradio.it/stream?ext=.mp3",
       "countryCode": "BR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/963fa65f-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "adult contemporary",
         "jazz",
@@ -6010,7 +6010,7 @@
       "name": "# 70s 80s 90s RdMix Network",
       "streamUrl": "https://cast1.torontocast.com:1830/stream",
       "countryCode": "CA",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/cf14b5ee-f03e-4468-8ce1-379f171fd8c4.jpg",
       "tags": [
         "00's",
         "00s",
@@ -6311,7 +6311,7 @@
       "name": "ALFA 91.3 (Ciudad de México) - 91.3 FM - XHFAJ-FM - Grupo Radio Centro - Ciudad de México",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/XHFAJ_FMAAC.aac",
       "countryCode": "MX",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/5766fc5b-ce3e-4f46-a5b3-c274ea46d8e6.webp",
       "tags": [
         "91.3",
         "91.3 fm",
@@ -6387,7 +6387,7 @@
       "name": "Free FM 80 Tokyo",
       "streamUrl": "https://freefm80.radioca.st/",
       "countryCode": "JP",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/54732c01-db87-4aa2-b313-22fd5fa7eee9.jpg",
       "tags": [
         "#80s",
         "#freefm",
@@ -6552,7 +6552,7 @@
       "name": "Sud FM Sen Radio",
       "streamUrl": "http://stream-303.zeno.fm/rq40edfn3reuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJycTQwZWRmbjNyZXV2IiwiaG9zdCI6InN0cmVhbS0zMDMuemVuby5mbSIsInRtIjpmYWxzZSwicnR0bCI6NSwianRpIjoiZVRsQ1VjSFhURC1HNHBMb2ZsNlZOUSIsImlhdCI6MTc1OTAzNzU2OSwiZXhwIjoxNzU5MDM3NjI5fQ.1EzA0vFjHBJeHNuDgmblNkkXzW2OJkgXG02O1znoMtA",
       "countryCode": "SN",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/2a1973ea-2e51-40c4-b379-36cac2464ad7.png",
       "tags": [
         "african music"
       ],
@@ -6580,7 +6580,7 @@
       "name": "Звезда",
       "streamUrl": "https://icecast-zvezda.mediacdn.ru/radio/zvezda/zvezda_128",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/39094c88-fc5d-4628-b5e7-5884b58ba8a5.png",
       "tags": [
         "news",
         "russian",
@@ -6744,7 +6744,7 @@
       "name": "1.FM - Deep Techno & Deep House",
       "streamUrl": "http://strm112.1.fm/deeptech_mobile_mp3",
       "countryCode": "CH",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0ac7f5db-6f86-428f-8bb2-66ecce89ad1a.png",
       "tags": [
         "deep house",
         "techno"
@@ -6850,7 +6850,7 @@
       "name": "Radio Comercial Portugal",
       "streamUrl": "https://stream-icy.bauermedia.pt/comercial.mp3",
       "countryCode": "PT",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/44cb20dc-e9ac-41ef-a4fe-153d48fcdd96.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -7015,7 +7015,7 @@
       "name": "Beats Radio",
       "streamUrl": "http://klassikr.streamabc.net/klr-beatsnational-mp3-192-6609571?listenerid=fad926e11c2fff0b25cee50f27d8604e",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/f28460cb-9f0d-4602-9a46-be8c49975a16.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 0,
@@ -7081,7 +7081,7 @@
       "name": "RADIO BOB! Classic Rock",
       "streamUrl": "http://regiocast.streamabc.net/regc-radiobobclassicrock1594088-mp3-192-3516780?sABC=68q7s048%230%23q7s809s74070n543n7p5213q6qr39235%23fgernzf.enqvbobo.qr&aw_0_1st.playerid=streams.radiobob.de&amsparams=playerid:streams.radiobob.de;skey:1758982216",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9618c8c0-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "rock"
       ],
@@ -7122,7 +7122,7 @@
       "name": "RFI-Chinese",
       "streamUrl": "https://rfienchinois64k.ice.infomaniak.ch/rfienchinois-64.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/a781a6da-a41f-498d-92f5-aede46952d54.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 64,
@@ -7146,7 +7146,7 @@
       "name": "BFM radio",
       "streamUrl": "https://audio.bfmtv.com/bfmradio_128.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/3e6e3252-dd81-4b07-baba-b61bf96cd457.png",
       "tags": [
         "information",
         "news"
@@ -7161,7 +7161,7 @@
       "name": "RMC Radio Monte Carlo",
       "streamUrl": "http://icecast.unitedradio.it/RMC.mp3",
       "countryCode": "IT",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/961a5a75-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "adult contemporary",
         "mediaset",
@@ -7340,7 +7340,7 @@
       "name": "Heart UK",
       "streamUrl": "http://media-ice.musicradio.com/HeartUKMP3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/283402b5-dc2e-11e9-a8ba-52543be04c81.png",
       "tags": [
         "adult contemporary",
         "national",
@@ -7450,7 +7450,7 @@
       "name": "OFM 94 & 97 FM Bloemfontein",
       "streamUrl": "http://edge.iono.fm/xice/ofm_live_medium.aac",
       "countryCode": "ZA",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/961e3141-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "bloemfontein",
         "commercial",
@@ -7503,7 +7503,7 @@
       "name": "BBC Radio 6 Music (128k)",
       "streamUrl": "http://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d128000.norewind.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/eec6dc9b-79de-4609-8c6d-88f2bfeb8110.png",
       "tags": [
         "alternative"
       ],
@@ -7611,7 +7611,7 @@
       "name": "DFM",
       "streamUrl": "https://dfm.hostingradio.ru/dfm96.aacp?0.28225617725168517",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/87008f72-3741-11ea-8dd7-52543be04c81.png",
       "tags": [
         "dfm"
       ],
@@ -7645,7 +7645,7 @@
       "name": "SRo1 Rádio Slovensko (256k)",
       "streamUrl": "http://live.slovakradio.sk:8000/Slovensko_256.mp3",
       "countryCode": "SK",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/b45002ed-3692-11e9-9b4e-52543be04c81.svg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 256,
@@ -7743,7 +7743,7 @@
       "name": "Evropa 2 - Radio",
       "streamUrl": "https://ice.actve.net/fm-evropa2-128",
       "countryCode": "CZ",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1b568695-9ce7-493d-ba72-d9b3d5e0a364.png",
       "tags": [
         "88.2"
       ],
@@ -7960,7 +7960,7 @@
       "name": "BBC RADIO 1 - The biggest new pop and all-day vibes",
       "streamUrl": "http://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/pc_hd_abr_v2/cf/bbc_radio_one.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/f7fd408e-02a5-49a1-8c03-078727e97e8f.png",
       "tags": [
         "97.1 fm",
         "99.7 fm",
@@ -8034,7 +8034,7 @@
       "name": "臺北電台",
       "streamUrl": "https://stream.ginnet.cloud/live0130lo-yfyo/_definst_/fm/playlist.m3u8",
       "countryCode": "TW",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96b88cb2-76a4-43fb-9257-e791103f5fa8.jpg",
       "tags": [
         "news",
         "public radio",
@@ -8140,7 +8140,7 @@
       "name": "1.FM - Ambient Psychill",
       "streamUrl": "http://strm112.1.fm/ambientpsy_mobile_mp3",
       "countryCode": "CH",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/07064262-5ef9-44e1-900d-ed752b7433b8.png",
       "tags": [
         "downtempo",
         "psychedelic chillout grooves",
@@ -8208,7 +8208,7 @@
       "name": "Classic FM Calm",
       "streamUrl": "https://media-ice.musicradio.com/ClassicFMCalmMP3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/2babf29a-811c-4a51-93c3-9f3531ef2e97.png",
       "tags": [
         "classical",
         "romantic"
@@ -8273,7 +8273,7 @@
       "name": "BBC Radio 1 Dance (128k)",
       "streamUrl": "http://as-hls-ww-live.akamaized.net/pool_62063831/live/ww/bbc_radio_one_dance/bbc_radio_one_dance.isml/bbc_radio_one_dance-audio%3d128000.norewind.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/f2547182-2dab-4ad2-b4d8-bb03533c2e9c.png",
       "tags": [
         "dance",
         "pop"
@@ -8308,7 +8308,7 @@
       "name": "citi fm",
       "streamUrl": "https://citi973fm.radioca.st/index.html:80/;stream.mp3",
       "countryCode": "GH",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/da2b0cdc-57c6-4c84-81bf-33e4e165c0d4.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -8406,7 +8406,7 @@
       "name": "Radio Con Vos 89.9",
       "streamUrl": "https://server1.stweb.tv/rcvos/live/playlist.m3u8",
       "countryCode": "AR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ae7694a3-d499-11e9-a861-52543be04c81.png",
       "tags": [
         "news",
         "pop",
@@ -8484,7 +8484,7 @@
       "name": "Radio Złote Przeboje Wrocław",
       "streamUrl": "https://radiostream.pl/tuba9-1.mp3",
       "countryCode": "PL",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/6a2591f4-7286-4c65-a7bd-6c491b6e672b.svg",
       "tags": [
         "classic hits",
         "classic rock",
@@ -8557,7 +8557,7 @@
       "name": "Душевное радио Минск 105.7 FM",
       "streamUrl": "https://stream2.datacenter.by/dushevnoe",
       "countryCode": "BY",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/82007efb-5709-40b6-86c4-4576ca732799.jpg",
       "tags": [
         "belarus",
         "different songs",
@@ -8574,7 +8574,7 @@
       "name": "Olímpica Stereo (Medellín) 104.9-FM",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/OLP_MEDELLINAAC.aac",
       "countryCode": "CO",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/cd4f771b-04b6-41ed-ba97-74d23d9f6e59.webp",
       "tags": [
         "salsa",
         "vallenato",
@@ -8590,7 +8590,7 @@
       "name": "Sunshine Live - Die 90er",
       "streamUrl": "http://sunsl.streamabc.net/sunsl-90er-mp3-192-9697679?sABC=68q8824p%230%234313or3p195706q13n90589o7061s597%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1759019596",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/962c0376-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "90s",
         "dance",
@@ -8831,7 +8831,7 @@
       "name": "Ibiza Global Radio",
       "streamUrl": "http://cdn-peer012.streaming-pro.com:8024/ibizaglobalradio.mp3",
       "countryCode": "ES",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/960e4940-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "dance",
         "electronic",
@@ -8890,7 +8890,7 @@
       "name": "357",
       "streamUrl": "https://n-11-26.dcs.redcdn.pl/sc/o2/radio357/live/radio357_pr.livx?preroll=0",
       "countryCode": "PL",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/fbbccfc2-a610-44ec-bd43-7a356a247b54.svg",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 128,
@@ -8902,7 +8902,7 @@
       "name": "বাংলাদেশ বেতার ঢাকা ক",
       "streamUrl": "http://as1.digitalsynapsebd.com:8582/;",
       "countryCode": "BD",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/4aa68f72-39dd-44d2-b57f-099078a94755.jpg",
       "tags": [
         "bangla music",
         "bangla natok",
@@ -8934,7 +8934,7 @@
       "name": "Rádio Melody",
       "streamUrl": "https://stream.bauermedia.sk/melody-hi.mp3",
       "countryCode": "SK",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/f75cc3d3-10eb-40e3-926a-a9030eae3bba.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -9001,7 +9001,7 @@
       "name": "70s 80s Disco Funk ModernSoul Boogie",
       "streamUrl": "https://discofunk.streamingmedia.it/usa",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/bafbd6cc-65e0-4af7-907b-dd1c425e8917.png",
       "tags": [
         "1970s",
         "1980s",
@@ -9067,7 +9067,7 @@
       "name": "Hot 102.7 FM",
       "streamUrl": "https://edge.iono.fm/xice/57_high.aac",
       "countryCode": "ZA",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/d6647132-efaf-4de4-a76b-7e71383117b8.png",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 0,
@@ -9091,7 +9091,7 @@
       "name": "Дискотека 80-х & 90-х",
       "streamUrl": "https://listen4.myradio24.com/dance80",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/a9fd7b2e-d5a2-4b74-8d2c-7e036b1cb4d7.png",
       "tags": [
         "ретро"
       ],
@@ -9379,7 +9379,7 @@
       "name": "Café Romántico Radio (Monterrey) - Online - www.caferomanticoradio.com - Grupo Digital Radioland - Monterrey, Nuevo León",
       "streamUrl": "https://panel.retrolandigital.com/radio/8110/listen",
       "countryCode": "MX",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/bbed394d-8907-435f-8714-8b24c1c56399.jpg",
       "tags": [
         "80s en español",
         "café romántico radio",
@@ -9640,7 +9640,7 @@
       "name": "Tunog Pinoy Power FM",
       "streamUrl": "http://streamnavs.net:8143/live",
       "countryCode": "PH",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/36351c6c-bccc-404c-bf6d-35ed4c799b9b.png",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 128,
@@ -9652,7 +9652,7 @@
       "name": "Kiss FM São Paulo",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_KISSFMAAC.aac",
       "countryCode": "BR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/d12439b1-0bfe-4caa-9dec-6f19af01db3a.svg",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 64,
@@ -9690,7 +9690,7 @@
       "name": "Radio 70 80 90 Marche",
       "streamUrl": "https://rblive.it:8020/radio.mp3",
       "countryCode": "IT",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/a27fc1f0-bcdc-4079-9f73-ae444c045ddc.png",
       "tags": [
         "70s",
         "80s",
@@ -9826,7 +9826,7 @@
       "name": "Radio Courtoisie",
       "streamUrl": "https://ice.creacast.com/radio-courtoisie",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/aeee1931-d6a2-4ac5-9212-dec8fb4bb4c0.svg",
       "tags": [
         "catholic",
         "classical music",
@@ -9856,7 +9856,7 @@
       "name": "Radio Blackout",
       "streamUrl": "https://zeppelin.streampunk.cc/_stream/blackout.ogg",
       "countryCode": "IT",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/962dbeab-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "alternative rock",
         "punk",
@@ -9919,7 +9919,7 @@
       "name": "Vintage Radio",
       "streamUrl": "https://vintageradio.ice.infomaniak.ch/vintageradio-high.mp3",
       "countryCode": "CH",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/962af9b5-0601-11e8-ae97-52543be04c81.jpg",
       "tags": [
         "music"
       ],
@@ -9933,7 +9933,7 @@
       "name": "Radio Radicale",
       "streamUrl": "http://live.radioradicale.it/live.mp3",
       "countryCode": "IT",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96242832-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "politics",
         "talk"
@@ -9978,7 +9978,7 @@
       "name": "Iran On Air",
       "streamUrl": "http://ice41.securenetsystems.net/KIRN",
       "countryCode": "IR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/964807c7-0601-11e8-ae97-52543be04c81.png",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 24,
@@ -10045,7 +10045,7 @@
       "name": "Radio Chocolate",
       "streamUrl": "http://choco.hostingradio.ru:10010/fm",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1a8df17d-5a57-11e9-a622-52543be04c81.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -10057,7 +10057,7 @@
       "name": "Kiss FM Digital HD",
       "streamUrl": "https://online.kissfm.ua/KissFM_Digital_HD",
       "countryCode": "UA",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/7ed52195-993a-4ecd-963f-c7f9ed665174.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 320,
@@ -10069,7 +10069,7 @@
       "name": "Radio ROKS Ballads",
       "streamUrl": "http://online.radioroks.ua/RadioROKS_Ballads_HD",
       "countryCode": "UA",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/94256dfa-f568-4954-87c7-7f446cf35c0e.png",
       "tags": [
         "classic rock",
         "rock"
@@ -10108,7 +10108,7 @@
       "name": "BH FM 102,1 MHz ZYC690 (Belo Horizonte - MG)",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/BHFMAAC.aac",
       "countryCode": "BR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/3998f9ae-ed80-4319-8109-0acb29efb256.jpg",
       "tags": [
         "funk",
         "internacional",
@@ -10128,7 +10128,7 @@
       "name": "Zloteprzeboje",
       "streamUrl": "https://radiostream.pl/tuba8904-1.mp3",
       "countryCode": "PL",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/86632585-f76d-4cac-b771-d2c6902366c3.svg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -10152,7 +10152,7 @@
       "name": "Rythmos 94.9",
       "streamUrl": "http://n04.radiojar.com/aw1w2xfx1vduv?rj-ttl=5&rj-tok=AAABmYuR9ZkAginC96Neok6bgA",
       "countryCode": "GR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96b37cae-4795-4e9a-92be-178f16216ecf.png",
       "tags": [
         "greek",
         "pop",
@@ -10182,7 +10182,7 @@
       "name": "اذاعة الحادي والعشرين من سبتمبر",
       "streamUrl": "http://procyon.shoutca.st:8488/index",
       "countryCode": "YE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/b2330072-50ce-4c37-a504-98830422c31e.png",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 104,
@@ -10257,7 +10257,7 @@
       "name": "Mohammed Rafi",
       "streamUrl": "https://stream-159.zeno.fm/6yqvumgfxtzuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI2eXF2dW1nZnh0enV2IiwiaG9zdCI6InN0cmVhbS0xNTkuemVuby5mbSIsInRtIjpmYWxzZSwicnR0bCI6NSwianRpIjoiNGxLMGxDSE1TRU8yLUJUYnEyT0stQSIsImlhdCI6MTc1ODk5NjgzNywiZXhwIjoxNzU4OTk2ODk3fQ.U3Lx-pZE7klBJoO3t0D_gleBIl7vTp567-mIVrjZUTQ",
       "countryCode": "IN",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/db15bf87-980c-4388-a142-b0171a06ed46.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 0,
@@ -10399,7 +10399,7 @@
       "name": "Хіт ФМ Найбільші хіти",
       "streamUrl": "http://online.hitfm.ua/HitFM_Best",
       "countryCode": "UA",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/7aecf6b1-4724-4fd5-b66e-88d2e34e9b8a.png",
       "tags": [
         "90's",
         "pop"
@@ -10450,7 +10450,7 @@
       "name": "Rockabilly-radio.net",
       "streamUrl": "http://lin3.ash.fast-serv.com:6026/stream_96",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/204b0d57-2c17-11e8-91bf-52543be04c81.png",
       "tags": [
         "rockabilly"
       ],
@@ -10764,7 +10764,7 @@
       "name": "LOVE RADIO Only Love Songs 70s80s90s - www.love.radio",
       "streamUrl": "http://shoutcast3.streamingmedia.it:3162/",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/7ab5fcfc-46ed-40be-9c47-27da8f8ef56c.png",
       "tags": [
         "70s",
         "80s",
@@ -10862,7 +10862,7 @@
       "name": "Vibra Bogotá 104.9 FM",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/VIBRAAAC_SC",
       "countryCode": "CO",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/36492a90-efa9-11e8-a471-52543be04c81.png",
       "tags": [
         "colombian music",
         "latin music",
@@ -10922,7 +10922,7 @@
       "name": "RBN - Republic Broadcastin Network",
       "streamUrl": "https://cast2.my-control-panel.com/proxy/rbn/stream;",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/7b5b6832-98c3-4d3f-ba4f-87cf46e2d6e2.jpg",
       "tags": [
         "political talk"
       ],
@@ -10936,7 +10936,7 @@
       "name": "KISS - The Best Vibes & Energy",
       "streamUrl": "https://live-bauerkiss.sharp-stream.com/kissnational.aac?direct=true&aw_0_1st.skey=1602676850&rp_source=1&=&&___cb=60456375243858",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0f1a8621-d35a-4073-83d3-7ee14207a9a9.jpg",
       "tags": [
         "dab",
         "dance",
@@ -10964,7 +10964,7 @@
       "name": "Sfera 102.2",
       "streamUrl": "http://sfera.live24.gr/sfera4132",
       "countryCode": "GR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9611d448-0601-11e8-ae97-52543be04c81.webp",
       "tags": [
         "greek",
         "pop",
@@ -11025,7 +11025,7 @@
       "name": "বাংলাদেশ বেতার বানিজ্যিক কার্যক্রম",
       "streamUrl": "http://as1.digitalsynapsebd.com:8741/;",
       "countryCode": "BD",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/75640ca6-31f1-4d70-be2e-37873c397b15.jpg",
       "tags": [
         "bengali music",
         "music"
@@ -11098,7 +11098,7 @@
       "name": "RDS 100% Grandi Successi",
       "streamUrl": "https://stream.rds.radio/audio/rds.stream_aac64/chunklist.m3u8",
       "countryCode": "IT",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/cf383460-c764-477e-a17b-33d1bff7a9aa.jpg",
       "tags": [],
       "codec": "UNKNOWN",
       "bitrateKbps": 0,
@@ -11198,7 +11198,7 @@
       "name": "анекдот фм",
       "streamUrl": "http://ic6.101.ru:8000/stream/trust/mp3/128/20",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/2e2b04b9-dabf-496d-b0cd-3912a525936c.png",
       "tags": [
         "101",
         "anekdot",
@@ -11241,7 +11241,7 @@
       "name": "France Musique La Baroque",
       "streamUrl": "http://icecast.radiofrance.fr/francemusiquebaroque-hifi.aac",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/eb0e95f5-5c36-48dc-9ed0-954039186465.webp",
       "tags": [
         "aac",
         "classical",
@@ -11378,7 +11378,7 @@
       "name": "70 80 Hits HQ",
       "streamUrl": "https://nr8.newradio.it:19574/stream",
       "countryCode": "IT",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/44c862a3-27e7-4d88-be66-4c70a642bb38.jpg",
       "tags": [
         "320 kbps",
         "70",
@@ -11591,7 +11591,7 @@
       "name": "Nightride FM - Chillsynth",
       "streamUrl": "https://stream.nightride.fm/chillsynth.mp3",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9067dc39-4bf4-4364-bd6b-8020cff3e15d.png",
       "tags": [
         "chillsynth",
         "chillwave",
@@ -11688,7 +11688,7 @@
       "name": "The Breeze 93.4",
       "streamUrl": "https://mediaworks.streamguys1.com/breeze-akl-high_icy",
       "countryCode": "NZ",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/74ee4b8c-1c55-4a2f-8fa6-2d6136e6fb8f.jpg",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 130,
@@ -11700,7 +11700,7 @@
       "name": "RADIO BOB! BOBs Alternative Rock",
       "streamUrl": "http://regiocast.streamabc.net/regc-radiobobalternativerock9577444-mp3-192-2041777?sABC=68q81o23%230%234313or3p195706q13n90589o7061s597%23fgernzf.enqvbobo.qr&aw_0_1st.playerid=streams.radiobob.de&amsparams=playerid:streams.radiobob.de;skey:1758993187",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9618ca06-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "alternative",
         "rock"
@@ -11715,7 +11715,7 @@
       "name": "NRJ Sweden",
       "streamUrl": "http://edge-bauerse-01-gos2.sharp-stream.com/nrj_instreamtest_se_mp3?",
       "countryCode": "SE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96414222-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "top 40"
       ],
@@ -11954,7 +11954,7 @@
       "name": "Couleur3",
       "streamUrl": "http://livestreaming-node-1.srg-ssr.ch/srgssr/couleur3/aac/96",
       "countryCode": "CH",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/78ffd9e4-5ff7-11e8-b15b-52543be04c81.png",
       "tags": [
         "indie",
         "pop",
@@ -12022,7 +12022,7 @@
       "name": "ČRo Radiožurnál",
       "streamUrl": "http://icecast8.play.cz/cro1-128.mp3",
       "countryCode": "CZ",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/960c2e1f-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "news",
         "public radio",
@@ -12050,7 +12050,7 @@
       "name": "Говорит Москва",
       "streamUrl": "http://media.govoritmoskva.ru:8880/ru64.mp3",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/961a35ee-0601-11e8-ae97-52543be04c81.jpg",
       "tags": [
         "dorenko",
         "moscow",
@@ -12132,7 +12132,7 @@
       "name": "ORF Radio Wien",
       "streamUrl": "http://orf-live.ors-shoutcast.at/wie-q1a",
       "countryCode": "AT",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/8a3685e2-711e-4764-9080-6fa143c33014.png",
       "tags": [
         "orf"
       ],
@@ -12179,7 +12179,7 @@
       "name": "Alternative Radio",
       "streamUrl": "https://www.radioking.com/play/alternative-radio-1",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/97d830f4-c35f-11e9-8502-52543be04c81.png",
       "tags": [
         "electro",
         "folk",
@@ -12215,7 +12215,7 @@
       "name": "Deep One",
       "streamUrl": "https://stream.deep1.ru/deep1mp3",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/191bc3a9-845b-4e9f-aca9-e3c7344b6a87.jpg",
       "tags": [
         "deep house"
       ],
@@ -12668,7 +12668,7 @@
       "name": "CCTV-2财经伴音",
       "streamUrl": "https://piccpndali.v.myalicdn.com/audio/cctv2_2.m3u8",
       "countryCode": "CN",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/948c6e7c-aee1-4d50-87bf-ce338e38e311.jpg",
       "tags": [
         "tv"
       ],
@@ -12742,7 +12742,7 @@
       "name": "DFM - Vocal Trance",
       "streamUrl": "https://dfm-trance.hostingradio.ru/trance96.aacp",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/51b7f8ff-bbe9-4c74-8f53-0cda9f16eaec.png",
       "tags": [
         "trance"
       ],
@@ -12756,7 +12756,7 @@
       "name": "Enigmatic 3 - Magnetic Chillout",
       "streamUrl": "http://radio.enigmatic.su:8050/radio",
       "countryCode": "RU",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/11b52be4-df72-11e9-a8ba-52543be04c81.jpg",
       "tags": [
         "ambient",
         "atmospheric",
@@ -12787,7 +12787,7 @@
       "name": "The Hits",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/NZME_71AAC",
       "countryCode": "NZ",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/2fa6da4e-e494-4a5f-a29a-bf94bd77c864.png",
       "tags": [
         "contemporary hits"
       ],
@@ -12801,7 +12801,7 @@
       "name": "80s80s Italo Disco",
       "streamUrl": "http://regiocast.streamabc.net/regc-80s80sitalohits4327678-mp3-192-4934150?sABC=654902n3%230%232qqpnss01895rqr0s8oq129o03s183o0%23fgernzf.80f80f.qr&aw_0_1st.playerid=streams.80s80s.de&amsparams=playerid:streams.80s80s.de;skey:1699283619",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/900a7450-c2fb-4896-a38f-99a2e6dc0c6e.png",
       "tags": [
         "80s",
         "decades",
@@ -12817,7 +12817,7 @@
       "name": "Naxi ExYu Radio",
       "streamUrl": "https://naxidigital-exyu128ssl.streaming.rs:8242/;stream.nsv",
       "countryCode": "RS",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/a8dabf9f-2b7f-4bad-bc80-f54cbe8d52ca.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -12924,7 +12924,7 @@
       "name": "KnOOz FM",
       "streamUrl": "http://streaming.knoozfm.net:8000/knoozfm",
       "countryCode": "TN",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/500bc504-c47f-46bc-9c9a-16e15bee2353.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 96,
@@ -13023,7 +13023,7 @@
       "name": "Lounge FM Chill Out",
       "streamUrl": "https://cast.mediaonline.net.ua/chillout320",
       "countryCode": "UA",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/026cebc6-9629-4b21-b29d-1596945182b7.png",
       "tags": [
         "chillout",
         "lounge",
@@ -13100,7 +13100,7 @@
       "name": "NDR Info (Niedersachsen)",
       "streamUrl": "http://icecast.ndr.de/ndr/ndrinfo/live/mp3/128/stream.mp3",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9639c07d-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "cultural news",
         "culture",
@@ -13120,7 +13120,7 @@
       "name": "Radio Nepal",
       "streamUrl": "https://stream1.radionepal.gov.np/live/",
       "countryCode": "NP",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/d9b11ab6-74f0-4be0-a104-2e68c1ee3c4f.png",
       "tags": [
         "news"
       ],
@@ -13189,7 +13189,7 @@
       "name": "ISEKOI Radio | Chill Zone",
       "streamUrl": "https://public.isekoi-radio.com/listen/chill/radio.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9467b580-dd8b-44d6-b99a-6ac688a50786.png",
       "tags": [
         "chill",
         "chillout",
@@ -13259,7 +13259,7 @@
       "name": "NDR 2",
       "streamUrl": "https://icecast.ndr.de/ndr/ndr2/niedersachsen/mp3/128/stream.mp3",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9e3b0f8e-95d3-11e9-a605-52543be04c81.png",
       "tags": [
         "pop"
       ],
@@ -13580,7 +13580,7 @@
       "name": "Greatest Hits Radio (Devon)",
       "streamUrl": "http://edge-bauermz-03-gos2.sharp-stream.com/net2devon.mp3?aw_0_1st.skey=1602676850",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ae0d2a18-d4fe-4123-a33b-07ba5a4540f9.png",
       "tags": [
         "1980s hits",
         "1990s hits",
@@ -13659,7 +13659,7 @@
       "name": "SWR1 BW",
       "streamUrl": "https://liveradio.swr.de/sw282p3/swr1bw/play.mp3",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/36a6d57a-4d8a-45e3-aad9-7931c6e43c56.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -13758,7 +13758,7 @@
       "name": "Mouv'",
       "streamUrl": "http://icecast.radiofrance.fr/mouv-hifi.aac",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/c998424a-e6f5-11e9-a96c-52543be04c81.webp",
       "tags": [
         "aac",
         "music",
@@ -14002,7 +14002,7 @@
       "name": "PLANET ROCK: Where Rock Lives",
       "streamUrl": "https://stream-mz.hellorayo.co.uk/planetrock.aac?direct=true&aw_0_1st.playerid=BMUK_Airable&aw_0_1st.skey=6778249992",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/dec031e0-4419-45d2-9f3e-76e91d876c40.png",
       "tags": [
         "bauer radio",
         "classic rock",
@@ -14196,7 +14196,7 @@
       "name": "BBC Radio 1Xtra (128k)",
       "streamUrl": "http://as-hls-ww-live.akamaized.net/pool_92079267/live/ww/bbc_1xtra/bbc_1xtra.isml/bbc_1xtra-audio%3d128000.norewind.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/308d38c6-e8a4-41e9-8ffe-9be2623826a4.png",
       "tags": [
         "black music",
         "pop"
@@ -14297,7 +14297,7 @@
       "name": "RADIO BOB - Power Metal",
       "streamUrl": "http://streams.radiobob.de/powermetal/mp3-192/streams.radiobob.de/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/35ecc442-1ba3-48ff-a874-cacc4e5867c1.png",
       "tags": [
         "metal",
         "power metal"
@@ -14326,7 +14326,7 @@
       "name": "JOY TÜRK TURKEY",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/JOY_TURK_SC?/",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/2a372113-4b74-41aa-a1e8-3dcb5d66de61.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 64,
@@ -14350,7 +14350,7 @@
       "name": "KISSTORY R&B: The Hottest R&B tracks from KISSTORY",
       "streamUrl": "https://live-bauerkiss.sharp-stream.com/kisstoryrb.aac?direct=true&aw_0_1st.playerid=BMUK_Airable&aw_0_1st.skey=6778249992",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/19b250fe-9027-4caf-b6ea-33022f0b6392.png",
       "tags": [
         "anthems",
         "bauer radio",
@@ -14380,7 +14380,7 @@
       "name": "KISSTORY: Non-Stop Old Skool & Anthems",
       "streamUrl": "https://live-bauerkiss.sharp-stream.com/kisstory.aac?direct=true&aw_0_1st.playerid=BMUK_Airable&aw_0_1st.skey=6778249992",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/53733e08-7728-40ee-b968-59e71f0281b6.png",
       "tags": [
         "anthems",
         "bauer radio",
@@ -14605,7 +14605,7 @@
       "name": "Heart 70s",
       "streamUrl": "https://media-ssl.musicradio.com/Heart70sMP3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/e7205cd4-dc30-11e9-a8ba-52543be04c81.png",
       "tags": [
         "70s",
         "national",
@@ -14648,7 +14648,7 @@
       "name": "HR Info",
       "streamUrl": "https://dispatcher.rndfnk.com/hr/hrinfo/live/mp3/high",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/83b7ec82-15dd-4cfe-96b4-db0a27c6b979.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -14829,7 +14829,7 @@
       "name": "B4B DISCO FUNK OFFICIAL",
       "streamUrl": "http://eu10.fastcast4u.com:8120/",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/f280ec00-897a-4080-853b-4d7fa72acda6.jpg",
       "tags": [
         "80s",
         "80s live radio",
@@ -14847,7 +14847,7 @@
       "name": "181.FM - Kickin' Country",
       "streamUrl": "http://listen.181fm.com/181-kickincountry_128k.mp3",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/960d4bdc-0601-11e8-ae97-52543be04c81.jpg",
       "tags": [
         "country",
         "pop",
@@ -14864,7 +14864,7 @@
       "name": "CAPITAL ANTHEMS: The Songs Capital Made Famous",
       "streamUrl": "https://media-ssl.musicradio.com/CapitalAnthemsMP3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/72ad8536-729c-41db-828a-48c0c03dc44a.png",
       "tags": [
         "capital",
         "dance",
@@ -15074,7 +15074,7 @@
       "name": "RADIO BOB! Livestream National",
       "streamUrl": "http://streams.radiobob.de/bob-national/mp3-192/mediaplayer",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9b89aa82-3427-4c4f-afe4-65cde7657e2e.png",
       "tags": [
         "rock"
       ],
@@ -15184,7 +15184,7 @@
       "name": "France Musique Classique Plus",
       "streamUrl": "http://icecast.radiofrance.fr/francemusiqueclassiqueplus-hifi.aac",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/c60a480e-eb93-11e9-a96c-52543be04c81.webp",
       "tags": [
         "aac",
         "long pieces of classical music",
@@ -15216,7 +15216,7 @@
       "name": "Nightride FM - Darksynth",
       "streamUrl": "https://stream.nightride.fm/darksynth.mp3",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/edccbfd1-9f20-4f96-adee-b00c6b65dd3c.png",
       "tags": [
         "cyberpunk",
         "darksynth",
@@ -15322,7 +15322,7 @@
       "name": "KISS XTRA: Black Music & Culture",
       "streamUrl": "https://live-bauerkiss.sharp-stream.com/kissfresh.aac?direct=true&aw_0_1st.skey=1602676850&rp_source=1&=&&___cb=60456375243858",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/abb48ea5-7aaf-460c-bf04-7fe3b7f10bb7.png",
       "tags": [
         "bauer radio",
         "contemporary r&b",
@@ -15487,7 +15487,7 @@
       "name": "Halk Tv",
       "streamUrl": "https://halktv.daioncdn.net/halktv/halktv_1080p.m3u8?sid=6vahxsup0jxl&app=c86957d3-74a7-44da-9ad2-dc358c769609&ce=3",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/f5b65b4d-66ba-438c-aba0-b91b69806c2a.svg",
       "tags": [],
       "codec": "UNKNOWN",
       "bitrateKbps": 0,
@@ -15615,7 +15615,7 @@
       "name": "MoE Lofi",
       "streamUrl": "http://stream.zeno.fm/3u1qndyk8rhvv",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/526b6bad-68f3-4197-9cfa-fa8b341830bb.png",
       "tags": [
         "chillout",
         "lofi",
@@ -15691,7 +15691,7 @@
       "name": "RFI-Afrique",
       "streamUrl": "http://live02.rfi.fr/rfiafrique-96k.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/c2698fb7-f7ec-401d-904f-ef4284501bd9.png",
       "tags": [
         "france médias monde",
         "information",
@@ -15841,7 +15841,7 @@
       "name": "Nightride FM - Spacesynth",
       "streamUrl": "https://stream.nightride.fm/spacesynth.mp3",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9aea4f9e-4170-4d8f-ad8c-67f2bfeaa9e0.png",
       "tags": [
         "space disco",
         "spacesynth",
@@ -15875,7 +15875,7 @@
       "name": "BBC RADIO 1 DANCE: The biggest current, future and classic dance vibes",
       "streamUrl": "http://151.80.56.90:8090/bbc_radio_one_dance.aac",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/70df08a8-d166-4acf-8c09-079b4374e1ba.png",
       "tags": [
         "bbc",
         "bbc radio 1",
@@ -15910,7 +15910,7 @@
       "name": "VOA Chinese Radio",
       "streamUrl": "http://voa-ingest.akamaized.net/hls/live/2035206/151_124L/playlist.m3u8",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/819e0ecb-fb3d-49de-8d8d-50fd408ff173.png",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 140,
@@ -15969,7 +15969,7 @@
       "name": "VIRGIN RADIO UK: Rock‘n’Roll Radio From The Top Of The Tower",
       "streamUrl": "https://virgin.live.stream.broadcasting.news/stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/723e042f-3c2f-4562-b8fa-3f9a8d31cf3e.png",
       "tags": [
         "dab",
         "digital radio",
@@ -15997,7 +15997,7 @@
       "name": "RTL2",
       "streamUrl": "http://icecast.rtl2.fr/rtl2-1-44-128?listen=webCwsBCggNCQgLDQUGBAcGBg",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0ee0fb71-e19d-475b-9135-b914d0d6e4cf.png",
       "tags": [
         "pop"
       ],
@@ -16254,7 +16254,7 @@
       "name": "RTL France",
       "streamUrl": "https://live.m6radio.quortex.io/webpHJPXnXrN7B6J7Q8mcqmxP/grouprtl/national/long/audio-64000/index.m3u8",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/fb398bd6-9873-4c06-b6d3-e2e3ca6d5c3c.png",
       "tags": [
         "news",
         "pop"
@@ -16340,7 +16340,7 @@
       "name": "Sunshine Live - House",
       "streamUrl": "http://stream.sunshine-live.de/house/mp3-192/stream.sunshine-live.de/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96109308-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "house"
       ],
@@ -16354,7 +16354,7 @@
       "name": "BBC Radio One",
       "streamUrl": "https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/aks/bbc_radio_one.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/a1b40e7a-94fe-4199-bd8f-31a7ed074a53.png",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 101,
@@ -16443,7 +16443,7 @@
       "name": "Sunshine Live - Lounge",
       "streamUrl": "http://stream.sunshine-live.de/lounge/mp3-192/stream.sunshine-live.de/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/962683f5-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "dance",
         "electronic",
@@ -16510,7 +16510,7 @@
       "name": "Z 92 (Miami) - 92.3 FM - WCMQ-FM - Spanish Broadcasting System - Miami, Florida",
       "streamUrl": "https://liveaudio.lamusica.com/MIA_WCMQ_icy",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/03eccedf-bf40-4413-8d52-817c298331e2.jpg",
       "tags": [
         "92.3 fm",
         "entretenimiento",
@@ -16590,7 +16590,7 @@
       "name": "TechnoBase.FM   AAC HD 256k",
       "streamUrl": "http://listen.technobase.fm/tunein-aac-hd-pls",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/861d9811-a0b4-11e9-a787-52543be04c81.png",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 256,
@@ -16696,7 +16696,7 @@
       "name": "RADIO BOB! BOBs Metal",
       "streamUrl": "http://streams.radiobob.de/bob-metal/mp3-192/streams.radiobob.de/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9618d38b-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "heavy metal"
       ],
@@ -16832,7 +16832,7 @@
       "name": "Classic FM Movies",
       "streamUrl": "https://media-ice.musicradio.com/ClassicFMMoviesMP3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/7cc0c486-92cb-4509-9b93-775e41950ed3.png",
       "tags": [
         "classical",
         "film score",
@@ -16887,7 +16887,7 @@
       "name": "MRADIO FRANCE",
       "streamUrl": "http://mfm.ice.infomaniak.ch/mfm-64.aac",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/43e7a507-2745-46cb-b08b-88e0bc0f0368.png",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 64,
@@ -16953,7 +16953,7 @@
       "name": "CLASSIC HITS RADIO",
       "streamUrl": "http://www.play4.fr/play4-club.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1a7f5ed1-f017-4391-af29-25bfb99e953a.png",
       "tags": [
         "1970s",
         "1980s",
@@ -17113,7 +17113,7 @@
       "name": "Gold Radio UK",
       "streamUrl": "https://media-ice.musicradio.com/GoldMP3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9b3a5084-91ba-4d90-ac06-3e0ba8c50d67.png",
       "tags": [
         "golden oldies",
         "pop"
@@ -17184,7 +17184,7 @@
       "name": "Kane FM",
       "streamUrl": "http://stream.kanefm.com:1037/;stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9619271d-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "bass",
         "breaks",
@@ -17387,7 +17387,7 @@
       "name": "Schlagerparadies",
       "streamUrl": "https://webstream.schlagerparadies.de/schlager30842",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9607be6f-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "schlager"
       ],
@@ -17489,7 +17489,7 @@
       "name": "KISS DANCE: The Biggest Dance Anthems 24/7",
       "streamUrl": "https://stream-kiss.hellorayo.co.uk/kissdance.aac?direct=true&aw_0_1st.skey=1602676850&rp_source=1&=&&___cb=60456375243858",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9c8f6141-f8e8-4779-bfed-5a79e14ed4dd.png",
       "tags": [
         "anthems",
         "bauer radio",
@@ -17694,7 +17694,7 @@
       "name": "Radio Bob! Symphonic Metal",
       "streamUrl": "http://streams.radiobob.de/symphmetal/mp3-192/mediaplayer/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/45c7e4f0-a007-4e4a-a61c-d897d5ff7b29.png",
       "tags": [
         "symphonic metal"
       ],
@@ -17708,7 +17708,7 @@
       "name": "80s80s Rock",
       "streamUrl": "https://regiocast.streamabc.net/regc-80s80srock2191507-mp3-192-4255750?sABC=648p713n%231%23r0s395556op64ro793171r5427p80197%23ubzrcntr&context=fHA6LTE=&aw_0_1st.skey=1686925626&cb=914075802&listenerid=e0f395556bc64eb793171e5427c80197&aw_0_1st.playerid=homepage&amsparams=playerid:homepage;skey:1686925626",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0d307610-7079-455b-a34d-6b46eec2e552.png",
       "tags": [
         "80s rock"
       ],
@@ -17749,7 +17749,7 @@
       "name": "BBC Arabic",
       "streamUrl": "https://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/fd7898b9-e442-4824-a313-77f25cb59de1.png",
       "tags": [
         "news"
       ],
@@ -17818,7 +17818,7 @@
       "name": "Smooth Relax",
       "streamUrl": "https://icecast.thisisdax.com/SmoothRelaxMP3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/15a7162c-45a3-4bde-b864-aa7731c6dd87.png",
       "tags": [
         "easy listening",
         "relaxing"
@@ -17833,7 +17833,7 @@
       "name": "Classic FM",
       "streamUrl": "http://media-ice.musicradio.com/ClassicFMMP3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/32da2113-229c-11e9-a80b-52543be04c81.svg",
       "tags": [
         "classic fm",
         "classical"
@@ -18054,7 +18054,7 @@
       "name": "sunshine live - Vocal Trance",
       "streamUrl": "https://sunsl.streamabc.net/sunsl-vocaltrance-mp3-192-5826863?sABC=696859p6%230%23q280o0r09ns9qpq3889p9qqn13p5753s%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1768446406",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/822191e8-d29d-4031-8cc0-bc6af89fb8af.png",
       "tags": [
         "192kbps",
         "live",
@@ -18105,7 +18105,7 @@
       "name": "TMM 1",
       "streamUrl": "https://listen-msmn.sharp-stream.com/nme1.mp3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9619e7d7-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "alternative",
         "alternative rock",
@@ -18219,7 +18219,7 @@
       "name": "Pink Floyd",
       "streamUrl": "https://stream.pcradio.ru/Pink_Floyd-hi",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/39c07f86-2d14-469a-994b-968de965e75a.svg",
       "tags": [
         "discography"
       ],
@@ -18324,7 +18324,7 @@
       "name": "Fun Radio France",
       "streamUrl": "http://icecast.funradio.fr/fun-1-44-128?listen=webCwsBCggNCQgLDQUGBAcGBg",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/8f0bc91d-ad91-4021-a2df-84f2644f9b9d.png",
       "tags": [
         "pop"
       ],
@@ -18361,7 +18361,7 @@
       "name": "B4B Radio DISCO FUNK",
       "streamUrl": "https://eu10.fastcast4u.com:8120/",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ab91bc51-8ddd-4d13-a349-26955c326541.jpg",
       "tags": [
         "dance classics",
         "disco funk",
@@ -18625,7 +18625,7 @@
       "name": "90s90s Trance",
       "streamUrl": "https://regiocast.streamabc.net/regc-90s90strance-mp3-192-2383645",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/bb3117fb-0513-4251-9135-ba9cdc730d41.png",
       "tags": [
         "trance"
       ],
@@ -18654,7 +18654,7 @@
       "name": "80s80s Maxis",
       "streamUrl": "http://regiocast.streamabc.net/regc-80s80smaxis2114493-mp3-192-5359027?sABC=65491rrn%230%232qqpnss01895rqr0s8oq129o03s183o0%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1699290858",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/73273788-b236-4569-89a8-72c87423524e.png",
       "tags": [
         "12inch",
         "80s",
@@ -18709,7 +18709,7 @@
       "name": "Sunshine Live - Classics",
       "streamUrl": "http://stream.sunshine-live.de/classics/mp3-192/stream.sunshine-live.de/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96109022-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "00s",
         "dance"
@@ -18795,7 +18795,7 @@
       "name": "egoFM",
       "streamUrl": "http://cast.egofm.de/egofm.mp3?ar-distributor=ffa0&aw_0_req.gdpr=true",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/5f20d10f-732b-11e8-83fa-52543be04c81.png",
       "tags": [
         "indie"
       ],
@@ -18824,7 +18824,7 @@
       "name": "Nightride FM",
       "streamUrl": "https://stream.nightride.fm/nightride.mp3",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/12e458f2-cf9b-426a-8d18-7cb07c75b07c.png",
       "tags": [
         "outrun",
         "retrowave",
@@ -19029,7 +19029,7 @@
       "name": "GotRadio Hip Hop Stop",
       "streamUrl": "http://pureplay.cdnstream1.com/6041_128.mp3",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/71c1f2ab-897f-414c-b01c-5b0c185962c0.png",
       "tags": [
         "hip hop"
       ],
@@ -19067,7 +19067,7 @@
       "name": "Conyers Old Time Radio",
       "streamUrl": "https://s8.yesstreaming.net:17011/stream",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/38055669-97a7-11e9-a605-52543be04c81.png",
       "tags": [
         "christmas",
         "d-day",
@@ -19168,7 +19168,7 @@
       "name": "Smooth 80s",
       "streamUrl": "https://media-ice.musicradio.com/Smooth80sMP3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96568036-4928-44ba-a54e-c4db0b5463f2.png",
       "tags": [
         "80s"
       ],
@@ -19235,7 +19235,7 @@
       "name": "Melody Vintage Radio",
       "streamUrl": "https://stream.rcs.revma.com/5a05fstup42vv",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/3e9281cc-aa27-4ddb-8a74-e48c5f7ea854.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 0,
@@ -19374,7 +19374,7 @@
       "name": "Magic Classical",
       "streamUrl": "https://stream-mz.hellorayo.co.uk/scala.aac",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/d18943f2-7c18-4e1d-8cf2-9ce1c5616f86.jpg",
       "tags": [
         "classical music"
       ],
@@ -19442,7 +19442,7 @@
       "name": "RFM PARTY 90",
       "streamUrl": "https://rfm.lmn.fm/rfm-wr5.aac",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/2e1cc485-f61c-473d-a6f2-df30a0d1fd1e.png",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 128,
@@ -19483,7 +19483,7 @@
       "name": "deutschlandfunk",
       "streamUrl": "https://st01.sslstream.dlf.de/dlf/01/128/mp3/stream.mp3?aggregator=web",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/42a73a97-9398-437c-b521-86646a79f82f.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -19507,7 +19507,7 @@
       "name": "80s80s Depeche Mode",
       "streamUrl": "http://streams.80s80s.de/dm/mp3-192/streams.80s80s.de/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1d624bf7-ff10-48ef-a693-6b923c370d5e.png",
       "tags": [
         "80er",
         "80s"
@@ -19621,7 +19621,7 @@
       "name": "RADIO BOB! BOBs Best of Rock",
       "streamUrl": "http://streams.radiobob.de/bob-bestofrock/mp3-192/streams.radiobob.de/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9618d137-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "alternative",
         "rock"
@@ -19762,7 +19762,7 @@
       "name": "Radio Chemnitz",
       "streamUrl": "https://hermes.bcs-systems.de/radio-chemnitz_simulcast_192k_mp3",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0d0f7b56-ca6d-11e9-8502-52543be04c81.png",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 0,
@@ -19851,7 +19851,7 @@
       "name": "WHUR 96.3 \"Howard University Radio\" Washington, DC",
       "streamUrl": "http://whur.streamon.fm:8000/WHUR-48k.aac",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96465ea1-0601-11e8-ae97-52543be04c81.jpg",
       "tags": [
         "urban adult contemporary",
         "washington dc"
@@ -20042,7 +20042,7 @@
       "name": "Dogglounge",
       "streamUrl": "http://dogglounge.com:8000/",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1c41c07b-b995-11e8-aaf2-52543be04c81.jpg",
       "tags": [
         "deep house"
       ],
@@ -20461,7 +20461,7 @@
       "name": "M40 Deep dance",
       "streamUrl": "https://live.m40radio.fr/listen/m40-deep-dance/m40-deep-dance-128.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/2faac538-3fc5-42d5-9f39-ef26fb978c81.webp",
       "tags": [
         "deep"
       ],
@@ -20583,7 +20583,7 @@
       "name": "TOGGO Radio",
       "streamUrl": "https://radio.toggo.de/live/mp3-192",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9e872eab-3ac9-4d55-a104-b4a59d589af3.png",
       "tags": [
         "children",
         "kids",
@@ -20648,7 +20648,7 @@
       "name": "FIP Sacré Français !",
       "streamUrl": "https://stream.radiofrance.fr/fipsacrefrancais/fipsacrefrancais.m3u8?id=radiofrance",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/50420f6a-fe77-40c5-a065-b12c5c7d5299.webp",
       "tags": [
         "fip",
         "french",
@@ -20798,7 +20798,7 @@
       "name": "Jam FM",
       "streamUrl": "http://stream.jam.fm/jamfm-live/mp3-128/radio-browser.info/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/962a1121-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "berlin",
         "charts",
@@ -20933,7 +20933,7 @@
       "name": "Radio Gong 96.3 München - Live",
       "streamUrl": "http://radiogong-live.cast.addradio.de/radiogong/live/mp3/high",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/7eb433a9-fba5-4c86-9e08-2727ec9835de.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -20960,7 +20960,7 @@
       "name": "Deeper Shades Of House",
       "streamUrl": "http://andromeda.housejunkie.ca:8000/radio.mp3",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/e3e406b3-1500-4b77-93a6-80fa6eab70a6.png",
       "tags": [
         "dance",
         "deep house",
@@ -21010,7 +21010,7 @@
       "name": "WAMU American University Radio",
       "streamUrl": "https://wamu.cdnstream1.com/wamu.mp3",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/11c28f97-0177-47d3-bf88-eb24b492c34f.jpg",
       "tags": [
         "news",
         "public",
@@ -21120,7 +21120,7 @@
       "name": "Christian FM",
       "streamUrl": "http://stream.dar.fm/27203",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/b993390f-8d6d-4e9b-a60b-a42926a4dc85.png",
       "tags": [
         "christian",
         "christian contemporary"
@@ -21272,7 +21272,7 @@
       "name": "Mabu Beatz Dub Techno",
       "streamUrl": "http://78.47.31.164:8002/dub",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/63f00576-2ed9-41f7-bef5-e3ed27ed90d2.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -21469,7 +21469,7 @@
       "name": "The Blaze radio",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/BLZE_1.mp3",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/32811bda-1a78-40b5-a572-d3e17c055da3.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 64,
@@ -21481,7 +21481,7 @@
       "name": "Radio Gong 97.1",
       "streamUrl": "https://frontend.streamonkey.net/fhn-gong971/stream/mp3",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1a261f52-c6b8-4db9-a1af-bee3fc9a23eb.png",
       "tags": [
         "classic rock"
       ],
@@ -21507,7 +21507,7 @@
       "name": "Birdsong Radio",
       "streamUrl": "https://a1.radio.co/s5c5da6a36/listen",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ceab5124-608a-4eb1-8149-d65829f9a9d7.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 0,
@@ -21570,7 +21570,7 @@
       "name": "Sunshine Live - EDM",
       "streamUrl": "http://stream.sunshine-live.de/edm/mp3-192/stream.sunshine-live.de/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96108f48-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "dance",
         "edm"
@@ -21727,7 +21727,7 @@
       "name": "M40 Eurodance",
       "streamUrl": "https://live.m40radio.fr/listen/m40-eurodance/m40-eurodance-128.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/48d735a2-586c-4857-8a26-3332aa475962.webp",
       "tags": [
         "dance"
       ],
@@ -21804,7 +21804,7 @@
       "name": "DrGnu - Metallica",
       "streamUrl": "http://streams.radiobob.de/metallica/mp3-192/mediaplayer/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/da88f032-a594-4f23-8293-ab8525e75a6e.png",
       "tags": [
         "1990s",
         "20th century",
@@ -21931,7 +21931,7 @@
       "name": "NDR Info Hamburg",
       "streamUrl": "http://icecast.ndr.de/ndr/ndrinfo/hamburg/mp3/128/stream.mp3",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/5fc60a0a-4457-4be5-ab41-9e744de95fb1.png",
       "tags": [
         "news"
       ],
@@ -22064,7 +22064,7 @@
       "name": "Forum 70's",
       "streamUrl": "http://forum70s.ice.infomaniak.ch/forum70s.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/29a690fb-26dc-4485-9ef3-b6682ed6b878.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -22175,7 +22175,7 @@
       "name": "M40 Maxi Dance",
       "streamUrl": "https://live.m40radio.fr/listen/m40-maxi-dance/m40-maxi-dance-128.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/37a53031-a692-440f-9d38-d7524d0a0408.webp",
       "tags": [
         "dance"
       ],
@@ -22207,7 +22207,7 @@
       "name": "pop 90 turkey",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/POP90AAC_SC",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0dc6e3f7-b313-4bc4-a06a-94f05c51dff5.jpg",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 64,
@@ -22231,7 +22231,7 @@
       "name": "Antenne Bayern Classic Rock Live",
       "streamUrl": "http://stream.antenne.de/classic-rock-live.aac",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9631865c-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "classic rock"
       ],
@@ -22269,7 +22269,7 @@
       "name": "Sunshine Live - Chillout",
       "streamUrl": "http://stream.sunshine-live.de/sp8/mp3-192/stream.sunshine-live.de/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ee636add-2a57-11e8-91bf-52543be04c81.png",
       "tags": [
         "chillout",
         "relaxing",
@@ -22297,7 +22297,7 @@
       "name": "Sunshine Live - Hardtechno",
       "streamUrl": "https://sunsl.streamabc.net/sunsl_w4pk5n9ou_0dfk-mp3-192-4232604",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/55b42f22-e9df-4801-b50f-4e771419d521.png",
       "tags": [
         "hardtechno"
       ],
@@ -22378,7 +22378,7 @@
       "name": "RADIO BOB! BOBs Gothic Rock",
       "streamUrl": "http://streams.radiobob.de/gothic/mp3-192/streams.radiobob.de/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9646b5ee-4b98-11e8-a4d1-52543be04c81.png",
       "tags": [
         "gothic",
         "metal",
@@ -22432,7 +22432,7 @@
       "name": "RADIO BOB! BOBs Punk",
       "streamUrl": "http://streams.radiobob.de/bob-punk/mp3-192/streams.radiobob.de/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9618c802-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "punk"
       ],
@@ -22541,7 +22541,7 @@
       "name": "MDR SACHSEN – Das Sachsenradio",
       "streamUrl": "https://mdr-radio-hls.akamaized.net/hls/live/2112890/mdr-284280-3-hls/index.m3u8",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/2194b405-2b98-4b30-ab36-e1fbdc9bb5a2.png",
       "tags": [
         "70er",
         "80er",
@@ -22689,7 +22689,7 @@
       "name": "FREQUENCE 3 - DANCE FLAC [Powered by IKOULA] - M2 Club",
       "streamUrl": "https://onair.net-radio.fr/frequence3dance.flac",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/764caa2f-ccf8-459f-99d7-1e15009b1474.png",
       "tags": [
         "dance",
         "house"
@@ -22704,7 +22704,7 @@
       "name": "M40 PopRock",
       "streamUrl": "https://live.m40radio.fr/listen/m40-pop-rock/m40-pop-rock-128.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/2c17fecb-a5a2-4af5-9e7e-eaab5841fcca.webp",
       "tags": [
         "pop rock"
       ],
@@ -22772,7 +22772,7 @@
       "name": "TSF Jazz",
       "streamUrl": "http://tsfjazz.ice.infomaniak.ch/tsfjazz-high.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ce61ecb3-cf9f-4991-b860-32047def71ed.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -22799,7 +22799,7 @@
       "name": "Fréquence 3 Dance",
       "streamUrl": "https://frequence3.net-radio.fr/frequence3dance.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ebe1b024-1ed2-4dca-a22c-77eac95ef612.png",
       "tags": [
         "dance",
         "pop"
@@ -22840,7 +22840,7 @@
       "name": "Forum 2000",
       "streamUrl": "http://forum2000.ice.infomaniak.ch/forum2000.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/096624e8-546b-4ea1-8711-571a58ed65c0.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -22935,7 +22935,7 @@
       "name": "RCF",
       "streamUrl": "https://rcf.streamakaci.com/rcfdigital.mp3?platform=site",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/910e7e60-d3b4-4e1a-ae3d-2860dd877b6f.png",
       "tags": [
         "catholic radio",
         "news",
@@ -23059,7 +23059,7 @@
       "name": "Free FM 80s San Francisco",
       "streamUrl": "https://freefm80.radioca.st/",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/7b49c831-83e8-407a-a655-0ff50b2869f6.jpg",
       "tags": [
         "#80",
         "#80s",
@@ -23087,7 +23087,7 @@
       "name": "dublab",
       "streamUrl": "http://dublab.out.airtime.pro:8000/dublab_a",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0bb84fe1-e899-11e9-a96c-52543be04c81.png",
       "tags": [
         "dj sets",
         "independent",
@@ -23241,7 +23241,7 @@
       "name": "Magic 80s Florida (128 kbit/s)",
       "streamUrl": "https://streaming.live365.com/a79417",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/491fbb30-9a91-44e3-a7d6-0d4d821090b1.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -23490,7 +23490,7 @@
       "name": "Neon Radio - 80s & 90s Pop & Dance",
       "streamUrl": "https://live.flashbackcentral.co.uk/radio/8050/tunein.mp3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/04bd267f-046a-4275-b7c5-c29f9e25efc9.png",
       "tags": [
         "hits 80s",
         "hits 90s",
@@ -23506,7 +23506,7 @@
       "name": "HearMe - Classic Hard Rock",
       "streamUrl": "https://radio.hearme.fm:8250/stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1f951feb-544e-447b-8143-8b9656a46cf2.png",
       "tags": [
         "classic hard rock"
       ],
@@ -23548,7 +23548,7 @@
       "name": "Energy 1058",
       "streamUrl": "http://tachyon.shoutca.st:8590/stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/b200fa87-76ec-4afc-9eef-6a609ef9d4b8.png",
       "tags": [
         "90s",
         "acid",
@@ -23572,7 +23572,7 @@
       "name": "Worldwide FM",
       "streamUrl": "https://worldwide-fm.radiocult.fm/stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1651c32f-55d8-4429-995d-872ea0dcf520.svg",
       "tags": [
         "electronica",
         "jazz",
@@ -23805,7 +23805,7 @@
       "name": "Radio BOB Progressive Rock",
       "streamUrl": "https://streams.radiobob.de/progrock/mp3-192/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/5f729860-a726-4468-bf41-67986e60bdef.png",
       "tags": [
         "prog rock",
         "progressive rock"
@@ -23847,7 +23847,7 @@
       "name": "90s90s Rave",
       "streamUrl": "https://regiocast.streamabc.net/regc-90s90srave-mp3-192-2687569",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/b3a6334c-2d59-4e2c-acc2-0d17b28d7ab7.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 0,
@@ -23871,7 +23871,7 @@
       "name": "Sunshine Live - Tech House",
       "streamUrl": "http://stream.sunshine-live.de/sp4/mp3-192/stream.sunshine-live.de/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/efe59d93-2fe4-11e8-91bf-52543be04c81.png",
       "tags": [
         "tech house"
       ],
@@ -23897,7 +23897,7 @@
       "name": "ffn",
       "streamUrl": "https://ffn-de-hz-fal-stream04-cluster01.radiohost.de/ffn_mp3-192",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/8d5e1ce1-0625-469f-920e-8fee0f3da72e.png",
       "tags": [
         "pop"
       ],
@@ -23923,7 +23923,7 @@
       "name": "Crooner Radio Elvis Presley",
       "streamUrl": "http://croonerradio_elvispresley.ice.infomaniak.ch/croonerradio-elvispresley-midfi.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/303c6318-8faa-47c6-a38e-f2e6348f3ea7.webp",
       "tags": [
         "crooner radio",
         "elvis presley"
@@ -23938,7 +23938,7 @@
       "name": "RADIO BOB! BOBs 80er Rock",
       "streamUrl": "http://streams.radiobob.de/bob-80srock/mp3-192/streams.radiobob.de/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9618d1fc-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "alternative",
         "rock"
@@ -24015,7 +24015,7 @@
       "name": "Classic Videogames RADIO",
       "streamUrl": "http://195.201.9.210:1541/stream/2/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/e47d51c0-bb01-49f1-894b-903a2bf343aa.jpg",
       "tags": [
         "electronic"
       ],
@@ -24029,7 +24029,7 @@
       "name": "LOR'FM",
       "streamUrl": "http://lorfm.ice.infomaniak.ch/lorfm-128.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/5ee89928-032d-43d6-bdfb-b4248fc8242a.jpg",
       "tags": [
         "années 80",
         "trafic...",
@@ -24045,7 +24045,7 @@
       "name": "France Musique | Classique Easy",
       "streamUrl": "http://direct.francemusique.fr/live/francemusiqueeasyclassique-hifi.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96162e74-0601-11e8-ae97-52543be04c81.webp",
       "tags": [
         "classic",
         "classical"
@@ -24088,7 +24088,7 @@
       "name": "Crooner Radio Legends",
       "streamUrl": "http://croonerradio_legends.ice.infomaniak.ch/croonerradio-legends-midfi.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ec952681-b808-4b77-aa5d-892b7d14331c.webp",
       "tags": [
         "crooners",
         "goldies",
@@ -24183,7 +24183,7 @@
       "name": "M40 Rnb",
       "streamUrl": "https://live.m40radio.fr/listen/m40-rnb/m40-rnb-128.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/8de91b56-079b-443b-94e5-d1a363b67299.webp",
       "tags": [
         "rnb"
       ],
@@ -24209,7 +24209,7 @@
       "name": "La Grosse Radio Rock",
       "streamUrl": "http://hd.lagrosseradio.info/lagrosseradio-rock-192.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96064f55-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "music",
         "rock"
@@ -24241,7 +24241,7 @@
       "name": "Fréquence 3 Gold",
       "streamUrl": "https://frequence3.net-radio.fr/frequence3gold.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/35815119-ff80-4700-8d81-bd359fb7ce03.png",
       "tags": [
         "pop"
       ],
@@ -24267,7 +24267,7 @@
       "name": "Forum 90's",
       "streamUrl": "http://forum90s.ice.infomaniak.ch/forum90s.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/4fc70446-5b8e-49c9-afc9-ece827d7a11a.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -24329,7 +24329,7 @@
       "name": "M40 80s",
       "streamUrl": "https://live.m40radio.fr/listen/m40-80s/m40-80s-128.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0b751ded-4f4a-485e-bd0d-c4b91298a1bf.webp",
       "tags": [
         "80's"
       ],
@@ -24477,7 +24477,7 @@
       "name": "ROCK ANTENNE Soft Rock",
       "streamUrl": "http://stream.rockantenne.de/soft-rock",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9612dd56-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "soft rock"
       ],
@@ -24519,7 +24519,7 @@
       "name": "181.FM - Power 181 (Top 40)",
       "streamUrl": "http://listen.181fm.com/181-power_128k.mp3",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9612358a-0601-11e8-ae97-52543be04c81.jpg",
       "tags": [
         "pop",
         "top 40",
@@ -24737,7 +24737,7 @@
       "name": "EDM Sessions",
       "streamUrl": "https://stream.edmsessions.com/",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/3340d618-c700-4e8d-b784-0fb76d58af40.png",
       "tags": [
         "house",
         "techno",
@@ -24960,7 +24960,7 @@
       "name": "Classic FM Essential Classical",
       "streamUrl": "https://icecast.thisisdax.com/ClassicFM-M-Essential",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/e847f0b7-4694-4d96-a56a-3bc9543c5705.svg",
       "tags": [
         "classical"
       ],
@@ -25053,7 +25053,7 @@
       "name": "100% Hip Hop | NTS",
       "streamUrl": "https://stream-mixtape-geo.ntslive.net/mixtape2",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/afd853b3-e6d1-11e9-a96c-52543be04c81.png",
       "tags": [
         "hip-hop"
       ],
@@ -25128,7 +25128,7 @@
       "name": "Dire Straits",
       "streamUrl": "https://stream.pcradio.ru/dire_straits-hi",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/e5d11c60-4d05-41cd-84dc-60ccf9445caf.svg",
       "tags": [
         "discography"
       ],
@@ -25185,7 +25185,7 @@
       "name": "Def Leppard",
       "streamUrl": "https://stream.pcradio.ru/def_leppard-hi",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/a7dd8e74-c836-4844-bd59-d44cac395952.svg",
       "tags": [
         "discography"
       ],
@@ -25316,7 +25316,7 @@
       "name": "Strange Radio - Pumpkin FM",
       "streamUrl": "https://cast2.asurahosting.com/proxy/strangeradio/stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/dce75ec5-a0f8-4bba-bf4c-2827c871490c.png",
       "tags": [
         "horror stories",
         "mystery",
@@ -25335,7 +25335,7 @@
       "name": "Drum & Bass Radio",
       "streamUrl": "http://eilo.org:8000/drum",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/bed54f78-2bb5-4dc9-922e-5b19bb192e74.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -25554,7 +25554,7 @@
       "name": "Forth1",
       "streamUrl": "https://stream-al.hellorayo.co.uk/forth1.aac?direct=true&aw_0_1st.skey=1602676850&rp_source=1&aw_0_1st.bauer_listenerid=undefined",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/2bf8ecb6-51ee-4c2d-a9ee-b8753ded0624.png",
       "tags": [
         "pop music",
         "popular"
@@ -25569,7 +25569,7 @@
       "name": "Boom Radio",
       "streamUrl": "https://listen-boomradio.sharp-stream.com/65_boom_radio_live_128",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/695da448-1840-4e4f-adda-57d699900b58.jpg",
       "tags": [
         "oldies"
       ],
@@ -25583,7 +25583,7 @@
       "name": "Divine Radio London",
       "streamUrl": "https://uk2.internet-radio.com/proxy/divinestream?mp=/stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/b4491892-12f3-41b7-8252-5cd5e4cf61fb.png",
       "tags": [
         "dj mixes",
         "electronic",
@@ -25658,7 +25658,7 @@
       "name": "TotalRock Radio",
       "streamUrl": "https://s3.citrus3.com:8056/stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ee843b89-e69d-4a64-bb8f-0ed8da7a558a.png",
       "tags": [
         "metal",
         "music",
@@ -25741,7 +25741,7 @@
       "name": "DrGnu - Prog Rock Classics",
       "streamUrl": "http://streams.radiobob.de/progrock/mp3-192/mediaplayer/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/20c21c03-349a-447f-b54b-3f1630d9a41a.png",
       "tags": [
         "1960s",
         "1970s",
@@ -25786,7 +25786,7 @@
       "name": "Dance UK",
       "streamUrl": "http://51.89.148.171:8022/stream/",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ae1dc3f1-ac79-4b79-9de6-64dd99a528db.png",
       "tags": [
         "the best dance music mix"
       ],
@@ -25860,7 +25860,7 @@
       "name": "80s80s DEUTSCH",
       "streamUrl": "http://streams.80s80s.de/deutsch/mp3-192/streams.80s80s.de/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/b25e0078-9931-4fe0-aa75-e8db63726e0e.png",
       "tags": [
         "80's",
         "80er",
@@ -25892,7 +25892,7 @@
       "name": "Klassik Radio - Lounge",
       "streamUrl": "http://stream.klassikradio.de/lounge/mp3-128/www.klassikradio.de/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/960dc8d6-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "lounge"
       ],
@@ -25923,7 +25923,7 @@
       "name": "RADIO BOB Stoner Rock 64kbps",
       "streamUrl": "https://streams.radiobob.de/stonerrock/aac-64/streams.radiobob.de/",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/3e1931ce-3494-4909-b4ce-0358c0ededd6.png",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 0,
@@ -25993,7 +25993,7 @@
       "name": "RADIO BOB! Livestream",
       "streamUrl": "http://streams.radiobob.de/bob-national/mp3-192/mediaplayer",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/18a12030-0b31-449e-9b0b-493a4c57ada7.png",
       "tags": [
         "hard rock",
         "heavy metal",
@@ -26073,7 +26073,7 @@
       "name": "Chansons oubliees ou presque",
       "streamUrl": "https://manager7.streamradio.fr:2580/stream?1701295921862",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/24e2291a-e782-4d49-a351-7135cc151a70.png",
       "tags": [
         "chansons françaises",
         "french chansons"
@@ -26108,7 +26108,7 @@
       "name": "80s80s Funk & Soul",
       "streamUrl": "http://regiocast.streamabc.net/regc-80s80ssoul8277002-mp3-192-1187403?sABC=65493326%230%236080533n48sp2nrq0o4389q6o67o3qps%23fgernzf.80f80f.qr&aw_0_1st.playerid=streams.80s80s.de&amsparams=playerid:streams.80s80s.de;skey:1699296038",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/d42b13b7-4f41-42dd-817b-492b2a21fd8c.png",
       "tags": [
         "80s",
         "decades",
@@ -26185,7 +26185,7 @@
       "name": "Night Drive Radio – Synthwave & Retrowave",
       "streamUrl": "https://a5.asurahosting.com:7920/radio.mp3",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9ca5d25c-f979-48e1-a269-8e71bf74479b.png",
       "tags": [
         "chillwave",
         "electronic",
@@ -26203,7 +26203,7 @@
       "name": "Retro Lofi Chiptune Radio",
       "streamUrl": "https://a5.asurahosting.com:8150/radio.mp3",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/bad4945f-cd86-42be-8ef4-72e0db167b45.png",
       "tags": [
         "16-bit",
         "8-bit",
@@ -26226,7 +26226,7 @@
       "name": "DrGnu - Metalcore 1",
       "streamUrl": "http://streams.radiobob.de/metalcore/mp3-192/mediaplayer",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/02f054a6-cd9d-49a4-b1a9-772da6fa87c3.png",
       "tags": [
         "1990s",
         "20th century",
@@ -26307,7 +26307,7 @@
       "name": "M40 Funk",
       "streamUrl": "https://live.m40radio.fr/listen/m40-funk/m40-funk-128.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/bec4ce52-9a00-45b6-a1df-0cb9d57e8e52.webp",
       "tags": [
         "funk"
       ],
@@ -26321,7 +26321,7 @@
       "name": "France Musique Piano Zen",
       "streamUrl": "http://icecast.radiofrance.fr/francemusiquepianozen-hifi.aac",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/a93bec5c-39b3-463a-ad2b-0f2d81ea55d3.webp",
       "tags": [
         "piano"
       ],
@@ -26431,7 +26431,7 @@
       "name": "The Point Independent Radio",
       "streamUrl": "https://nebcoradio.com:8443/WNCS",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9bfcec98-b3ad-44be-bbb8-e690d0db0ef7.png",
       "tags": [
         "alternative"
       ],
@@ -26473,7 +26473,7 @@
       "name": "Today's Hot Country",
       "streamUrl": "http://ice.stream101.com:9016/stream",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/5facce98-2f87-11e8-91bf-52543be04c81.png",
       "tags": [
         "classic country",
         "grand rapids",
@@ -26650,7 +26650,7 @@
       "name": "TRAP RADIO TRAP.radio",
       "streamUrl": "https://trapradio.streamingmedia.it/play",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/63c56fba-2e27-4983-a78e-5798aba8d73a.png",
       "tags": [
         "trap"
       ],
@@ -26664,7 +26664,7 @@
       "name": "Truckers Radio USA",
       "streamUrl": "http://streamer.radio.co/s81d30349a/low",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ef54fc76-d141-11e9-a861-52543be04c81.jpg",
       "tags": [
         "classic country",
         "country",
@@ -26853,7 +26853,7 @@
       "name": "N Joy",
       "streamUrl": "http://icecast.ndr.de/ndr/njoy/live/mp3/128/stream.mp3?aggregator=airable",
       "countryCode": "DE",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/f56cccd7-5656-49f0-9242-55c83e35b7b2.webp",
       "tags": [
         "pop"
       ],
@@ -26884,7 +26884,7 @@
       "name": "KCRW ECLECTIC 24",
       "streamUrl": "https://streams.kcrw.com/e24_mp3",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/18e31f25-53c8-4213-a1ec-dccc0443a788.webp",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 192,
@@ -26951,7 +26951,7 @@
       "name": "Forum 80's",
       "streamUrl": "http://forum80s.ice.infomaniak.ch/forum80s.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/acb92af8-88e7-4f91-8f07-3b1dbaba3ee6.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -27043,7 +27043,7 @@
       "name": "WCSP 90.1 \"C-SPAN Radio\" Washington, DC",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/CSPANRADIO_SC",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/962263bc-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "current affairs",
         "national news",
@@ -27120,7 +27120,7 @@
       "name": "Mega 96.3 (Los Angeles) - 96.3 FM - KXOL-FM - Spanish Broadcasting System - Los Angeles, California",
       "streamUrl": "https://liveaudio.lamusica.com/LA_KXOL_icy",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0534207e-dea1-4239-a4be-d38017df2e61.jpg",
       "tags": [
         "96.3 fm",
         "américa",
@@ -27170,7 +27170,7 @@
       "name": "FUNKY RADIO - Only Funk Music (60's & 70's)",
       "streamUrl": "https://funkyradio.streamingmedia.it/audio.aac",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/439fafd7-b35b-4a6c-b22f-d9e4fbd9dfd4.png",
       "tags": [
         "60s",
         "70s",
@@ -27340,7 +27340,7 @@
       "name": "La Grosse Radio Métal",
       "streamUrl": "http://hd.lagrosseradio.info/lagrosseradio-metal-192.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/961291f5-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "metal",
         "music"
@@ -27355,7 +27355,7 @@
       "name": "France Musique (no pub)",
       "streamUrl": "https://stream.radiofrance.fr/francemusique/francemusique.m3u8?id=radiofrance",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/7fdf8122-e85d-4f4e-9f88-11e8664eee2b.webp",
       "tags": [
         "classical music",
         "hls",
@@ -27384,7 +27384,7 @@
       "name": "JOY TÜRK ROCK TURKEY",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/JOYTURK_ROCK_SC?/",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/354ffe25-8a45-4534-888b-c900054c1ba7.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 64,
@@ -27408,7 +27408,7 @@
       "name": "BAYRAM FM TURKEY",
       "streamUrl": "https://sslyayin.netyayin.net/3442/stream",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/b0d6423b-dd92-4267-9b91-f3d291cf8849.jpg",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 96,
@@ -27491,7 +27491,7 @@
       "name": "PsyStream",
       "streamUrl": "http://radio.psymusic.co.uk:8040/radio1_192k.mp3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/6dc71790-65af-4557-a940-d8864eb439e6.png",
       "tags": [
         "progressive",
         "psychedelic",
@@ -27616,7 +27616,7 @@
       "name": "TMM 2",
       "streamUrl": "https://listen-msmn.sharp-stream.com/nme2.mp3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9619e894-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "alternative",
         "hiphop",
@@ -27649,7 +27649,7 @@
       "name": "Virgin Radio Chilled",
       "streamUrl": "https://radio.virginradio.co.uk/stream-chilled",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/6d12f64e-0f99-11ea-a87e-52543be04c81.png",
       "tags": [
         "chill",
         "chilled",
@@ -27681,7 +27681,7 @@
       "name": "SOUL RADIO Only Classic Soul",
       "streamUrl": "https://listen.soulradio.uk/uk",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9f61ef81-bf7d-4bc4-8135-3fc8be52dafb.png",
       "tags": [
         "50s",
         "60s",
@@ -27744,7 +27744,7 @@
       "name": "Radiohead",
       "streamUrl": "https://stream.pcradio.ru/radiohead-hi",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/3c7f3361-f72f-4ff5-ad1d-9af563f95584.svg",
       "tags": [
         "discography"
       ],
@@ -27772,7 +27772,7 @@
       "name": "1940s Radio HS - Pumpkin FM",
       "streamUrl": "https://cast2.asurahosting.com/proxy/1940sradio/stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/dbb7ac2b-cda4-42ef-9e7a-18c62dade3f6.png",
       "tags": [
         "1930s",
         "1940s",
@@ -27828,7 +27828,7 @@
       "name": "HearMe - 60s Rock",
       "streamUrl": "https://radio.hearme.fm:8230/stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/dd24eb09-84cb-4d9e-aca4-4c2ed71e624d.png",
       "tags": [
         "60s rock",
         "60’s rock"
@@ -27889,7 +27889,7 @@
       "name": "Celtic Music Radio",
       "streamUrl": "http://stream.celticmusicradio.net:8000/celticmusic.mp3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/960f2a8b-0601-11e8-ae97-52543be04c81.jpg",
       "tags": [
         "celtic",
         "folk"
@@ -27983,7 +27983,7 @@
       "name": "BBC Radio 1 (128k)",
       "streamUrl": "http://as-hls-ww-live.akamaized.net/pool_01505109/live/ww/bbc_radio_one/bbc_radio_one.isml/bbc_radio_one-audio%3d128000.norewind.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/a740cc4c-9563-4fbe-a13f-e7f9e89b7441.png",
       "tags": [
         "pop"
       ],
@@ -28063,7 +28063,7 @@
       "name": "60 NORTH RADIO - FLAC",
       "streamUrl": "http://r5.zetcast.net/flac",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/c8c5c4c4-a27e-4ad5-9339-e5ce38c38aa9.png",
       "tags": [],
       "codec": "OGG",
       "bitrateKbps": 1411,
@@ -28220,7 +28220,7 @@
       "name": "Avrasya Türk Radyo",
       "streamUrl": "https://sslyayin.netyayin.net:10909/",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1210df35-9d44-4f35-b70e-f3c81428cd27.png",
       "tags": [
         "classical"
       ],
@@ -28291,7 +28291,7 @@
       "name": "4U Classic Rock",
       "streamUrl": "https://str4uice.streamakaci.com/4uclassicrock.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/176833ee-0888-4f8a-bc51-51fc800e34d6.png",
       "tags": [
         "classic rock",
         "hits"
@@ -28357,7 +28357,7 @@
       "name": "M40",
       "streamUrl": "https://live.m40radio.fr/listen/m40/m40-128.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/b09cd187-2575-4c56-8988-e56be1638652.webp",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 128,
@@ -28426,7 +28426,7 @@
       "name": "Fréquence 3 - World FLAC",
       "streamUrl": "https://frequence3.net-radio.fr/frequence3world.flac",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/46eb7347-e63c-49a2-80af-e7df471c9703.png",
       "tags": [
         "world music"
       ],
@@ -28487,7 +28487,7 @@
       "name": "M40 Latino",
       "streamUrl": "https://live.m40radio.fr/listen/m40-latino/m40-latino-128.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/7884f8d8-fb06-4ca6-9d0c-112de041411d.webp",
       "tags": [
         "latino"
       ],
@@ -28501,7 +28501,7 @@
       "name": "BlackBox US",
       "streamUrl": "https://blackbox-us.ice.infomaniak.ch/blackbox-us.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/75b985cc-2d66-11ea-aa0c-52543be04c81.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -28513,7 +28513,7 @@
       "name": "..87,5!. Nantes",
       "streamUrl": "https://listen.radioking.com/radio/15130/stream/28217",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/038c8fb4-6939-11e9-af37-52543be04c81.png",
       "tags": [
         "alternative",
         "alternative rock",
@@ -28579,7 +28579,7 @@
       "name": "M40 Makina",
       "streamUrl": "https://live.m40radio.fr/listen/m40-makina/m40-makina-128.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/5ce993c4-55d1-433c-9487-c3e8a6840dc1.webp",
       "tags": [
         "techno"
       ],
@@ -28838,7 +28838,7 @@
       "name": "Radio Aviva",
       "streamUrl": "https://radio13.pro-fhi.net/listen-tpgmxyoe-stream.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/6efb6188-fcee-4a56-86ce-26e3e6fcd2fa.png",
       "tags": [
         "00s",
         "70s",
@@ -28917,7 +28917,7 @@
       "name": "SOUL RADIO Classics",
       "streamUrl": "https://listen.soulradio.us/us",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/951ebca8-80cf-4047-a2b4-3a5d403ed3ae.png",
       "tags": [
         "classic soul",
         "soul"
@@ -28932,7 +28932,7 @@
       "name": "Whisperings Solo Piano Radio",
       "streamUrl": "http://pianosolo.streamguys.net/live",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/960c55e4-0601-11e8-ae97-52543be04c81.jpg",
       "tags": [
         "classical",
         "junction city"
@@ -28987,7 +28987,7 @@
       "name": "WUWM 89.7 Milwaukee's NPR",
       "streamUrl": "https://www.tundracast.stream:3040/mount1?uuid=y48h2oci9",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/e46456c7-a497-47b9-87ec-76eeef29a254.png",
       "tags": [
         "news",
         "npr",
@@ -29019,7 +29019,7 @@
       "name": "Radiostorm - Rock 104 - Classic Rock",
       "streamUrl": "http://streaming.live365.com/b47785_128mp3",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/080499ac-362b-4331-ab81-e518c37d6792.png",
       "tags": [
         "60s",
         "70s",
@@ -29079,7 +29079,7 @@
       "name": "Classic Rock Florida",
       "streamUrl": "https://streaming.live365.com/a06375",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0da886fb-afb7-497f-a5c7-d0a7dddfccad.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 192,
@@ -29091,7 +29091,7 @@
       "name": "Your Classical Chamber Music",
       "streamUrl": "https://chambermusic.stream.publicradio.org/chambermusic.mp3",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/820d9afb-91c1-4c8d-bd93-e858741059b9.png",
       "tags": [
         "chamber music",
         "classical"
@@ -29120,7 +29120,7 @@
       "name": "Progressive Rock AZUSA",
       "streamUrl": "https://streaming.live365.com/a38225",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/a386f2af-2025-4405-b8f0-fe5350ef5498.png",
       "tags": [
         "ambient",
         "electronic",
@@ -29240,7 +29240,7 @@
       "name": "Antioch OTR",
       "streamUrl": "http://208.115.216.90:8000/listen",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/e9766102-91fa-11e9-a6c6-52543be04c81.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 32,
@@ -29402,7 +29402,7 @@
       "name": "Thegooshradio Deep House",
       "streamUrl": "http://eu2.fastcast4u.com:3732/stream/1/",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/904df09f-2412-11e8-91bf-52543be04c81.png",
       "tags": [
         "deep house",
         "electro deep",
@@ -29474,7 +29474,7 @@
       "name": "Conyers Old Time Radio 2nd Stream",
       "streamUrl": "https://s6.yesstreaming.net:17082/stream",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/405a606d-5bb8-45c1-bfc1-4c2ad879e53d.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 64,
@@ -29679,7 +29679,7 @@
       "name": "Eden Radio",
       "streamUrl": "https://edenofthewest.com/listen/eden-radio/radio.mp3",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ebe57b35-9f71-432b-bde7-c49a01d25aaa.png",
       "tags": [
         "anime",
         "jpop"
@@ -29694,7 +29694,7 @@
       "name": "KEXP 90.3 FM Seattle, WA",
       "streamUrl": "http://live-mp3-128.kexp.org/kexp128.mp3",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/a509502d-1ba7-4d51-9791-0be5a7d5ec34.png",
       "tags": [
         "alternative",
         "electronic",
@@ -29774,7 +29774,7 @@
       "name": "ChristianCountryGospel.Net",
       "streamUrl": "https://listen.christianrock.net/stream/18/",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/976fa379-6bc4-4777-bf66-092e5a9f18d4.png",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 120,
@@ -29835,7 +29835,7 @@
       "name": "NFBRN -- The national federation of the blind radio network",
       "streamUrl": "http://cast.az-streamingserver.com:8590/stream",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0e034caa-b0b4-474b-a5cd-2729f3b5d0ed.jpg",
       "tags": [
         "blind",
         "blind radio",
@@ -29939,7 +29939,7 @@
       "name": "Magic 60s Florida (Live365)",
       "streamUrl": "http://streaming.live365.com/a99804",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/5d2e4f66-47a5-4699-8506-feb442f991cd.jpg",
       "tags": [
         "60s"
       ],
@@ -30027,7 +30027,7 @@
       "name": "New Wave Radio",
       "streamUrl": "https://digitalaudiobroadcasting.net:1085/stream",
       "countryCode": "US",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/419b75a9-c397-4ef4-80d4-c5b2001a2270.png",
       "tags": [
         "new wave"
       ],
@@ -30220,7 +30220,7 @@
       "name": "Soul Rhythms Radio UK",
       "streamUrl": "https://a7.asurahosting.com:8230/radio.mp3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/6b92af91-7a1d-443c-a382-22d6dc21d0b4.jpg",
       "tags": [
         "dancehall",
         "house",
@@ -30240,7 +30240,7 @@
       "name": "Joyhits UK FLAC",
       "streamUrl": "https://joyhits.online/joyhits.flac.ogg",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1f2f0072-dfb1-42e1-9c5c-f4d4db9eda89.jpg",
       "tags": [
         "dance hits",
         "pop",
@@ -30256,7 +30256,7 @@
       "name": "Heart Musicals",
       "streamUrl": "https://media-ice.musicradio.com/HeartMusicalsMP3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0ea2b325-307b-45d4-80ce-f948302b1366.png",
       "tags": [
         "movies",
         "musicals"
@@ -30327,7 +30327,7 @@
       "name": "Queen",
       "streamUrl": "https://stream.pcradio.ru/Queen-hi",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/f97e38e9-b0e8-459e-ac37-1983f83a75da.svg",
       "tags": [
         "discography"
       ],
@@ -30359,7 +30359,7 @@
       "name": "Grey Clay Radio",
       "streamUrl": "http://fra-pioneer08.dedicateware.com:2240/stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/dcc883b6-3083-4ab0-8105-5094054305cd.jpg",
       "tags": [
         "ambient",
         "dark ambient",
@@ -30378,7 +30378,7 @@
       "name": "Smooth Christmas",
       "streamUrl": "https://media-ice.musicradio.com/SmoothXmasMP3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/052ee406-0369-44be-939d-a35d24f376c4.png",
       "tags": [
         "christmas music"
       ],
@@ -30451,7 +30451,7 @@
       "name": "1940sRadio",
       "streamUrl": "http://uk3.internet-radio.com:8082/live",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/bab6c5ee-0aee-4c6a-8fe7-1e436bc8a393.jpg",
       "tags": [
         "big band",
         "crooners",
@@ -30488,7 +30488,7 @@
       "name": "LOVE.radio Only Love Songs 70s80s90s",
       "streamUrl": "https://loveradio.streamingmedia.it/england",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/6dea6c7d-9b22-4698-889f-e7c34203ee6a.png",
       "tags": [
         "love",
         "love songs",
@@ -30505,7 +30505,7 @@
       "name": "HearMe - 70s Rock",
       "streamUrl": "https://radio.hearme.fm:8240/stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/aecb407b-b446-4b3c-94f7-54a3ccbe4a91.png",
       "tags": [
         "70s rock",
         "70’s rock"
@@ -30555,7 +30555,7 @@
       "name": "Smooth Chill (UK)",
       "streamUrl": "http://icecast.thisisdax.com/SmoothChillMP3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/14fec6dc-74ea-4874-9b05-99e512d92e1d.png",
       "tags": [
         "chillout",
         "soul"
@@ -30570,7 +30570,7 @@
       "name": "BBC 1 XTRA",
       "streamUrl": "http://as-hls-ww-live.akamaized.net/pool_92079267/live/ww/bbc_1xtra/bbc_1xtra.isml/bbc_1xtra-audio%3d320000.norewind.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/424d5d08-b4f5-4677-b593-cdd877e05c45.png",
       "tags": [],
       "codec": "UNKNOWN",
       "bitrateKbps": 0,
@@ -30630,7 +30630,7 @@
       "name": "Hard Rock Hell",
       "streamUrl": "http://andromeda.shoutca.st:9254/stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/5b7d9b52-5fe5-11ea-be63-52543be04c81.jpg",
       "tags": [
         "death metal",
         "hard rock",
@@ -30694,7 +30694,7 @@
       "name": "Deep Purple",
       "streamUrl": "https://stream.pcradio.ru/Deep_purple-hi",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/53d055fb-9364-4d12-be68-f61d4c14c0b3.svg",
       "tags": [
         "discography"
       ],
@@ -30736,7 +30736,7 @@
       "name": "BritCom 3 - Pumpkin FM",
       "streamUrl": "https://cast2.asurahosting.com/proxy/britcom3/stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/f76a4a99-20c0-4546-8050-cd84464c4275.png",
       "tags": [
         "british comedy",
         "comedy",
@@ -30765,7 +30765,7 @@
       "name": "Le Mellotron",
       "streamUrl": "https://listen.radioking.com/radio/477719/stream/534044",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/54289b36-ddc8-41f7-a880-a6299df0891b.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -30918,7 +30918,7 @@
       "name": "Maxi France radio",
       "streamUrl": "https://stream.maxifrance.radio/stream",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/7c2bdd5a-81e4-49ec-9128-dd7d3a6e2db2.webp",
       "tags": [
         "chansons françaises",
         "pop",
@@ -31097,7 +31097,7 @@
       "name": "FIP (metadata)",
       "streamUrl": "http://radio-metadata.fr:8000/fip",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/70ea44d2-ae95-4911-91ec-a2655b979950.webp",
       "tags": [
         "music",
         "radio france"
@@ -31154,7 +31154,7 @@
       "name": "Blackbox @Work",
       "streamUrl": "http://blackboxwork.ice.infomaniak.ch/blackboxwork-128.mp3",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9613c002-0601-11e8-ae97-52543be04c81.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -31244,7 +31244,7 @@
       "name": "Soul Radio",
       "streamUrl": "https://listen.soulradio.eu/eu",
       "countryCode": "FR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/c3904d2e-32cb-43fa-9040-e76f8f0afa41.png",
       "tags": [
         "hip-hop",
         "jazz",
@@ -31286,7 +31286,7 @@
       "name": "Joy Hits UK",
       "streamUrl": "http://joyhits.online/joyhitshq.mp3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/658e103a-ed12-41d7-be75-e3dd6b55902b.jpg",
       "tags": [
         "commercial free",
         "pop",
@@ -31433,7 +31433,7 @@
       "name": "Virgin Radio Anthems",
       "streamUrl": "https://radio.virginradio.co.uk/stream-anthems",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1a1ef3a9-0f99-11ea-a87e-52543be04c81.png",
       "tags": [
         "anthems",
         "national"
@@ -31448,7 +31448,7 @@
       "name": "EGE HAVALARI TURKEY",
       "streamUrl": "https://moondigitalmaster.radyotvonline.net/egehavalari/playlist.m3u8",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/d9e9d5de-9c90-42d4-bb3c-44332e93bf04.jpg",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 128,
@@ -31651,7 +31651,7 @@
       "name": "Rap House - Infinite Mixtapes | NTS",
       "streamUrl": "https://stream-mixtape-geo.ntslive.net/mixtape22",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/4e5fc635-8d2a-4e80-b44f-d07315892705.png",
       "tags": [
         "drill",
         "rap",
@@ -31697,7 +31697,7 @@
       "name": "BEST SMOOTH JAZZ - UK",
       "streamUrl": "http://64.95.243.43:8002/stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/def842a8-e3aa-11e8-a9cc-52543be04c81.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -31709,7 +31709,7 @@
       "name": "Dundee Radio Club",
       "streamUrl": "https://dundee-radio-club.radiocult.fm/stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/721286a0-1886-4a06-92e3-2f5be0451ebb.jpg",
       "tags": [
         "community radio",
         "field recordings",
@@ -31772,7 +31772,7 @@
       "name": "Masjid Quba London",
       "streamUrl": "http://livemasjid.net/masjidequba.mp3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0e42abac-460f-4ef3-b742-818d584f6762.png",
       "tags": [
         "islam",
         "masjid",
@@ -31790,7 +31790,7 @@
       "name": "House Music Radio",
       "streamUrl": "https://uk4-vn.mixstream.net/8128/listen.mp3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/c58c0009-ad0d-4ed5-a208-a8e797885a75.jpg",
       "tags": [
         "deep house",
         "house"
@@ -31805,7 +31805,7 @@
       "name": "Ambient & Chill Radio",
       "streamUrl": "http://eilo.org:8000/ambient",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/c941f7c5-2bcb-4215-b0c6-ebba932898fd.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -31861,7 +31861,7 @@
       "name": "Angel Radio (HQ)",
       "streamUrl": "http://s2.xrad.io:8522/stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/46e9a651-8fc2-4d71-b64b-17fb8f9a919f.png",
       "tags": [
         "nostalgia",
         "oldies",
@@ -31907,7 +31907,7 @@
       "name": "BritCom 1 - Pumpkin FM",
       "streamUrl": "https://cast2.asurahosting.com/proxy/britcom1/stream",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/349d8a3b-ef0f-4928-a014-a33d44cac0f5.png",
       "tags": [
         "british comedy",
         "comedy",
@@ -32234,7 +32234,7 @@
       "name": "Fun Kids",
       "streamUrl": "https://listen-funkids.sharp-stream.com/funkids.mp3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ff871225-7731-45a1-aee0-9e8fa463dfc3.png",
       "tags": [
         "kids"
       ],
@@ -32420,7 +32420,7 @@
       "name": "POWER XL TURKEY",
       "streamUrl": "https://listen.powerapp.com.tr/powerextralounge/abr/powerextralounge/96/playlist.m3u8",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1a4a7f3f-fbed-4dcc-ab7b-d6a53468076d.jpg",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 108,
@@ -32658,7 +32658,7 @@
       "name": "RadioX UK",
       "streamUrl": "http://icecast.thisisdax.com/RadioXUKMP3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/03387f8e-4a8b-4b2b-8740-5d35a5cc8c48.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -32744,7 +32744,7 @@
       "name": "Classic FM at the Movies",
       "streamUrl": "http://media-sov.musicradio.com/ClassicFM-M-Movies",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9f1574b3-b2c1-11e9-acb2-52543be04c81.svg",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 48,
@@ -32800,7 +32800,7 @@
       "name": "TMM 1 (HQ)",
       "streamUrl": "https://listen-msmn.sharp-stream.com/nme1high.mp3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/6d55f9ad-5a50-4ac3-be1c-4abcbb68fd09.png",
       "tags": [
         "alternative",
         "alternative rock",
@@ -32820,7 +32820,7 @@
       "name": "bbc 1 tv",
       "streamUrl": "http://onj2.andrelouis.com:8000/bbc1",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/3164d8df-e6f0-43b4-bdf9-3044e9f59457.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 0,
@@ -32903,7 +32903,7 @@
       "name": "Kniteforce Radio",
       "streamUrl": "https://kniteforce.out.airtime.pro/kniteforce_a",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/fba2054a-0812-4a8f-b9bf-ab0546c5cccd.png",
       "tags": [
         "drum & bass",
         "hardcore",
@@ -33094,7 +33094,7 @@
       "name": "Hard Techno Radio",
       "streamUrl": "http://eilo.org:8000/hard",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/6eef88eb-396c-4393-86aa-1ba04ff91918.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -33138,7 +33138,7 @@
       "name": "Boom",
       "streamUrl": "http://edge-audio-03-gos2.sharp-stream.com/65_boom_radio_live_320",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ab49da2e-4d9b-499b-ab45-ef3bf7a6e635.jpg",
       "tags": [
         "oldies"
       ],
@@ -33152,7 +33152,7 @@
       "name": "Capital Xtra Reloaded",
       "streamUrl": "https://media-ice.musicradio.com/CapitalXTRAReloaded",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9e5f26ba-0674-4b7f-adca-3ee41725d4f8.png",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 48,
@@ -33223,7 +33223,7 @@
       "name": "BBC Radio 3 Unwind (128k)",
       "streamUrl": "http://as-hls-ww-live.akamaized.net/pool_30624046/live/ww/bbc_radio_three_unwind/bbc_radio_three_unwind.isml/bbc_radio_three_unwind-audio%3d128000.norewind.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/35773c40-a6d0-4316-bc39-18477a8c63d0.png",
       "tags": [
         "classical",
         "relax",
@@ -33255,7 +33255,7 @@
       "name": "BBC Asian Network (128k)",
       "streamUrl": "http://as-hls-ww-live.akamaized.net/pool_22108647/live/ww/bbc_asian_network/bbc_asian_network.isml/bbc_asian_network-audio%3d128000.norewind.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/df59a041-0f80-466b-b257-4f551229a771.png",
       "tags": [
         "bhangra",
         "bollywood",
@@ -33318,7 +33318,7 @@
       "name": "BritCom 4 - Pumpkin FM",
       "streamUrl": "https://cast2.asurahosting.com/proxy/britcom4/stream/",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/253173a0-f56a-49cb-8f60-cbca1f2c0fdd.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -33347,7 +33347,7 @@
       "name": "Dubplate.fm Dub &Bass",
       "streamUrl": "https://sc2.dubplate.fm/radio/8000/dubandbass/uhifi",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/5a71d128-cb37-4d62-8b8b-a705e95ad2d8.gif",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 256,
@@ -33396,7 +33396,7 @@
       "name": "Nation 60s",
       "streamUrl": "https://listen-nation.sharp-stream.com/nation60s.mp3",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/dd4e349c-77df-43da-a97d-34234ab08a2f.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -33484,7 +33484,7 @@
       "name": "BİLECİK FM TURKEY",
       "streamUrl": "http://bilecikfm.kesintisizyayin.com:9980/",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/0b70b296-3335-4d7d-bb55-a60d2c4071b1.jpg",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 64,
@@ -33792,7 +33792,7 @@
       "name": "Joy FM Istanbul",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/JOY_FM128AAC.aac",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1a830025-a828-47ad-910c-441afca92ce7.png",
       "tags": [
         "2000s",
         "80s",
@@ -33861,7 +33861,7 @@
       "name": "Radyo Eksen 96.2",
       "streamUrl": "http://eksenwmp.radyotvonline.com/;stream.mp3",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/961fbfc8-0601-11e8-ae97-52543be04c81.png",
       "tags": [
         "alternative rock",
         "indie",
@@ -33899,7 +33899,7 @@
       "name": "Hardrock Hell",
       "streamUrl": "https://s3.radio.co/s1f74e2763/listen",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/2f281ed9-c336-4049-ab17-524f4bc81c0a.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 192,
@@ -34114,7 +34114,7 @@
       "name": "Radyo Banko",
       "streamUrl": "http://yayin.netradyom.com:9910/RADYOBANKO",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/306970f9-8063-481d-9f6b-00b99833d206.png",
       "tags": [
         "folk"
       ],
@@ -34239,7 +34239,7 @@
       "name": "ÇINAR FM",
       "streamUrl": "https://sslyayin.netyayin.net:10992/",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/cdd35eda-263b-4475-81d7-6696024e097e.jpg",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 64,
@@ -34351,7 +34351,7 @@
       "name": "HOME KLASİK TURKEY",
       "streamUrl": "https://ssl4.radyotvonline.com/radyohome/klasikhome.stream_aac/playlist.m3u8",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/1c4363ac-c53f-43a9-8378-aab79be08aca.jpg",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 128,
@@ -34527,7 +34527,7 @@
       "name": "Heart Yorkshire",
       "streamUrl": "http://media-sov.musicradio.com/HeartYorkshire",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/361b47fb-4f34-11e9-a4d7-52543be04c81.png",
       "tags": [
         "pop"
       ],
@@ -34616,7 +34616,7 @@
       "name": "Metro fm turkey",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/METRO_FM_SC?",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/f17523b9-2e77-46f3-8851-cdd842ca5b8f.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 64,
@@ -34652,7 +34652,7 @@
       "name": "BBC Radio Leicester",
       "streamUrl": "http://as-hls-ww-live.akamaized.net/pool_04542919/live/ww/bbc_radio_leicester/bbc_radio_leicester.isml/bbc_radio_leicester-audio%3d96000.norewind.m3u8",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/f66ffc36-ce61-4925-8ef4-20925a28a1bd.png",
       "tags": [],
       "codec": "UNKNOWN",
       "bitrateKbps": 0,
@@ -34712,7 +34712,7 @@
       "name": "Tarkan",
       "streamUrl": "https://stream.pcradio.ru/tarkan-hi",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/4b2d157e-9741-4174-8731-6d6cb2bdf8e8.svg",
       "tags": [
         "discography"
       ],
@@ -34762,7 +34762,7 @@
       "name": "XL:UK Radio",
       "streamUrl": "https://s3.radio.co/s113a5dc46/listen",
       "countryCode": "GB",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/124c45d7-57a9-46ed-8b93-83b306992126.png",
       "tags": [
         "afrobeat",
         "asian urban hits",
@@ -35623,7 +35623,7 @@
       "name": "radio megasite",
       "streamUrl": "http://yayin.netradyom.com:7900/;",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/4c58f80e-f4fa-4233-b336-17164cf934b9.jpg",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 32,
