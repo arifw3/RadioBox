@@ -213,6 +213,8 @@ class NowPlayingScreen extends ConsumerWidget {
                               ? StationArt(
                                   imageUrl: mediaItem!.artUri.toString(),
                                   fit: BoxFit.cover,
+                                  width: 150,
+                                  height: 150,
                                   errorWidget: (_) => const _FallbackArt(),
                                 )
                               : const _FallbackArt(),

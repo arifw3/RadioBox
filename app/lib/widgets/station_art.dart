@@ -40,11 +40,21 @@ class StationArt extends StatelessWidget {
       );
     }
 
+    // Station logos are commonly 1200x630+ (social-share-sized source
+    // images), decoded and cached at full resolution by default even when
+    // displayed in a 44-52px list tile — real, visible scroll jank on
+    // this project's low-end test device. Capping the decode target to
+    // the actual display size (in device pixels) fixes that; only do it
+    // when a fixed size is known, not for the full-bleed hero/share-card
+    // uses where the source resolution is the point.
+    final dpr = MediaQuery.devicePixelRatioOf(context);
     return CachedNetworkImage(
       imageUrl: imageUrl,
       fit: fit,
       width: width,
       height: height,
+      memCacheWidth: width == null ? null : (width! * dpr).round(),
+      memCacheHeight: height == null ? null : (height! * dpr).round(),
       errorWidget: errorWidget == null
           ? null
           : (context, url, error) => errorWidget!(context),
