@@ -188,7 +188,7 @@
       "name": "iraninternational",
       "streamUrl": "http://n0a.radiojar.com/dfnrphnr5f0uv?rj-ttl=5&rj-tok=AAABmY6uA5MA4jGtLD8I_98vdQ",
       "countryCode": "IR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/5c6c092b-2b8b-4ac1-a8d0-090f87037fd9-favicon-upgrade.webp",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/5c6c092b-2b8b-4ac1-a8d0-090f87037fd9-favicon-upgrade.png",
       "tags": [
         "iran",
         "news",
@@ -660,7 +660,7 @@
       "name": "Iran International (HTTPS stream)",
       "streamUrl": "http://n08.radiojar.com/iintl_c?rj-ttl=5&rj-tok=AAABmY4BhQQAzkR5Nkq2S7Ma6w",
       "countryCode": "IR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/37acc36e-e070-4225-9d9f-d3c3610470fd-favicon-upgrade.webp",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/37acc36e-e070-4225-9d9f-d3c3610470fd-favicon-upgrade.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 0,
@@ -3242,7 +3242,7 @@
       "name": "Blu Radio, señal nacional (HJCK, 89.9 MHz FM, Bogotá / HJN42, 96.3 MHz, San Martín, Meta / HJH87, 103.1 MHz, Paipa, Boyacá / HJOM, 1090 KHz, Cartagena de Indias / HJM47 103.1 MHz, Algeciras, Huila / HJQ43, 94.1 MHz, Bugalagrande, Valle del Cauca)",
       "streamUrl": "http://26583.live.streamtheworld.com:3690/BLURADIO_SC",
       "countryCode": "CO",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/961f5a7a-0601-11e8-ae97-52543be04c81-favicon-upgrade.webp",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/961f5a7a-0601-11e8-ae97-52543be04c81-favicon-upgrade.png",
       "tags": [
         "armenian",
         "bogotá",
@@ -3590,7 +3590,7 @@
       "name": "Music Radio",
       "streamUrl": "https://radio.musicradio.ai/listen/musicradio.ai/radio.mp3",
       "countryCode": "FR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/df2ef0fb-5019-4eb0-bfea-fa21e6a7e609-favicon-upgrade.webp",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/df2ef0fb-5019-4eb0-bfea-fa21e6a7e609-favicon-upgrade.png",
       "tags": [
         "chillout",
         "chillout+lounge",
@@ -6214,7 +6214,7 @@
       "name": "TOPradio Belgium",
       "streamUrl": "https://29053.live.streamtheworld.com:443/TOP_RADIO.mp3",
       "countryCode": "BE",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/a2c199e5-cff2-11e8-a54a-52543be04c81-favicon-upgrade.webp",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/a2c199e5-cff2-11e8-a54a-52543be04c81-favicon-upgrade.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 192,
@@ -6633,7 +6633,7 @@
       "name": "MDR Kultur",
       "streamUrl": "http://f111.rndfnk.com/ard/mdr/284310/0/mp3/128/stream.mp3?cid=01FBQ0DC86PCK25SZ3MS3J5EM2&sid=33HVdz95q9r0HlejfcYfYZNrh5P&token=EHvOLwqV1BJtQyZFfYKS-Ut5zCshKPWwMTEsHvABjSE&tvf=Azw_Mz81aRhmMTExLnJuZGZuay5jb20",
       "countryCode": "DE",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9612d85e-0601-11e8-ae97-52543be04c81-favicon-upgrade.webp",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/9612d85e-0601-11e8-ae97-52543be04c81-favicon-upgrade.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -8350,7 +8350,7 @@
       "name": "Radio 10 60's & 70's Hits",
       "streamUrl": "http://22333.live.streamtheworld.com:3690/TLPSTR18_SC",
       "countryCode": "NL",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/39874081-8a87-45ca-a67f-52bae3372ae8-favicon-upgrade.webp",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/39874081-8a87-45ca-a67f-52bae3372ae8-favicon-upgrade.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -12315,7 +12315,7 @@
       "name": "Radio 10 non-stop",
       "streamUrl": "https://25253.live.streamtheworld.com:443/TLPSTR15.mp3",
       "countryCode": "NL",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/c1c834eb-e84e-43fc-8841-6749e19b4edc-favicon-upgrade.webp",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/c1c834eb-e84e-43fc-8841-6749e19b4edc-favicon-upgrade.png",
       "tags": [
         "top hits"
       ],
@@ -20976,7 +20976,7 @@
       "name": "MDR Aktuell (low)",
       "streamUrl": "http://mdr-284340-0.cast.mdr.de/mdr/284340/0/mp3/high/stream.mp3",
       "countryCode": "DE",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96399f56-0601-11e8-ae97-52543be04c81-favicon-upgrade.webp",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/96399f56-0601-11e8-ae97-52543be04c81-favicon-upgrade.png",
       "tags": [
         "information",
         "news"
@@ -27202,7 +27202,7 @@
       "name": "croonerradio julioiglesias",
       "streamUrl": "http://croonerradio_julioiglesias.ice.infomaniak.ch/croonerradio-julioiglesias-midfi.mp3",
       "countryCode": "FR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/3fb647f3-93af-4d33-9cad-3d69e2efb048-favicon-upgrade.webp",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/3fb647f3-93af-4d33-9cad-3d69e2efb048-favicon-upgrade.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -29433,7 +29433,7 @@
       "name": "Crooner Radio",
       "streamUrl": "https://direct.croonerradio.fr/croonerradio-midfi.mp3",
       "countryCode": "FR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/efedae79-7cd7-43c0-ad23-a149466efec8-favicon-upgrade.webp",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/efedae79-7cd7-43c0-ad23-a149466efec8-favicon-upgrade.png",
       "tags": [
         "crooner",
         "crooners"
@@ -34795,7 +34795,7 @@
       "name": "Radio 44 Malatya",
       "streamUrl": "https://radyo44.80.yayin.com.tr/stream",
       "countryCode": "TR",
-      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/e3521638-7535-4327-865a-2c36e45f5f4c-favicon-upgrade.webp",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/e3521638-7535-4327-865a-2c36e45f5f4c-favicon-upgrade.png",
       "tags": [
         "folk",
         "folk music"

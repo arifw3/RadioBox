@@ -109,10 +109,12 @@ Future<void> main(List<String> args) async {
           return;
         }
 
-        final ext = _extensionFor(candidate.url, bytes);
-        final fileName = '${station.id}-favicon-upgrade$ext';
+        // Always PNG, regardless of the source format: images/*.webp is
+        // gitignored (it was added for unrelated orphaned scratch files),
+        // and re-encoding here is free since decodeImage() already ran.
+        final fileName = '${station.id}-favicon-upgrade.png';
         final destFile = File('$imagesDir/$fileName');
-        await destFile.writeAsBytes(bytes);
+        await destFile.writeAsBytes(img.encodePng(decoded));
 
         updated[station.id] = RadioStation(
           id: station.id,
@@ -154,31 +156,6 @@ Future<void> main(List<String> args) async {
     const JsonEncoder.withIndent('  ').convert(newCatalog.toJson()),
   );
   stderr.writeln('Wrote $radiosPath');
-}
-
-String _extensionFor(String url, Uint8List bytes) {
-  if (bytes.length >= 8 &&
-      bytes[0] == 0x89 &&
-      bytes[1] == 0x50 &&
-      bytes[2] == 0x4E &&
-      bytes[3] == 0x47) {
-    return '.png';
-  }
-  if (bytes.length >= 3 && bytes[0] == 0xFF && bytes[1] == 0xD8) {
-    return '.jpg';
-  }
-  if (bytes.length >= 12 &&
-      bytes[8] == 0x57 &&
-      bytes[9] == 0x45 &&
-      bytes[10] == 0x42 &&
-      bytes[11] == 0x50) {
-    return '.webp';
-  }
-  final lower = url.toLowerCase();
-  if (lower.endsWith('.png')) return '.png';
-  if (lower.endsWith('.webp')) return '.webp';
-  if (lower.endsWith('.ico')) return '.ico';
-  return '.jpg';
 }
 
 Future<(int, int)?> _fetchImageDimensions(http.Client client, String url) async {
