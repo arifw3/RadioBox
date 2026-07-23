@@ -66,5 +66,12 @@
   "playStationLabel": "Reproducir: {name}",
   "@playStationLabel": {
     "placeholders": { "name": { "type": "String" } }
-  }
+  },
+
+  "timeShiftRewindTooltip": "Retroceder 30 segundos",
+  "timeShiftLiveBadge": "NO EN VIVO",
+  "timeShiftReturnToLive": "Volver a en vivo",
+  "shareTooltip": "Compartir esta emisora",
+  "sharePreviewTitle": "Compartir",
+  "shareAction": "Compartir"
 }

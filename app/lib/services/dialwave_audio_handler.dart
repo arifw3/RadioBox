@@ -1,9 +1,11 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:io';
 import 'dart:ui' as ui;
 
 import 'package:audio_service/audio_service.dart';
 import 'package:audio_session/audio_session.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dialwave_core/dialwave_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:http/http.dart' as http;
@@ -11,6 +13,7 @@ import 'package:just_audio/just_audio.dart';
 
 import 'favorites_repository.dart';
 import 'radio_repository.dart';
+import 'time_shift_recorder.dart';
 
 /// Wraps [AudioPlayer] behind audio_service's [BaseAudioHandler] so
 /// playback survives the app going to background and keeps working with
@@ -30,7 +33,13 @@ class DialWaveAudioHandler extends BaseAudioHandler with SeekHandler {
   final AudioPlayer _player = AudioPlayer();
   final RadioRepository _radioRepository = RadioRepository(http.Client());
   final FavoritesRepository _favoritesRepository = FavoritesRepository();
+  final TimeShiftRecorder _timeShiftRecorder = TimeShiftRecorder();
   RadioCatalog? _browsingCatalogCache;
+  bool _isTimeShifted = false;
+  bool get isTimeShifted => _isTimeShifted;
+
+  final _timeShiftController = StreamController<bool>.broadcast();
+  Stream<bool> get timeShiftStream => _timeShiftController.stream;
 
   static const _favoritesFolderId = 'favorites';
   static const _allStationsFolderId = 'all_stations';
@@ -104,6 +113,7 @@ class DialWaveAudioHandler extends BaseAudioHandler with SeekHandler {
     _reconnectTimer?.cancel();
     _reconnectAttempts = 0;
     _currentStation = station;
+    _isTimeShifted = false;
     // ExoPlayer's ICY extractor runs on a background thread against the
     // *old* stream connection while it's being torn down — a metadata
     // event already in flight when setUrl() below replaces the source can
@@ -120,12 +130,80 @@ class DialWaveAudioHandler extends BaseAudioHandler with SeekHandler {
         playing: false,
       ),
     );
+    _broadcastTimeShiftState();
+    unawaited(_restartTimeShiftRecording(station.streamUrl));
     try {
       await _player.setUrl(station.streamUrl);
       await _player.play();
     } catch (_) {
       _scheduleReconnect();
     }
+  }
+
+  /// Zaman Yolculuğu (Section 4, CLAUDE.md): only records on Wi-Fi since
+  /// it's a second, independent download of the same stream purely for
+  /// the rewind buffer — mobile-data listeners get ordinary live playback
+  /// with no extra data cost, just no rewind capability.
+  Future<void> _restartTimeShiftRecording(String streamUrl) async {
+    final results = await Connectivity().checkConnectivity();
+    if (!results.contains(ConnectivityResult.wifi)) {
+      await _timeShiftRecorder.stop();
+      return;
+    }
+    await _timeShiftRecorder.start(streamUrl);
+  }
+
+  /// Jumps back into the rolling buffer by [by]. The first call switches
+  /// from the live URL to the local buffer file (which — unlike a live
+  /// stream — is a real seekable file); repeated calls seek further back
+  /// within it, clamped to whatever's actually been recorded.
+  ///
+  /// Named rewindBy rather than overriding [SeekHandler.rewind] — that
+  /// inherited method is the system media-button rewind action and has a
+  /// fixed zero-argument signature we don't want to disturb.
+  Future<void> rewindBy(Duration by) async {
+    final bufferPath = _timeShiftRecorder.bufferFilePath;
+    if (bufferPath == null || !await File(bufferPath).exists()) return;
+
+    final targetPosition = _isTimeShifted
+        ? _player.position - by
+        : _timeShiftRecorder.bufferedDuration - by;
+
+    // Suspended before the seek/play attempt, not just on success — a
+    // trim racing an in-flight setFilePath/seek is exactly what this
+    // guards against.
+    _timeShiftRecorder.trimSuspended = true;
+    try {
+      await _player.setFilePath(bufferPath);
+      await _player.seek(
+        targetPosition < Duration.zero ? Duration.zero : targetPosition,
+      );
+      await _player.play();
+      _isTimeShifted = true;
+      _broadcastTimeShiftState();
+    } catch (_) {
+      // Not enough buffered data yet, or the partial file wasn't playable
+      // — stay on live rather than leaving playback in a broken state.
+      _timeShiftRecorder.trimSuspended = false;
+    }
+  }
+
+  Future<void> returnToLive() async {
+    final station = _currentStation;
+    if (station == null || !_isTimeShifted) return;
+    _isTimeShifted = false;
+    _timeShiftRecorder.trimSuspended = false;
+    try {
+      await _player.setUrl(station.streamUrl);
+      await _player.play();
+    } catch (_) {
+      _scheduleReconnect();
+    }
+    _broadcastTimeShiftState();
+  }
+
+  void _broadcastTimeShiftState() {
+    _timeShiftController.add(_isTimeShifted);
   }
 
   MediaItem _toMediaItem(RadioStation station) => MediaItem(
@@ -243,6 +321,8 @@ class DialWaveAudioHandler extends BaseAudioHandler with SeekHandler {
   @override
   Future<void> stop() async {
     _reconnectTimer?.cancel();
+    _isTimeShifted = false;
+    await _timeShiftRecorder.stop();
     await _player.stop();
     await super.stop();
   }

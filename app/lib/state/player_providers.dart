@@ -59,3 +59,9 @@ final playbackStateProvider = StreamProvider<PlaybackState>((ref) {
 final currentMediaItemProvider = StreamProvider<MediaItem?>((ref) {
   return ref.watch(audioHandlerProvider).mediaItem;
 });
+
+/// Zaman Yolculuğu (Section 4, CLAUDE.md) — true once playback has switched
+/// from the live URL to the local rewind buffer.
+final isTimeShiftedProvider = StreamProvider<bool>((ref) {
+  return ref.watch(audioHandlerProvider).timeShiftStream;
+});

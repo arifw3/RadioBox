@@ -66,5 +66,12 @@
   "playStationLabel": "Play: {name}",
   "@playStationLabel": {
     "placeholders": { "name": { "type": "String" } }
-  }
+  },
+
+  "timeShiftRewindTooltip": "Rewind 30 seconds",
+  "timeShiftLiveBadge": "NOT LIVE",
+  "timeShiftReturnToLive": "Back to live",
+  "shareTooltip": "Share this station",
+  "sharePreviewTitle": "Share",
+  "shareAction": "Share"
 }

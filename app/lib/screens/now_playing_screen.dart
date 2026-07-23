@@ -12,6 +12,7 @@ import '../theme/app_theme.dart';
 import '../widgets/banner_ad_widget.dart';
 import '../widgets/circular_visualizer.dart';
 import '../widgets/social_sync_panel.dart';
+import 'share_preview_screen.dart';
 
 final _visualizerStyleProvider = StateProvider<int>((ref) => 0);
 
@@ -33,14 +34,18 @@ class NowPlayingScreen extends ConsumerWidget {
 
     final spotlightAsync = ref.watch(artistSpotlightProvider);
     final spotlight = spotlightAsync.valueOrNull;
+    final isTimeShifted = ref.watch(isTimeShiftedProvider).valueOrNull ?? false;
     // Riverpod keeps a FutureProvider's *previous* value visible by default
     // while it's re-fetching after a dependency change (so quick refreshes
     // don't flash a loading spinner) — here that dependency is the current
     // song, so without this check a new song's title would briefly pair
     // with the previous song's cover art until the new iTunes lookup
     // finishes. Gating on isLoading falls back to the plain visualizer for
-    // that window instead of showing a mismatched image.
+    // that window instead of showing a mismatched image. Also suppressed
+    // while time-shifted: the ICY-derived "now playing" text reflects the
+    // live edge, not whatever's actually audible from the rewind buffer.
     final spotlightReady =
+        !isTimeShifted &&
         !spotlightAsync.isLoading &&
         spotlight != null &&
         (spotlight.imageUrl?.isNotEmpty ?? false);
@@ -78,6 +83,64 @@ class NowPlayingScreen extends ConsumerWidget {
       ],
     );
 
+    // Zaman Yolculuğu (Section 4, CLAUDE.md): a rewind step, plus — only
+    // once actually time-shifted — a "not live" badge with a way back.
+    final timeShiftRow = Padding(
+      padding: const EdgeInsets.only(top: 8),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          IconButton(
+            icon: const Icon(Icons.replay_30),
+            tooltip: l10n.timeShiftRewindTooltip,
+            color: Colors.white70,
+            onPressed: () => ref
+                .read(audioHandlerProvider)
+                .rewindBy(const Duration(seconds: 30)),
+          ),
+          if (isTimeShifted) ...[
+            const SizedBox(width: 8),
+            Container(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 12,
+                vertical: 6,
+              ),
+              decoration: BoxDecoration(
+                color: AppColors.pink,
+                borderRadius: BorderRadius.circular(AppRadii.pill),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    l10n.timeShiftLiveBadge,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 11,
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  GestureDetector(
+                    onTap: () => ref.read(audioHandlerProvider).returnToLive(),
+                    child: Text(
+                      l10n.timeShiftReturnToLive,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        decoration: TextDecoration.underline,
+                        fontSize: 11,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ],
+      ),
+    );
+
     if (spotlightReady) {
       return _SpotlightScaffold(
         imageUrl: spotlight.imageUrl!,
@@ -86,12 +149,25 @@ class NowPlayingScreen extends ConsumerWidget {
         songTitle: spotlight.songTitle,
         otherTracks: spotlight.otherTracks,
         transportRow: transportRow,
+        timeShiftRow: timeShiftRow,
       );
     }
 
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: AppBar(backgroundColor: Colors.transparent, elevation: 0),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.ios_share),
+            tooltip: l10n.shareTooltip,
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(builder: (_) => const SharePreviewScreen()),
+            ),
+          ),
+        ],
+      ),
       bottomNavigationBar: const BannerAdWidget(),
       body: Container(
         width: double.infinity,
@@ -166,6 +242,7 @@ class NowPlayingScreen extends ConsumerWidget {
                 ],
                 const SizedBox(height: 32),
                 transportRow,
+                timeShiftRow,
                 const SizedBox(height: 12),
                 Text(
                   l10n.visualizerHint,
@@ -214,6 +291,7 @@ class _SpotlightScaffold extends StatelessWidget {
     required this.songTitle,
     required this.otherTracks,
     required this.transportRow,
+    required this.timeShiftRow,
   });
 
   final String imageUrl;
@@ -222,6 +300,7 @@ class _SpotlightScaffold extends StatelessWidget {
   final String songTitle;
   final List<ItunesTrack> otherTracks;
   final Widget transportRow;
+  final Widget timeShiftRow;
 
   @override
   Widget build(BuildContext context) {
@@ -242,6 +321,15 @@ class _SpotlightScaffold extends StatelessWidget {
           ).textTheme.titleMedium?.copyWith(color: Colors.white),
         ),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.ios_share),
+            tooltip: l10n.shareTooltip,
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(builder: (_) => const SharePreviewScreen()),
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: const BannerAdWidget(),
       backgroundColor: AppColors.background,
@@ -312,6 +400,7 @@ class _SpotlightScaffold extends StatelessWidget {
                   ),
                   const SizedBox(height: 24),
                   transportRow,
+                  timeShiftRow,
                   if (otherTracks.isNotEmpty) ...[
                     const SizedBox(height: 24),
                     Padding(

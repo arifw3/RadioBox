@@ -35,7 +35,10 @@ class SongHistoryEntry {
 /// recent first, capped so it doesn't grow unbounded in shared_preferences.
 class SongHistoryRepository {
   static const _prefsKey = 'song_history_entries';
-  static const maxEntries = 200;
+  // Matches the rough size of "recently played" lists in Spotify/Apple
+  // Music — enough history to be useful without the list feeling
+  // unbounded.
+  static const maxEntries = 100;
 
   Future<List<SongHistoryEntry>> load() async {
     final prefs = await SharedPreferences.getInstance();

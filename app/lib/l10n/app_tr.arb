@@ -66,5 +66,12 @@
   "playStationLabel": "Çal: {name}",
   "@playStationLabel": {
     "placeholders": { "name": { "type": "String" } }
-  }
+  },
+
+  "timeShiftRewindTooltip": "30 saniye geri sar",
+  "timeShiftLiveBadge": "CANLI DEĞİL",
+  "timeShiftReturnToLive": "Canlıya dön",
+  "shareTooltip": "Bu istasyonu paylaş",
+  "sharePreviewTitle": "Paylaş",
+  "shareAction": "Paylaş"
 }

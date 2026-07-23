@@ -19,9 +19,9 @@ import '../widgets/banner_ad_widget.dart';
 import '../widgets/country_picker_button.dart';
 import '../widgets/language_picker_button.dart';
 import '../widgets/mini_player.dart';
-import 'song_history_screen.dart';
 import '../widgets/sleep_timer_button.dart';
 import 'search_screen.dart';
+import 'song_history_screen.dart';
 
 final _selectedTabProvider = StateProvider<int>((ref) => 0);
 
@@ -58,7 +58,13 @@ class HomeScreen extends ConsumerWidget {
                 .read(driveModeManualOverrideProvider.notifier)
                 .state = true,
           ),
-          const _AppBarIconWrapper(child: CountryPickerButton()),
+          _AppBarIconButton(
+            icon: Icons.history,
+            tooltip: l10n.songHistoryLabel,
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(builder: (_) => const SongHistoryScreen()),
+            ),
+          ),
           const _OverflowMenuButton(),
           const SizedBox(width: 8),
         ],
@@ -143,14 +149,14 @@ enum _OverflowAction {
   alarm,
   sleepTimer,
   language,
-  songHistory,
+  countryPicker,
   wifiOnly,
   contact,
 }
 
-/// Alarm + Sleep Timer + Language + Wi-Fi Only + Contact share one overflow
-/// menu — five-plus separate circular AppBar icons left no room for the
-/// logo to breathe.
+/// Alarm + Sleep Timer + Language + Dünya Turu + Wi-Fi Only + Contact
+/// share one overflow menu — six-plus separate circular AppBar icons left
+/// no room for the logo to breathe.
 class _OverflowMenuButton extends ConsumerWidget {
   const _OverflowMenuButton();
 
@@ -170,12 +176,8 @@ class _OverflowMenuButton extends ConsumerWidget {
               openSleepTimerSheet(context, ref);
             case _OverflowAction.language:
               openLanguageSheet(context, ref);
-            case _OverflowAction.songHistory:
-              Navigator.of(context).push(
-                MaterialPageRoute<void>(
-                  builder: (_) => const SongHistoryScreen(),
-                ),
-              );
+            case _OverflowAction.countryPicker:
+              openCountrySheet(context, ref);
             case _OverflowAction.wifiOnly:
               ref.read(wifiOnlyProvider.notifier).toggle();
             case _OverflowAction.contact:
@@ -207,11 +209,11 @@ class _OverflowMenuButton extends ConsumerWidget {
               contentPadding: EdgeInsets.zero,
             ),
           ),
-          PopupMenuItem(
-            value: _OverflowAction.songHistory,
+          const PopupMenuItem(
+            value: _OverflowAction.countryPicker,
             child: ListTile(
-              leading: const Icon(Icons.history),
-              title: Text(l10n.songHistoryLabel),
+              leading: Icon(Icons.public),
+              title: Text('Dünya Turu'),
               contentPadding: EdgeInsets.zero,
             ),
           ),
