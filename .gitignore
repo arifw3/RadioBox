@@ -37,3 +37,4 @@ images/*.webp
 # Local test artifacts from device runs.
 run_debug*.log
 screenshot*.png
+images/design/
