@@ -9,10 +9,10 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
-import 'package:crypto/crypto.dart';
 import 'package:dialwave_core/dialwave_core.dart';
 import 'package:http/http.dart' as http;
 import 'package:pool/pool.dart';
+import 'package:radio_sync/radio_sync_logic.dart';
 
 /// Countries whose stations we sync. Extend freely for "Dünya Turu" — no
 /// other code changes needed (RadioStation already carries countryCode,
@@ -69,7 +69,7 @@ Future<void> main(List<String> args) async {
     // radio-browser.info is crowdsourced — the same station commonly gets
     // submitted more than once (different UUIDs, mirrored stream URLs).
     // Keep only the most-clicked entry per (name, country).
-    final deduplicated = _deduplicate(verified);
+    final deduplicated = deduplicate(verified);
     stderr.writeln(
       '${deduplicated.length}/${verified.length} after merging same-name duplicates',
     );
@@ -77,7 +77,7 @@ Future<void> main(List<String> args) async {
     deduplicated.sort((a, b) => b.clickCount.compareTo(a.clickCount));
 
     final catalog = RadioCatalog(
-      version: _hashStations(deduplicated),
+      version: hashStations(deduplicated),
       generatedAtUtc: DateTime.now().toUtc(),
       stations: deduplicated,
     );
@@ -121,14 +121,6 @@ Future<String> _pickApiMirror(http.Client client) async {
   } catch (_) {
     return 'https://all.api.radio-browser.info';
   }
-}
-
-/// radio-browser.info sometimes sends the literal string "null" instead of
-/// an empty/absent field for stations with no favicon — treat that the
-/// same as genuinely empty, or the app tries to load "null" as a URL.
-String _cleanFavicon(String? raw) {
-  final trimmed = (raw ?? '').trim();
-  return trimmed.toLowerCase() == 'null' ? '' : trimmed;
 }
 
 class _Candidate {
@@ -205,7 +197,7 @@ Future<List<_Candidate>> _fetchStationsForCountry(
       name: (map['name'] as String? ?? '').trim(),
       streamUrl: resolvedUrl.isNotEmpty ? resolvedUrl : url,
       countryCode: countryCode,
-      favicon: _cleanFavicon(map['favicon'] as String?),
+      favicon: cleanFavicon(map['favicon'] as String?),
       tags: (map['tags'] as String? ?? '')
           .split(',')
           .map((t) => t.trim())
@@ -243,7 +235,7 @@ Future<List<_Candidate>> _loadCandidatesFromFile(String fileName) async {
           name: (map['name'] as String? ?? '').trim(),
           streamUrl: resolvedUrl.isNotEmpty ? resolvedUrl : url,
           countryCode: countryCode,
-          favicon: _cleanFavicon(map['favicon'] as String?),
+          favicon: cleanFavicon(map['favicon'] as String?),
           tags: (map['tags'] as String? ?? '')
               .split(',')
               .map((t) => t.trim())
@@ -301,7 +293,7 @@ Future<bool> _isStreamReachable(http.Client client, String url) async {
 
     final statusOk = response.statusCode >= 200 && response.statusCode < 400;
     final contentType = response.headers['content-type']?.toLowerCase() ?? '';
-    return statusOk && _looksLikeAudio(contentType);
+    return statusOk && looksLikeAudio(contentType);
   } catch (_) {
     return false;
   } finally {
@@ -309,49 +301,4 @@ Future<bool> _isStreamReachable(http.Client client, String url) async {
     // is read — cancel now instead of buffering an endless live stream.
     unawaited(response?.stream.listen((_) {}).cancel());
   }
-}
-
-bool _looksLikeAudio(String contentType) {
-  if (contentType.isEmpty) {
-    // Some Icecast/Shoutcast mounts omit Content-Type entirely. We already
-    // filtered on hidebroken=true upstream, so treat "empty but 2xx/3xx"
-    // as acceptable rather than penalizing valid streams twice.
-    return true;
-  }
-  const audioMarkers = [
-    'audio/',
-    'application/ogg',
-    'application/octet-stream',
-    // HLS playlists (.m3u8) — a growing share of Turkish CDN-hosted streams.
-    'mpegurl',
-  ];
-  return audioMarkers.any(contentType.contains);
-}
-
-List<RadioStation> _deduplicate(List<RadioStation> stations) {
-  final byKey = <String, RadioStation>{};
-  for (final station in stations) {
-    final key = '${station.name.trim().toLowerCase()}|${station.countryCode}';
-    final current = byKey[key];
-    if (current == null || _isBetterDuplicate(station, current)) {
-      byKey[key] = station;
-    }
-  }
-  return byKey.values.toList();
-}
-
-/// Which of two same-name entries to keep: the more-clicked one is more
-/// likely to be the mirror people actually found and listened to, not a
-/// stale/abandoned duplicate submission.
-bool _isBetterDuplicate(RadioStation candidate, RadioStation current) {
-  if (candidate.clickCount != current.clickCount) {
-    return candidate.clickCount > current.clickCount;
-  }
-  return candidate.votes > current.votes;
-}
-
-String _hashStations(List<RadioStation> stations) {
-  final sortedIds = stations.map((s) => '${s.id}:${s.streamUrl}').toList()
-    ..sort();
-  return sha256.convert(utf8.encode(sortedIds.join('|'))).toString();
 }

@@ -85,7 +85,7 @@ final artistSpotlightProvider = FutureProvider<ArtistSpotlightData?>((
 
   final itunes = ref.watch(itunesSearchRepositoryProvider);
   final itunesTracks = await itunes.search(query);
-  final itunesMatch = _findConfidentMatch(
+  final itunesMatch = findConfidentMatch(
     itunesTracks,
     (t) => t.trackName,
     expectedSong,
@@ -112,7 +112,7 @@ final artistSpotlightProvider = FutureProvider<ArtistSpotlightData?>((
 
   final deezer = ref.watch(deezerSearchRepositoryProvider);
   final deezerTracks = await deezer.search(query);
-  final deezerMatch = _findConfidentMatch(
+  final deezerMatch = findConfidentMatch(
     deezerTracks,
     (t) => t.trackName,
     expectedSong,
@@ -158,7 +158,7 @@ final artistSpotlightProvider = FutureProvider<ArtistSpotlightData?>((
 /// Returns null rather than guessing with the first result — a confidently
 /// wrong song + cover art (a different track by the same artist) is worse
 /// than showing nothing.
-T? _findConfidentMatch<T>(
+T? findConfidentMatch<T>(
   List<T> tracks,
   String Function(T) trackNameOf,
   String? expectedSong,
@@ -171,12 +171,12 @@ T? _findConfidentMatch<T>(
     return tracks.first;
   }
 
-  final normalizedExpected = _normalizeTitle(expectedSong);
+  final normalizedExpected = normalizeTitle(expectedSong);
   for (final t in tracks) {
-    if (_normalizeTitle(trackNameOf(t)) == normalizedExpected) return t;
+    if (normalizeTitle(trackNameOf(t)) == normalizedExpected) return t;
   }
   for (final t in tracks) {
-    final normalizedTrack = _normalizeTitle(trackNameOf(t));
+    final normalizedTrack = normalizeTitle(trackNameOf(t));
     if (normalizedTrack.contains(normalizedExpected) ||
         normalizedExpected.contains(normalizedTrack)) {
       return t;
@@ -188,7 +188,7 @@ T? _findConfidentMatch<T>(
 /// Case-insensitive, ignores parenthetical/bracketed qualifiers like
 /// "(Remastered)" or "[Live]" that iTunes often appends but ICY metadata
 /// usually omits.
-String _normalizeTitle(String input) {
+String normalizeTitle(String input) {
   return input
       .replaceAll(RegExp(r'\(.*?\)|\[.*?\]'), '')
       .toLowerCase()
