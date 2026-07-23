@@ -644,7 +644,7 @@
     {
       "id": "961b7325-0601-11e8-ae97-52543be04c81",
       "name": ".977 80s",
-      "streamUrl": "http://26433.live.streamtheworld.com:3690/977_80_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/977_80_SC",
       "countryCode": "US",
       "favicon": "",
       "tags": [
@@ -670,7 +670,7 @@
     {
       "id": "fd059cc5-b538-41c1-ae76-b8778a84c3db",
       "name": "Radio 538",
-      "streamUrl": "http://27783.live.streamtheworld.com:80/RADIO538.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO538.mp3",
       "countryCode": "NL",
       "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/fd059cc5-b538-41c1-ae76-b8778a84c3db-favicon-upgrade.jpg",
       "tags": [],
@@ -1022,7 +1022,7 @@
     {
       "id": "901c92bd-a757-449a-b8ce-652b079fd38a",
       "name": "Rádio Mix 106.3 FM",
-      "streamUrl": "https://24283.live.streamtheworld.com:443/MIXFM_SAOPAULOAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/MIXFM_SAOPAULOAAC.aac",
       "countryCode": "BR",
       "favicon": "https://img.radios.com.br/radio/lg/radio13955_1720711597.png",
       "tags": [
@@ -1184,7 +1184,7 @@
     {
       "id": "b20de429-e1b3-4624-a1ac-12e2bf0cadb0",
       "name": "Sky Radio",
-      "streamUrl": "https://22603.live.streamtheworld.com:443/SKYRADIO.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/SKYRADIO.mp3",
       "countryCode": "NL",
       "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/b20de429-e1b3-4624-a1ac-12e2bf0cadb0-favicon-upgrade.jpg",
       "tags": [],
@@ -1469,7 +1469,7 @@
     {
       "id": "961d5c4e-0601-11e8-ae97-52543be04c81",
       "name": ".977 Hitz",
-      "streamUrl": "http://27243.live.streamtheworld.com:3690/977_HITS_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/977_HITS_SC",
       "countryCode": "US",
       "favicon": "",
       "tags": [
@@ -1531,7 +1531,7 @@
     {
       "id": "4285a122-9c78-417e-879e-5440c0482c56",
       "name": "Aspen 102.3",
-      "streamUrl": "https://26663.live.streamtheworld.com:443/ASPEN.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/ASPEN.mp3",
       "countryCode": "AR",
       "favicon": "https://fmaspen.com/wp-content/themes/aspen/images/logoaspen.png",
       "tags": [],
@@ -1569,7 +1569,7 @@
     {
       "id": "ac81df15-039c-43df-b944-7462426b9db5",
       "name": "Ukhozi FM S.A",
-      "streamUrl": "https://27873.live.streamtheworld.com:443/UKHOZIFMAAC_SC?dist=triton-widget&pname=tdwidgets",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/UKHOZIFMAAC_SC",
       "countryCode": "ZA",
       "favicon": "https://www.ukhozifm.co.za/wp-content/uploads/2023/07/cropped-ukhozi-tranparent-logo.png",
       "tags": [],
@@ -1642,7 +1642,7 @@
     {
       "id": "961d9b63-0601-11e8-ae97-52543be04c81",
       "name": ".977 Country",
-      "streamUrl": "http://26343.live.streamtheworld.com/977_COUNTRY_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/977_COUNTRY_SC",
       "countryCode": "US",
       "favicon": "",
       "tags": [
@@ -1715,7 +1715,7 @@
     {
       "id": "5dcbb03d-423a-4f97-8af5-b95981094c69",
       "name": "Rádio Saudade FM 99.7",
-      "streamUrl": "https://24443.live.streamtheworld.com:443/SAUDADE_FMAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/SAUDADE_FMAAC.aac",
       "countryCode": "BR",
       "favicon": "https://img.radios.com.br/radio/lg/radio8_1626274312.png",
       "tags": [
@@ -1962,7 +1962,7 @@
     {
       "id": "b81c57c3-eb05-47ac-a0ea-eb01a6960cc4",
       "name": "LOS 40 Principales España",
-      "streamUrl": "https://25633.live.streamtheworld.com:443/LOS40.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40.mp3",
       "countryCode": "ES",
       "favicon": "https://los40es00.epimg.net/iconos/v1.x/v1.0/touch-apple.png",
       "tags": [
@@ -2091,7 +2091,7 @@
     {
       "id": "d227990c-2385-4419-8159-1c73a33a58dd",
       "name": "Radio 10",
-      "streamUrl": "http://29103.live.streamtheworld.com:80/RADIO10.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO10.mp3",
       "countryCode": "NL",
       "favicon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScXQ3C4MdB2iKNRXVmQSy-fl3MBqAi-SX2JU3p-ZeLSiLCVbDw&s",
       "tags": [
@@ -2375,7 +2375,7 @@
     {
       "id": "961dbb40-0601-11e8-ae97-52543be04c81",
       "name": ".977 The Mix",
-      "streamUrl": "http://15113.live.streamtheworld.com/977_MIX_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/977_MIX_SC",
       "countryCode": "US",
       "favicon": "",
       "tags": [
@@ -2392,7 +2392,7 @@
     {
       "id": "447a1a5f-aee6-4b21-b85f-10ceb1896ad3",
       "name": "Alpha FM 101.7 MHz (São Paulo - SP)",
-      "streamUrl": "https://27573.live.streamtheworld.com:443/RADIO_ALPHAFM_ADP.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_ALPHAFM_ADP.aac",
       "countryCode": "BR",
       "favicon": "https://cdn-profiles.tunein.com/s8129/images/logod.jpg",
       "tags": [
@@ -2434,7 +2434,7 @@
     {
       "id": "604bb4af-ccf6-47bd-819e-7d1accd15e05",
       "name": "Barangay LS 97.1 Manila",
-      "streamUrl": "http://28093.live.streamtheworld.com:3690/MORFM_S01AAC_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/MORFM_S01AAC_SC",
       "countryCode": "PH",
       "favicon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVyc_tSPPOg-OsGjJUOSlAcdaEcRFFL3_nKQ&s",
       "tags": [
@@ -2536,7 +2536,7 @@
     {
       "id": "1680e92f-c3b2-451c-9d76-f1a9708daecb",
       "name": "Radio Sonder Grense",
-      "streamUrl": "http://25583.live.streamtheworld.com/RSGAAC.aac?dist=triton-widget&tdsdk=js-2.9&swm=false&pname=tdwidgets&pversion=2.9&banners=none&burst-time=15&sbmid=9395327b-94a6-4c64-fe05-7f9179443574",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RSGAAC.aac",
       "countryCode": "ZA",
       "favicon": "https://static.wikia.nocookie.net/logopedia/images/8/8d/Radio_Sonder_Grense_logo.png/revision/latest?cb=20171102212609",
       "tags": [],
@@ -3039,7 +3039,7 @@
     {
       "id": "962e7e22-0601-11e8-ae97-52543be04c81",
       "name": "SLAM!",
-      "streamUrl": "http://25253.live.streamtheworld.com/SLAM_MP3_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/SLAM_MP3_SC",
       "countryCode": "NL",
       "favicon": "https://www.slam.nl/favicon.ico",
       "tags": [
@@ -3240,7 +3240,7 @@
     {
       "id": "961f5a7a-0601-11e8-ae97-52543be04c81",
       "name": "Blu Radio, señal nacional (HJCK, 89.9 MHz FM, Bogotá / HJN42, 96.3 MHz, San Martín, Meta / HJH87, 103.1 MHz, Paipa, Boyacá / HJOM, 1090 KHz, Cartagena de Indias / HJM47 103.1 MHz, Algeciras, Huila / HJQ43, 94.1 MHz, Bugalagrande, Valle del Cauca)",
-      "streamUrl": "http://26583.live.streamtheworld.com:3690/BLURADIO_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/BLURADIO_SC",
       "countryCode": "CO",
       "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/961f5a7a-0601-11e8-ae97-52543be04c81-favicon-upgrade.png",
       "tags": [
@@ -3331,7 +3331,7 @@
     {
       "id": "b8601593-152a-429d-9cb2-5065cf7c0185",
       "name": "ONDA CERO (España)",
-      "streamUrl": "https://29033.live.streamtheworld.com:443/OCAAC/HLS/playlist.m3u8?dist=Otros-Agregadores&ttag=program%3Anoticias-fin-de-semana",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/OCAAC",
       "countryCode": "ES",
       "favicon": "",
       "tags": [
@@ -3420,7 +3420,7 @@
     {
       "id": "38a33fc0-be05-4c98-8c6a-ba3869575bc1",
       "name": "RAC1",
-      "streamUrl": "https://25483.live.streamtheworld.com:443/RAC_1.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RAC_1.mp3",
       "countryCode": "ES",
       "favicon": "",
       "tags": [
@@ -3438,7 +3438,7 @@
     {
       "id": "8643cfcb-a7bb-4c46-8391-fffe266bce16",
       "name": "RTE1",
-      "streamUrl": "http://28563.live.streamtheworld.com:80/RTE_1_INT.mp3?tdsdk=rte",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RTE_1_INT.mp3",
       "countryCode": "IE",
       "favicon": "http://i.imgur.com/KDHt1eb.jpg",
       "tags": [
@@ -3793,7 +3793,7 @@
     {
       "id": "49970d3a-0a50-4655-8dfb-9065b279d662",
       "name": "Lesedi",
-      "streamUrl": "https://25653.live.streamtheworld.com:443/LESEDIAAC_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/LESEDIAAC_SC",
       "countryCode": "ZA",
       "favicon": "http://www.lesedifm.co.za/sabc/wcm/connect/1c966b4c-f8cb-4b55-a426-9b607a8fa32e/index.jpg?MOD=AJPERES&CACHEID=1c966b4c-f8cb-4b55-a426-9b607a8fa32e&cache=none",
       "tags": [],
@@ -3928,7 +3928,7 @@
     {
       "id": "de39fc19-0636-4d05-acbb-2aba2c0d1f7a",
       "name": "LOS40 Classic",
-      "streamUrl": "https://28563.live.streamtheworld.com:443/LOS40_CLASSIC.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_CLASSIC.mp3",
       "countryCode": "ES",
       "favicon": "https://los40es00.epimg.net/estaticos/recursosgraficos/v1/img/app/los40_192.png",
       "tags": [
@@ -3973,7 +3973,7 @@
     {
       "id": "a90bf48e-c689-4394-a22b-a4980689cedf",
       "name": "MOR 101.9 FM",
-      "streamUrl": "https://22253.live.streamtheworld.com:443/MORFM_S01.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/MORFM_S01.mp3",
       "countryCode": "PH",
       "favicon": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/MOR_101.9_Logo_2018.svg/440px-MOR_101.9_Logo_2018.svg.png",
       "tags": [],
@@ -4022,7 +4022,7 @@
     {
       "id": "5599a9c8-38bb-4e25-bbce-cfcb346151a9",
       "name": "Klasik FM 101,1 MHz",
-      "streamUrl": "http://22283.live.streamtheworld.com:80/RADIO_KLASIK.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_KLASIK.mp3",
       "countryCode": "MY",
       "favicon": "",
       "tags": [],
@@ -4157,7 +4157,7 @@
     {
       "id": "706def0c-7017-4601-8305-db1cdb2e9420",
       "name": "Super Fm",
-      "streamUrl": "https://27753.live.streamtheworld.com:443/SUPER_FM_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/SUPER_FM_SC",
       "countryCode": "TR",
       "favicon": "https://turkradyodinle.com/stations/logos/super-fm.png",
       "tags": [
@@ -4203,7 +4203,7 @@
     {
       "id": "4520c04e-0514-43f9-9fe6-89d2f6d746f5",
       "name": "Blue 100.7 FM",
-      "streamUrl": "https://26593.live.streamtheworld.com:443/BLUE_FM_100_7AAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/BLUE_FM_100_7AAC.aac",
       "countryCode": "AR",
       "favicon": "https://bluefm.com.ar/wp-content/themes/bluefmtheme/img/logo_blue.png",
       "tags": [
@@ -4310,7 +4310,7 @@
     {
       "id": "f006d4dc-9771-4109-bf35-eb09291320da",
       "name": "Mitre AM 790. AAC Alta. Ciudad de Buenos Aires",
-      "streamUrl": "https://26683.live.streamtheworld.com:443/AM790_56AAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/AM790_56AAC.aac",
       "countryCode": "AR",
       "favicon": "https://cloudfront-arc.cienradios.com/radiomitre/favicons/apple-icon-120x120.png",
       "tags": [],
@@ -4494,7 +4494,7 @@
     {
       "id": "856155ee-f434-4a45-9225-391c0e618b8b",
       "name": "RFM",
-      "streamUrl": "https://23603.live.streamtheworld.com/RFMAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RFMAAC.aac",
       "countryCode": "PT",
       "favicon": "https://rfmsite-images.azureedge.net/icons/touch-icon-iphone-retina.png",
       "tags": [
@@ -4564,7 +4564,7 @@
     {
       "id": "6ee52ee9-95c0-4e19-95fd-d9a9c345b7b3",
       "name": "988 FM",
-      "streamUrl": "https://28103.live.streamtheworld.com/988_FMAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/988_FMAAC.aac",
       "countryCode": "MY",
       "favicon": "https://www.988.com.my/wp-content/themes/988_web/assets/988-logo.png",
       "tags": [],
@@ -4739,7 +4739,7 @@
     {
       "id": "9257ed3b-c422-43cf-a8dd-8165861b3187",
       "name": "Radio Disney 94.3 - Buenos Aires, Argentina",
-      "streamUrl": "https://27373.live.streamtheworld.com:443/DISNEY_ARG_BA_ADP.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_ARG_BA_ADP.aac",
       "countryCode": "AR",
       "favicon": "https://cdn-profiles.tunein.com/s13659/images/logog.png",
       "tags": [
@@ -4894,7 +4894,7 @@
     {
       "id": "0012c08a-31e7-48c6-87a9-7f64736e0a38",
       "name": "Metro FM",
-      "streamUrl": "http://25693.live.streamtheworld.com:3690/METRO_FMAAC_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/METRO_FMAAC_SC",
       "countryCode": "TR",
       "favicon": "https://turkradyodinle.com/stations/logos/metro-fm.png",
       "tags": [],
@@ -4906,7 +4906,7 @@
     {
       "id": "84c6f3cc-3c66-415d-aff5-050b5f330adc",
       "name": "Cadena Dial",
-      "streamUrl": "http://22653.live.streamtheworld.com:80/CADENADIAL.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/CADENADIAL.mp3",
       "countryCode": "ES",
       "favicon": "https://www.cadenadial.com/wp-content/uploads/2024/03/cropped-512x512_favicon_dial-180x180.png",
       "tags": [
@@ -4920,7 +4920,7 @@
     {
       "id": "0e65ad7a-b179-4b5d-994b-d351349ee955",
       "name": "Radio Veronica",
-      "streamUrl": "http://28983.live.streamtheworld.com:80/VERONICAAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/VERONICAAAC.aac",
       "countryCode": "NL",
       "favicon": "",
       "tags": [],
@@ -4932,7 +4932,7 @@
     {
       "id": "cd6d66e4-adc0-4284-9392-f1a1f87091d9",
       "name": "KFM 94.5",
-      "streamUrl": "https://27783.live.streamtheworld.com:443/KFM.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/KFM.mp3",
       "countryCode": "ZA",
       "favicon": "",
       "tags": [
@@ -5501,7 +5501,7 @@
     {
       "id": "960969eb-0601-11e8-ae97-52543be04c81",
       "name": "Virgin Radio Türkiye",
-      "streamUrl": "http://25653.live.streamtheworld.com/VIRGIN_RADIO_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/VIRGIN_RADIO_SC",
       "countryCode": "TR",
       "favicon": "https://i.karnavalcdn.com/media/site_media/icons/android-icon-192x192.png",
       "tags": [
@@ -5527,7 +5527,7 @@
     {
       "id": "0c0da3bd-d26a-42af-9cf0-d393ffab9fe0",
       "name": "راديو مكان  - Kan Israel Makan",
-      "streamUrl": "https://28993.live.streamtheworld.com:443/RADIO_MAKAN.mp3?dist=bynetredirect",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_MAKAN.mp3",
       "countryCode": "IL",
       "favicon": "",
       "tags": [
@@ -5635,7 +5635,7 @@
     {
       "id": "5440e89d-708d-4336-9b42-fa274ed093b1",
       "name": "Radio La Red AM 910. Ciudad de Buenos Aires",
-      "streamUrl": "https://26563.live.streamtheworld.com:443/LA_RED_AM910AAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/LA_RED_AM910AAC.aac",
       "countryCode": "AR",
       "favicon": "",
       "tags": [],
@@ -6212,7 +6212,7 @@
     {
       "id": "a2c199e5-cff2-11e8-a54a-52543be04c81",
       "name": "TOPradio Belgium",
-      "streamUrl": "https://29053.live.streamtheworld.com:443/TOP_RADIO.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/TOP_RADIO.mp3",
       "countryCode": "BE",
       "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/a2c199e5-cff2-11e8-a54a-52543be04c81-favicon-upgrade.png",
       "tags": [],
@@ -6309,7 +6309,7 @@
     {
       "id": "5766fc5b-ce3e-4f46-a5b3-c274ea46d8e6",
       "name": "ALFA 91.3 (Ciudad de México) - 91.3 FM - XHFAJ-FM - Grupo Radio Centro - Ciudad de México",
-      "streamUrl": "https://15723.live.streamtheworld.com:443/XHFAJ_FMAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/XHFAJ_FMAAC.aac",
       "countryCode": "MX",
       "favicon": "https://i.iheart.com/v3/re/new_assets/5ef0ca067ec97a064f3322c9",
       "tags": [
@@ -6356,7 +6356,7 @@
     {
       "id": "451491bd-624e-41e8-ab4c-71816f10611e",
       "name": "Nostalgie Vlaanderen",
-      "streamUrl": "https://27913.live.streamtheworld.com:443/NOSTALGIEWHATAFEELING.mp3?dist=radiobrowser",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/NOSTALGIEWHATAFEELING.mp3",
       "countryCode": "BE",
       "favicon": "https://nl.nostalgie.be/icons/icon-144x144.png?v=f2b073e495322d52deec159c8bdcaf20",
       "tags": [
@@ -6681,7 +6681,7 @@
     {
       "id": "177cc601-a536-41cc-bd67-7d10b1a5dee1",
       "name": "Radio Felicidad - 1180 AM - XEFR-AM - Grupo ACIR - Ciudad de México",
-      "streamUrl": "https://18063.live.streamtheworld.com:443/XEFRAMAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/XEFRAMAAC.aac",
       "countryCode": "MX",
       "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/177cc601-a536-41cc-bd67-7d10b1a5dee1-favicon-upgrade.jpg",
       "tags": [
@@ -6832,7 +6832,7 @@
     {
       "id": "4fd2f9ba-11c0-4022-a274-220f81283b98",
       "name": "538 Non-Stop",
-      "streamUrl": "http://22553.live.streamtheworld.com:80/TLPSTR09.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR09.mp3",
       "countryCode": "NL",
       "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/4fd2f9ba-11c0-4022-a274-220f81283b98-favicon-upgrade.png",
       "tags": [
@@ -7001,7 +7001,7 @@
     {
       "id": "3bdf2126-b792-46f6-b0bd-9c991411e373",
       "name": "ThobelaFM",
-      "streamUrl": "https://25633.live.streamtheworld.com:443/THOBELAAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/THOBELAAAC.aac",
       "countryCode": "ZA",
       "favicon": "http://www.thobelafm.co.za/sabc/contenthandler/!ut/p/digest!os-IGfRHDAke8Lr8sjz6Wg/war/CustomTheme8Static/themes/Portal8.0/pivot/thobelafm/images/website-header-main-logo.png",
       "tags": [],
@@ -7274,7 +7274,7 @@
     {
       "id": "9e31c4e7-03b6-4a80-a4e2-5977b023d32c",
       "name": "Tomorrowland One World Radio",
-      "streamUrl": "https://28513.live.streamtheworld.com:443/OWR_INTERNATIONAL_ADP.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/OWR_INTERNATIONAL_ADP.aac",
       "countryCode": "BE",
       "favicon": "https://www.tomorrowland.com/home/apple-touch-icon.png",
       "tags": [],
@@ -7356,7 +7356,7 @@
     {
       "id": "a949b7f0-0b79-11e9-a80b-52543be04c81",
       "name": "Warna 942 Radio",
-      "streamUrl": "http://22903.live.streamtheworld.com:80/WARNA942FMAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/WARNA942FMAAC.aac",
       "countryCode": "SG",
       "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/a949b7f0-0b79-11e9-a80b-52543be04c81-favicon-upgrade.jpg",
       "tags": [],
@@ -7623,7 +7623,7 @@
     {
       "id": "1653b791-7005-4e95-be20-4e7b626a4a20",
       "name": "Sky News Australia Radio",
-      "streamUrl": "https://22243.live.streamtheworld.com:443/NOVA_SKYNEWSAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/NOVA_SKYNEWSAAC.aac",
       "countryCode": "AU",
       "favicon": "https://raw.githubusercontent.com/AusIPTV/IPTVLogos/master/SKY_News_Australia_logo.png",
       "tags": [
@@ -8348,7 +8348,7 @@
     {
       "id": "39874081-8a87-45ca-a67f-52bae3372ae8",
       "name": "Radio 10 60's & 70's Hits",
-      "streamUrl": "http://22333.live.streamtheworld.com:3690/TLPSTR18_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR18_SC",
       "countryCode": "NL",
       "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/39874081-8a87-45ca-a67f-52bae3372ae8-favicon-upgrade.png",
       "tags": [],
@@ -8572,7 +8572,7 @@
     {
       "id": "cd4f771b-04b6-41ed-ba97-74d23d9f6e59",
       "name": "Olímpica Stereo (Medellín) 104.9-FM",
-      "streamUrl": "https://18003.live.streamtheworld.com:443/OLP_MEDELLINAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/OLP_MEDELLINAAC.aac",
       "countryCode": "CO",
       "favicon": "https://olimpicastereo.com.co/wp-content/uploads/2019/12/Logo_olimpica_stereologo.png",
       "tags": [
@@ -8645,7 +8645,7 @@
     {
       "id": "47d1e0f9-ce15-4557-a73c-a703b3762d06",
       "name": "La Popu",
-      "streamUrl": "https://24443.live.streamtheworld.com:443/LAPOPU.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/LAPOPU.mp3",
       "countryCode": "AR",
       "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/47d1e0f9-ce15-4557-a73c-a703b3762d06-favicon-upgrade.jpg",
       "tags": [
@@ -8728,7 +8728,7 @@
     {
       "id": "0c5a3d4f-ecd6-430e-bcf4-f51ff1b13d1c",
       "name": "Talk Radio 702",
-      "streamUrl": "https://25633.live.streamtheworld.com:443/FM702_192AAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/FM702_192AAC.aac",
       "countryCode": "ZA",
       "favicon": "https://www.primediaplus.com/images/logos/logo-702.png",
       "tags": [],
@@ -8754,7 +8754,7 @@
     {
       "id": "11ee3ad5-ead9-47de-ab04-7e0d06789a15",
       "name": "Amor Ciudad de México - 95.3 FM - XHSH-FM - Grupo ACIR - Ciudad de México",
-      "streamUrl": "https://14613.live.streamtheworld.com:443/XHSHFMAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/XHSHFMAAC.aac",
       "countryCode": "MX",
       "favicon": "https://i.iheart.com/v3/re/new_assets/5bce06169803f27603c24988?ops=fit(240%2C240)",
       "tags": [
@@ -9024,7 +9024,7 @@
     {
       "id": "bcb3b03a-f0ec-4ceb-b22f-922138858800",
       "name": "Rock And Pop FM 95.9 (Rock & Pop) Ciudad de Buenos Aires",
-      "streamUrl": "https://24403.live.streamtheworld.com:443/ROCKANDPOPAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/ROCKANDPOPAAC.aac",
       "countryCode": "AR",
       "favicon": "https://fmrockandpop.com/pwa/ios_192x192.png",
       "tags": [],
@@ -9232,7 +9232,7 @@
     {
       "id": "94ab6f5f-b684-4ca1-ae5c-c5c868ed20c6",
       "name": "3AW - Melbourne - 693 AM (MP3)",
-      "streamUrl": "http://28903.live.streamtheworld.com:80/3AW.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/3AW.mp3",
       "countryCode": "AU",
       "favicon": "https://www.3aw.com.au/wp-content/themes/3aw/assets/img/favicon/apple-touch-icon.png",
       "tags": [
@@ -9325,7 +9325,7 @@
     {
       "id": "777d14b2-f344-11e9-a96c-52543be04c81",
       "name": "Los 40 Dance",
-      "streamUrl": "http://25603.live.streamtheworld.com:80/LOS40_DANCE_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_DANCE_SC",
       "countryCode": "ES",
       "favicon": "https://recursosweb.prisaradio.com/fotos/original/010002753887.png",
       "tags": [
@@ -9495,7 +9495,7 @@
     {
       "id": "da5d71d1-d8cc-4301-9f86-b6abaa1201bd",
       "name": "BNR Nieuwsradio",
-      "streamUrl": "https://25603.live.streamtheworld.com:443/BNR_NIEUWSRADIO.mp3?dist=other",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/BNR_NIEUWSRADIO.mp3",
       "countryCode": "NL",
       "favicon": "https://static.bnr.nl/assets/bnr-next/logo.png",
       "tags": [
@@ -9650,7 +9650,7 @@
     {
       "id": "d12439b1-0bfe-4caa-9dec-6f19af01db3a",
       "name": "Kiss FM São Paulo",
-      "streamUrl": "https://27423.live.streamtheworld.com:443/RADIO_KISSFMAAC.aac?1655609055880",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_KISSFMAAC.aac",
       "countryCode": "BR",
       "favicon": "",
       "tags": [],
@@ -9782,7 +9782,7 @@
     {
       "id": "c2b724db-9ddb-41e2-b190-324014c55467",
       "name": "Kan Bet",
-      "streamUrl": "https://28563.live.streamtheworld.com/KAN_BET.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/KAN_BET.mp3",
       "countryCode": "IL",
       "favicon": "https://www.kan.org.il/media/wgtfcyp2/%D7%91-%D7%9C%D7%95%D7%92%D7%95-%D7%9C%D7%91%D7%9F-2.svg",
       "tags": [
@@ -10000,7 +10000,7 @@
     {
       "id": "eac6a047-c06e-42bf-a504-09ace8f810a3",
       "name": "Rádio BLANÍK",
-      "streamUrl": "https://29053.live.streamtheworld.com:443/RADIO_BLANIK.aac?gdpr=0",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_BLANIK.aac",
       "countryCode": "CZ",
       "favicon": "https://radioblanik.cz/design/favicons/apple-icon-180x180.png",
       "tags": [],
@@ -10106,7 +10106,7 @@
     {
       "id": "3998f9ae-ed80-4319-8109-0acb29efb256",
       "name": "BH FM 102,1 MHz ZYC690 (Belo Horizonte - MG)",
-      "streamUrl": "https://26653.live.streamtheworld.com:443/BHFMAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/BHFMAAC.aac",
       "countryCode": "BR",
       "favicon": "https://i.postimg.cc/ncT9hqH6/04008003142.png",
       "tags": [
@@ -10297,7 +10297,7 @@
     {
       "id": "3c6c111c-6bbc-44ae-8ad8-46b502b3002a",
       "name": "Radio Rivadavia AM 630. Ciudad de Buenos Aires",
-      "streamUrl": "https://27403.live.streamtheworld.com:443/RIVADAVIAAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RIVADAVIAAAC.aac",
       "countryCode": "AR",
       "favicon": "https://rivadavia.com.ar/apple-touch-icon.png",
       "tags": [],
@@ -10462,7 +10462,7 @@
     {
       "id": "34760786-80a0-4057-99a1-85f2d8fd2338",
       "name": "RFM Oceano Pacifico",
-      "streamUrl": "https://23543.live.streamtheworld.com/OCEANPACIFICAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/OCEANPACIFICAAC.aac",
       "countryCode": "PT",
       "favicon": "https://rfmsite2023-images.azureedge.net/icons/favicon.ico",
       "tags": [
@@ -10860,7 +10860,7 @@
     {
       "id": "36492a90-efa9-11e8-a471-52543be04c81",
       "name": "Vibra Bogotá 104.9 FM",
-      "streamUrl": "http://27693.live.streamtheworld.com:3690/VIBRAAAC_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/VIBRAAAC_SC",
       "countryCode": "CO",
       "favicon": "",
       "tags": [
@@ -11004,7 +11004,7 @@
     {
       "id": "6e36299b-6a91-4022-9db4-f72a2c8e9fef",
       "name": "RAC1 +1",
-      "streamUrl": "https://25253.live.streamtheworld.com:443/RAC_MES_1.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RAC_MES_1.mp3",
       "countryCode": "ES",
       "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/6e36299b-6a91-4022-9db4-f72a2c8e9fef-favicon-upgrade.png",
       "tags": [
@@ -11503,7 +11503,7 @@
     {
       "id": "8cc2da8b-ae85-4e37-9027-9ad765a1ea7a",
       "name": "Los 40 Urban",
-      "streamUrl": "https://21223.live.streamtheworld.com:443/LOS40_URBAN.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_URBAN.mp3",
       "countryCode": "ES",
       "favicon": "https://los40es00.epimg.net/iconos/v1.x/v1.0/promos/promo_og_los40.png",
       "tags": [
@@ -11876,7 +11876,7 @@
     {
       "id": "96224885-0601-11e8-ae97-52543be04c81",
       "name": "WBBR 1130 \"Bloomberg Radio\" New York, NY",
-      "streamUrl": "http://15313.live.streamtheworld.com:3690/WBBRAMAAC_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/WBBRAMAAC_SC",
       "countryCode": "US",
       "favicon": "https://www.bloombergradio.com/content/plugins/bloomberg-favicon/dist/img/amber-120x120.png",
       "tags": [
@@ -11934,7 +11934,7 @@
     {
       "id": "61c62eb4-0fb6-441b-bc1f-c53c03e0d392",
       "name": "WAI FM IBAN",
-      "streamUrl": "http://22243.live.streamtheworld.com:80/WAI_FM_IBAN.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/WAI_FM_IBAN.mp3",
       "countryCode": "MY",
       "favicon": "https://play-lh.googleusercontent.com/uxM8yNfSSSXXmrI2Jft9Md3V-SrlyBl8XYk1YrnEXykn71l3AK8g8_kjQsFk1lLi-hM=w600-h300-pc0xffffff-pd",
       "tags": [
@@ -12313,7 +12313,7 @@
     {
       "id": "c1c834eb-e84e-43fc-8841-6749e19b4edc",
       "name": "Radio 10 non-stop",
-      "streamUrl": "https://25253.live.streamtheworld.com:443/TLPSTR15.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR15.mp3",
       "countryCode": "NL",
       "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/c1c834eb-e84e-43fc-8841-6749e19b4edc-favicon-upgrade.png",
       "tags": [
@@ -12785,7 +12785,7 @@
     {
       "id": "2fa6da4e-e494-4a5f-a29a-bf94bd77c864",
       "name": "The Hits",
-      "streamUrl": "https://23163.live.streamtheworld.com:443/NZME_71AAC/HLS/playlist.m3u8?aw_0_1st.playerid=iHeartRadioWebPlayer&aw_0_1st.skey=9774168307&clientType=web&companionAds=false&deviceName=web-desktop&dist=iheart&host=webapp.NZ&listenerId=&playedFrom=157&pname=live_profile&profileId=9774168307&stationid=6204&terminalId=162&territory=NZ",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/NZME_71AAC",
       "countryCode": "NZ",
       "favicon": "https://i.postimg.cc/gkQ2VPks/the-hits-c99846c6.png",
       "tags": [
@@ -12966,7 +12966,7 @@
     {
       "id": "31710261-0b76-11e9-a80b-52543be04c81",
       "name": "YES 933 Radio",
-      "streamUrl": "http://28333.live.streamtheworld.com:80/YES933AAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/YES933AAC.aac",
       "countryCode": "SG",
       "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/31710261-0b76-11e9-a80b-52543be04c81-favicon-upgrade.jpg",
       "tags": [],
@@ -13150,7 +13150,7 @@
     {
       "id": "12a970e2-443a-4640-8775-5c6b0f238c4a",
       "name": "SABROSITA Ciudad de México - 590 AM - XEPH-AM - NRM Comunicaciones - Ciudad de México",
-      "streamUrl": "https://19263.live.streamtheworld.com:443/XEPHAMAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/XEPHAMAAC.aac",
       "countryCode": "MX",
       "favicon": "https://yt3.ggpht.com/ytc/AAUvwnjGCqHNgRIXL-qgnm4HKlYyXS_1Yy-ctciPKLMI=s900-c-k-c0x00ffffff-no-rj",
       "tags": [
@@ -14044,7 +14044,7 @@
     {
       "id": "9610c519-0601-11e8-ae97-52543be04c81",
       "name": ".977 Smooth Jazz",
-      "streamUrl": "http://14543.live.streamtheworld.com/977_SMOOJAZZ_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/977_SMOOJAZZ_SC",
       "countryCode": "US",
       "favicon": "",
       "tags": [
@@ -14476,7 +14476,7 @@
     {
       "id": "964251cc-0601-11e8-ae97-52543be04c81",
       "name": "WWWQ 99.7 \"Q100\" Atlanta, GA",
-      "streamUrl": "http://14223.live.streamtheworld.com/WWWQFM_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/WWWQFM_SC",
       "countryCode": "US",
       "favicon": "",
       "tags": [
@@ -16752,7 +16752,7 @@
     {
       "id": "c7dadc87-3c43-46f5-aa24-91e0fa9a7643",
       "name": "Joy Fm",
-      "streamUrl": "http://22193.live.streamtheworld.com:3690/JOY_FMAAC_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/JOY_FMAAC_SC",
       "countryCode": "TR",
       "favicon": "https://turkradyodinle.com/stations/logos/joy-fm.png",
       "tags": [
@@ -16913,7 +16913,7 @@
     {
       "id": "960d2014-0601-11e8-ae97-52543be04c81",
       "name": ".977 Comedy",
-      "streamUrl": "http://26433.live.streamtheworld.com/977_COMEDY_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/977_COMEDY_SC",
       "countryCode": "US",
       "favicon": "",
       "tags": [
@@ -17924,7 +17924,7 @@
     {
       "id": "961e6ff1-0601-11e8-ae97-52543be04c81",
       "name": ".977 Oldies",
-      "streamUrl": "http://27273.live.streamtheworld.com/977_OLDIES_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/977_OLDIES_SC",
       "countryCode": "US",
       "favicon": "",
       "tags": [
@@ -19414,7 +19414,7 @@
     {
       "id": "221432fb-bc5e-4f3f-815a-4f6f13f156eb",
       "name": "Bloomberg AM New York, NY",
-      "streamUrl": "http://20593.live.streamtheworld.com:3690/WBBRNYAAC_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/WBBRNYAAC_SC",
       "countryCode": "US",
       "favicon": "https://www.bloombergradio.com/content/plugins/bloomberg-favicon/dist/img/amber-120x120.png",
       "tags": [
@@ -19917,7 +19917,7 @@
     {
       "id": "961ec4b7-0601-11e8-ae97-52543be04c81",
       "name": ".977 Jamz",
-      "streamUrl": "http://15113.live.streamtheworld.com/977_JAMZ_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/977_JAMZ_SC",
       "countryCode": "US",
       "favicon": "",
       "tags": [
@@ -21100,7 +21100,7 @@
     {
       "id": "961e70ca-0601-11e8-ae97-52543be04c81",
       "name": "WRVO-3 BBC World Service Stream - Oswego, NY",
-      "streamUrl": "http://26423.live.streamtheworld.com:3690/WRVOHD3_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/WRVOHD3_SC",
       "countryCode": "US",
       "favicon": "http://wrvo.org/apple-touch-icon.png",
       "tags": [
@@ -22205,7 +22205,7 @@
     {
       "id": "0dc6e3f7-b313-4bc4-a06a-94f05c51dff5",
       "name": "pop 90 turkey",
-      "streamUrl": "http://23623.live.streamtheworld.com:3690/POP90AAC_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/POP90AAC_SC",
       "countryCode": "TR",
       "favicon": "",
       "tags": [],
@@ -23681,7 +23681,7 @@
     {
       "id": "ccfd28c8-9f0a-11e9-a787-52543be04c81",
       "name": "Borusan Klasik",
-      "streamUrl": "http://27783.live.streamtheworld.com/BORUSAN_KLASIKAAC_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/BORUSAN_KLASIKAAC_SC",
       "countryCode": "TR",
       "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/ccfd28c8-9f0a-11e9-a787-52543be04c81-favicon-upgrade.png",
       "tags": [
@@ -27041,7 +27041,7 @@
     {
       "id": "962263bc-0601-11e8-ae97-52543be04c81",
       "name": "WCSP 90.1 \"C-SPAN Radio\" Washington, DC",
-      "streamUrl": "http://26283.live.streamtheworld.com:3690/CSPANRADIO_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/CSPANRADIO_SC",
       "countryCode": "US",
       "favicon": "http://freevector.co/wp-content/uploads/2013/03/c-span-radio.png",
       "tags": [
@@ -28725,7 +28725,7 @@
     {
       "id": "70d83f8f-1842-4f18-896b-bc9c8d23467b",
       "name": "KXLX ESPN Spokane 700 AM",
-      "streamUrl": "https://14623.live.streamtheworld.com/KXLXAMAAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/KXLXAMAAC.aac",
       "countryCode": "US",
       "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/70d83f8f-1842-4f18-896b-bc9c8d23467b-favicon-upgrade.jpg",
       "tags": [
@@ -29729,7 +29729,7 @@
     {
       "id": "960761d5-0601-11e8-ae97-52543be04c81",
       "name": ".977 90s",
-      "streamUrl": "http://26433.live.streamtheworld.com:3690/977_90_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/977_90_SC",
       "countryCode": "US",
       "favicon": "",
       "tags": [
@@ -30051,7 +30051,7 @@
     {
       "id": "925c4993-2140-4a3e-9d56-ff644be0339c",
       "name": "joytürk fm",
-      "streamUrl": "https://27743.live.streamtheworld.com/JOY_TURK_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/JOY_TURK_SC",
       "countryCode": "TR",
       "favicon": "https://turkradyodinle.com/stations/logos/joyturk-fm.png",
       "tags": [],
@@ -30158,7 +30158,7 @@
     {
       "id": "2d122ba2-553e-45c5-8946-e41c60ace773",
       "name": "JoyTürk Rock",
-      "streamUrl": "http://21633.live.streamtheworld.com/JOYTURK_ROCK128AAC.aac?/;stream.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/JOYTURK_ROCK128AAC.aac",
       "countryCode": "TR",
       "favicon": "https://turkradyodinle.com/stations/logos/joy-turk-rock.png",
       "tags": [
@@ -32054,7 +32054,7 @@
     {
       "id": "7ee088e7-375f-4f1f-bd60-55a3606e9d3f",
       "name": "Mydonose Türk",
-      "streamUrl": "https://27913.live.streamtheworld.com/MYDONOSE_TURK128AAC.aac?/;stream.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/MYDONOSE_TURK128AAC.aac",
       "countryCode": "TR",
       "favicon": "https://turkradyodinle.com/stations/logos/mydonose-turk.png",
       "tags": [],
@@ -32348,7 +32348,7 @@
     {
       "id": "926a0629-3096-4755-a3b3-031e78bef5c1",
       "name": "Radio Mydonose",
-      "streamUrl": "https://29083.live.streamtheworld.com/RADIO_MYDONOSE128AAC.aac?/;stream.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_MYDONOSE128AAC.aac",
       "countryCode": "TR",
       "favicon": "https://turkradyodinle.com/stations/logos/radio-mydonose.png",
       "tags": [],
@@ -33446,7 +33446,7 @@
     {
       "id": "24a3740f-4a8e-46e5-8b39-c8b4a2730ded",
       "name": "retro turk",
-      "streamUrl": "http://27783.live.streamtheworld.com:3690/RETROTURKAAC_SC",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RETROTURKAAC_SC",
       "countryCode": "TR",
       "favicon": "https://turkradyodinle.com/stations/logos/retro-turk.png",
       "tags": [],
@@ -33790,7 +33790,7 @@
     {
       "id": "1a830025-a828-47ad-910c-441afca92ce7",
       "name": "Joy FM Istanbul",
-      "streamUrl": "http://21633.live.streamtheworld.com/JOY_FM128AAC.aac",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/JOY_FM128AAC.aac",
       "countryCode": "TR",
       "favicon": "",
       "tags": [
@@ -36300,7 +36300,7 @@
     {
       "id": "trd-gol-radyo",
       "name": "Göl Radyo",
-      "streamUrl": "https://28553.live.streamtheworld.com/SUPER_FM_ITUNES.mp3",
+      "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/SUPER_FM_ITUNES.mp3",
       "countryCode": "TR",
       "favicon": "https://turkradyodinle.com/stations/logos/gol-radyo.png",
       "tags": [
