@@ -78,7 +78,8 @@ class IcyMetadataProbe {
             // underlying stream subscription for us — no manual close.
             final text = latin1.decode(metaBuffer, allowInvalid: true);
             final match = RegExp("StreamTitle='([^']*)'").firstMatch(text);
-            return match?.group(1)?.trim();
+            final raw = match?.group(1)?.trim();
+            return raw == null ? null : _fixIcyEncoding(raw);
           }
         }
       }
@@ -89,6 +90,21 @@ class IcyMetadataProbe {
       if (!consumedStream) {
         unawaited(response?.stream.listen((_) {}).cancel());
       }
+    }
+  }
+
+  /// Same fix as DialWaveAudioHandler._fixIcyEncoding: the ICY spec calls
+  /// for ISO-8859-1, but plenty of stations' encoders actually send UTF-8
+  /// anyway. latin1.decode above is always lossless (every byte maps to
+  /// exactly one char), so round-tripping back through latin1.encode
+  /// recovers the original bytes losslessly too — decoding those as UTF-8
+  /// recovers the real text when that's what the station sent; falls back
+  /// to the latin1 reading untouched when it wasn't.
+  String _fixIcyEncoding(String raw) {
+    try {
+      return utf8.decode(latin1.encode(raw));
+    } catch (_) {
+      return raw;
     }
   }
 }

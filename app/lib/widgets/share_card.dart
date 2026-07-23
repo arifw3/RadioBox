@@ -1,8 +1,8 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/app_theme.dart';
 import 'circular_visualizer.dart';
+import 'station_art.dart';
 
 /// The Instagram/WhatsApp story card rendered for sharing (Section 8,
 /// CLAUDE.md) — sized to the standard 1080x1920 story format. Built at
@@ -42,7 +42,7 @@ class ShareCard extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           if (hasImage)
-            CachedNetworkImage(imageUrl: imageUrl!, fit: BoxFit.cover)
+            StationArt(imageUrl: imageUrl!, fit: BoxFit.cover)
           else
             Container(
               decoration: BoxDecoration(

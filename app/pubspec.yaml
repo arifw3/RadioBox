@@ -94,6 +94,11 @@ dependencies:
   # every cold start.
   cached_network_image: ^3.4.1
 
+  # A meaningful slice of manually-sourced station logos turn out to be
+  # SVG (brand sites often only publish a vector logo) — CachedNetworkImage
+  # can't decode those at all, see widgets/station_art.dart.
+  flutter_svg: ^2.0.10
+
   # Local persistence: cache-first catalog load, Wi-Fi-only setting,
   # in-app review triggers.
   path_provider: ^2.1.5

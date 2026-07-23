@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dialwave_core/dialwave_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -21,6 +20,7 @@ import '../widgets/country_picker_button.dart';
 import '../widgets/language_picker_button.dart';
 import '../widgets/mini_player.dart';
 import '../widgets/sleep_timer_button.dart';
+import '../widgets/station_art.dart';
 import 'search_screen.dart';
 import 'song_history_screen.dart';
 
@@ -627,7 +627,7 @@ class _HeroCard extends ConsumerWidget {
             children: [
               Container(color: AppColors.surfaceRaised),
               if (hasLiveSpotlight)
-                CachedNetworkImage(
+                StationArt(
                   imageUrl: spotlight!.imageUrl!,
                   fit: BoxFit.cover,
                 )
@@ -641,10 +641,10 @@ class _HeroCard extends ConsumerWidget {
                 Center(
                   child: Padding(
                     padding: const EdgeInsets.all(36),
-                    child: CachedNetworkImage(
+                    child: StationArt(
                       imageUrl: station.favicon,
                       fit: BoxFit.contain,
-                      errorWidget: (_, _, _) => const SizedBox.shrink(),
+                      errorWidget: (_) => const SizedBox.shrink(),
                     ),
                   ),
                 ),
@@ -872,12 +872,12 @@ class _StationSliverList extends ConsumerWidget {
             leading: ClipRRect(
               borderRadius: BorderRadius.circular(14),
               child: station.favicon.isNotEmpty
-                  ? CachedNetworkImage(
+                  ? StationArt(
                       imageUrl: station.favicon,
                       width: 52,
                       height: 52,
                       fit: BoxFit.cover,
-                      errorWidget: (_, _, _) => _FallbackArt(name: station.name),
+                      errorWidget: (_) => _FallbackArt(name: station.name),
                     )
                   : _FallbackArt(name: station.name),
             ),

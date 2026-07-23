@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dialwave_core/dialwave_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -9,6 +8,7 @@ import '../state/player_providers.dart';
 import '../theme/app_theme.dart';
 import '../utils/playback_navigation.dart';
 import '../widgets/banner_ad_widget.dart';
+import '../widgets/station_art.dart';
 
 enum _SearchMode { voice, keyboard }
 
@@ -221,12 +221,12 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                           leading: ClipRRect(
                             borderRadius: BorderRadius.circular(12),
                             child: station.favicon.isNotEmpty
-                                ? CachedNetworkImage(
+                                ? StationArt(
                                     imageUrl: station.favicon,
                                     width: 48,
                                     height: 48,
                                     fit: BoxFit.cover,
-                                    errorWidget: (_, _, _) =>
+                                    errorWidget: (_) =>
                                         _ResultFallback(name: station.name),
                                   )
                                 : _ResultFallback(name: station.name),

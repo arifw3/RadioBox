@@ -1,5 +1,4 @@
 import 'package:audio_service/audio_service.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -7,6 +6,7 @@ import '../l10n/app_localizations.dart';
 import '../screens/now_playing_screen.dart';
 import '../state/player_providers.dart';
 import '../theme/app_theme.dart';
+import 'station_art.dart';
 
 /// Floating now-playing pill — sits just above the ad banner (Section 9,
 /// CLAUDE.md), styled to match the rounded "premium dark UI kit" look
@@ -45,12 +45,12 @@ class MiniPlayer extends ConsumerWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(AppRadii.pill),
                   child: mediaItem.artUri != null
-                      ? CachedNetworkImage(
+                      ? StationArt(
                           imageUrl: mediaItem.artUri.toString(),
                           width: 44,
                           height: 44,
                           fit: BoxFit.cover,
-                          errorWidget: (_, _, _) => const _FallbackDisc(),
+                          errorWidget: (_) => const _FallbackDisc(),
                         )
                       : const _FallbackDisc(),
                 ),

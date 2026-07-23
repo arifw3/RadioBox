@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -12,6 +11,7 @@ import '../theme/app_theme.dart';
 import '../widgets/banner_ad_widget.dart';
 import '../widgets/circular_visualizer.dart';
 import '../widgets/social_sync_panel.dart';
+import '../widgets/station_art.dart';
 import 'share_preview_screen.dart';
 
 final _visualizerStyleProvider = StateProvider<int>((ref) => 0);
@@ -210,11 +210,10 @@ class NowPlayingScreen extends ConsumerWidget {
                         ),
                         child: ClipOval(
                           child: mediaItem?.artUri != null
-                              ? CachedNetworkImage(
+                              ? StationArt(
                                   imageUrl: mediaItem!.artUri.toString(),
                                   fit: BoxFit.cover,
-                                  errorWidget: (_, _, _) =>
-                                      const _FallbackArt(),
+                                  errorWidget: (_) => const _FallbackArt(),
                                 )
                               : const _FallbackArt(),
                         ),
@@ -344,7 +343,7 @@ class _SpotlightScaffold extends StatelessWidget {
             child: Stack(
               fit: StackFit.expand,
               children: [
-                CachedNetworkImage(imageUrl: imageUrl, fit: BoxFit.cover),
+                StationArt(imageUrl: imageUrl, fit: BoxFit.cover),
                 // Dark enough at the very top for the back button/title to
                 // stay legible, clear through the middle so the photo
                 // actually shows, then fades to the exact background color
