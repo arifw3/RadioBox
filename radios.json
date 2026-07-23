@@ -4159,7 +4159,7 @@
       "name": "Super Fm",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/SUPER_FM_SC",
       "countryCode": "TR",
-      "favicon": "https://turkradyodinle.com/stations/logos/super-fm.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/super-fm.png",
       "tags": [
         "pop"
       ],
@@ -4896,7 +4896,7 @@
       "name": "Metro FM",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/METRO_FMAAC_SC",
       "countryCode": "TR",
-      "favicon": "https://turkradyodinle.com/stations/logos/metro-fm.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/metro-fm.png",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 64,
@@ -34164,7 +34164,7 @@
       "name": "Süper FM 99.9",
       "streamUrl": "https://yayin.superfmradyo.com.tr/superfm/stream",
       "countryCode": "TR",
-      "favicon": "https://www.superfmradyo.com.tr/img/logo.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/super-fm-99.png",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 64,
