@@ -1,12 +1,37 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 
+import '../services/deezer_search_repository.dart';
 import '../services/itunes_search_repository.dart';
+import '../services/wikipedia_artist_repository.dart';
 import 'player_providers.dart';
 
 final itunesSearchRepositoryProvider = Provider<ItunesSearchRepository>(
   (ref) => ItunesSearchRepository(http.Client()),
 );
+
+final deezerSearchRepositoryProvider = Provider<DeezerSearchRepository>(
+  (ref) => DeezerSearchRepository(http.Client()),
+);
+
+final wikipediaArtistRepositoryProvider = Provider<WikipediaArtistRepository>(
+  (ref) => WikipediaArtistRepository(http.Client()),
+);
+
+/// Common shape both ItunesTrack and DeezerTrack are reduced to once
+/// matched, so the rest of the provider (and the UI) doesn't care which
+/// source a result came from.
+class SpotlightTrack {
+  const SpotlightTrack({
+    required this.trackName,
+    required this.artistName,
+    required this.artworkUrl,
+  });
+
+  final String trackName;
+  final String artistName;
+  final String artworkUrl;
+}
 
 class ArtistSpotlightData {
   const ArtistSpotlightData({
@@ -19,7 +44,7 @@ class ArtistSpotlightData {
   final String artistName;
   final String songTitle;
   final String? imageUrl;
-  final List<ItunesTrack> otherTracks;
+  final List<SpotlightTrack> otherTracks;
 }
 
 /// MediaItem.artist starts out as the station's plain country code (see
@@ -37,13 +62,18 @@ final rawNowPlayingTextProvider = Provider<String?>((ref) {
 
 /// Refetches automatically whenever the raw ICY text changes (i.e. a new
 /// song starts).
+///
+/// Three tiers, each stricter than cheap but weaker than confident:
+/// 1. iTunes exact/fuzzy song match (cover art + song title).
+/// 2. Deezer exact/fuzzy song match, same rule, when iTunes has nothing.
+/// 3. Wikipedia artist photo — only reachable when neither source could
+///    confirm the actual song, so it never claims a song match; it's just
+///    a real photo of the artist ICY told us is playing.
 final artistSpotlightProvider = FutureProvider<ArtistSpotlightData?>((
   ref,
 ) async {
   final raw = ref.watch(rawNowPlayingTextProvider);
   if (raw == null) return null;
-
-  final repo = ref.watch(itunesSearchRepositoryProvider);
 
   // ICY "StreamTitle" formatting isn't standardized across stations: most
   // use "Artist - Song", but plenty send "ARTIST SONG" with no separator
@@ -53,55 +83,107 @@ final artistSpotlightProvider = FutureProvider<ArtistSpotlightData?>((
   final expectedSong = dashIndex > 0 ? raw.substring(dashIndex + 3).trim() : null;
   final query = dashIndex > 0 ? raw.substring(0, dashIndex).trim() : raw;
 
-  final tracks = await repo.search(query);
-  if (tracks.isEmpty) return null;
+  final itunes = ref.watch(itunesSearchRepositoryProvider);
+  final itunesTracks = await itunes.search(query);
+  final itunesMatch = _findConfidentMatch(
+    itunesTracks,
+    (t) => t.trackName,
+    expectedSong,
+  );
+  if (itunesMatch != null) {
+    final others = itunesTracks
+        .where((t) => t.trackName != itunesMatch.trackName)
+        .take(3)
+        .map(
+          (t) => SpotlightTrack(
+            trackName: t.trackName,
+            artistName: t.artistName,
+            artworkUrl: t.artworkUrl,
+          ),
+        )
+        .toList();
+    return ArtistSpotlightData(
+      artistName: itunesMatch.artistName,
+      songTitle: itunesMatch.trackName,
+      imageUrl: itunesMatch.artworkUrl,
+      otherTracks: others,
+    );
+  }
 
-  ItunesTrack? matched;
+  final deezer = ref.watch(deezerSearchRepositoryProvider);
+  final deezerTracks = await deezer.search(query);
+  final deezerMatch = _findConfidentMatch(
+    deezerTracks,
+    (t) => t.trackName,
+    expectedSong,
+  );
+  if (deezerMatch != null) {
+    final others = deezerTracks
+        .where((t) => t.trackName != deezerMatch.trackName)
+        .take(3)
+        .map(
+          (t) => SpotlightTrack(
+            trackName: t.trackName,
+            artistName: t.artistName,
+            artworkUrl: t.artworkUrl,
+          ),
+        )
+        .toList();
+    return ArtistSpotlightData(
+      artistName: deezerMatch.artistName,
+      songTitle: deezerMatch.trackName,
+      imageUrl: deezerMatch.artworkUrl,
+      otherTracks: others,
+    );
+  }
+
+  // Neither music source could confirm the actual song. Wikipedia can't
+  // confirm a song either, but matching just the artist name is a much
+  // lower bar — a real artist photo alongside the raw (unverified) ICY
+  // song text beats showing nothing.
+  final wikipedia = ref.watch(wikipediaArtistRepositoryProvider);
+  final artistPhoto = await wikipedia.findArtistPhoto(query);
+  if (artistPhoto == null) return null;
+
+  return ArtistSpotlightData(
+    artistName: query,
+    songTitle: expectedSong ?? '',
+    imageUrl: artistPhoto,
+    otherTracks: const [],
+  );
+});
+
+/// Exact match first; a loose substring match second (catches "(Remastered)"/
+/// "[Live]" suffixes a source appends but ICY metadata usually omits).
+/// Returns null rather than guessing with the first result — a confidently
+/// wrong song + cover art (a different track by the same artist) is worse
+/// than showing nothing.
+T? _findConfidentMatch<T>(
+  List<T> tracks,
+  String Function(T) trackNameOf,
+  String? expectedSong,
+) {
+  if (tracks.isEmpty) return null;
   if (expectedSong == null) {
     // No dash to split on, so there was never a specific song title to
     // verify against — the artist-only search result is the best we can
     // do, low-confidence or not.
-    matched = tracks.first;
-  } else {
-    final normalizedExpected = _normalizeTitle(expectedSong);
-    for (final t in tracks) {
-      if (_normalizeTitle(t.trackName) == normalizedExpected) {
-        matched = t;
-        break;
-      }
-    }
-    // A track like "Tutkunum (Remastered)" won't exact-match ICY's plain
-    // "Tutkunum" — a loose substring match still catches those without
-    // accepting a same-artist-but-different-song false positive.
-    if (matched == null) {
-      for (final t in tracks) {
-        final normalizedTrack = _normalizeTitle(t.trackName);
-        if (normalizedTrack.contains(normalizedExpected) ||
-            normalizedExpected.contains(normalizedTrack)) {
-          matched = t;
-          break;
-        }
-      }
-    }
+    return tracks.first;
   }
 
-  // Showing a confidently wrong song + cover art (a different track by
-  // the same artist) is worse than showing nothing — fall back to the
-  // plain visualizer instead of guessing with tracks.first here.
-  if (matched == null) return null;
-
-  final others = tracks
-      .where((t) => t.trackName != matched!.trackName)
-      .take(3)
-      .toList();
-
-  return ArtistSpotlightData(
-    artistName: matched.artistName,
-    songTitle: matched.trackName,
-    imageUrl: matched.artworkUrl,
-    otherTracks: others,
-  );
-});
+  final normalizedExpected = _normalizeTitle(expectedSong);
+  for (final t in tracks) {
+    if (_normalizeTitle(trackNameOf(t)) == normalizedExpected) return t;
+  }
+  for (final t in tracks) {
+    final normalizedTrack = _normalizeTitle(trackNameOf(t));
+    if (normalizedTrack.contains(normalizedExpected) ||
+        normalizedExpected.contains(normalizedTrack)) {
+      return t;
+    }
+  }
+  return null;
+}
 
 /// Case-insensitive, ignores parenthetical/bracketed qualifiers like
 /// "(Remastered)" or "[Live]" that iTunes often appends but ICY metadata

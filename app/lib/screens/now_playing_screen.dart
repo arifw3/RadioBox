@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../l10n/app_localizations.dart';
-import '../services/itunes_search_repository.dart';
 import '../state/artist_spotlight_providers.dart';
 import '../state/country_providers.dart';
 import '../state/palette_providers.dart';
@@ -293,7 +292,7 @@ class _SpotlightScaffold extends StatelessWidget {
   final String stationName;
   final String artistName;
   final String songTitle;
-  final List<ItunesTrack> otherTracks;
+  final List<SpotlightTrack> otherTracks;
   final Widget transportRow;
   final Widget timeShiftRow;
 
