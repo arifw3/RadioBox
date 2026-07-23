@@ -5,6 +5,7 @@
   "tabFavorites": "Favoriler",
   "allStationsHeading": "Tüm İstasyonlar",
   "featuredLabel": "Öne Çıkan",
+  "mostPlayedLabel": "En Çok Dinlediğin",
   "nowLabel": "Şimdi: {label}",
   "@nowLabel": {
     "placeholders": { "label": { "type": "String" } }

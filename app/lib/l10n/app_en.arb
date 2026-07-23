@@ -5,6 +5,7 @@
   "tabFavorites": "Favorites",
   "allStationsHeading": "All Stations",
   "featuredLabel": "Featured",
+  "mostPlayedLabel": "Most Played",
   "nowLabel": "Now: {label}",
   "@nowLabel": {
     "placeholders": { "label": { "type": "String" } }

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../l10n/app_localizations.dart';
+import '../state/artist_spotlight_providers.dart';
 import '../state/country_providers.dart';
 import '../state/drive_mode_providers.dart';
 import '../state/favorites_providers.dart';
@@ -382,6 +383,17 @@ class _AllStationsTabState extends ConsumerState<_AllStationsTab> {
       );
     }
 
+    // A station the user actually keeps coming back to beats any generic
+    // suggestion — only fall back to time-of-day/popularity for a
+    // first-run user with no play history yet.
+    final mostPlayed = [...stations]
+      ..sort(
+        (a, b) => (_playCountSnapshot[b.id] ?? 0)
+            .compareTo(_playCountSnapshot[a.id] ?? 0),
+      );
+    final hasPlayHistory =
+        mostPlayed.isNotEmpty && (_playCountSnapshot[mostPlayed.first.id] ?? 0) > 0;
+
     final suggestion = suggestionForHour(DateTime.now().hour);
     final suggested = suggestion == null
         ? const <RadioStation>[]
@@ -396,10 +408,14 @@ class _AllStationsTabState extends ConsumerState<_AllStationsTab> {
 
     final sortedByPopularity = [...stations]
       ..sort((a, b) => b.clickCount.compareTo(a.clickCount));
-    final hero = (suggested.isNotEmpty ? suggested : sortedByPopularity).first;
+    final hero = hasPlayHistory
+        ? mostPlayed.first
+        : (suggested.isNotEmpty ? suggested : sortedByPopularity).first;
     // Coverage note: the time-of-day suggestion label itself (e.g. "Gece
     // Ritmi") isn't localized yet — only this static fallback is.
-    final heroLabel = suggested.isNotEmpty ? suggestion!.label : l10n.featuredLabel;
+    final heroLabel = hasPlayHistory
+        ? l10n.mostPlayedLabel
+        : (suggested.isNotEmpty ? suggestion!.label : l10n.featuredLabel);
 
     // "Sık dinlenen önce": personal play count beats favorite status or
     // radio-browser.info's global click count — a station you actually
@@ -577,6 +593,26 @@ class _HeroCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
+
+    // This hero is "the user's most-played station", which isn't
+    // necessarily what's playing right now — a live artist/song/photo is
+    // only something we actually know when it is. Reuses the exact same
+    // spotlight chain (iTunes -> Deezer -> Wikipedia) Now Playing already
+    // resolves; nothing new to fetch here.
+    final isCurrentlyPlayingThis =
+        ref.watch(currentMediaItemProvider).valueOrNull?.id == station.id;
+    final spotlightAsync = isCurrentlyPlayingThis
+        ? ref.watch(artistSpotlightProvider)
+        : const AsyncValue<ArtistSpotlightData?>.data(null);
+    final spotlight = spotlightAsync.valueOrNull;
+    final hasLiveSpotlight =
+        isCurrentlyPlayingThis && (spotlight?.imageUrl?.isNotEmpty ?? false);
+    final isResolvingSpotlight = isCurrentlyPlayingThis &&
+        spotlightAsync.isLoading &&
+        !hasLiveSpotlight;
+    final playing = isCurrentlyPlayingThis &&
+        (ref.watch(playbackStateProvider).valueOrNull?.playing ?? false);
+
     return Semantics(
       button: true,
       label: l10n.playStationLabel(station.name),
@@ -591,13 +627,18 @@ class _HeroCard extends ConsumerWidget {
             fit: StackFit.expand,
             children: [
               Container(color: AppColors.surfaceRaised),
+              if (hasLiveSpotlight)
+                CachedNetworkImage(
+                  imageUrl: spotlight!.imageUrl!,
+                  fit: BoxFit.cover,
+                )
               // Most station logos are small square favicons — stretching
               // one across a 16:9 hero with BoxFit.cover looks blurry and
               // distorted, so show it at its natural aspect ratio instead.
               // (Tried a blurred-backdrop-plus-sharp-logo layout first, but
               // fetching the same favicon twice concurrently made some
               // CDNs — e.g. kanal7.com — fail to decode it at all.)
-              if (station.favicon.isNotEmpty)
+              else if (station.favicon.isNotEmpty)
                 Center(
                   child: Padding(
                     padding: const EdgeInsets.all(36),
@@ -620,29 +661,79 @@ class _HeroCard extends ConsumerWidget {
                   ),
                 ),
               ),
+              if (hasLiveSpotlight || isResolvingSpotlight)
+                Positioned(
+                  left: 20,
+                  top: 18,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 6,
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.black.withValues(alpha: 0.45),
+                      borderRadius: BorderRadius.circular(AppRadii.pill),
+                    ),
+                    child: Text(
+                      station.name,
+                      style: Theme.of(context)
+                          .textTheme
+                          .labelSmall
+                          ?.copyWith(color: Colors.white, fontWeight: FontWeight.w600),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ),
               Positioned(
                 left: 20,
                 right: 20,
                 bottom: 18,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      l10n.nowLabel(label),
-                      style: Theme.of(context)
-                          .textTheme
-                          .labelSmall
-                          ?.copyWith(color: Colors.white70),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      station.name,
-                      style: Theme.of(context).textTheme.headlineSmall,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ],
-                ),
+                child: hasLiveSpotlight
+                    ? Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            spotlight!.artistName,
+                            style: Theme.of(context).textTheme.headlineSmall,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          if (spotlight.songTitle.isNotEmpty) ...[
+                            const SizedBox(height: 4),
+                            Text(
+                              spotlight.songTitle,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium
+                                  ?.copyWith(color: Colors.white70),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ],
+                        ],
+                      )
+                    : isResolvingSpotlight
+                        ? const _HeroTextSkeleton()
+                        : Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                l10n.nowLabel(label),
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .labelSmall
+                                    ?.copyWith(color: Colors.white70),
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                station.name,
+                                style: Theme.of(context).textTheme.headlineSmall,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ],
+                          ),
               ),
               Positioned(
                 right: 16,
@@ -654,13 +745,70 @@ class _HeroCard extends ConsumerWidget {
                     color: AppColors.accent,
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(Icons.play_arrow_rounded, color: Colors.white, size: 30),
+                  child: Icon(
+                    playing ? Icons.pause_rounded : Icons.play_arrow_rounded,
+                    color: Colors.white,
+                    size: 30,
+                  ),
                 ),
               ),
             ],
           ),
         ),
       ),
+      ),
+    );
+  }
+}
+
+/// Placeholder for the artist-name/song-title pair while the spotlight
+/// chain (iTunes -> Deezer -> Wikipedia) is still resolving for the
+/// currently-playing hero station.
+class _HeroTextSkeleton extends StatefulWidget {
+  const _HeroTextSkeleton();
+
+  @override
+  State<_HeroTextSkeleton> createState() => _HeroTextSkeletonState();
+}
+
+class _HeroTextSkeletonState extends State<_HeroTextSkeleton>
+    with SingleTickerProviderStateMixin {
+  late final _controller = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 900),
+  )..repeat(reverse: true);
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FadeTransition(
+      opacity: _controller.drive(Tween(begin: 0.3, end: 0.7)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: 160,
+            height: 22,
+            decoration: BoxDecoration(
+              color: Colors.white24,
+              borderRadius: BorderRadius.circular(6),
+            ),
+          ),
+          const SizedBox(height: 8),
+          Container(
+            width: 100,
+            height: 14,
+            decoration: BoxDecoration(
+              color: Colors.white24,
+              borderRadius: BorderRadius.circular(6),
+            ),
+          ),
+        ],
       ),
     );
   }

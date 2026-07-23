@@ -5,6 +5,7 @@
   "tabFavorites": "Favoritas",
   "allStationsHeading": "Todas las emisoras",
   "featuredLabel": "Destacada",
+  "mostPlayedLabel": "Más Escuchada",
   "nowLabel": "Ahora: {label}",
   "@nowLabel": {
     "placeholders": { "label": { "type": "String" } }
