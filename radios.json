@@ -18574,7 +18574,7 @@
       "name": "102.1 Arabeskin Merkezi Fm",
       "streamUrl": "http://canli.arabeskinmerkezi.com:9180/stream",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/arabeskin-merkezi.png",
       "tags": [
         "arabesk",
         "arabesk fantazi",
@@ -20186,7 +20186,7 @@
       "name": "Pal station",
       "streamUrl": "http://shoutcast.radyogrup.com:1020/",
       "countryCode": "TR",
-      "favicon": "https://palstation106.com/img/logo/pal-station.ico",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-pal-station.jpg",
       "tags": [],
       "codec": "AAC+",
       "bitrateKbps": 96,
@@ -20666,7 +20666,7 @@
       "name": "Show Radyo",
       "streamUrl": "http://showradyo.radyotvonline.net/showradyoaac/",
       "countryCode": "TR",
-      "favicon": "https://i.showradyo.com.tr/2/96/96/images/2025/07/28/show-radyo-logo-siyah-kare-1080x1080-3FlYmzPm.jpg",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/show-radyo.png",
       "tags": [],
       "codec": "AAC",
       "bitrateKbps": 128,
@@ -24813,10 +24813,10 @@
     },
     {
       "id": "c7219824-110c-4d30-b6dd-c60a39ea7907",
-      "name": "Turkuaz Anadolu",
+      "name": "Turkuvaz Anadolu",
       "streamUrl": "https://trkvz-radyolar.ercdn.net/turkuvazanadolu/playlist.m3u8",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/turkuvaz-anadolu.png",
       "tags": [
         "classical"
       ],
@@ -27377,7 +27377,7 @@
     },
     {
       "id": "461458d7-6472-4bf1-adca-d33705dad718",
-      "name": "Radyo Alevi Canlar",
+      "name": "Radyo Canlar",
       "streamUrl": "https://alevifm.80.yayin.com.tr/",
       "countryCode": "TR",
       "favicon": "",
@@ -27418,7 +27418,7 @@
       "name": "Radyo Vatan Türkü",
       "streamUrl": "http://95.0.173.195:9000/turku",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-vatan-turku.jpg",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 128,
@@ -28052,18 +28052,6 @@
       "codec": "OGG",
       "bitrateKbps": 1411,
       "votes": 598,
-      "clickCount": 6
-    },
-    {
-      "id": "4e441be5-8124-43d8-984a-319413392c3d",
-      "name": "DateLine IP",
-      "streamUrl": "https://stream.datelineip.com/hls/datelineip/live.m3u8",
-      "countryCode": "TR",
-      "favicon": "",
-      "tags": [],
-      "codec": "UNKNOWN",
-      "bitrateKbps": 0,
-      "votes": 2,
       "clickCount": 6
     },
     {
@@ -30173,7 +30161,7 @@
       "name": "TRT Radyo Arabi / عربي",
       "streamUrl": "https://radio-trtarabi.medya.trt.com.tr/master.m3u8",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/trt-arabi.png",
       "tags": [
         "national radio",
         "news"
@@ -31244,7 +31232,7 @@
       "name": "SUPER FM 2 TURKEY",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/SUPER2_SC?/",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/super-fm-2.png",
       "tags": [],
       "codec": "MP3",
       "bitrateKbps": 64,
@@ -31253,10 +31241,10 @@
     },
     {
       "id": "a4c69a47-bb4f-4a09-a1c7-8c89b554fd53",
-      "name": "lokum fm",
+      "name": "Lokum Fm",
       "streamUrl": "http://37.247.98.9/stream/493/?/;stream.mp3",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/lokum.png",
       "tags": [
         "country"
       ],
@@ -31305,20 +31293,6 @@
       "codec": "MP3",
       "bitrateKbps": 128,
       "votes": 0,
-      "clickCount": 5
-    },
-    {
-      "id": "a404045e-bd13-4e15-a591-6c81b846b1b8",
-      "name": "Med Radyo",
-      "streamUrl": "http://medradyo.kesintisizyayin.com:8062/stream",
-      "countryCode": "TR",
-      "favicon": "",
-      "tags": [
-        "classical"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 64,
-      "votes": 335,
       "clickCount": 5
     },
     {
@@ -31955,7 +31929,7 @@
       "name": "Gözyaşı FM",
       "streamUrl": "http://yayin1.canliyayin.org:8700/;*.mp3",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/gozyasi-fm-dinle.jpg",
       "tags": [
         "islamic"
       ],
@@ -32021,10 +31995,10 @@
     },
     {
       "id": "4650ba79-390b-4251-bce8-058eb3f39094",
-      "name": "S1lhoutte Arabesk FM",
+      "name": "Radyo Arabesk",
       "streamUrl": "https://yayin.radyoarabesk.com.tr:8000/stream",
       "countryCode": "TR",
-      "favicon": "https://turkradyodinle.com/stations/logos/s1lhoutte-arabesk-fm.png",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/arabesk-fm.png",
       "tags": [
         "arabesk"
       ],
@@ -32204,7 +32178,7 @@
       "name": "HAYATMİX",
       "streamUrl": "https://hayatmix.yayin.com.tr/mp3",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/hayat-mix.png",
       "tags": [
         "classical"
       ],
@@ -33359,7 +33333,7 @@
     },
     {
       "id": "3ca73769-408e-4460-abc1-a748d035d313",
-      "name": "REPLAY NEWS - Türkçe    Her 5 dakikada haber radyosu",
+      "name": "REPLAY NEWS",
       "streamUrl": "https://replaynewstr.ice.infomaniak.ch/replaynewstr-128.mp3",
       "countryCode": "TR",
       "favicon": "https://turkradyodinle.com/stations/logos/replay-news-turkce-her-5-dakikada-haber-radyosu.png",
@@ -33436,7 +33410,7 @@
       "name": "Ereğli FM",
       "streamUrl": "http://radyo.yayindakiler.com:3000/stream",
       "countryCode": "TR",
-      "favicon": "https://ereglifm.com.tr/assets/imgs/logo.svg",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/eregli-fm-dinle2.jpg",
       "tags": [
         "local news",
         "pop"
@@ -33494,7 +33468,7 @@
     },
     {
       "id": "c3cf5a4e-6673-42d8-9fb6-e7635ec69f64",
-      "name": "Radyo 45lik Canlı Yayın - En İyi Türkçe Nostalji Şarkılar | 70ler 80ler ve 90lar",
+      "name": "Radyo 45lik",
       "streamUrl": "https://stream.radyo45lik.com:4545/",
       "countryCode": "TR",
       "favicon": "https://turkradyodinle.com/stations/logos/radyo-45lik-canli-yayin-en-iyi-turkce-nostalji-sarkilar-70ler-80ler-ve-90lar.png",
@@ -33646,7 +33620,7 @@
     },
     {
       "id": "7f29690c-2cc0-11e8-91bf-52543be04c81",
-      "name": "dinamo.fm locodyno",
+      "name": "Dinamo.fm Locodyno",
       "streamUrl": "http://channels.dinamo.fm/locodyno-mp3",
       "countryCode": "TR",
       "favicon": "https://www.dinamo.fm/favicons/dinamo-locodyno-favicon.jpg",
@@ -34423,7 +34397,7 @@
       "name": "Radyo ODTU - Rock",
       "streamUrl": "http://stream.radyoodtu.com.tr/rock",
       "countryCode": "TR",
-      "favicon": "",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/radyo-odtu-dinle.jpg",
       "tags": [
         "classic rock",
         "hard rock",
@@ -35028,20 +35002,6 @@
       "clickCount": 2
     },
     {
-      "id": "faa6a398-ae90-45e2-8afb-cc739a0a0504",
-      "name": "اذاعة القرآن الكريم 🇹🇷",
-      "streamUrl": "http://stream.radiojar.com/0tpy1h0kxtzuv",
-      "countryCode": "TR",
-      "favicon": "",
-      "tags": [
-        "classical"
-      ],
-      "codec": "MP3",
-      "bitrateKbps": 0,
-      "votes": 110,
-      "clickCount": 2
-    },
-    {
       "id": "1020f3df-3507-476a-85ca-152e03cb75ff",
       "name": "Radyo Nida",
       "streamUrl": "https://anadolu.liderhost.com.tr/8106/stream",
@@ -35060,7 +35020,7 @@
     },
     {
       "id": "c143d7ad-2cc0-4a9d-8a1c-d16a3c7f5a86",
-      "name": "powerturk",
+      "name": "Powerturk",
       "streamUrl": "https://live.powerapp.com.tr/powerturk/abr/playlist.m3u8",
       "countryCode": "TR",
       "favicon": "https://turkradyodinle.com/stations/logos/powerturk.png",
@@ -37411,7 +37371,7 @@
     },
     {
       "id": "trd-replay-news-turkce-her-5-dakikada-haber-radyosu",
-      "name": "REPLAY NEWS - Türkçe Her 5 dakikada haber radyosu",
+      "name": "REPLAY NEWS",
       "streamUrl": "https://replaynewstr.ice.infomaniak.ch/replaynewstr-128.mp3",
       "countryCode": "TR",
       "favicon": "https://turkradyodinle.com/stations/logos/replay-news-turkce-her-5-dakikada-haber-radyosu.png",

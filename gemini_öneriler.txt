@@ -1,0 +1,170 @@
+Kesinlikle Olması Gerekenler (Hayati Özellikler)
+Kusursuz Arka Plan Çalma (Background Audio): Kullanıcı ekranı kilitlediğinde veya başka uygulamaya geçtiğinde yayın asla kesilmemelidir. Flutter ekosisteminde bunun endüstri standardı just_audio ve audio_service paketlerinin birlikte kullanılmasıdır. İşletim sistemine (Android/iOS) bunun bir "Medya" uygulaması olduğunu doğru manifest izinleriyle (Foreground Service) bildirmelisiniz.
+
+Ses Odak Yönetimi (Audio Focus): Telefon çaldığında, alarm öttüğünde veya kullanıcı Instagram'da sesli bir video açtığında radyo otomatik olarak duraklamalı veya sesini kısmalıdır (ducking). Görüşme veya diğer medya bitince yayın tekrar başlamalıdır.
+
+Kulaklık/Bluetooth Bağlantı Tepkileri: Kulaklık jakı çıkarıldığında veya Bluetooth bağlantısı koptuğunda yayın anında duraklatılmalıdır. Hoparlörden birden yüksek sesle radyo çalması çok fazla 1 yıldız yorumuna sebep olan kritik bir hatadır.
+
+Kilit Ekranı ve Bildirim Kontrolleri: Kullanıcı uygulamayı açmadan yayını durdurabilmeli veya başlatabilmelidir. Kilit ekranında uygulamanızın logosu ve (mümkünse) çalan istasyonun/şarkının adı yer almalıdır.
+
+Ağ Kopmalarına Karşı Tolerans ve Otomatik Yeniden Bağlanma: Kullanıcı Wi-Fi'dan hücresel veriye geçtiğinde veya metroya bindiğinde bağlantı kopar. Yayın koptuğunda uygulamanın çökmesi veya sessizliğe gömülmesi yerine, arka planda belirli aralıklarla yeniden bağlanmayı denemeli (retry logic) ve arayüzde zarif bir "Bağlanıyor..." veya "Buffering" durumu göstermelidir.
+
+Farklı Stream Formatlarına Destek: Tüm radyo istasyonları aynı formatta yayın yapmaz. Altyapınızı kurarken MP3, AAC ve özellikle HLS (M3U8) stream formatlarının hepsini problemsiz çalabilen bir oynatıcı yapısı kurguladığınızdan emin olun.
+
+Kesinlikle Yapmamanız Gerekenler (Ölümcül Hatalar)
+Yanlış Paket Seçimi Yapmayın: audioplayers gibi bazı popüler paketler statik ses dosyaları veya kısa efektler için harikadır, ancak canlı ve kesintisiz radyo yayınlarında (Icecast/Shoutcast) just_audio kadar stabil performans vermezler. Stream altyapısı zayıf veya güncellenmeyen paketleri projenize dahil etmeyin.
+
+Ana İş Parçacığını (UI Thread) Bloklamayın: Canlı bir URL'nin çözümlenmesi veya ara belleğe (buffer) alınması uzun sürebilir. Bu asenkron işlemleri yönetirken arayüzü kilitlerseniz, işletim sistemi "Uygulama Yanıt Vermiyor (ANR)" hatası fırlatır ve kullanıcıyı atmak zorunda kalır.
+
+Sesin Üstüne Çıkan Agresif Reklamlar Koymayın: Reddit ve forumlardaki en büyük nefret kaynağı, radyo yayınının üstüne veya yayını durdurup araya giren videolu/sesli tam ekran reklamlardır (Interstitial ads). Ses kesintisiz akmalı, reklam modelleriniz sadece görsel olmalıdır (Banner veya native arayüz içi reklamlar).
+
+Gereksiz Arka Plan İşlemleriyle Pili Sömürmeyin: Arka planda çalışırken gereksiz yere konum çekmek veya uygulama görünür değilken State (UI) güncellemelerini tetiklemeye devam etmek pili tüketir. Android'in Doze modu yüksek pil tüketen uygulamaları affetmez ve arka plan servisini acımasızca sonlandırır.
+
+
+
+1. Kullanıcıların En Çok İsyan Ettiği Noktalar"Ses kesiliyor ama uygulama hâlâ çalıyor görünüyor": Kullanıcıların en nefret ettiği durumdur. İnternet dalgalanır, ses gider ama ekrandaki "Play" ikonu dönmeye veya çalıyor gibi görünmeye devam eder.Arka planda 10 dakika sonra kapanma: Android'in Doze (uyku) modu veya iOS'in bellek yönetimi, doğru yapılandırılmamış uygulamaları arka plana atıldıktan kısa süre sonra acımasızca kapatır.Araya giren reklamların kontrolleri bozması: Uygulama içinde gösterilen bir video veya sesli reklam, ana radyo yayınının "Audio Session" (ses oturumu) ayarlarını bozup kilit ekranı (lock screen) kontrollerini yok edebilir.Kötü istasyon yönetimi: Kullanıcılar sadece tekdüze bir liste veya "favoriye ekle" butonu istemiyor. İstasyonları kendi klasörlerine/listelerine göre (örn: "Haberler", "Çalışırken", "Yabancı Pop") organize etmek istiyorlar.2. Kesinlikle Olması Gerekenler (Must-Haves)Foreground Service (Ön Plan Servisi): Arka planda kesintisiz müzik çalmak için işletim sistemine "Ben buradayım ve aktif bir iş yapıyorum" demen şart. Flutter'da bunu kalıcı bir bildirim (notification) göstererek yapmalısın. Aksi takdirde Android, uygulamanı dakikalar içinde öldürür.  Audio Session (Ses Oturumu) Yönetimi: İşletim sistemindeki diğer seslerle nasıl etkileşime gireceğini net olarak belirlemelisin. Navigasyon konuştuğunda radyonun sesi hafifçe kısılmalı (ducking), telefon çaldığında durmalı ve kulaklık/Bluetooth bağlantısı koptuğunda yayın anında duraklatılmalıdır.  Stall Detection (Kesinti Algılama) ve Otomatik Yeniden Bağlanma: Wi-Fi'dan hücresel veriye geçişlerde yayın kopar. Native taraftaki oynatıcıların (ExoPlayer/AVPlayer) varsayılan zaman aşımı (timeout) sürelerine güvenme. Yayının gerçekten gelip gelmediğini (buffer'ı) kontrol eden ve koptuğunda sessizce yeniden bağlanmaya (graceful reconnect) çalışan kendi algoritmaya sahip olmalısın.Kusursuz State (Durum) Senkronizasyonu: Uygulamanın UI durumu ile arka plandaki oynatıcının durumu (Çalıyor/Duraklatıldı/Yükleniyor) her zaman eşit olmalı. Kilit ekranından veya akıllı saatten yayını durduran bir kullanıcı, uygulamayı açtığında da doğru durumu görmelidir.3. Kesinlikle Yapmaman Gerekenler (Pitfalls)Sesi UI Katmanında (Widget İçinde) Çalmak: Oynatıcı nesnesini bir Widget'ın state'i içine gömme. Kullanıcı ana ekrana döndüğünde (UI öldüğünde) sesin arka planda çalmaya devam etmesi gerekir. Müzik oynatma mantığını UI'dan tamamen soyutla.Yayından Önce (Pre-roll) Reklamları Abartmak: Kullanıcılar radyoya tıkladığı an sesi duymak ister. Yayının arasına zorla kendi sesli/görüntülü reklamlarını sokarsan kullanıcıyı anında kaybedersin. Reklam modelini, yayın kesilmeden gösterilen banner veya temiz native arayüz reklamları üzerine kur.  Video Reklam Gösterirken Audio Session'ı Bozmak: Eğer uygulamanın bir yerinde video reklam gösterirsen, videonun sesi ana oynatıcının sesini ezer ve kilit ekranı medya kontrollerini kaybedersin. Bunu önlemek için video oynatıcıda diğer seslerle karışmaya izin veren ayarları (örn: mixWithOthers: true) kullanmalı ve reklam bittikten sonra ses oturumunu tekrar müzik moduna döndürmelisin.Radyo Linklerini Kodun İçine Gömmek (Hardcode): Radyo stream URL'leri çok sık değişir. İstasyon listesini uygulamanın koduna gömmek yerine Firebase, Supabase veya kendi backend'in üzerinden dinamik olarak çek. Böylece kırık bir radyo linkini düzeltmek için Google Play'e yeni güncelleme çıkıp onay beklemek zorunda kalmazsın.
+
+
+
+Uygulamanın kaliteli hissettirmesi için bu metadata verisini işlerken şu detaylara dikkat etmelisin:
+
+Kilit Ekranını (Lock Screen) Güncelleme: Şarkı değiştiğinde sadece uygulama içindeki yazıyı değil, işletim sisteminin kilit ekranındaki medya oynatıcısını (MediaSession) da güncellemelisin. Bunun için audio_service paketi şarttır. Şarkı her değiştiğinde kilit ekranına o şarkının adını ve (varsa) sanatçının veya radyonun kapak fotoğrafını göndermelisin.
+
+Fallback (Yedek) Senaryosu: Türkiye'deki veya dünyadaki yerel radyoların çoğunun metadata altyapısı bozuktur. Şarkı adı yerine sadece "Reklam", "Jingle", radyonun kendi adı veya null dönebilir. Bu durumda ekranda çirkin bir "Bilinmeyen Şarkı" yazısı çıkarmak yerine, akıllıca bir sistem kurup Radyonun Adını ve Frekansını göstermelisin.
+
+Karakter Kodlaması (Encoding) Sorunları: ICY metadataları her zaman modern UTF-8 formatında gelmeyebilir (örneğin eski ISO-8859-1 kullanılabilir). Şarkı adı "Gülşen" yerine "GÃ¼lÅŸen" gibi tuhaf karakterlerle gelirse, bu metni ekrana basmadan önce düzeltecek bir "decoder" yazman veya Dart tarafında utf8.decode() gibi fonksiyonlarla parse etmen gerekebilir.
+
+
+1. Hayat Kurtaran "Küçük" Özellikler (UX)
+Uyku Zamanlayıcısı (Sleep Timer): Radyo dinleyicilerinin çok büyük bir kısmı radyoyu uykuya dalarken dinler. Uygulamana mutlaka 15, 30, 45, 60 dakikalık bir "Uyku Modu" ekle. Süre dolduğunda sesi aniden kesmek yerine "Fade Out" (sesi 5-10 saniye içinde yavaşça kısarak kapatma) yaparsan harika bir deneyim sunarsın.
+
+Kulaklık/Bluetooth Koptuğunda Susturma: Kullanıcı otobüste kulaklıkla müzik dinlerken Bluetooth şarjı biterse veya jak çıkarsa, radyonun telefon hoparlöründen bas bas bağırmaması gerekir. İşletim sistemindeki "Becoming Noisy" (Gürültülü olma) event'ini dinleyip bu durumda yayını anında duraklatmalısın.
+
+"Sadece Wi-Fi ile Çal" Seçeneği: Mobil veri paketleri kısıtlı olan kullanıcılar için ayarlara bu seçeneği koymak, uygulamanın silinmesini büyük ölçüde engeller.
+
+2. Mağaza Onayı ve Hukuki Tuzaklar (Çok Önemli)
+Radyo uygulamalarının Google Play ve Apple App Store'da en çok takıldığı yer Telif Hakları (Copyright) ve İçerik Politikasıdır.
+
+Telif Şikayetleri İçin Acil Durum Planı: Bir radyo istasyonu, "Benim yayınımı izinsiz uygulamanıza koymuşsunuz" diye Google'a şikayet ederse, uygulaman direkt askıya alınabilir (Suspend). Bunu önlemek için istasyonları kesinlikle kod içine (hardcode) gömme. Veritabanında (Firebase Firestore, Supabase vb.) tut ki şikayet geldiğinde o radyoyu tek tıkla veritabanından silebil.
+
+İletişim/DMCA Butonu: Ayarlar kısmına mutlaka "Radyo Ekleme / Kaldırma Talebi" veya "Telif Hakkı Bildirimi" için bir mail linki veya form koy. İnceleme ekipleri bunu gördüğünde uygulamanın iyi niyetli bir platform olduğuna ikna olur.
+
+3. Akıllı Hata Yönetimi ve Analitik
+Kullanıcılar "radyo çalışmıyor" diye 1 yıldız verip giderler ama sorunun radyodan mı, internetten mi yoksa senin kodundan mı olduğunu asla yazmazlar.
+
+Kırık Link Takibi: Firebase Crashlytics veya kendi backend'in üzerinden oynatma hatalarını logla. Bir radyo URL'si üst üste 10 kez "HTTP 404" veya "Connection Timeout" hatası veriyorsa, senin bundan kullanıcılar isyan etmeden önce haberin olmalı.
+
+Sessizce Yeniden Bağlanma: Canlı yayınlar ara sıra kopar. Eğer stream 1 saniyeliğine kesilirse, UI tarafında "Hata oluştu" ekranı gösterme. Arka planda oynatıcıya 3-5 saniyelik bir retry (yeniden bağlanma) döngüsü kur.
+
+4. Pil ve Performans Optimizasyonu
+Radyo uygulamaları arka planda saatlerce çalıştığı için pil tüketimi en hassas konudur.
+
+Gereksiz UI Animasyonlarından Kaçın: Uygulama ön plandayken ses dalgalarına göre hareket eden (Audio Visualizer) saniyede 60 kare (60fps) dönen gösterişli animasyonlar pili su gibi içer. Eğer görsel bir şeyler ekleyeceksen, çok hafif Lottie animasyonları kullan ve sadece uygulama ekrandayken (Lifecycle resumed durumundayken) çalıştır.
+
+Wakelock Kullanımı: Cihaz ekranı kapattığında işlemcinin (CPU) de tamamen uykuya geçmesini engellemek için sadece gereken minimum düzeyde (Partial Wakelock) izinler kullan. Aksi takdirde uygulaman cihazın şarjını hızla tüketir ve Android'in pil optimizasyon sistemi tarafından kara listeye alınır.
+
+
+1. Araç İçi Ekosisteme Giriş (Otomobil Pazarı)
+Radyo uygulamalarının tartışmasız en çok kullanıldığı yer trafiktir. Sadece mobil ekranda kalmak büyük bir fırsatı kaçırmak olur.
+
+Android Auto ve Apple CarPlay Desteği: Flutter için mevcut olan flutter_carplay (iOS için) veya benzeri paketleri kullanarak uygulamanı otomobil ekranlarına taşımalısın. Direksiyondaki tuşlarla kanal değiştirebilmek, kullanıcıların uygulamanı silinmezler arasına almasını sağlar.
+
+2. Sosyal Paylaşım ve Viral Büyüme (Deep Linking)
+Kullanıcılar keşfettikleri güzel şeyleri paylaşmayı sever. Uygulamanın kendi kendini pazarlaması için bir sistem kurmalısın.
+
+"Şu an dinliyorum" Paylaşımı: Kullanıcı o an çalan radyoyu veya şarkıyı tek tıkla Instagram Hikayesi veya WhatsApp mesajı olarak paylaşabilmeli. Çalan şarkının kapağı ve uygulamanın logosuyla şık bir görsel oluşturan (örn: share_plus ve path_provider kullanarak) bir özellik ekleyebilirsin.
+
+Derin Bağlantılar (App Links / Universal Links): Arkadaşına gönderdiği radyo linkine tıklayan kişi, Play Store'a (veya uygulama yüklüyse doğrudan uygulamanın içine) yönlendirilmeli ve o radyo anında çalmaya başlamalı.
+
+3. Gizli Hazine: Erişilebilirlik (Accessibility)
+Görme engelli veya az gören kullanıcılar, radyo ve sesli içerik uygulamalarının en sadık ve en yoğun kullanıcılarıdır.
+
+TalkBack ve VoiceOver Desteği: Flutter'da butonlarının ve görsellerinin etrafını Semantics widget'ı ile sar. Örneğin, kalpsiz bir favori butonunun sadece bir ikon olması yerine ekran okuyucunun "Favorilere Ekle" demesini sağla. Bu ufacık detay sana çok sayıda 5 yıldızlı yorum ve inanılmaz bir kullanıcı sadakati getirecektir.
+
+5. Başlangıç Hızı (Splash Screen ve Cache)
+Mobil radyolarda kullanıcı, uygulamaya tıkladığı an (daha uygulama tam yüklenmeden bile) ses duymak ister.
+
+Hızlı Açılış: İstasyon listesini her seferinde internetten çekmek yerine yerel veritabanında (Hive, Isar veya Shared Preferences) önbellekle (cache). Kullanıcı uygulamayı açtığında anında son dinlediği istasyon ve lokaldeki liste yüklensin. Arka planda ise sessizce Firebase'den yeni istasyon listesini kontrol edip güncellersin.
+
+
+4. "Kırık Link" Krizini Backend Olmadan Çözmenin Akıllı Yolu
+Bir backend'in yoksa, radyoların yayın linkleri değiştiğinde veya koptuğunda uygulaman "çalışmıyor" algısı yaratır. Bunun önüne geçmek için hibrit (yarı dinamik) bir hile yapabilirsin:
+
+GitHub Pages (Ücretsiz Hile): Radyo listeni (JSON dosyanı) GitHub'da public bir repository'ye koy ve GitHub Pages veya raw linki üzerinden ücretsiz bir şekilde yayınla.
+
+Nasıl Çalışır?: Uygulaman açıldığında assets/stations.json dosyasını kullanır. Ancak arka planda GitHub'daki JSON dosyanı kontrol eder. Eğer GitHub'daki sürüm daha yeniyse, o dosyayı indirir ve cihazın lokal önbelleğine yazar.
+
+Sonuç: Sen sadece GitHub'daki bir dosyayı değiştirerek (hiçbir sunucu kurmadan ve mağaza onayı beklemeden) tüm kullanıcıların bozuk radyo linklerini anında güncellemiş olursun.
+
+
+Ölü Link (Dead Stream) Yönetimi ve Otomatik Temizlik: Otomatik toplanmış geniş veri setlerindeki radyo yayın linkleri, IP ve port değişiklikleri nedeniyle sıklıkla ölebilir (404 veya Timeout). Bir istasyon açılmadığında uygulamanın çökmesi veya sonsuz yükleme döngüsüne girmesi yerine zarif bir hata mesajı gösterin. Ayrıca arka planda "bu istasyon arka arkaya 3 kez hata verdi" mantığı kurarak veritabanınızdaki kırık linkleri otomatik tespit edip temizleyen bir mekanizma kurgulayabilirsiniz.
+
+Dinamik Albüm Kapağı (Album Art) Entegrasyonu: Radyolardan gelen IcyMetadata yalnızca metin içerir, görsel göndermez. Ekrana düşen "Sanatçı - Şarkı Adı" metnini arka planda ücretsiz iTunes Search API veya Last.fm API'sine göndererek o an çalan şarkının albüm kapağını çekip arayüzde (örneğin arka plana bulanık şekilde) gösterebilirsiniz. Bu, standart bir radyo uygulamasını Spotify kalitesinde bir görünüme kavuşturur.
+
+Uyku Zamanlayıcısı (Sleep Timer): Kullanıcıların büyük bir kısmı radyoyu uyumadan önce açar. Uygulamanın sabaha kadar internet ve pil tüketmesini engellemek için arayüze 15, 30, 45 dakikalık bir "Uyku Modu" butonu ekleyin. Süre dolduğunda _player.stop() komutunu tetiklemek, kullanıcılardan en çok teşekkür alan özelliklerden biridir.
+
+Çalınma Geçmişi (History) Modülü: Kullanıcılar radyoda duyup beğendikleri ama adını unuttukları şarkıları bulmak isterler. Gelen IcyMetadata verisini, saat bilgisiyle birlikte cihazın yerel veritabanına (Hive, Isar veya SQLite) kaydederek kullanıcıya bir "Son Çalanlar" listesi sunun. Hatta bu listeye doğrudan Spotify/YouTube arama linkleri eklerseniz harika bir değer katmış olursunuz.
+
+Görsel İşitsel Geribildirim (Simüle Edilmiş EQ): Sadece sabit bir oynat tuşu yerine, müzik çalarken hareket eden hafif bir ses dalgası (waveform) animasyonu ekleyin. Canlı stream üzerinden gerçek zamanlı ses frekansı (FFT) analizi yapmak cihazı yorabilir; bunun yerine sadece oynatma (play) durumu true olduğunda rastgele hareket eden şık bir Lottie animasyonu kullanmak, minimum pil tüketimiyle aynı premium hissiyatı verir.
+
+
+
+iTunes Search API, hem ücretsiz olması hem de API anahtarı (key) gerektirmemesi nedeniyle bu iş için mükemmel bir tercihtir. Radyodan gelen "Sanatçı - Şarkı" metnini URL formatına çevirip Apple'ın veritabanında aratacağız ve dönen JSON sonucundan yüksek çözünürlüklü kapak fotoğrafını çekeceğiz.
+
+
+
+1. Ağ (Network) Durumuna Göre Akıllı Tepkiler
+İnternet radyosu yapıyorsan, en büyük düşmanın dalgalanan internet bağlantısıdır. Backend'in olmasa bile uygulamanın zekası olmalı.
+
+Bağlantı Türüne Göre Kalite (Eğer mümkünse): Bazı büyük radyolar aynı yayının hem yüksek kaliteli (örneğin 128 kbps) hem de düşük kaliteli (64 kbps) stream linklerini sunar. Eğer JSON dosyana her istasyon için iki link eklersen (high_res_url, low_res_url), connectivity_plus paketiyle kullanıcının Wi-Fi'da mı yoksa mobil veride mi (hatta 3G'de mi) olduğunu anlayıp doğru linki tetikleyebilirsin.
+
+İnternet Kesildiğinde UI Davranışı: İnternet koptuğunda "Oynatılamıyor" hatası fırlatmak yerine, ekranda kibar bir "Bağlantı bekleniyor..." veya "Sinyal zayıf, yeniden bağlanılıyor" mesajı göster. Bu, kullanıcıya sorunun uygulamadan değil, kendi internetinden kaynaklandığını hissettirir.
+
+2. Görsel Algı ve "Fake" Yükleme Hızı
+Uygulamanın hızlı hissettirmesi, gerçekten hızlı olmasından daha önemlidir.
+
+Shimmer Effect (Parıltı Efekti): Uygulama ilk açıldığında (lokal JSON okunana kadar geçen o saliselik sürede bile) boş bir ekran veya dönen bir çember (CircularProgressIndicator) gösterme. Bunun yerine shimmer paketini kullanarak, yükleniyormuş gibi parlayan sahte liste elemanları göster (YouTube'un açılışındaki gibi). Bu, uygulamanın modern ve Premium hissettirmesini sağlar.
+
+Kapak Fotoğrafı Yönetimi (Cached Network Image): Radyo logolarını uygulamanın içine (assets) gömeceksen sorun yok. Ama eğer logoları bir URL'den çekeceksen (örneğin GitHub hilesini yaparsan), logoları her seferinde indirmek uygulamanı kasar. Mutlaka cached_network_image paketi kullan ki, logolar bir kez indirilip cihazda saklansın.
+
+3. Kod Mimarisinde "Audio Service" Soyutlaması
+Ses oynatma mantığı, uygulamanın kalbidir. Bunu UI kodlarına bulaştırırsan proje bir noktada yönetilemez hale gelir.
+
+Oynatıcıyı Bir Servis Gibi Yaz: just_audio nesneni asla bir widget'ın içine yazma. Kendine bir RadioPlayerService sınıfı oluştur. Çal (play), durdur (pause), istasyon değiştir (changeStation) gibi tüm fonksiyonları bu sınıfta topla.
+
+State Management ile Bağla: Kullanacağın state management (Riverpod, Provider veya Bloc) sadece bu servisle konuşsun. Örneğin, bir butona basıldığında UI doğrudan player.play() demesin; UI, Provider'a "oynat" desin, Provider servise söylesin. Bu "soyutlama" (abstraction), yarın bir gün just_audio paketinden memnun kalmayıp başka bir pakete geçmek istersen, UI kodlarına hiç dokunmadan sadece servisi değiştirmeni sağlar.
+
+4. Kullanıcı Geri Bildirimi İçin İnce Bir Dokunuş (In-App Review)
+Backend'in yoksa, kullanıcıların uygulamanı ne kadar sevdiğini görebileceğin tek yer Google Play yorumlarıdır.
+
+Doğru Zamanda Yorum İsteme: Kullanıcı uygulamayı indirdiği ilk gün, tam da ilk radyosunu dinlerken karşısına "Bize oy verin" penceresi çıkarma (bu 1 yıldız sebebidir). in_app_review paketini kur. Kullanıcı uygulamayı en az 5 farklı günde açtıysa veya 10'dan fazla favori istasyon eklediyse, yani uygulamanı sevdiği kesinleştiğinde bu pencereyi tetikle.
+
+Bu yapıyla, sıfır maliyetli, asla çökmeyen ve çok hızlı çalışan bir mimari inşa etmiş olursun. Kodlamaya başlamadan önce uygulamanın temel yapısı veya ekran tasarımları hakkında netleştirmek istediğin bir detay var mı?
+
+. Kapalı Kutuyu Aydınlatmak: Sessiz Hata Takibi
+Backend'inin olmaması, uygulamanın bir "kapalı kutu" gibi çalışacağı anlamına gelir. Kullanıcıların nerede çöktüğünü veya hangi radyo linkinin bozuk olduğunu bilemezsin.
+
+Crashlytics veya Sentry Entegrasyonu: Bir backend kurmuyor olman, analitik araçları kullanamayacağın anlamına gelmez. Uygulamana mutlaka Firebase Crashlytics veya Sentry ekle. Bunlar sunucu yönetimi gerektirmeyen, takçalıştır hata loglama servisleridir.
+
+Özel Hata Fırlatma (Custom Logging): Kullanıcı bir radyoyu açamadığında sessizce Sentry'ye bir mesaj gönder (Örn: Sentry.captureMessage("Kırık Link: Kral FM - Hata: 404")). Böylece Play Store'da kötü yorum almadan önce kırık linkleri tespit edip GitHub'daki JSON dosyanı güncelleyebilirsin.
+
+2. Donanım ve Akıllı Saat Entegrasyonu
+Radyo dinleyicileri genellikle telefonu ceplerine koyar ve bir daha ekrana bakmazlar. Kontrolü donanıma bırakmalısın.
+
+Fiziksel Medya Tuşları: Bluetooth kulaklıklardaki fiziksel "Play/Pause" tuşlarına veya arabadaki medya değiştirme tuşlarına mutlaka yanıt vermelisin. audio_service paketi, işletim sisteminden gelen bu donanım tetikleyicilerini yakalamanı sağlar.
+
+Smartwatch (Akıllı Saat) Kontrolü: Kilit ekranı medya kontrollerini (MediaSession) doğru yapılandırırsan, uygulaman otomatik olarak Apple Watch ve Wear OS (Android saatler) cihazların "Şu An Çalınan" ekranlarına düşer. Kullanıcı saatinden radyoyu durdurup başlatabilir; bu, premium bir histir.
+
+3. Global Pazara Hazırlık (Lokalizasyon)
+Veritabanı olmayan uygulamaların en büyük avantajı, dünyaya açılmanın çok kolay olmasıdır. Çünkü çevrilecek dinamik bir içerik (haber, post, makale) yoktur. Sadece menüleri çevirmen yeterlidir.
+
+İlk Günden Çok Dil Desteği: Uygulamanı kodlarken metinleri (Örn: "Ayarlar", "Favoriler") direkt ekrana yazma. easy_localization veya Flutter'ın kendi intl paketini kullanarak en baştan dil dosyaları (JSON) oluştur.
+
+Hedef Diller: Türkçe ve İngilizce'ye ek olarak İspanyolca ve Almanca'yı da eklemek, mağaza indirmelerini (hiçbir reklam yapmasan bile) ciddi oranda artırır.
+
+4. Uygulama Mağazası Optimizasyonu (ASO)
+Geliştiricilerin en çok atladığı yer burasıdır. Dünyanın en iyi kodlanmış uygulamasını da yapsan, aramalarda çıkmazsan kimse indirmez.
+
+Uygulama İsmi Stratejisi: Mağazaya sadece "RadioBox" adıyla çıkarsan, devasa rakiplerin arasında kaybolursun. Uygulama ismini "RadioBox: Canlı FM Radyo" veya "RadioBox: FM Radio & Music" şeklinde anahtar kelimelerle zenginleştir.
+
+Görsel Sunum: Ekran görüntülerinde (Screenshots) sadece uygulamanın resmini koyma. Büyük puntolarla "İnternetsiz Kesintisiz Arayüz", "Favori Radyolarınız Tek Tıkla" gibi değer tekliflerini (Value Proposition) yaz.

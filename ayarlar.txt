@@ -1,0 +1,48 @@
+radios.json zaten GitHub'da (arifw3/RadioBox reposu), jsDelivr CDN üzerinden ücretsiz servis ediliyor (cdn.jsdelivr.net/gh/arifw3/RadioBox@main/radios.json).
+Uygulama zaten cache-first: açılışta önce yerel diskteki önbelleği anında gösteriyor, arka planda CDN'den son sürümü çekip önbelleği güncelliyor (RadioRepository.loadCached() / fetchAndCache() — bu oturumda değil, daha önce kurduk).
+Kırık link temizliği tamamen otomatik: tool/radio_sync adında bir GitHub Actions cron job'u her gece 03:00'te TÜM istasyonlara ping atıyor, ölü linkleri eliyor ve güncellenmiş radios.json'ı otomatik commit'liyor — yani senin elle "GitHub'daki dosyayı değiştir" adımını bile otomatikleştirmiş durumdayız, manuel müdahale gerekmiyor.
+
+
+cdn.jsdelivr.net/gh/arifw3/RadioBox@main/radios.json ben bu json dosyasını güğncellemek istediğimde nasıl yapacağım
+İki yol var:
+
+1. GitHub.com üzerinden direkt (önerdiğim — bu makinedeki git push SSL sorununu tamamen atlar):
+
+github.com/arifw3/RadioBox reposuna git, radios.json dosyasını aç, kalem (✏️) ikonuna tıkla.
+Değişikliği yap, altta "Commit changes..." → "Commit directly to the main branch" seç, commit'le.
+Bu kadar — local git'e hiç dokunmadan, tarayıcıdan yapılıyor.
+2. Local'den git ile:
+
+
+git add radios.json
+git commit -m "..."
+git push
+Ama bu makinede daha önce git push'ta SSL sertifika hatası vardı (çözülmedi, sen o zaman push'u erteleyip işe odaklanmayı seçmiştin) — o yüzden 1. yolu öneriyorum.
+
+Önemli: jsDelivr'ın kendi önbelleği var. Push/commit sonrası dosya GitHub'da anında güncellenir ama jsDelivr eski sürümü birkaç saat önbellekte tutabilir. Anında yayılmasını istersen tarayıcıda şu adresi aç (GET isteği yeterli):
+
+
+https://purge.jsdelivr.net/gh/arifw3/RadioBox@main/radios.json
+
+
+
+veya jsdelivr.com/tools/purge sayfasına https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/radios.json dosya linkini yapıştırıp "Purge" butonuna bas. Bunu yapmazsan değişiklik kullanıcılara ulaşması saatler sürebilir.
+
+Not: Bu sadece tek bir istasyonu elle düzeltmek içindir. Genel kırık-link temizliği zaten her gece otomatik çalışan tool/radio_sync script'i tarafından yapılıyor, ona dokunman gerekmiyor.
+
+
+
+tool/radio_sync hangi sistemde çalışıyor.
+Globpattern: ".github/workflows/*.yml"
+Found 1 file
+Read D:\Dev\DialWave\.github\workflows\update_radios.yml
+GitHub Actions üzerinde çalışıyor — senin bilgisayarında değil, GitHub'ın kendi ücretsiz sunucularında (ubuntu-latest runner).
+
+Detaylar:
+
+Ne zaman: Her gece 00:00 UTC = 03:00 Türkiye saati, otomatik cron tetikleyicisiyle. İstersen GitHub'daki Actions sekmesinden "Run workflow" ile elle de tetikleyebilirsin (workflow_dispatch).
+Ne yapıyor: Dart SDK kurup tool/radio_sync/bin/radio_sync.dart'ı çalıştırıyor (radio-browser.info'dan çekip her linke ping atıyor, ölü olanları eleyip dedup yapıyor).
+Sonrası: radios.json değiştiyse otomatik commit'leyip repo'ya push ediyor — kendi bot kimliğiyle (dialwave-bot), senin git/SSL sorunlarından tamamen bağımsız çünkü GitHub'ın kendi GITHUB_TOKEN'ını kullanıyor.
+Maliyet: Public repo olduğu için GitHub Actions dakikaları tamamen ücretsiz (sınırsız), zero-cost mimariye tam uyuyor.
+Yani bu, senin bilgisayarının açık olup olmadığından bağımsız, tamamen GitHub'ın altyapısında otonom çalışıyor — istasyon linklerini her gece kendi kendine tazeliyor.
+
