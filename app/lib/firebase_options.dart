@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDPzYWsnTViCUBYf-4BU0vi-dqZLMQIuMw',
-    appId: '1:403750730149:android:0d1a9dc32dd054bfd9104c',
+    appId: '1:403750730149:android:4b1e26bcd5432fb7d9104c',
     messagingSenderId: '403750730149',
     projectId: 'dialwave-radio-2026',
     storageBucket: 'dialwave-radio-2026.firebasestorage.app',

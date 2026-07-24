@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "403750730149",
+    "firebase_url": "https://dialwave-radio-2026-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "dialwave-radio-2026",
     "storage_bucket": "dialwave-radio-2026.firebasestorage.app"
   },
@@ -10,6 +11,25 @@
         "mobilesdk_app_id": "1:403750730149:android:0d1a9dc32dd054bfd9104c",
         "android_client_info": {
           "package_name": "com.dialwave.dialwave"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPzYWsnTViCUBYf-4BU0vi-dqZLMQIuMw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403750730149:android:4b1e26bcd5432fb7d9104c",
+        "android_client_info": {
+          "package_name": "com.w3app.radiobox"
         }
       },
       "oauth_client": [],

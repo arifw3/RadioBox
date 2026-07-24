@@ -9,15 +9,15 @@ plugins {
 }
 
 android {
-    namespace = "com.dialwave.dialwave"
+    namespace = "com.w3app.radiobox"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
-        // Required by flutter_local_notifications (radio alarm, Section 7
-        // of CLAUDE.md).
+        // Several plugins (geolocator, audio_service, ...) need Java 8+
+        // desugared APIs on older minSdk devices.
         isCoreLibraryDesugaringEnabled = true
     }
 
@@ -26,8 +26,7 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.dialwave.dialwave"
+        applicationId = "com.w3app.radiobox"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion

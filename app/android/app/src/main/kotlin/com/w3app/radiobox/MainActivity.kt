@@ -1,4 +1,4 @@
-package com.dialwave.dialwave
+package com.w3app.radiobox
 
 import com.ryanheise.audioservice.AudioServiceActivity
 
