@@ -220,8 +220,8 @@ class NowPlayingScreen extends ConsumerWidget {
                         style: style,
                       ),
                       Container(
-                        width: 150,
-                        height: 150,
+                        width: 130,
+                        height: 130,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           border: Border.all(color: Colors.white24, width: 3),
@@ -231,8 +231,8 @@ class NowPlayingScreen extends ConsumerWidget {
                               ? StationArt(
                                   imageUrl: mediaItem!.artUri.toString(),
                                   fit: BoxFit.cover,
-                                  width: 150,
-                                  height: 150,
+                                  width: 130,
+                                  height: 130,
                                   errorWidget: (_) => const _FallbackArt(),
                                 )
                               : const _FallbackArt(),
@@ -242,7 +242,7 @@ class NowPlayingScreen extends ConsumerWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 32),
+                const SizedBox(height: 24),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Text(
@@ -353,7 +353,7 @@ class _SpotlightScaffold extends StatelessWidget {
           // washed over it — the image stays clean and the station/artist/
           // song text gets its own card below, on the normal background.
           SizedBox(
-            height: screenHeight * 0.5,
+            height: screenHeight * 0.4,
             width: double.infinity,
             child: Stack(
               fit: StackFit.expand,
@@ -563,7 +563,6 @@ class _NowPlayingBottomNav extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final l10n = AppLocalizations.of(context)!;
     final favoriteIds =
         ref.watch(favoritesProvider).valueOrNull ?? const <String>{};
     final isFavorite = stationId != null && favoriteIds.contains(stationId);
@@ -582,20 +581,17 @@ class _NowPlayingBottomNav extends ConsumerWidget {
             children: [
               _NowPlayingNavItem(
                 icon: Icons.home_outlined,
-                label: l10n.homeLabel,
                 onTap: () =>
                     Navigator.of(context).popUntil((route) => route.isFirst),
               ),
               _NowPlayingNavItem(
                 icon: Icons.search_rounded,
-                label: l10n.searchTooltip,
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute<void>(builder: (_) => const SearchScreen()),
                 ),
               ),
               _NowPlayingNavItem(
                 icon: Icons.directions_car_filled_outlined,
-                label: l10n.driveModeTooltip,
                 onTap: () {
                   Navigator.of(context).popUntil((route) => route.isFirst);
                   ref.read(driveModeManualOverrideProvider.notifier).state =
@@ -605,7 +601,6 @@ class _NowPlayingBottomNav extends ConsumerWidget {
               _NowPlayingNavItem(
                 icon: isFavorite ? Icons.favorite : Icons.favorite_border,
                 iconColor: isFavorite ? AppColors.pink : Colors.white70,
-                label: l10n.tabFavorites,
                 onTap: stationId == null
                     ? null
                     : () =>
@@ -622,13 +617,11 @@ class _NowPlayingBottomNav extends ConsumerWidget {
 class _NowPlayingNavItem extends StatelessWidget {
   const _NowPlayingNavItem({
     required this.icon,
-    required this.label,
     required this.onTap,
     this.iconColor,
   });
 
   final IconData icon;
-  final String label;
   final VoidCallback? onTap;
   final Color? iconColor;
 
@@ -638,23 +631,8 @@ class _NowPlayingNavItem extends StatelessWidget {
       onTap: onTap,
       borderRadius: BorderRadius.circular(12),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(icon, color: iconColor ?? Colors.white70, size: 24),
-            const SizedBox(height: 4),
-            Text(
-              label,
-              style: Theme.of(context)
-                  .textTheme
-                  .labelSmall
-                  ?.copyWith(color: Colors.white70),
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-            ),
-          ],
-        ),
+        padding: const EdgeInsets.all(12),
+        child: Icon(icon, color: iconColor ?? Colors.white70, size: 26),
       ),
     );
   }

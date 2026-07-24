@@ -42,7 +42,7 @@ class _CircularVisualizerState extends State<CircularVisualizer>
     return AnimatedBuilder(
       animation: _controller,
       builder: (context, _) => CustomPaint(
-        size: const Size.square(260),
+        size: const Size.square(220),
         painter: _VisualizerPainter(
           progress: _controller.value,
           color: widget.color,

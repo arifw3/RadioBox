@@ -65,8 +65,21 @@ final rawNowPlayingTextProvider = Provider<String?>((ref) {
   if (raw == null || raw.isEmpty) return null;
   final countryCode = ref.watch(audioHandlerProvider).currentStation?.countryCode;
   if (raw == countryCode) return null;
+  if (_looksLikeStationPromo(raw)) return null;
   return raw;
 });
+
+/// Plenty of stations send their own website or slogan through ICY
+/// "StreamTitle" instead of real song info during ads/jingles/dead air
+/// (e.g. "www.hayatmix.com") — that's not a song, so it shouldn't be shown
+/// as one or logged into song history as if it were.
+bool _looksLikeStationPromo(String raw) {
+  final lower = raw.toLowerCase();
+  return lower.contains('www.') ||
+      lower.contains('http://') ||
+      lower.contains('https://') ||
+      RegExp(r'\.(com|net|org|tv|fm)\b').hasMatch(lower);
+}
 
 /// Refetches automatically whenever the raw ICY text changes (i.e. a new
 /// song starts).

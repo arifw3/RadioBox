@@ -167,6 +167,8 @@ flutter_launcher_icons:
   image_path: "assets/branding/icon.png"
   # The mark has transparent corners around a circular badge — Android
   # adaptive icons need an opaque background or launchers render it on
-  # whatever wallpaper is behind it.
-  adaptive_icon_background: "#0D0D12"
+  # whatever wallpaper is behind it. White matches the hand-tuned icon
+  # set actually shipped (images/icons/) — keeps a future regeneration
+  # from silently reverting to a different background.
+  adaptive_icon_background: "#ffffff"
   adaptive_icon_foreground: "assets/branding/icon.png"
