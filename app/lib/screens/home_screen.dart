@@ -14,10 +14,10 @@ import '../theme/app_theme.dart';
 import '../utils/contact.dart';
 import '../utils/playback_navigation.dart';
 import '../utils/time_of_day_suggestion.dart';
-import '../widgets/alarm_button.dart';
 import '../widgets/banner_ad_widget.dart';
 import '../widgets/country_picker_button.dart';
 import '../widgets/language_picker_button.dart';
+import '../state/sleep_timer_providers.dart';
 import '../widgets/mini_player.dart';
 import '../widgets/sleep_timer_button.dart';
 import '../widgets/station_art.dart';
@@ -92,9 +92,9 @@ class HomeScreen extends ConsumerWidget {
   }
 }
 
-/// Sürüş Modu / Şarkı Geçmişi / Uyku Zamanlayıcısı / Alarm used to live as
-/// separate AppBar icons plus an overflow menu; moved down here as one
-/// icon row so the AppBar can stay just the logo and a search icon.
+/// Ev (refresh) / Sürüş Modu / Şarkı Geçmişi / Uyku Zamanlayıcısı used to
+/// live as separate AppBar icons plus an overflow menu; moved down here as
+/// one icon row so the AppBar can stay just the logo and a search icon.
 class _HomeUtilityBar extends StatelessWidget {
   const _HomeUtilityBar();
 
@@ -107,34 +107,43 @@ class _HomeUtilityBar extends StatelessWidget {
         border: Border(bottom: BorderSide(color: AppColors.surfaceRaised)),
       ),
       child: Consumer(
-        builder: (context, ref, _) => Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            _BottomBarItem(
-              icon: Icons.directions_car_filled_outlined,
-              onTap: () => ref
-                  .read(driveModeManualOverrideProvider.notifier)
-                  .state = true,
-            ),
-            _BottomBarItem(
-              icon: Icons.history,
-              onTap: () => Navigator.of(context).push(
-                MaterialPageRoute<void>(
-                  builder: (_) => const SongHistoryScreen(),
+        builder: (context, ref, _) {
+          final sleepRemaining = ref.watch(sleepTimerProvider);
+          return Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              _BottomBarItem(
+                icon: Icons.home_outlined,
+                onTap: () => ref.invalidate(radioCatalogProvider),
+              ),
+              _BottomBarItem(
+                icon: Icons.directions_car_filled_outlined,
+                onTap: () => ref
+                    .read(driveModeManualOverrideProvider.notifier)
+                    .state = true,
+              ),
+              _BottomBarItem(
+                icon: Icons.history,
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (_) => const SongHistoryScreen(),
+                  ),
                 ),
               ),
-            ),
-            _BottomBarItem(
-              icon: Icons.bedtime_outlined,
-              onTap: () => openSleepTimerSheet(context, ref),
-            ),
-            _BottomBarItem(
-              icon: Icons.alarm,
-              onTap: () => openAlarmSheet(context, ref),
-            ),
-            const _SettingsBottomBarItem(),
-          ],
-        ),
+              _BottomBarItem(
+                icon: sleepRemaining == null
+                    ? Icons.bedtime_outlined
+                    : Icons.bedtime,
+                iconColor: sleepRemaining == null ? null : AppColors.accent,
+                badgeLabel: sleepRemaining == null
+                    ? null
+                    : '${sleepRemaining.inMinutes + 1}',
+                onTap: () => openSleepTimerSheet(context, ref),
+              ),
+              const _SettingsBottomBarItem(),
+            ],
+          );
+        },
       ),
     );
   }
@@ -144,19 +153,29 @@ class _BottomBarItem extends StatelessWidget {
   const _BottomBarItem({
     required this.icon,
     required this.onTap,
+    this.iconColor,
+    this.badgeLabel,
   });
 
   final IconData icon;
   final VoidCallback onTap;
+  final Color? iconColor;
+  final String? badgeLabel;
 
   @override
   Widget build(BuildContext context) {
+    final label = badgeLabel;
     return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(12),
       child: Padding(
         padding: const EdgeInsets.all(10),
-        child: Icon(icon, color: Colors.white70, size: 24),
+        child: label == null
+            ? Icon(icon, color: iconColor ?? Colors.white70, size: 24)
+            : Badge(
+                label: Text(label),
+                child: Icon(icon, color: iconColor ?? Colors.white70, size: 24),
+              ),
       ),
     );
   }

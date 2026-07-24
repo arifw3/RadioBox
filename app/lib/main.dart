@@ -10,9 +10,7 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import 'app.dart';
 import 'firebase_options.dart';
-import 'services/alarm_service.dart';
 import 'services/dialwave_audio_handler.dart';
-import 'state/alarm_providers.dart';
 import 'state/player_providers.dart';
 
 Future<void> main() async {
@@ -23,12 +21,10 @@ Future<void> main() async {
   await runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
 
-    final alarmService = AlarmService();
-
-    // These were previously sequential awaits — Firebase, AdMob, and the
-    // notification-permission timezone setup have no dependency on each
-    // other, so running them concurrently (and audio_service alongside
-    // them) is most of the real-device first-launch latency fix.
+    // These were previously sequential awaits — Firebase and AdMob have no
+    // dependency on each other, so running them concurrently (and
+    // audio_service alongside them) is most of the real-device first-launch
+    // latency fix.
     final audioHandlerFuture = AudioService.init(
       builder: DialWaveAudioHandler.new,
       config: const AudioServiceConfig(
@@ -44,7 +40,6 @@ Future<void> main() async {
     await Future.wait([
       Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform),
       MobileAds.instance.initialize(),
-      alarmService.init(),
     ]);
     final audioHandler = await audioHandlerFuture;
 
@@ -56,18 +51,10 @@ Future<void> main() async {
 
     runApp(
       ProviderScope(
-        overrides: [
-          audioHandlerProvider.overrideWithValue(audioHandler),
-          alarmServiceProvider.overrideWithValue(alarmService),
-        ],
+        overrides: [audioHandlerProvider.overrideWithValue(audioHandler)],
         child: const RadioBoxApp(),
       ),
     );
-
-    // The notification-permission system dialog would otherwise block the
-    // very first frame from ever showing — ask for it only once the UI is
-    // already on screen.
-    unawaited(alarmService.requestPermissions());
   }, (error, stack) {
     FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
   });

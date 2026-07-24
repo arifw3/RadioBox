@@ -11,13 +11,9 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
-    <!-- Radio wake-up alarm (Section 7, CLAUDE.md): exact-time full-screen
-         notification, the same mechanism the system Clock app uses. -->
-    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
-    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+    <!-- audio_service's persistent "now playing" notification needs this
+         on Android 13+ (API 33), independent of the notification's content. -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
-    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <!-- Voice-first full-screen search — typing station names while
          driving is impractical. -->

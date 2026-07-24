@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'l10n/app_localizations.dart';
 import 'screens/drive_mode_screen.dart';
 import 'screens/home_screen.dart';
-import 'state/alarm_providers.dart';
 import 'state/artist_spotlight_providers.dart';
 import 'state/drive_mode_providers.dart';
 import 'state/locale_providers.dart';
@@ -44,14 +43,9 @@ class _RootScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // Side-effect only: starts alarm playback if this launch came from
-    // tapping the alarm notification. Result is intentionally unused.
-    ref.watch(alarmAutoplayProvider);
-
     // Records a play exactly once per station change, regardless of
     // where playback was triggered from (list tap, hero card, Drive Mode
-    // swipe, alarm autoplay, Social Sync join) — drives "sık dinlenen
-    // önce" ordering on the station list.
+    // swipe) — drives "sık dinlenen önce" ordering on the station list.
     ref.listen(currentMediaItemProvider, (previous, next) {
       final id = next.valueOrNull?.id;
       if (id != null && id != previous?.valueOrNull?.id) {

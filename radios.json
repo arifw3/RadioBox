@@ -1,6 +1,6 @@
 {
-  "version": "4407c501fdc28f6f169e55b64167a146bcf1ba8669376b46b78d1acc4d9443d7",
-  "generatedAtUtc": "2026-07-23T13:07:45.427623Z",
+  "version": "ab51be3ca4d472a46756503058f8bc8b32d1ef27e1ab736a0b75308dfd1157c7",
+  "generatedAtUtc": "2026-07-24T07:22:00.080036Z",
   "stations": [
     {
       "id": "98adecf7-2683-4408-9be7-02d3f9098eb8",
@@ -3239,7 +3239,7 @@
     },
     {
       "id": "961f5a7a-0601-11e8-ae97-52543be04c81",
-      "name": "Blu Radio, señal nacional (HJCK, 89.9 MHz FM, Bogotá / HJN42, 96.3 MHz, San Martín, Meta / HJH87, 103.1 MHz, Paipa, Boyacá / HJOM, 1090 KHz, Cartagena de Indias / HJM47 103.1 MHz, Algeciras, Huila / HJQ43, 94.1 MHz, Bugalagrande, Valle del Cauca)",
+      "name": "Blu Radio",
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/BLURADIO_SC",
       "countryCode": "CO",
       "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/961f5a7a-0601-11e8-ae97-52543be04c81-favicon-upgrade.png",
@@ -13887,7 +13887,7 @@
     },
     {
       "id": "d06dd5cb-97f4-48f6-8146-ec89e7b94cc0",
-      "name": "-- # TOP 100 CHARTS --- DJ MIXES -- Pop, Rock, Dance, House, Techno, Trance, Electro, Hip-Hop, Rap, RnB, Reggaeton, Latin, Jazz, Blues, Soul, Funk, Metal, Indie, Alternative, Chillout, Lounge, Ambient, Classical, Acoustic, Party, Hits, Charts, Oldies, 80s, 90s, EDM, Club, Deep House, Tropical, Mood, Love Songs, Workout, Relax",
+      "name": "TOP 100 CHARTS - DJ MIXES",
       "streamUrl": "https://breakz-high.rautemusik.fm/?ref=rb-djclubcharts0326",
       "countryCode": "DE",
       "favicon": "https://i.ibb.co/m5695X1x/T100-BRR-CH.png",
@@ -21722,7 +21722,7 @@
     },
     {
       "id": "ebdaeaf7-bbcf-4136-bb44-0c644d0c7d69",
-      "name": ">> *TOP 100 CHARTS* <<  || Pop, Rock, Dance, House, Techno, Trance, Electro, Hip-Hop, Rap, RnB, Reggaeton, Latin, Jazz, Blues, Soul, Funk, Metal, Punk, Indie, Alternative, Chillout, Lounge, Ambient, Classical, Acoustic, Singer-Songwriter, Party, Top 40, Hits, Charts, Oldies, 80s, 90s, 2000s, 2010s, EDM, Club, Deep House, Tropical, Mood, Love Songs, Workout, Relax, Study, Driving, Festival, Summer",
+      "name": "TOP 100 CHARTS Pop, Rock",
       "streamUrl": "https://breakz-2012-high.rautemusik.fm/?ref=rb010326",
       "countryCode": "DE",
       "favicon": "",
@@ -37655,6 +37655,1034 @@
       ],
       "codec": "AAC",
       "bitrateKbps": 96,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-268",
+      "name": "Afşin FM",
+      "streamUrl": "https://radyo.arkacadde.org/4646/afsinradyo.mp3",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-268.jpg",
+      "tags": [
+        "halk müziği",
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-609",
+      "name": "Aksaray'ın Sesi",
+      "streamUrl": "http://yayin.netyayin.net:8098/stream",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-609.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2761",
+      "name": "Amasya FM",
+      "streamUrl": "https://amasyafm.ozelip.com:8022/stream",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2761.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2105",
+      "name": "Arkadaş FM",
+      "streamUrl": "http://yayin.yayindakiler.com:4134/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2105.jpg",
+      "tags": [
+        "dinî"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-1167",
+      "name": "Arnavutköy FM",
+      "streamUrl": "https://arnavut2.80.yayin.com.tr/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-1167.jpg",
+      "tags": [
+        "türkçe pop",
+        "türkçe remiks"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-3011",
+      "name": "Berat FM",
+      "streamUrl": "https://beratfm.80.yayin.com.tr/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-3011.jpg",
+      "tags": [
+        "dinî"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-304",
+      "name": "Bloomberg HT Radyo",
+      "streamUrl": "http://bloomberghtradyo.radyotvonline.net/bloomberghtradyo",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-304.jpg",
+      "tags": [
+        "ekonomi",
+        "haber"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-579",
+      "name": "Botan FM",
+      "streamUrl": "https://live.botanfm.com/botanfm",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-579.jpg",
+      "tags": [
+        "dinî",
+        "halk müziği"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-742",
+      "name": "Cemre FM",
+      "streamUrl": "https://live.cemrefm.net/cemrefm",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-742.jpg",
+      "tags": [
+        "dinî"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-3064",
+      "name": "Çamlıca FM",
+      "streamUrl": "https://camlicafm.ozelip.com:9314/stream?/;stream.mp3",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-3064.jpg",
+      "tags": [
+        "dinî"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2081",
+      "name": "Elbistan Radyo Umut",
+      "streamUrl": "http://yayin.canliyayin.org:8892/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2081.jpg",
+      "tags": [
+        "halk müziği"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2545",
+      "name": "Elbistan Yöre FM",
+      "streamUrl": "https://ip.elbistanyorefm.com.tr:8022/stream?/;stream.mp3",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2545.jpg",
+      "tags": [
+        "arabesk/fantazi",
+        "halk müziği"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-534",
+      "name": "Gebze FM",
+      "streamUrl": "http://gebzefm.radyotvyayini.com:9530/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-534.jpg",
+      "tags": [
+        "arabesk/fantazi",
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-400",
+      "name": "Gimsa Radyo",
+      "streamUrl": "http://yayin.canliyayin.org:9482/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-400.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-623",
+      "name": "Gözde FM Kayseri",
+      "streamUrl": "https://sslyayin.radyoyayini.com:7067/stream",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-623.jpg",
+      "tags": [
+        "arabesk/fantazi"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-818",
+      "name": "Haber Radyo Samsun",
+      "streamUrl": "https://sslyayin.radyoyayini.com/8014/stream/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-818.jpg",
+      "tags": [
+        "haber",
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-1217",
+      "name": "Harman Radyo",
+      "streamUrl": "https://free.rcast.net/200259",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-1217.jpg",
+      "tags": [
+        "halk müziği"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-1247",
+      "name": "Harran FM",
+      "streamUrl": "https://harranfm.ozelip.com/8026/stream",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-1247.jpg",
+      "tags": [
+        "halk müziği"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-756",
+      "name": "Hit FM Elazığ",
+      "streamUrl": "http://yayin.turkiletisim.com.tr:1094/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-756.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2219",
+      "name": "HKÜ Radyo",
+      "streamUrl": "https://radio.hku.edu.tr:8000/radio.mp3",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2219.png",
+      "tags": [
+        "kampüs",
+        "yabancı pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-736",
+      "name": "Iğdır FM",
+      "streamUrl": "http://yayin2.yayindakiler.com:4158/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-736.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2675",
+      "name": "İncitek FM",
+      "streamUrl": "http://yayin.yayindakiler.com:4204/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2675.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-327",
+      "name": "Keskin FM",
+      "streamUrl": "http://keskinfm.com:1021/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-327.jpg",
+      "tags": [
+        "halk müziği"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-507",
+      "name": "Körfez FM",
+      "streamUrl": "https://dinle.korfezfm.com/9954/stream",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-507.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2491",
+      "name": "Kuzey FM",
+      "streamUrl": "http://yayin.yayindakiler.com:3028/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2491.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-735",
+      "name": "Malatya Er FM",
+      "streamUrl": "https://edge1.socialsmart.tv/erfm/bant1/icecast.audio",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-735.jpg",
+      "tags": [
+        "türk sanat müziği"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2319",
+      "name": "Malazgirt FM",
+      "streamUrl": "https://radyo.malazgirtfm.com:1071/stream",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2319.jpg",
+      "tags": [
+        "halk müziği"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-571",
+      "name": "Mercan FM",
+      "streamUrl": "https://mercanfm.ozelip.com.tr:10975/;stream.nsv&type=mp3",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-571.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-105",
+      "name": "Number One Türk",
+      "streamUrl": "https://eustr75.mediatriple.net/Number1Media/00_Number1_Turk_FM.stream/playlist.m3u8",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-105.jpg",
+      "tags": [
+        "popüler",
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-975",
+      "name": "Özlem FM Uşak",
+      "streamUrl": "http://streamtr.turkiyeradyolari.com:15124/stream",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-975.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-831",
+      "name": "Piramit FM",
+      "streamUrl": "http://yayin.netyayin.net:2637/;*.nsv",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-831.jpg",
+      "tags": [
+        "türkçe pop",
+        "türkçe remiks"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-144",
+      "name": "Polis Radyosu",
+      "streamUrl": "https://m.egm.gov.tr:8093/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-144.jpg",
+      "tags": [
+        "haber",
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2511",
+      "name": "Polis Radyosu TSM",
+      "streamUrl": "https://m.egm.gov.tr:8095/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2511.jpg",
+      "tags": [
+        "türk sanat müziği"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-3533",
+      "name": "Radyo Başkent",
+      "streamUrl": "https://radyo.radyoimza.com/8066/stream",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-3533.jpg",
+      "tags": [
+        "arabesk/fantazi"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2214",
+      "name": "Radyo Çanakkale",
+      "streamUrl": "https://radyo2.fkbs.com.tr:8018/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2214.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2719",
+      "name": "Radyo Çetin",
+      "streamUrl": "http://www.gokyuzuserver.com.tr:9304/;stream/1",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2719.jpg",
+      "tags": [
+        "arabesk/fantazi"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-3402",
+      "name": "Radyo Desibel",
+      "streamUrl": "https://radyodesibel.com/stream.php",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-3402.jpg",
+      "tags": [
+        "yabancı pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2932",
+      "name": "Radyo Efebey",
+      "streamUrl": "https://radyo.radyoimza.com:8016/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2932.jpg",
+      "tags": [
+        "halk müziği"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-791",
+      "name": "Radyo Evrensel",
+      "streamUrl": "http://evrenselfm.ozelip.com/9996/stream",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-791.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-162",
+      "name": "Radyo Fenerbahçe",
+      "streamUrl": "https://radyofenerbahce.fenerbahce.org/radyofenerbahce/radyofenerbahce.stream_aac/playlist.m3u8",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-162.jpg",
+      "tags": [
+        "spor"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2895",
+      "name": "Radyo Gözlem",
+      "streamUrl": "https://radyogozlem.ozelip.net/8030/stream",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2895.jpg",
+      "tags": [
+        "slow"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-3112",
+      "name": "Radyo Hayat Amasya",
+      "streamUrl": "https://sslyayin.radyoyayini.com:7059/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-3112.jpg",
+      "tags": [
+        "halk müziği"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-592",
+      "name": "Radyo Horoz",
+      "streamUrl": "https://radyohoroz.ozelip.com/8008/stream",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-592.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2492",
+      "name": "Radyo Kolaylı",
+      "streamUrl": "http://154.53.167.66:8004/stream.nsv",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2492.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-190",
+      "name": "Radyo Kordelya",
+      "streamUrl": "https://radyo.medyahost.com.tr/8048/stream",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-190.jpg",
+      "tags": [
+        "türk sanat müziği"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2646",
+      "name": "Radyo Manavgat",
+      "streamUrl": "http://yayin.netyayin.net:8355/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2646.jpg",
+      "tags": [
+        "arabesk/fantazi"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2493",
+      "name": "Radyo Megastar",
+      "streamUrl": "https://sslyayin.radyoyayini.com:7039/stream",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2493.jpg",
+      "tags": [
+        "arabesk/fantazi"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-958",
+      "name": "Radyo Neşter",
+      "streamUrl": "https://live.sinirsizhost.com/8026/stream?/;stream.mp3",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-958.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-1007",
+      "name": "Radyo Nevşehir",
+      "streamUrl": "http://radyonevsehir.radyoyayini.com:5000/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-1007.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2870",
+      "name": "Radyo Nikomedya",
+      "streamUrl": "https://sslyayin.radyoyayini.com:7091/stream?/;stream.mp3",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2870.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-252",
+      "name": "Radyo Pause",
+      "streamUrl": "https://radyopause.ozelip.com.tr:8040/;*.nsv",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-252.jpg",
+      "tags": [
+        "slow",
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-3104",
+      "name": "Radyo Pötürgeli",
+      "streamUrl": "https://yayin.radyopoturgeli.com/4444/stream",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-3104.jpg",
+      "tags": [
+        "halk müziği"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2857",
+      "name": "Radyo Radar",
+      "streamUrl": "https://live.radyoradar.com/default",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2857.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-575",
+      "name": "Radyo Sultan",
+      "streamUrl": "https://kilissul.80.yayin.com.tr/stream",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-575.jpg",
+      "tags": [
+        "halk müziği",
+        "ortadoğu"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-569",
+      "name": "Radyo Şirin",
+      "streamUrl": "http://154.53.167.66:9570/mp3/1/",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-569.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-26",
+      "name": "Radyo Trafik",
+      "streamUrl": "http://live2.radyotvonline.com:8000/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-26.jpg",
+      "tags": [
+        "haber",
+        "popüler",
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-567",
+      "name": "Radyo Trafik Ankara",
+      "streamUrl": "http://live4.radyotvonline.com:7075/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-567.jpg",
+      "tags": [
+        "haber"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-1613",
+      "name": "Radyo Trafik İzmir",
+      "streamUrl": "http://37.247.100.118/stream/179/",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-1613.jpg",
+      "tags": [
+        "haber"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-406",
+      "name": "Radyo Trend",
+      "streamUrl": "https://sslyayin.radyoyayini.com:7032/stream",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-406.jpg",
+      "tags": [
+        "türkçe pop",
+        "yabancı pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-197",
+      "name": "Radyo Yakamoz",
+      "streamUrl": "http://live4.radyotvonline.com:6570/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-197.jpg",
+      "tags": [
+        "halk müziği",
+        "özgün müzik"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2962",
+      "name": "Radyo Zafer",
+      "streamUrl": "https://radyozafer.ozelip.com:8034/stream?/;stream.mp3",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2962.jpg",
+      "tags": [
+        "halk müziği"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2119",
+      "name": "Sakarya Ada FM",
+      "streamUrl": "http://www.adafm.net:6262/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2119.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-366",
+      "name": "Samsun Tutku FM",
+      "streamUrl": "https://sslyayin.radyoyayini.com/8012/stream?/;stream.mp3",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-366.jpg",
+      "tags": [
+        "halk müziği"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-607",
+      "name": "Serhad FM",
+      "streamUrl": "https://live.serhadfm.com/serhadfm",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-607.jpg",
+      "tags": [
+        "dinî"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-675",
+      "name": "Sorgun FM",
+      "streamUrl": "http://radyovetv.com:8001/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-675.jpg",
+      "tags": [
+        "arabesk/fantazi",
+        "halk müziği"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-2542",
+      "name": "Sout Al-Khaleej",
+      "streamUrl": "https://tx.sharp-stream.com/icecast.php?i=spectrum4.mp3",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-2542.jpg",
+      "tags": [
+        "ortadoğu"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-1384",
+      "name": "ST Endüstri Radyo",
+      "streamUrl": "https://endustriradyo.radyotvonline.net/endustriradyo",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-1384.jpg",
+      "tags": [
+        "ekonomi",
+        "tematik"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-1292",
+      "name": "Tempo FM Niğde",
+      "streamUrl": "https://radyoserver1.okeylisans.com:8082/;",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-1292.jpg",
+      "tags": [
+        "türkçe pop"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-3545",
+      "name": "TV100 Haber",
+      "streamUrl": "https://ssldyg2.radyotvonline.com/live/tv100radyo.stream/playlist.m3u8",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-3545.jpg",
+      "tags": [
+        "haber"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-738",
+      "name": "Vitamin FM",
+      "streamUrl": "https://ip.vitaminfm.com/8190/stream",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-738.jpg",
+      "tags": [
+        "halk müziği",
+        "karadeniz"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-596",
+      "name": "Vuslat FM",
+      "streamUrl": "https://live.vuslatfm.com.tr/vuslatfm",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-596.jpg",
+      "tags": [
+        "dinî"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
+      "votes": 0,
+      "clickCount": 0
+    },
+    {
+      "id": "rk-312",
+      "name": "Yörük FM",
+      "streamUrl": "https://tr2.socialsmart.tv/tepemedya/yorukfm/icecast.audio",
+      "countryCode": "TR",
+      "favicon": "https://cdn.jsdelivr.net/gh/arifw3/RadioBox@main/images/rk-312.jpg",
+      "tags": [
+        "halk müziği"
+      ],
+      "codec": "",
+      "bitrateKbps": 0,
       "votes": 0,
       "clickCount": 0
     }

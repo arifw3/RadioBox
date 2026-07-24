@@ -11,43 +11,67 @@ const _presets = [
 ];
 
 /// Opens the sleep timer picker sheet — also called directly from the
-/// AppBar overflow menu, not just [SleepTimerButton].
+/// AppBar overflow menu, not just [SleepTimerButton]. A [Consumer] inside
+/// (rather than reading state once before the sheet opens) so the live
+/// countdown and the "cancel" option track the timer while the sheet is
+/// open, instead of only reflecting whatever was true at the moment it
+/// was opened.
 Future<void> openSleepTimerSheet(BuildContext context, WidgetRef ref) async {
-  final active = ref.read(sleepTimerProvider) != null;
   await showModalBottomSheet<void>(
     context: context,
     builder: (context) => SafeArea(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const Padding(
-            padding: EdgeInsets.all(16),
-            child: Text(
-              'Uyku Zamanlayıcısı',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-            ),
-          ),
-          for (final preset in _presets)
-            ListTile(
-              title: Text('${preset.inMinutes} dakika sonra durdur'),
-              onTap: () {
-                ref.read(sleepTimerProvider.notifier).start(preset);
-                Navigator.of(context).pop();
-              },
-            ),
-          if (active)
-            ListTile(
-              leading: const Icon(Icons.close),
-              title: const Text('Zamanlayıcıyı kapat'),
-              onTap: () {
-                ref.read(sleepTimerProvider.notifier).cancel();
-                Navigator.of(context).pop();
-              },
-            ),
-        ],
+      child: Consumer(
+        builder: (context, ref, _) {
+          final remaining = ref.watch(sleepTimerProvider);
+          return Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Padding(
+                padding: EdgeInsets.fromLTRB(16, 16, 16, 4),
+                child: Text(
+                  'Uyku Zamanlayıcısı',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                ),
+              ),
+              if (remaining != null)
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 4, 16, 12),
+                  child: Text(
+                    '${_endClockTime(remaining)}\'de duracak '
+                    '(${remaining.inMinutes + 1} dakika kaldı)',
+                    style: const TextStyle(color: Colors.grey),
+                  ),
+                ),
+              for (final preset in _presets)
+                ListTile(
+                  title: Text('${preset.inMinutes} dakika sonra durdur'),
+                  onTap: () {
+                    ref.read(sleepTimerProvider.notifier).start(preset);
+                    Navigator.of(context).pop();
+                  },
+                ),
+              if (remaining != null)
+                ListTile(
+                  leading: const Icon(Icons.close),
+                  title: const Text('Zamanlayıcıyı kapat'),
+                  onTap: () {
+                    ref.read(sleepTimerProvider.notifier).cancel();
+                    Navigator.of(context).pop();
+                  },
+                ),
+            ],
+          );
+        },
       ),
     ),
   );
+}
+
+String _endClockTime(Duration remaining) {
+  final end = DateTime.now().add(remaining);
+  final hour = end.hour.toString().padLeft(2, '0');
+  final minute = end.minute.toString().padLeft(2, '0');
+  return '$hour:$minute';
 }
 
 /// AppBar action for the sleep timer — shows remaining minutes once one
