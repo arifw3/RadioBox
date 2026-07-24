@@ -4,14 +4,15 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../l10n/app_localizations.dart';
 import '../state/artist_spotlight_providers.dart';
 import '../state/country_providers.dart';
+import '../state/drive_mode_providers.dart';
 import '../state/favorites_providers.dart';
 import '../state/palette_providers.dart';
 import '../state/player_providers.dart';
 import '../theme/app_theme.dart';
 import '../widgets/banner_ad_widget.dart';
 import '../widgets/circular_visualizer.dart';
-import '../widgets/social_sync_panel.dart';
 import '../widgets/station_art.dart';
+import 'search_screen.dart';
 import 'share_preview_screen.dart';
 
 final _visualizerStyleProvider = StateProvider<int>((ref) => 0);
@@ -50,46 +51,54 @@ class NowPlayingScreen extends ConsumerWidget {
         spotlight != null &&
         (spotlight.imageUrl?.isNotEmpty ?? false);
 
-    final transportRow = Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        _TransportButton(
-          icon: Icons.skip_previous_rounded,
-          size: 56,
-          iconSize: 28,
-          tooltip: l10n.transportPrevious,
-          onPressed: () => _skip(ref, forward: false),
-        ),
-        const SizedBox(width: 20),
-        _TransportButton(
-          icon: playing ? Icons.pause_rounded : Icons.play_arrow_rounded,
-          size: 84,
-          iconSize: 44,
-          filled: true,
-          tooltip: playing ? l10n.transportPause : l10n.transportPlay,
-          onPressed: () {
-            final handler = ref.read(audioHandlerProvider);
-            playing ? handler.pause() : handler.play();
-          },
-        ),
-        const SizedBox(width: 20),
-        _TransportButton(
-          icon: Icons.skip_next_rounded,
-          size: 56,
-          iconSize: 28,
-          tooltip: l10n.transportNext,
-          onPressed: () => _skip(ref, forward: true),
-        ),
-      ],
-    );
-
-    // Zaman Yolculuğu (Section 4, CLAUDE.md): a rewind step, plus — only
-    // once actually time-shifted — a "not live" badge with a way back.
-    final timeShiftRow = Padding(
-      padding: const EdgeInsets.only(top: 8),
+    // Share and the time-shift rewind step used to live apart from the
+    // transport controls (share in the AppBar, rewind in its own row) —
+    // moved to flank prev/next here so play's own position on screen never
+    // moves, only what sits to its left/right.
+    final transportRow = Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          IconButton(
+            icon: const Icon(Icons.ios_share),
+            tooltip: l10n.shareTooltip,
+            color: Colors.white70,
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(builder: (_) => const SharePreviewScreen()),
+            ),
+          ),
+          Row(
+            children: [
+              _TransportButton(
+                icon: Icons.skip_previous_rounded,
+                size: 56,
+                iconSize: 28,
+                tooltip: l10n.transportPrevious,
+                onPressed: () => _skip(ref, forward: false),
+              ),
+              const SizedBox(width: 20),
+              _TransportButton(
+                icon: playing ? Icons.pause_rounded : Icons.play_arrow_rounded,
+                size: 84,
+                iconSize: 44,
+                filled: true,
+                tooltip: playing ? l10n.transportPause : l10n.transportPlay,
+                onPressed: () {
+                  final handler = ref.read(audioHandlerProvider);
+                  playing ? handler.pause() : handler.play();
+                },
+              ),
+              const SizedBox(width: 20),
+              _TransportButton(
+                icon: Icons.skip_next_rounded,
+                size: 56,
+                iconSize: 28,
+                tooltip: l10n.transportNext,
+                onPressed: () => _skip(ref, forward: true),
+              ),
+            ],
+          ),
           IconButton(
             icon: const Icon(Icons.replay_30),
             tooltip: l10n.timeShiftRewindTooltip,
@@ -98,48 +107,60 @@ class NowPlayingScreen extends ConsumerWidget {
                 .read(audioHandlerProvider)
                 .rewindBy(const Duration(seconds: 30)),
           ),
-          if (isTimeShifted) ...[
-            const SizedBox(width: 8),
-            Container(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 12,
-                vertical: 6,
-              ),
-              decoration: BoxDecoration(
-                color: AppColors.pink,
-                borderRadius: BorderRadius.circular(AppRadii.pill),
-              ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    l10n.timeShiftLiveBadge,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 11,
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                  GestureDetector(
-                    onTap: () => ref.read(audioHandlerProvider).returnToLive(),
-                    child: Text(
-                      l10n.timeShiftReturnToLive,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        decoration: TextDecoration.underline,
-                        fontSize: 11,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
         ],
       ),
     );
+
+    // Zaman Yolculuğu (Section 4, CLAUDE.md): only shown once actually
+    // time-shifted — a "not live" badge with a way back. The rewind step
+    // itself now lives in transportRow, flanking prev/next.
+    final timeShiftRow = isTimeShifted
+        ? Padding(
+            padding: const EdgeInsets.only(top: 8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 6,
+                  ),
+                  decoration: BoxDecoration(
+                    color: AppColors.pink,
+                    borderRadius: BorderRadius.circular(AppRadii.pill),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        l10n.timeShiftLiveBadge,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 11,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      GestureDetector(
+                        onTap: () =>
+                            ref.read(audioHandlerProvider).returnToLive(),
+                        child: Text(
+                          l10n.timeShiftReturnToLive,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            decoration: TextDecoration.underline,
+                            fontSize: 11,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          )
+        : const SizedBox.shrink();
 
     if (spotlightReady) {
       return _SpotlightScaffold(
@@ -159,18 +180,15 @@ class NowPlayingScreen extends ConsumerWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        actions: [
-          _FavoriteButton(stationId: mediaItem?.id),
-          IconButton(
-            icon: const Icon(Icons.ios_share),
-            tooltip: l10n.shareTooltip,
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute<void>(builder: (_) => const SharePreviewScreen()),
-            ),
-          ),
+        actions: [_FavoriteButton(stationId: mediaItem?.id)],
+      ),
+      bottomNavigationBar: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const BannerAdWidget(),
+          _NowPlayingBottomNav(stationId: mediaItem?.id),
         ],
       ),
-      bottomNavigationBar: const BannerAdWidget(),
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(
@@ -246,9 +264,7 @@ class NowPlayingScreen extends ConsumerWidget {
                 const SizedBox(height: 32),
                 transportRow,
                 timeShiftRow,
-                const SizedBox(height: 28),
-                const SocialSyncPanel(),
-                const SizedBox(height: 16),
+                const SizedBox(height: 24),
               ],
             ),
           ),
@@ -321,18 +337,15 @@ class _SpotlightScaffold extends StatelessWidget {
           ).textTheme.titleMedium?.copyWith(color: Colors.white),
         ),
         centerTitle: true,
-        actions: [
-          _FavoriteButton(stationId: stationId),
-          IconButton(
-            icon: const Icon(Icons.ios_share),
-            tooltip: l10n.shareTooltip,
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute<void>(builder: (_) => const SharePreviewScreen()),
-            ),
-          ),
+        actions: [_FavoriteButton(stationId: stationId)],
+      ),
+      bottomNavigationBar: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const BannerAdWidget(),
+          _NowPlayingBottomNav(stationId: stationId),
         ],
       ),
-      bottomNavigationBar: const BannerAdWidget(),
       backgroundColor: AppColors.background,
       body: Column(
         children: [
@@ -468,8 +481,6 @@ class _SpotlightScaffold extends StatelessWidget {
                     ),
                   ],
                   const SizedBox(height: 24),
-                  const SocialSyncPanel(),
-                  const SizedBox(height: 16),
                 ],
               ),
             ),
@@ -537,6 +548,114 @@ class _FavoriteButton extends ConsumerWidget {
       onPressed: stationId == null
           ? null
           : () => ref.read(favoritesProvider.notifier).toggle(stationId!),
+    );
+  }
+}
+
+/// Ev / Ara / Sürüş Modu / Beğen quick-nav row, replacing the old Social
+/// Sync ("Oda Oluştur / Odaya Katıl") panel — pinned in the Scaffold's
+/// bottomNavigationBar (not the scrollable body) so it stays fixed on
+/// screen, as its own rounded card sitting just below the banner ad.
+class _NowPlayingBottomNav extends ConsumerWidget {
+  const _NowPlayingBottomNav({required this.stationId});
+
+  final String? stationId;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
+    final favoriteIds =
+        ref.watch(favoritesProvider).valueOrNull ?? const <String>{};
+    final isFavorite = stationId != null && favoriteIds.contains(stationId);
+
+    return DecoratedBox(
+      decoration: const BoxDecoration(
+        color: AppColors.surfaceRaised,
+        borderRadius: BorderRadius.vertical(top: Radius.circular(AppRadii.card)),
+      ),
+      child: SafeArea(
+        top: false,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              _NowPlayingNavItem(
+                icon: Icons.home_outlined,
+                label: l10n.homeLabel,
+                onTap: () =>
+                    Navigator.of(context).popUntil((route) => route.isFirst),
+              ),
+              _NowPlayingNavItem(
+                icon: Icons.search_rounded,
+                label: l10n.searchTooltip,
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(builder: (_) => const SearchScreen()),
+                ),
+              ),
+              _NowPlayingNavItem(
+                icon: Icons.directions_car_filled_outlined,
+                label: l10n.driveModeTooltip,
+                onTap: () {
+                  Navigator.of(context).popUntil((route) => route.isFirst);
+                  ref.read(driveModeManualOverrideProvider.notifier).state =
+                      true;
+                },
+              ),
+              _NowPlayingNavItem(
+                icon: isFavorite ? Icons.favorite : Icons.favorite_border,
+                iconColor: isFavorite ? AppColors.pink : Colors.white70,
+                label: l10n.tabFavorites,
+                onTap: stationId == null
+                    ? null
+                    : () =>
+                        ref.read(favoritesProvider.notifier).toggle(stationId!),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _NowPlayingNavItem extends StatelessWidget {
+  const _NowPlayingNavItem({
+    required this.icon,
+    required this.label,
+    required this.onTap,
+    this.iconColor,
+  });
+
+  final IconData icon;
+  final String label;
+  final VoidCallback? onTap;
+  final Color? iconColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(12),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, color: iconColor ?? Colors.white70, size: 24),
+            const SizedBox(height: 4),
+            Text(
+              label,
+              style: Theme.of(context)
+                  .textTheme
+                  .labelSmall
+                  ?.copyWith(color: Colors.white70),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

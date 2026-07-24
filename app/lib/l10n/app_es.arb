@@ -33,6 +33,8 @@
   "alarmLabel": "Alarma",
   "sleepTimerLabel": "Temporizador de apagado",
   "languageLabel": "Idioma",
+  "settingsLabel": "Ajustes",
+  "homeLabel": "Inicio",
 
   "stationNotSelected": "Ninguna emisora seleccionada",
   "visualizerHint": "Toca el visualizador para cambiar la onda",

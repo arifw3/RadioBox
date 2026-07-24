@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../state/country_providers.dart';
 import '../state/drive_mode_providers.dart';
 import '../state/player_providers.dart';
+import '../widgets/banner_ad_widget.dart';
 
 final _volumeProvider = StateProvider<double>((ref) => 1.0);
 
@@ -22,6 +23,7 @@ class DriveModeScreen extends ConsumerWidget {
 
     return Scaffold(
       backgroundColor: Colors.black,
+      bottomNavigationBar: const BannerAdWidget(),
       body: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTap: () {

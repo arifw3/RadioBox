@@ -52,21 +52,6 @@ class HomeScreen extends ConsumerWidget {
               MaterialPageRoute<void>(builder: (_) => const SearchScreen()),
             ),
           ),
-          _AppBarIconButton(
-            icon: Icons.directions_car_filled_outlined,
-            tooltip: l10n.driveModeTooltip,
-            onPressed: () => ref
-                .read(driveModeManualOverrideProvider.notifier)
-                .state = true,
-          ),
-          _AppBarIconButton(
-            icon: Icons.history,
-            tooltip: l10n.songHistoryLabel,
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute<void>(builder: (_) => const SongHistoryScreen()),
-            ),
-          ),
-          const _OverflowMenuButton(),
           const SizedBox(width: 8),
         ],
       ),
@@ -101,8 +86,95 @@ class HomeScreen extends ConsumerWidget {
       ),
       bottomNavigationBar: const Column(
         mainAxisSize: MainAxisSize.min,
-        children: [MiniPlayer(), BannerAdWidget()],
+        children: [MiniPlayer(), BannerAdWidget(), _HomeUtilityBar()],
       ),
+    );
+  }
+}
+
+/// Sürüş Modu / Şarkı Geçmişi / Uyku Zamanlayıcısı / Alarm used to live as
+/// separate AppBar icons plus an overflow menu; moved down here as one
+/// icon row so the AppBar can stay just the logo and a search icon.
+class _HomeUtilityBar extends StatelessWidget {
+  const _HomeUtilityBar();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      decoration: const BoxDecoration(
+        color: AppColors.surface,
+        border: Border(bottom: BorderSide(color: AppColors.surfaceRaised)),
+      ),
+      child: Consumer(
+        builder: (context, ref, _) => Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            _BottomBarItem(
+              icon: Icons.directions_car_filled_outlined,
+              onTap: () => ref
+                  .read(driveModeManualOverrideProvider.notifier)
+                  .state = true,
+            ),
+            _BottomBarItem(
+              icon: Icons.history,
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute<void>(
+                  builder: (_) => const SongHistoryScreen(),
+                ),
+              ),
+            ),
+            _BottomBarItem(
+              icon: Icons.bedtime_outlined,
+              onTap: () => openSleepTimerSheet(context, ref),
+            ),
+            _BottomBarItem(
+              icon: Icons.alarm,
+              onTap: () => openAlarmSheet(context, ref),
+            ),
+            const _SettingsBottomBarItem(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _BottomBarItem extends StatelessWidget {
+  const _BottomBarItem({
+    required this.icon,
+    required this.onTap,
+  });
+
+  final IconData icon;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(12),
+      child: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Icon(icon, color: Colors.white70, size: 24),
+      ),
+    );
+  }
+}
+
+/// Same look as [_BottomBarItem], but with no tap handler of its own —
+/// used as the [PopupMenuButton.child] for the gear item, which already
+/// handles taps by opening the menu.
+class _BottomBarItemDecoration extends StatelessWidget {
+  const _BottomBarItemDecoration({required this.icon});
+
+  final IconData icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: Icon(icon, color: Colors.white70, size: 24),
     );
   }
 }
@@ -146,93 +218,71 @@ class _AppBarIconButton extends StatelessWidget {
   }
 }
 
-enum _OverflowAction {
-  alarm,
-  sleepTimer,
+enum _SettingsAction {
   language,
   countryPicker,
   wifiOnly,
   contact,
 }
 
-/// Alarm + Sleep Timer + Language + Dünya Turu + Wi-Fi Only + Contact
-/// share one overflow menu — six-plus separate circular AppBar icons left
-/// no room for the logo to breathe.
-class _OverflowMenuButton extends ConsumerWidget {
-  const _OverflowMenuButton();
+/// Dil + Dünya Turu + Sadece Wi-Fi + İletişim/İçerik bildir share one gear
+/// menu, anchored to the last icon in the home bottom bar.
+class _SettingsBottomBarItem extends ConsumerWidget {
+  const _SettingsBottomBarItem();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
     final wifiOnly = ref.watch(wifiOnlyProvider);
-    return _AppBarIconWrapper(
-      child: PopupMenuButton<_OverflowAction>(
-        icon: const Icon(Icons.more_vert),
-        tooltip: l10n.moreTooltip,
-        onSelected: (action) {
-          switch (action) {
-            case _OverflowAction.alarm:
-              openAlarmSheet(context, ref);
-            case _OverflowAction.sleepTimer:
-              openSleepTimerSheet(context, ref);
-            case _OverflowAction.language:
-              openLanguageSheet(context, ref);
-            case _OverflowAction.countryPicker:
-              openCountrySheet(context, ref);
-            case _OverflowAction.wifiOnly:
-              ref.read(wifiOnlyProvider.notifier).toggle();
-            case _OverflowAction.contact:
-              openContactEmail();
-          }
-        },
-        itemBuilder: (context) => [
-          PopupMenuItem(
-            value: _OverflowAction.alarm,
-            child: ListTile(
-              leading: const Icon(Icons.alarm),
-              title: Text(l10n.alarmLabel),
-              contentPadding: EdgeInsets.zero,
-            ),
+    return PopupMenuButton<_SettingsAction>(
+      tooltip: l10n.settingsLabel,
+      position: PopupMenuPosition.over,
+      onSelected: (action) {
+        switch (action) {
+          case _SettingsAction.language:
+            openLanguageSheet(context, ref);
+          case _SettingsAction.countryPicker:
+            openCountrySheet(context, ref);
+          case _SettingsAction.wifiOnly:
+            ref.read(wifiOnlyProvider.notifier).toggle();
+          case _SettingsAction.contact:
+            openContactEmail();
+        }
+      },
+      itemBuilder: (context) => [
+        PopupMenuItem(
+          value: _SettingsAction.language,
+          child: ListTile(
+            leading: const Icon(Icons.language),
+            title: Text(l10n.languageLabel),
+            contentPadding: EdgeInsets.zero,
           ),
-          PopupMenuItem(
-            value: _OverflowAction.sleepTimer,
-            child: ListTile(
-              leading: const Icon(Icons.bedtime_outlined),
-              title: Text(l10n.sleepTimerLabel),
-              contentPadding: EdgeInsets.zero,
-            ),
+        ),
+        const PopupMenuItem(
+          value: _SettingsAction.countryPicker,
+          child: ListTile(
+            leading: Icon(Icons.public),
+            title: Text('Dünya Turu'),
+            contentPadding: EdgeInsets.zero,
           ),
-          PopupMenuItem(
-            value: _OverflowAction.language,
-            child: ListTile(
-              leading: const Icon(Icons.language),
-              title: Text(l10n.languageLabel),
-              contentPadding: EdgeInsets.zero,
-            ),
+        ),
+        const PopupMenuDivider(),
+        CheckedPopupMenuItem(
+          value: _SettingsAction.wifiOnly,
+          checked: wifiOnly,
+          child: Text(l10n.wifiOnlyLabel),
+        ),
+        PopupMenuItem(
+          value: _SettingsAction.contact,
+          child: ListTile(
+            leading: const Icon(Icons.mail_outline),
+            title: Text(l10n.contactLabel),
+            contentPadding: EdgeInsets.zero,
           ),
-          const PopupMenuItem(
-            value: _OverflowAction.countryPicker,
-            child: ListTile(
-              leading: Icon(Icons.public),
-              title: Text('Dünya Turu'),
-              contentPadding: EdgeInsets.zero,
-            ),
-          ),
-          const PopupMenuDivider(),
-          CheckedPopupMenuItem(
-            value: _OverflowAction.wifiOnly,
-            checked: wifiOnly,
-            child: Text(l10n.wifiOnlyLabel),
-          ),
-          PopupMenuItem(
-            value: _OverflowAction.contact,
-            child: ListTile(
-              leading: const Icon(Icons.mail_outline),
-              title: Text(l10n.contactLabel),
-              contentPadding: EdgeInsets.zero,
-            ),
-          ),
-        ],
+        ),
+      ],
+      child: const _BottomBarItemDecoration(
+        icon: Icons.settings_outlined,
       ),
     );
   }

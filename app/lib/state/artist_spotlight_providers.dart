@@ -123,6 +123,8 @@ Future<ArtistSpotlightData?> resolveSpotlight(Ref ref, String raw) async {
   final itunesMatch = findConfidentMatch(
     itunesTracks,
     (t) => t.trackName,
+    (t) => t.artistName,
+    query,
     expectedSong,
   );
   if (itunesMatch != null) {
@@ -150,6 +152,8 @@ Future<ArtistSpotlightData?> resolveSpotlight(Ref ref, String raw) async {
   final deezerMatch = findConfidentMatch(
     deezerTracks,
     (t) => t.trackName,
+    (t) => t.artistName,
+    query,
     expectedSong,
   );
   if (deezerMatch != null) {
@@ -191,26 +195,46 @@ Future<ArtistSpotlightData?> resolveSpotlight(Ref ref, String raw) async {
 /// Exact match first; a loose substring match second (catches "(Remastered)"/
 /// "[Live]" suffixes a source appends but ICY metadata usually omits).
 /// Returns null rather than guessing with the first result — a confidently
-/// wrong song + cover art (a different track by the same artist) is worse
-/// than showing nothing.
+/// wrong song + cover art (a different track by the same artist, or worse,
+/// a same-titled track by a completely different artist) is worse than
+/// showing nothing.
+///
+/// Requires the artist name to match too — a search result can rank #1 by
+/// text relevance while being some other artist's cover/same-titled track,
+/// and matching only on song title would confidently show that artist's
+/// (unrelated) cover art instead.
 T? findConfidentMatch<T>(
   List<T> tracks,
   String Function(T) trackNameOf,
+  String Function(T) artistNameOf,
+  String expectedArtist,
   String? expectedSong,
 ) {
   if (tracks.isEmpty) return null;
+
+  final normalizedExpectedArtist = normalizeTitle(expectedArtist);
+  bool artistMatches(T t) {
+    final normalizedArtist = normalizeTitle(artistNameOf(t));
+    return normalizedArtist == normalizedExpectedArtist ||
+        normalizedArtist.contains(normalizedExpectedArtist) ||
+        normalizedExpectedArtist.contains(normalizedArtist);
+  }
+
+  final byArtist = tracks.where(artistMatches).toList();
+  if (byArtist.isEmpty) return null;
+
   if (expectedSong == null) {
     // No dash to split on, so there was never a specific song title to
-    // verify against — the artist-only search result is the best we can
+    // verify against — the best artist-matched result is the best we can
     // do, low-confidence or not.
-    return tracks.first;
+    return byArtist.first;
   }
 
   final normalizedExpected = normalizeTitle(expectedSong);
-  for (final t in tracks) {
+  for (final t in byArtist) {
     if (normalizeTitle(trackNameOf(t)) == normalizedExpected) return t;
   }
-  for (final t in tracks) {
+  for (final t in byArtist) {
     final normalizedTrack = normalizeTitle(trackNameOf(t));
     if (normalizedTrack.contains(normalizedExpected) ||
         normalizedExpected.contains(normalizedTrack)) {

@@ -33,6 +33,8 @@
   "alarmLabel": "Alarm",
   "sleepTimerLabel": "Sleep Timer",
   "languageLabel": "Language",
+  "settingsLabel": "Settings",
+  "homeLabel": "Home",
 
   "stationNotSelected": "No station selected",
   "visualizerHint": "Tap the visualizer to change the waveform",

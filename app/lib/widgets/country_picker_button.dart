@@ -19,27 +19,46 @@ Future<void> openCountrySheet(BuildContext context, WidgetRef ref) async {
   if (!context.mounted) return;
   await showModalBottomSheet<void>(
     context: context,
-    builder: (context) => SafeArea(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const Padding(
-            padding: EdgeInsets.all(16),
-            child: Text(
-              'Dünya Turu',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+    // The catalog spans 100+ countries — a plain Column with
+    // MainAxisSize.min had no scroll at all, so the sheet just clipped to
+    // whatever height fit and the rest (GB, CN, ...) were unreachable.
+    // isScrollControlled + DraggableScrollableSheet gives it a real,
+    // resizable, scrollable list instead.
+    isScrollControlled: true,
+    builder: (context) => DraggableScrollableSheet(
+      expand: false,
+      initialChildSize: 0.6,
+      minChildSize: 0.3,
+      maxChildSize: 0.9,
+      builder: (context, scrollController) => SafeArea(
+        child: Column(
+          children: [
+            const Padding(
+              padding: EdgeInsets.all(16),
+              child: Text(
+                'Dünya Turu',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              ),
             ),
-          ),
-          for (final code in countries)
-            ListTile(
-              title: Text(code),
-              trailing: Text('${counts[code]} istasyon'),
-              onTap: () {
-                ref.read(selectedCountryProvider.notifier).select(code);
-                Navigator.of(context).pop();
-              },
+            Expanded(
+              child: ListView.builder(
+                controller: scrollController,
+                itemCount: countries.length,
+                itemBuilder: (context, index) {
+                  final code = countries[index];
+                  return ListTile(
+                    title: Text(code),
+                    trailing: Text('${counts[code]} istasyon'),
+                    onTap: () {
+                      ref.read(selectedCountryProvider.notifier).select(code);
+                      Navigator.of(context).pop();
+                    },
+                  );
+                },
+              ),
             ),
-        ],
+          ],
+        ),
       ),
     ),
   );

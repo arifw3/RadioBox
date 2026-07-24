@@ -33,6 +33,8 @@
   "alarmLabel": "Wecker",
   "sleepTimerLabel": "Einschlaftimer",
   "languageLabel": "Sprache",
+  "settingsLabel": "Einstellungen",
+  "homeLabel": "Start",
 
   "stationNotSelected": "Kein Sender ausgewählt",
   "visualizerHint": "Tippe auf den Visualizer, um die Wellenform zu ändern",
