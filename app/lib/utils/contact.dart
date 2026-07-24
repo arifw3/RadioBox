@@ -6,7 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 Future<void> openContactEmail() async {
   final uri = Uri(
     scheme: 'mailto',
-    path: 'ariferzin@gmail.com',
+    path: 'seraperzin@gmail.com',
     query: 'subject=${Uri.encodeComponent('Radio Box - İçerik Bildirimi / Contact')}',
   );
   await launchUrl(uri);
