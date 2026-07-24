@@ -24,7 +24,12 @@ import '../widgets/station_art.dart';
 import 'search_screen.dart';
 import 'song_history_screen.dart';
 
-final _selectedTabProvider = StateProvider<int>((ref) => 0);
+/// Null means "no explicit choice yet" — the tab then defaults to
+/// Favoriler once favorites finish loading and turn out non-empty
+/// (skipped on a first-ever run, since there's nothing to show there).
+/// Any manual tap locks it to that index from then on, regardless of
+/// what favorites do afterwards.
+final _selectedTabProvider = StateProvider<int?>((ref) => null);
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
@@ -33,7 +38,10 @@ class HomeScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
     final catalog = ref.watch(radioCatalogProvider);
-    final selectedTab = ref.watch(_selectedTabProvider);
+    final explicitTab = ref.watch(_selectedTabProvider);
+    final hasFavorites =
+        ref.watch(favoritesProvider).valueOrNull?.isNotEmpty ?? false;
+    final selectedTab = explicitTab ?? (hasFavorites ? 1 : 0);
 
     return Scaffold(
       appBar: AppBar(
